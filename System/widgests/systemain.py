@@ -1046,9 +1046,7 @@ class MainwindowSC(QMainWindow):
         self.ui.source_btn.clicked.connect(self.areaClick)
         self.ui.electron_btn.clicked.connect(self.areaClick)
         self.ui.dropBox_btn.clicked.connect(self.areaClick)
-        self.ui.raspberry_btn.clicked.connect(self.areaClick)
         self.ui.help_btnF_2.clicked.connect(self.areaClick)
-        self.ui.android_btn.clicked.connect(self.areaClick)
 
         # responsavel por abrir salvar e criar arquivos
         self.ui.save.clicked.connect(self.editArq)
@@ -2080,7 +2078,7 @@ class MainwindowSC(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = SplashCreen()
+    window = MainwindowSC()
     sys.exit(app.exec())
 
 ##            for itens in self.ui.webEngineView.page().history().items():
