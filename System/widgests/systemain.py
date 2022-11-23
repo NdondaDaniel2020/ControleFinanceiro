@@ -56,7 +56,7 @@ class SplashCreen(QMainWindow):
 
         # chamando a class que controla a base de dados
 
-        self.database = database("ControloFinaceiro.bd")
+        self.database = database("ControloFinaceiro.db")
         self.senhaUltimoUser = ''
         self.VerificarUltimoUser()
 
@@ -451,7 +451,6 @@ class SplashCreen(QMainWindow):
             border-radius:5px;""")
 
             id = self.identificarUltimoUsuario(self.sc.NameEmp.text())
-            print(id, self.sc.NameEmp.text())
             self.inserirUltimoUserInBD(id)
 
             QTimer.singleShot(30, lambda: self.OpenResize())
@@ -526,7 +525,6 @@ class SplashCreen(QMainWindow):
             if nome == nome_pego:
                 nomeConst = nome
                 id = n
-                print(id)
                 user = True
                 break
             else:
@@ -1049,10 +1047,6 @@ class MainwindowSC(QMainWindow):
         self.ui.electron_btn.clicked.connect(self.areaClick)
         self.ui.dropBox_btn.clicked.connect(self.areaClick)
         self.ui.raspberry_btn.clicked.connect(self.areaClick)
-        self.ui.directWF_btn.clicked.connect(self.areaClick)
-        self.ui.ios_btn.clicked.connect(self.areaClick)
-        self.ui.ibm_btn.clicked.connect(self.areaClick)
-        self.ui.tesla_btn.clicked.connect(self.areaClick)
         self.ui.help_btnF_2.clicked.connect(self.areaClick)
         self.ui.android_btn.clicked.connect(self.areaClick)
 
@@ -1178,29 +1172,9 @@ class MainwindowSC(QMainWindow):
             if event.button() == Qt.LeftButton:
                 self.simpficaLond(self.ui.page_Extras, 0, "https://www.dropbox.com/")
 
-        def RaspberryMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.raspberrypi.org/")
-
         def AndroidMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
                 self.simpficaLond(self.ui.page_Extras, 0, "https://www.android.com/")
-
-        def DirectWFMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.directwifi.com.br/")
-
-        def IosMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.apple.com/ios/ios-16/")
-
-        def IbmMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.ibm.com/ao-pt")
-
-        def TeslaMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.tesla.com/")
 
         def HelpMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
@@ -1223,18 +1197,6 @@ class MainwindowSC(QMainWindow):
         self.ui.electron_lbl.mousePressEvent = ElectronMousePressEvent
         self.ui.frame_DropBox.mousePressEvent = DropBoxMousePressEvent
         self.ui.dropBox_lbl.mousePressEvent = DropBoxMousePressEvent
-        self.ui.frame_raspberry.mousePressEvent = RaspberryMousePressEvent
-        self.ui.raspberry_lbl.mousePressEvent = RaspberryMousePressEvent
-        self.ui.frame_Android.mousePressEvent = AndroidMousePressEvent
-        self.ui.android_lbl.mousePressEvent = AndroidMousePressEvent
-        self.ui.frame_DirectWF.mousePressEvent = DirectWFMousePressEvent
-        self.ui.directWF_lbl.mousePressEvent = DirectWFMousePressEvent
-        self.ui.frame_IOs.mousePressEvent = IosMousePressEvent
-        self.ui.ios_lbl.mousePressEvent = IosMousePressEvent
-        self.ui.frame_IBM.mousePressEvent = IbmMousePressEvent
-        self.ui.ibm_lbl.mousePressEvent = IbmMousePressEvent
-        self.ui.frame_Tesla.mousePressEvent = TeslaMousePressEvent
-        self.ui.tesla_lbl.mousePressEvent = TeslaMousePressEvent
         self.ui.frame_Helpe.mousePressEvent = HelpMousePressEvent
         self.ui.help_lbl.mousePressEvent = HelpMousePressEvent
 
@@ -1272,26 +1234,11 @@ class MainwindowSC(QMainWindow):
         self.ui.frame_Unity.mousePressEvent = moveScroll
         self.ui.frame_Unity.mouseReleaseEvent = releasecroll
 
-        self.ui.frame_IBM.mousePressEvent = moveScroll
-        self.ui.frame_IBM.mouseReleaseEvent = releasecroll
-
         self.ui.frame_Helpe.mousePressEvent = moveScroll
         self.ui.frame_Helpe.mouseReleaseEvent = releasecroll
 
-        self.ui.frame_Tesla.mousePressEvent = moveScroll
-        self.ui.frame_Tesla.mouseReleaseEvent = moveScroll
-
-        self.ui.frame_IOs.mouseMoveEvent = moveScroll
-        self.ui.frame_IOs.mouseReleaseEvent = releasecroll
-
-        self.ui.frame_DirectWF.mouseMoveEvent = moveScroll
-        self.ui.frame_DirectWF.mouseReleaseEvent = releasecroll
-
-        self.ui.frame_Android.mouseMoveEvent = moveScroll
-        self.ui.frame_Android.mouseReleaseEvent = releasecroll
-
-        self.ui.frame_raspberry.mouseMoveEvent = moveScroll
-        self.ui.frame_raspberry.mouseReleaseEvent = releasecroll
+        #self.ui.frame_raspberry.mouseMoveEvent = moveScroll
+        #.ui.frame_raspberry.mouseReleaseEvent = releasecroll
 
         self.ui.frame_DropBox.mouseMoveEvent = moveScroll
         self.ui.frame_DropBox.mouseReleaseEvent = releasecroll
@@ -1544,16 +1491,6 @@ class MainwindowSC(QMainWindow):
             self.simpficaLond(self.ui.page_Extras, 0, "https://www.dropbox.com/")
         elif name_btn == 'raspberry_btn':
             self.simpficaLond(self.ui.page_Extras, 0, "https://www.raspberrypi.org/")
-        elif name_btn == 'android_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.android.com/")
-        elif name_btn == 'directWF_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.directwifi.com.br/")
-        elif name_btn == 'ios_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.apple.com/ios/ios-16/")
-        elif name_btn == 'ibm_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.ibm.com/ao-pt")
-        elif name_btn == 'tesla_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.tesla.com/")
         elif name_btn == 'help_btnF_2':
             self.simpficaLond(self.ui.page_Extras, 0, "https://www.thesource.ca/en-ca")
         elif name_btn == 'perfil_btn':
