@@ -1,2 +1,2 @@
 # Controle Financeiro
- Controle Finaceiro Criaado em Python Para um projeto escolar
+Controle Financeiro Criado em Python Para um projeto escolar
