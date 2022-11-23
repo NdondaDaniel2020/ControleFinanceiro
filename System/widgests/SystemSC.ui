@@ -1,0 +1,1668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SplashCreen</class>
+ <widget class="QMainWindow" name="SplashCreen">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>691</width>
+    <height>368</height>
+   </rect>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>16777215</width>
+    <height>375</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true"/>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <property name="styleSheet">
+    <string notr="true">QToolTip{
+	background-color: rgb(170, 85, 255);
+	color: rgb(255, 255, 255);
+	border-left: 3px solid rgb(255, 255, 255);
+	pedding-left: 8px;
+}</string>
+   </property>
+   <layout class="QHBoxLayout" name="horizontalLayout_3">
+    <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+     <widget class="QFrame" name="CentralFrame">
+      <property name="minimumSize">
+       <size>
+        <width>410</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="maximumSize">
+       <size>
+        <width>400</width>
+        <height>350</height>
+       </size>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
+      </property>
+      <property name="frameShape">
+       <enum>QFrame::StyledPanel</enum>
+      </property>
+      <property name="frameShadow">
+       <enum>QFrame::Raised</enum>
+      </property>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <property name="spacing">
+        <number>0</number>
+       </property>
+       <property name="leftMargin">
+        <number>0</number>
+       </property>
+       <property name="topMargin">
+        <number>0</number>
+       </property>
+       <property name="rightMargin">
+        <number>0</number>
+       </property>
+       <property name="bottomMargin">
+        <number>0</number>
+       </property>
+       <item>
+        <widget class="QFrame" name="frame_SC">
+         <property name="minimumSize">
+          <size>
+           <width>410</width>
+           <height>250</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>410</width>
+           <height>250</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(170, 85, 255);
+border-radius: 15px; </string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_12">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="linhaBranca_9">
+            <property name="minimumSize">
+             <size>
+              <width>407</width>
+              <height>248</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>407</width>
+              <height>248</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 15px; </string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_13">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>0</number>
+             </property>
+             <item>
+              <widget class="QStackedWidget" name="stackedWidget_4">
+               <property name="minimumSize">
+                <size>
+                 <width>405</width>
+                 <height>246</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>405</width>
+                 <height>246</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(170, 85, 255);
+border-radius: 15px; </string>
+               </property>
+               <property name="currentIndex">
+                <number>1</number>
+               </property>
+               <widget class="QWidget" name="page_login">
+                <layout class="QVBoxLayout" name="verticalLayout">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item>
+                  <widget class="QFrame" name="title_login">
+                   <property name="minimumSize">
+                    <size>
+                     <width>0</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>16777215</width>
+                     <height>50</height>
+                    </size>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QToolButton" name="fechar_3">
+                    <property name="geometry">
+                     <rect>
+                      <x>370</x>
+                      <y>10</y>
+                      <width>21</width>
+                      <height>21</height>
+                     </rect>
+                    </property>
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Fechar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QToolButton:hover{
+	background-color: rgb(170, 0, 255);
+	border-radius:10px;
+}
+QToolButton:pressed{
+	background-color: rgb(170, 85, 255);
+	border-radius:10px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../img/cancel_512px.png</normaloff>../img/cancel_512px.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="criadoPor_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>30</y>
+                      <width>110</width>
+                      <height>16</height>
+                     </rect>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color:#ffffff;
+</string>
+                    </property>
+                    <property name="text">
+                     <string>Criado por: NdDaniel</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="data_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>20</x>
+                      <y>10</y>
+                      <width>91</width>
+                      <height>16</height>
+                     </rect>
+                    </property>
+                    <property name="whatsThis">
+                     <string/>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true"/>
+                    </property>
+                    <property name="text">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#dcbbff;&quot;&gt;data:  &lt;/span&gt;&lt;span style=&quot; color:#c297ff;&quot;/&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;28/06/2022&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                   </widget>
+                   <widget class="QToolButton" name="camera_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>330</x>
+                      <y>10</y>
+                      <width>31</width>
+                      <height>31</height>
+                     </rect>
+                    </property>
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;WebCamOFF&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QToolButton:hover{
+	background-color: rgb(170, 0, 255);
+	border-radius:10px;
+}
+QToolButton:pressed{
+	background-color: rgb(170, 85, 255);
+	border-radius:10px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../img/Instagram_90px.png</normaloff>../img/Instagram_90px.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>100</width>
+                      <height>200</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="container_login">
+                   <property name="minimumSize">
+                    <size>
+                     <width>261</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <layout class="QHBoxLayout" name="horizontalLayout_2">
+                    <property name="spacing">
+                     <number>0</number>
+                    </property>
+                    <property name="leftMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="topMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="rightMargin">
+                     <number>0</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>0</number>
+                    </property>
+                    <item>
+                     <widget class="QFrame" name="container_login2">
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <layout class="QHBoxLayout" name="horizontalLayout_5">
+                       <property name="spacing">
+                        <number>0</number>
+                       </property>
+                       <property name="leftMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="topMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="rightMargin">
+                        <number>0</number>
+                       </property>
+                       <property name="bottomMargin">
+                        <number>0</number>
+                       </property>
+                       <item alignment="Qt::AlignLeft">
+                        <widget class="QFrame" name="login">
+                         <property name="minimumSize">
+                          <size>
+                           <width>241</width>
+                           <height>1234</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>241</width>
+                           <height>1234</height>
+                          </size>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <widget class="QLineEdit" name="senha_login">
+                          <property name="geometry">
+                           <rect>
+                            <x>30</x>
+                            <y>20</y>
+                            <width>201</width>
+                            <height>25</height>
+                           </rect>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLineEdit{
+background-color: rgb(170, 0, 255);
+border:1px solid rgb(230, 187, 255);
+border-radius:5px;
+color: rgb(208, 208, 208)
+}
+
+
+QLineEdit:hover{
+background-color: rgb(170, 0, 255);
+border:2px solid rgb(230, 187, 255);
+border-radius:5px;}
+
+QLineEdit:focus{
+background-color: rgb(130, 0, 195);
+border:2px solid rgb(230, 187, 255);
+border-radius:5px;
+color: rgb(230, 187, 255);}</string>
+                          </property>
+                          <property name="echoMode">
+                           <enum>QLineEdit::Normal</enum>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                          </property>
+                          <property name="placeholderText">
+                           <string> Email</string>
+                          </property>
+                         </widget>
+                         <widget class="QPushButton" name="sengup">
+                          <property name="geometry">
+                           <rect>
+                            <x>130</x>
+                            <y>120</y>
+                            <width>90</width>
+                            <height>27</height>
+                           </rect>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Segoe UI Semibold</family>
+                            <pointsize>8</pointsize>
+                           </font>
+                          </property>
+                          <property name="toolTip">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QPushButton{
+color: rgb(170, 0, 255);
+background-color: rgb(255, 255, 255);
+border-radius:5px;
+border: 1.3px solid rgb(170, 0, 255);
+}
+QPushButton:hover{
+color:rgb(255, 255, 255);
+background-color:rgb(170, 0, 255);
+border-radius:5px;
+border: 2px solid rgb(170, 0, 255)
+}
+QPushButton:pressed{
+color: rgb(170, 0, 255);
+background-color: rgb(255, 255, 255);
+border-radius:5px;
+border: 1.3px solid rgb(170, 0, 255);
+}
+
+QToolTip{
+background-color: rgb(170, 85, 255);
+border-radius:3px;
+border:3px solid rgb(255, 255, 255);
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Sing up</string>
+                          </property>
+                         </widget>
+                         <widget class="QPushButton" name="login_btn">
+                          <property name="geometry">
+                           <rect>
+                            <x>32</x>
+                            <y>120</y>
+                            <width>90</width>
+                            <height>27</height>
+                           </rect>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Segoe UI Semibold</family>
+                            <pointsize>8</pointsize>
+                           </font>
+                          </property>
+                          <property name="toolTip">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QPushButton{
+color:#ffffff;
+background-color: rgb(170, 0, 255);
+border-radius:5px;
+border: 1.3px solid rgb(255, 255, 255);
+}
+QPushButton:hover{
+color:#aa00ff;
+background-color: rgb(255, 255, 255);
+border-radius:5px;
+border: 2px solid rgb(255, 255, 255);
+}
+QPushButton:pressed{
+color:#ffffff;
+background-color: rgb(170, 0, 255);
+border-radius:5px;
+}
+
+QToolTip{
+background-color: rgb(170, 85, 255);
+border-radius:3px;
+border:3px solid rgb(255, 255, 255);
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Login</string>
+                          </property>
+                         </widget>
+                         <widget class="QLineEdit" name="password">
+                          <property name="geometry">
+                           <rect>
+                            <x>30</x>
+                            <y>70</y>
+                            <width>201</width>
+                            <height>25</height>
+                           </rect>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QLineEdit{
+background-color: rgb(170, 0, 255);
+border:1px solid rgb(230, 187, 255);
+border-radius:5px;
+color: rgb(208, 208, 208)
+}
+
+
+QLineEdit:hover{
+background-color: rgb(170, 0, 255);
+border:2px solid rgb(230, 187, 255);
+border-radius:5px;}
+
+QLineEdit:focus{
+background-color: rgb(130, 0, 195);
+border:2px solid rgb(230, 187, 255);
+border-radius:5px;
+color: rgb(230, 187, 255);}</string>
+                          </property>
+                          <property name="echoMode">
+                           <enum>QLineEdit::Password</enum>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                          </property>
+                          <property name="placeholderText">
+                           <string> Password</string>
+                          </property>
+                         </widget>
+                         <widget class="QLabel" name="senhaIncorreta_2">
+                          <property name="geometry">
+                           <rect>
+                            <x>150</x>
+                            <y>100</y>
+                            <width>81</width>
+                            <height>10</height>
+                           </rect>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <pointsize>8</pointsize>
+                           </font>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">color: rgb(255, 0, 0);</string>
+                          </property>
+                          <property name="text">
+                           <string>senha incorreta</string>
+                          </property>
+                         </widget>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="zone_logo_2">
+                         <property name="minimumSize">
+                          <size>
+                           <width>145</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>145</width>
+                           <height>12345</height>
+                          </size>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <widget class="QLabel" name="logoPrincipal_login">
+                          <property name="geometry">
+                           <rect>
+                            <x>20</x>
+                            <y>0</y>
+                            <width>111</width>
+                            <height>111</height>
+                           </rect>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true"/>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="pixmap">
+                           <pixmap>../img/logoAu.png</pixmap>
+                          </property>
+                          <property name="alignment">
+                           <set>Qt::AlignCenter</set>
+                          </property>
+                         </widget>
+                         <widget class="QPushButton" name="faceid_login_3">
+                          <property name="geometry">
+                           <rect>
+                            <x>30</x>
+                            <y>140</y>
+                            <width>90</width>
+                            <height>24</height>
+                           </rect>
+                          </property>
+                          <property name="font">
+                           <font>
+                            <family>Segoe UI Semibold</family>
+                            <pointsize>8</pointsize>
+                           </font>
+                          </property>
+                          <property name="toolTip">
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Alterar a froma de login&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          </property>
+                          <property name="styleSheet">
+                           <string notr="true">QPushButton{
+color:#ffffff;
+background-color: rgb(170, 0, 255);
+border-radius:5px;
+}
+QPushButton:hover{
+color:#ffffff;
+background-color: rgb(149, 0, 223);
+border-radius:5px;
+}
+QPushButton:pressed{
+color:#ffffff;
+background-color: rgb(170, 0, 255);
+border-radius:5px;
+}
+
+QToolTip{
+background-color: rgb(170, 85, 255);
+border-radius:3px;
+border:3px solid rgb(255, 255, 255);
+}</string>
+                          </property>
+                          <property name="text">
+                           <string>Face id</string>
+                          </property>
+                         </widget>
+                        </widget>
+                       </item>
+                      </layout>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QFrame" name="singup">
+                      <property name="minimumSize">
+                       <size>
+                        <width>0</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="maximumSize">
+                       <size>
+                        <width>0</width>
+                        <height>16777215</height>
+                       </size>
+                      </property>
+                      <property name="frameShape">
+                       <enum>QFrame::StyledPanel</enum>
+                      </property>
+                      <property name="frameShadow">
+                       <enum>QFrame::Raised</enum>
+                      </property>
+                      <widget class="QPushButton" name="login_btn_singup">
+                       <property name="geometry">
+                        <rect>
+                         <x>30</x>
+                         <y>130</y>
+                         <width>90</width>
+                         <height>27</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Segoe UI Semibold</family>
+                         <pointsize>8</pointsize>
+                        </font>
+                       </property>
+                       <property name="toolTip">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton{
+color:#ffffff;
+background-color: rgb(170, 0, 255);
+border-radius:5px;
+border: 1.3px solid rgb(255, 255, 255);
+}
+QPushButton:hover{
+color:#aa00ff;
+background-color: rgb(255, 255, 255);
+border-radius:5px;
+border: 2px solid rgb(255, 255, 255);
+}
+QPushButton:pressed{
+color:#ffffff;
+background-color: rgb(170, 0, 255);
+border-radius:5px;
+}
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Login</string>
+                       </property>
+                      </widget>
+                      <widget class="QLineEdit" name="email_singup">
+                       <property name="geometry">
+                        <rect>
+                         <x>20</x>
+                         <y>10</y>
+                         <width>201</width>
+                         <height>25</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLineEdit{
+background-color: rgb(170, 0, 255);
+border:1px solid rgb(230, 187, 255);
+border-radius:5px;
+color: rgb(208, 208, 208)
+}
+
+
+QLineEdit:hover{
+background-color: rgb(170, 0, 255);
+border:2px solid rgb(230, 187, 255);
+border-radius:5px;}
+
+QLineEdit:focus{
+background-color: rgb(130, 0, 195);
+border:2px solid rgb(230, 187, 255);
+border-radius:5px;
+color: rgb(230, 187, 255);}</string>
+                       </property>
+                       <property name="echoMode">
+                        <enum>QLineEdit::Normal</enum>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="placeholderText">
+                        <string> Email</string>
+                       </property>
+                      </widget>
+                      <widget class="QPushButton" name="singup_singup">
+                       <property name="geometry">
+                        <rect>
+                         <x>130</x>
+                         <y>130</y>
+                         <width>90</width>
+                         <height>27</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <family>Segoe UI Semibold</family>
+                         <pointsize>8</pointsize>
+                        </font>
+                       </property>
+                       <property name="toolTip">
+                        <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QPushButton{
+color: rgb(170, 0, 255);
+background-color: rgb(255, 255, 255);
+border-radius:5px;
+border: 1.3px solid rgb(170, 0, 255);
+}
+QPushButton:hover{
+color:rgb(255, 255, 255);
+background-color:rgb(170, 0, 255);
+border-radius:5px;
+border: 2px solid rgb(170, 0, 255)
+}
+QPushButton:pressed{
+color: rgb(170, 0, 255);
+background-color: rgb(255, 255, 255);
+border-radius:5px;
+border: 1.3px solid rgb(170, 0, 255);
+}
+
+</string>
+                       </property>
+                       <property name="text">
+                        <string>Sing up</string>
+                       </property>
+                      </widget>
+                      <widget class="QLineEdit" name="password1">
+                       <property name="geometry">
+                        <rect>
+                         <x>20</x>
+                         <y>50</y>
+                         <width>201</width>
+                         <height>25</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLineEdit{
+background-color: rgb(170, 0, 255);
+border:1px solid rgb(230, 187, 255);
+border-radius:5px;
+color: rgb(208, 208, 208)
+}
+
+
+QLineEdit:hover{
+background-color: rgb(170, 0, 255);
+border:2px solid rgb(230, 187, 255);
+border-radius:5px;}
+
+QLineEdit:focus{
+background-color: rgb(130, 0, 195);
+border:2px solid rgb(230, 187, 255);
+border-radius:5px;
+color: rgb(230, 187, 255);}</string>
+                       </property>
+                       <property name="echoMode">
+                        <enum>QLineEdit::Password</enum>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="placeholderText">
+                        <string> Password</string>
+                       </property>
+                      </widget>
+                      <widget class="QLineEdit" name="password2">
+                       <property name="geometry">
+                        <rect>
+                         <x>20</x>
+                         <y>90</y>
+                         <width>201</width>
+                         <height>25</height>
+                        </rect>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">QLineEdit{
+background-color: rgb(170, 0, 255);
+border:1px solid rgb(230, 187, 255);
+border-radius:5px;
+color: rgb(208, 208, 208)
+}
+
+
+QLineEdit:hover{
+background-color: rgb(170, 0, 255);
+border:2px solid rgb(230, 187, 255);
+border-radius:5px;}
+
+QLineEdit:focus{
+background-color: rgb(130, 0, 195);
+border:2px solid rgb(230, 187, 255);
+border-radius:5px;
+color: rgb(230, 187, 255);}</string>
+                       </property>
+                       <property name="echoMode">
+                        <enum>QLineEdit::Password</enum>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="placeholderText">
+                        <string> Repeat-password</string>
+                       </property>
+                      </widget>
+                      <widget class="QLabel" name="senhaIncorreta_3">
+                       <property name="geometry">
+                        <rect>
+                         <x>135</x>
+                         <y>117</y>
+                         <width>81</width>
+                         <height>10</height>
+                        </rect>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>8</pointsize>
+                        </font>
+                       </property>
+                       <property name="styleSheet">
+                        <string notr="true">color: rgb(255, 0, 0);</string>
+                       </property>
+                       <property name="text">
+                        <string>senha incorreta</string>
+                       </property>
+                      </widget>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+               <widget class="QWidget" name="page_central">
+                <widget class="QFrame" name="centro">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>0</y>
+                   <width>405</width>
+                   <height>246</height>
+                  </rect>
+                 </property>
+                 <property name="minimumSize">
+                  <size>
+                   <width>405</width>
+                   <height>246</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>396</width>
+                   <height>226</height>
+                  </size>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="frameShape">
+                  <enum>QFrame::StyledPanel</enum>
+                 </property>
+                 <property name="frameShadow">
+                  <enum>QFrame::Raised</enum>
+                 </property>
+                 <widget class="QLabel" name="Nome">
+                  <property name="geometry">
+                   <rect>
+                    <x>10</x>
+                    <y>210</y>
+                    <width>170</width>
+                    <height>20</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI Semibold</family>
+                    <pointsize>14</pointsize>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color:#ffffff</string>
+                  </property>
+                  <property name="text">
+                   <string>NDONDA DANIEL</string>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QPushButton" name="TrocaDeUsuario">
+                  <property name="geometry">
+                   <rect>
+                    <x>260</x>
+                    <y>208</y>
+                    <width>121</width>
+                    <height>24</height>
+                   </rect>
+                  </property>
+                  <property name="font">
+                   <font>
+                    <family>Segoe UI Semibold</family>
+                    <pointsize>8</pointsize>
+                   </font>
+                  </property>
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Deslogar da conta atual&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton{
+color:#ffffff;
+background-color: rgb(170, 0, 255);
+border-radius:5px;
+}
+QPushButton:hover{
+color:#ffffff;
+background-color: rgb(149, 0, 223);
+border-radius:5px;
+}
+QPushButton:pressed{
+color:#ffffff;
+background-color: rgb(170, 0, 255);
+border-radius:5px;
+}
+QToolTip{
+background-color: rgb(170, 85, 255);
+border-radius:3px;
+border:3px solid rgb(255, 255, 255);
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>TROCA DE USUARIO</string>
+                  </property>
+                 </widget>
+                 <widget class="QToolButton" name="camera">
+                  <property name="geometry">
+                   <rect>
+                    <x>330</x>
+                    <y>10</y>
+                    <width>31</width>
+                    <height>31</height>
+                   </rect>
+                  </property>
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;WebCamOFF&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QToolButton:hover{
+	background-color: rgb(170, 0, 255);
+	border-radius:10px;
+}
+QToolButton:pressed{
+	background-color: rgb(170, 85, 255);
+	border-radius:10px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>...</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>../img/Instagram_90px.png</normaloff>../img/Instagram_90px.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>100</width>
+                    <height>200</height>
+                   </size>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="data">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>27</y>
+                    <width>91</width>
+                    <height>16</height>
+                   </rect>
+                  </property>
+                  <property name="whatsThis">
+                   <string/>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true"/>
+                  </property>
+                  <property name="text">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#dcbbff;&quot;&gt;data:  &lt;/span&gt;&lt;span style=&quot; color:#c297ff;&quot;/&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;28/06/2022&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="criadoPor">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>46</y>
+                    <width>110</width>
+                    <height>16</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgba(255, 255, 255, 255)
+</string>
+                  </property>
+                  <property name="text">
+                   <string>Criado por: NdDaniel</string>
+                  </property>
+                 </widget>
+                 <widget class="QToolButton" name="fechar_1">
+                  <property name="geometry">
+                   <rect>
+                    <x>370</x>
+                    <y>10</y>
+                    <width>21</width>
+                    <height>21</height>
+                   </rect>
+                  </property>
+                  <property name="toolTip">
+                   <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Fechar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QToolButton:hover{
+	background-color: rgb(170, 0, 255);
+	border-radius:10px;
+}
+QToolButton:pressed{
+	background-color: rgb(170, 85, 255);
+	border-radius:10px;
+}</string>
+                  </property>
+                  <property name="text">
+                   <string>...</string>
+                  </property>
+                  <property name="icon">
+                   <iconset>
+                    <normaloff>../img/cancel_512px.png</normaloff>../img/cancel_512px.png</iconset>
+                  </property>
+                  <property name="iconSize">
+                   <size>
+                    <width>20</width>
+                    <height>20</height>
+                   </size>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="logoA">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>90</y>
+                    <width>71</width>
+                    <height>71</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap>../img/LogAs.png</pixmap>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="logoPrincipal">
+                  <property name="geometry">
+                   <rect>
+                    <x>140</x>
+                    <y>70</y>
+                    <width>150</width>
+                    <height>111</height>
+                   </rect>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="pixmap">
+                   <pixmap>../img/LogocSC.png</pixmap>
+                  </property>
+                  <property name="alignment">
+                   <set>Qt::AlignCenter</set>
+                  </property>
+                 </widget>
+                 <widget class="QLabel" name="versao">
+                  <property name="geometry">
+                   <rect>
+                    <x>20</x>
+                    <y>10</y>
+                    <width>110</width>
+                    <height>16</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgba(255, 255, 255, 255)
+</string>
+                  </property>
+                  <property name="text">
+                   <string>versão: 1.0.1</string>
+                  </property>
+                 </widget>
+                </widget>
+               </widget>
+               <widget class="QWidget" name="page_webCam">
+                <layout class="QHBoxLayout" name="horizontalLayout_14">
+                 <property name="spacing">
+                  <number>0</number>
+                 </property>
+                 <property name="leftMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>0</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>0</number>
+                 </property>
+                 <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+                  <widget class="QLabel" name="WebCam">
+                   <property name="minimumSize">
+                    <size>
+                     <width>330</width>
+                     <height>240</height>
+                    </size>
+                   </property>
+                   <property name="maximumSize">
+                    <size>
+                     <width>320</width>
+                     <height>16777215</height>
+                    </size>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true"/>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QFrame" name="frame">
+                   <property name="frameShape">
+                    <enum>QFrame::StyledPanel</enum>
+                   </property>
+                   <property name="frameShadow">
+                    <enum>QFrame::Raised</enum>
+                   </property>
+                   <widget class="QPushButton" name="faceid_login_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>0</x>
+                      <y>210</y>
+                      <width>71</width>
+                      <height>24</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <family>Segoe UI Semibold</family>
+                      <pointsize>8</pointsize>
+                     </font>
+                    </property>
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Alterar a froma de login&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton{
+color:#ffffff;
+background-color: rgb(170, 0, 255);
+border-radius:5px;
+}
+QPushButton:hover{
+color:#ffffff;
+background-color: rgb(149, 0, 223);
+border-radius:5px;
+}
+QPushButton:pressed{
+color:#ffffff;
+background-color: rgb(170, 0, 255);
+border-radius:5px;
+}
+
+QToolTip{
+background-color: rgb(170, 85, 255);
+border-radius:3px;
+border:3px solid rgb(255, 255, 255);
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>Face id</string>
+                    </property>
+                   </widget>
+                   <widget class="QLabel" name="label_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>10</x>
+                      <y>30</y>
+                      <width>40</width>
+                      <height>41</height>
+                     </rect>
+                    </property>
+                    <property name="font">
+                     <font>
+                      <pointsize>25</pointsize>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="text">
+                     <string>0</string>
+                    </property>
+                    <property name="alignment">
+                     <set>Qt::AlignCenter</set>
+                    </property>
+                   </widget>
+                   <widget class="QToolButton" name="fechar_2">
+                    <property name="geometry">
+                     <rect>
+                      <x>40</x>
+                      <y>10</y>
+                      <width>21</width>
+                      <height>21</height>
+                     </rect>
+                    </property>
+                    <property name="toolTip">
+                     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Fechar&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QToolButton:hover{
+	background-color: rgb(170, 0, 255);
+	border-radius:10px;
+}
+QToolButton:pressed{
+	background-color: rgb(170, 85, 255);
+	border-radius:10px;
+}</string>
+                    </property>
+                    <property name="text">
+                     <string>...</string>
+                    </property>
+                    <property name="icon">
+                     <iconset>
+                      <normaloff>../img/cancel_512px.png</normaloff>../img/cancel_512px.png</iconset>
+                    </property>
+                    <property name="iconSize">
+                     <size>
+                      <width>20</width>
+                      <height>20</height>
+                     </size>
+                    </property>
+                   </widget>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item alignment="Qt::AlignHCenter">
+        <widget class="QFrame" name="frame_log">
+         <property name="minimumSize">
+          <size>
+           <width>360</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>360</width>
+           <height>130</height>
+          </size>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(170, 85, 255);
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;</string>
+         </property>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
+         </property>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
+         </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_10">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>1</number>
+          </property>
+          <item>
+           <widget class="QFrame" name="linhaBranca_7">
+            <property name="minimumSize">
+             <size>
+              <width>358</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>358</width>
+              <height>228</height>
+             </size>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">background-color: rgb(255, 255, 255);
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;</string>
+            </property>
+            <property name="frameShape">
+             <enum>QFrame::StyledPanel</enum>
+            </property>
+            <property name="frameShadow">
+             <enum>QFrame::Raised</enum>
+            </property>
+            <layout class="QHBoxLayout" name="horizontalLayout_11">
+             <property name="spacing">
+              <number>0</number>
+             </property>
+             <property name="leftMargin">
+              <number>0</number>
+             </property>
+             <property name="topMargin">
+              <number>0</number>
+             </property>
+             <property name="rightMargin">
+              <number>0</number>
+             </property>
+             <property name="bottomMargin">
+              <number>1</number>
+             </property>
+             <item>
+              <widget class="QFrame" name="linhaBranca_8">
+               <property name="minimumSize">
+                <size>
+                 <width>356</width>
+                 <height>0</height>
+                </size>
+               </property>
+               <property name="maximumSize">
+                <size>
+                 <width>356</width>
+                 <height>227</height>
+                </size>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">background-color: rgb(170, 85, 255);
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;</string>
+               </property>
+               <property name="frameShape">
+                <enum>QFrame::StyledPanel</enum>
+               </property>
+               <property name="frameShadow">
+                <enum>QFrame::Raised</enum>
+               </property>
+               <widget class="QPushButton" name="troca">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>57</y>
+                  <width>101</width>
+                  <height>24</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Segoe UI Semibold</family>
+                  <pointsize>8</pointsize>
+                 </font>
+                </property>
+                <property name="toolTip">
+                 <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Alterar a froma de login&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QPushButton{
+color:#ffffff;
+background-color: rgb(170, 0, 255);
+border-radius:5px;
+}
+QPushButton:hover{
+color:#ffffff;
+background-color: rgb(149, 0, 223);
+border-radius:5px;
+}
+QPushButton:pressed{
+color:#ffffff;
+background-color: rgb(170, 0, 255);
+border-radius:5px;
+}
+
+QToolTip{
+background-color: rgb(170, 85, 255);
+border-radius:3px;
+border:3px solid rgb(255, 255, 255);
+}</string>
+                </property>
+                <property name="text">
+                 <string>Face id</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="desbloquear">
+                <property name="geometry">
+                 <rect>
+                  <x>20</x>
+                  <y>35</y>
+                  <width>110</width>
+                  <height>16</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(230, 187, 255);
+</string>
+                </property>
+                <property name="text">
+                 <string>Desbloquear sua app</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+               <widget class="QLabel" name="NameEmp">
+                <property name="geometry">
+                 <rect>
+                  <x>17</x>
+                  <y>15</y>
+                  <width>70</width>
+                  <height>20</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <family>Bauhaus 93</family>
+                  <pointsize>12</pointsize>
+                  <bold>true</bold>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(230, 187, 255);
+</string>
+                </property>
+                <property name="text">
+                 <string>Nd Tech</string>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+               </widget>
+               <widget class="QLineEdit" name="senha">
+                <property name="geometry">
+                 <rect>
+                  <x>210</x>
+                  <y>30</y>
+                  <width>130</width>
+                  <height>25</height>
+                 </rect>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QLineEdit{
+background-color: rgb(170, 0, 255);
+border:1px solid rgb(230, 187, 255);
+border-radius:5px;
+color: rgb(208, 208, 208)
+}
+
+
+QLineEdit:hover{
+background-color: rgb(170, 0, 255);
+border:2px solid rgb(230, 187, 255);
+border-radius:5px;}
+
+QLineEdit:focus{
+background-color: rgb(130, 0, 195);
+border:2px solid rgb(230, 187, 255);
+border-radius:5px;
+color: rgb(230, 187, 255);}</string>
+                </property>
+                <property name="echoMode">
+                 <enum>QLineEdit::Password</enum>
+                </property>
+                <property name="alignment">
+                 <set>Qt::AlignCenter</set>
+                </property>
+                <property name="placeholderText">
+                 <string>Digite a sua senha</string>
+                </property>
+               </widget>
+               <widget class="QLabel" name="logoCamera">
+                <property name="geometry">
+                 <rect>
+                  <x>165</x>
+                  <y>10</y>
+                  <width>81</width>
+                  <height>91</height>
+                 </rect>
+                </property>
+                <property name="text">
+                 <string/>
+                </property>
+                <property name="pixmap">
+                 <pixmap>../img/Instagram_90px.png</pixmap>
+                </property>
+               </widget>
+               <widget class="QLabel" name="senhaIncorreta">
+                <property name="geometry">
+                 <rect>
+                  <x>260</x>
+                  <y>55</y>
+                  <width>81</width>
+                  <height>10</height>
+                 </rect>
+                </property>
+                <property name="font">
+                 <font>
+                  <pointsize>8</pointsize>
+                 </font>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">color: rgb(255, 0, 0);</string>
+                </property>
+                <property name="text">
+                 <string>senha incorreta</string>
+                </property>
+               </widget>
+               <zorder>troca</zorder>
+               <zorder>desbloquear</zorder>
+               <zorder>NameEmp</zorder>
+               <zorder>logoCamera</zorder>
+               <zorder>senha</zorder>
+               <zorder>senhaIncorreta</zorder>
+              </widget>
+             </item>
+            </layout>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
