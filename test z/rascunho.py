@@ -5,6 +5,21 @@ ancii = [" ", "!", "#", "$", "%", "&", "'", "(", ")", "*", "+", ",", "-", ".", "
          "ì", "í", "j", "k", "l", "m", "n", "o", "ò", "ó", "õ", "p", "q", "r", "s", "t", "u", "ù", "ú", "v", "w", "x",
          "y", "z", "{", "|", "}", "~", '"']
 
+def corrigirErroNamberPositivo(n):
+
+    while True:
+        try:
+            a = ancii[n]
+            return n
+        except:
+            n = n-90
+            return n
+
+def corrigirErroNamberNegativo(n):
+    a = ancii[n]
+    a = ordSelf(a)
+    return a
+
 # converter caracter para numero
 def ordSelf (getCaract):
     for n, caracter in enumerate(ancii):
