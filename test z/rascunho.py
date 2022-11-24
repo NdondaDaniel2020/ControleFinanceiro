@@ -17,3 +17,49 @@ def chrSelf (getNun):
         if getNun == n:
             return caracter
 
+# criptogáfar
+def criptografar(chave, mensagem):
+    n =128
+    novaMsm = ''
+    for letra in mensagem:
+        indice = ordSelf(letra)
+
+        novaLetra = (indice+chave)
+
+        while True:
+            try:
+                novaMsm += chrSelf(novaLetra)
+                break
+            except:
+                print(novaLetra)
+                novaLetra = corrigirErroNamberPositivo(novaLetra)
+
+    return novaMsm
+
+# descriptogáfar
+def descriptografar(chave, mensagem):
+    n = 128
+    novaMsm = ''
+    for letra in mensagem:
+        indice = ordSelf(letra)
+
+        novaLetra = (indice - chave)
+
+        while True:
+            try:
+                novaMsm += chrSelf(novaLetra)
+                break
+            except:
+                novaLetra = corrigirErroNamberNegativo(novaLetra)
+
+    return novaMsm
+
+
+
+mensagem = "Ndonda Daniel Matondo"
+chave = len(mensagem)
+#Ebojfm!Bmfy
+
+#texto = criptografar(chave, mensagem)
+
+#print(texto)
