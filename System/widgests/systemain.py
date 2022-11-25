@@ -1,4 +1,5 @@
 import json
+from unicodedata import UCD
 
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
@@ -20,7 +21,9 @@ import pyttsx3
 import pyaudio
 from vosk import Model, KaldiRecognizer
 
+
 # variavel global
+UsuiarioGlobal = ''
 CONT = 0
 HAARCASCADES = '../../haarcascades/haarcascade_frontalface_default.xml'
 CLASSIFICADORLBPH = '../../classificador/classificadorLBPH.0.1.yml'
@@ -29,8 +32,10 @@ MNW = 0
 PEGARaRQUIVO = False
 PEGARaUDIO = 0
 # temos dois bugs por enquanto no lin au clicar e ao navegar
+PEGARaUDIO = 0
 
 class SplashCreen(QMainWindow):
+
     def __init__(self):
         # antes de carregar a interface vamos por carregar o algoritimo de reconhecimento
         try:
@@ -57,6 +62,7 @@ class SplashCreen(QMainWindow):
 
         self.database = database("ControloFinaceiro.db")
         self.senhaUltimoUser = ''
+        self.nomeDoUsuario = ''    ## ele será Usado para o main window
         self.VerificarUltimoUser()
 
         # lista ficticia de usuario e suas senhas
@@ -442,6 +448,7 @@ class SplashCreen(QMainWindow):
 
     # verifica se a senha do do ultimo utilizador está certa ou não quando ele volta para entrar
     def confirma_senha(self):  # neste metodo fata addd o metodo que mostra a janela
+        global UsuiarioGlobal
         senha_ultimo_user = criptografar(self.sc.senha.text())
         if senha_ultimo_user == self.senhaUltimoUser:
             self.sc.senha.setStyleSheet("""
@@ -449,10 +456,9 @@ class SplashCreen(QMainWindow):
             color: rgb(208, 208, 208);
             border:2px solid rgb(85, 255, 127);
             border-radius:5px;""")
-
             id = self.identificarUltimoUsuario(self.sc.NameEmp.text())
             self.inserirUltimoUserInBD(id)
-
+            UsuiarioGlobal = self.nomeDoUsuario
             QTimer.singleShot(30, lambda: self.OpenResize())
             QTimer.singleShot(750, lambda: self.mainWindowMethod())
             QTimer.singleShot(1000, lambda: self.close())
@@ -513,7 +519,7 @@ class SplashCreen(QMainWindow):
 
     # responsavel pela confirmação do email e da senha do usuario que quer mudar de utilizador
     def confirma_senha_name(self):
-
+        global UsuiarioGlobal
         nomeConst = ''
         id = 0
         senhaConst = ''
@@ -539,7 +545,7 @@ class SplashCreen(QMainWindow):
 
         if user:
             senha = criptografar(self.sc.password.text())
-            #print(senha, self.listaSenha[id])
+
             if senha == self.listaSenha[id]:
                 self.sc.password.setStyleSheet("""
                             background-color: #8200c3;
@@ -552,6 +558,7 @@ class SplashCreen(QMainWindow):
                             border:2px solid rgb(85, 255, 127);
                             border-radius:5px;""")
                 self.inserirUltimoUserInBD(str(id+1))
+                UsuiarioGlobal = self.listaUsuarios[id]
                 QTimer.singleShot(200, lambda: self.mainWindowMethod())
                 QTimer.singleShot(500, lambda: self.close())
             else:
@@ -710,6 +717,7 @@ class SplashCreen(QMainWindow):
 
     # responsavel pela entrada de novos usuarios
     def singup(self):
+        global UsuiarioGlobal
 
         if len(self.sc.email_singup.text()) < 3:
             self.sc.email_singup.setStyleSheet("""background-color: rgb(150, 76, 228);
@@ -720,52 +728,64 @@ class SplashCreen(QMainWindow):
             self.emailsingupCont = len(self.sc.email_singup.text())
             QTimer.singleShot(100, lambda: self.emailsingupTimer.start())
 
-        if self.sc.password1.text() == '':
-            self.sc.password1.setStyleSheet("""background-color: rgb(150, 76, 228);
+        newUser = self.IsNewUser(self.sc.email_singup.text())
+
+        if newUser:
+            if self.sc.password1.text() == '':
+                self.sc.password1.setStyleSheet("""background-color: rgb(150, 76, 228);
+                                                                border:2px solid rgb(227, 0, 58);
+                                                                border-radius:5px;
+                                                                color: rgb(208, 208, 208);
+                                                                padding-left:3px;""")
+                self.passwor1Cont = len(self.sc.password1.text())
+                QTimer.singleShot(300, lambda: self.password1Timer.start())
+            else:
+                if self.sc.password1.text() != self.sc.password2.text():
+                    self.sc.password2.setStyleSheet("""background-color: rgb(150, 76, 228);
+                                                        border:2px solid rgb(227, 0, 58);
+                                                        border-radius:5px;
+                                                        color: rgb(208, 208, 208);
+                                                        padding-left:3px;""")
+                    self.sc.senhaIncorreta_3.show()
+                    self.passwor2Cont = len(self.sc.password2.text())
+                    QTimer.singleShot(300, lambda: self.password2Timer.start())
+                else:
+                    senha = criptografar(self.sc.password2.text())
+                    self.database.connect_database()
+                    self.database.executarComand(f"""
+                    INSERT INTO Usuario (nome, password, admin) values ('{self.sc.email_singup.text()}','{senha}', 'F')
+                                                    """)
+                    self.database.close_connection_database()
+
+                    self.inserirUltimoUserInBD(self.contarRegistrosTabelaUser())
+                    UsuiarioGlobal = self.sc.email_singup.text()
+
+                    self.sc.password1.setStyleSheet("""
+                                                background-color: #8200c3;
+                                                color: rgb(208, 208, 208);
+                                                border:2px solid rgb(85, 255, 127);
+                                                border-radius:5px;""")
+                    self.sc.password2.setStyleSheet("""
+                                                background-color: #8200c3;
+                                                color: rgb(208, 208, 208);
+                                                border:2px solid rgb(85, 255, 127);
+                                                border-radius:5px;""")
+                    self.sc.email_singup.setStyleSheet("""
+                                                background-color: #8200c3;
+                                                color: rgb(208, 208, 208);
+                                                border:2px solid rgb(85, 255, 127);
+                                                border-radius:5px;""")
+
+                    self.mainWindowMethod()
+                    self.close()
+        else:
+            self.sc.email_singup.setStyleSheet("""background-color: rgb(150, 76, 228);
                                                             border:2px solid rgb(227, 0, 58);
                                                             border-radius:5px;
                                                             color: rgb(208, 208, 208);
                                                             padding-left:3px;""")
-            self.passwor1Cont = len(self.sc.password1.text())
-            QTimer.singleShot(300, lambda: self.password1Timer.start())
-        else:
-            if self.sc.password1.text() != self.sc.password2.text():
-                self.sc.password2.setStyleSheet("""background-color: rgb(150, 76, 228);
-                                                    border:2px solid rgb(227, 0, 58);
-                                                    border-radius:5px;
-                                                    color: rgb(208, 208, 208);
-                                                    padding-left:3px;""")
-                self.sc.senhaIncorreta_3.show()
-                self.passwor2Cont = len(self.sc.password2.text())
-                QTimer.singleShot(300, lambda: self.password2Timer.start())
-            else:
-                senha = criptografar(self.sc.password2.text())
-                self.database.connect_database()
-                self.database.executarComand(f"""
-                INSERT INTO Usuario (nome, password, admin) values ('{self.sc.email_singup.text()}','{senha}', 'F')
-                                                """)
-                self.database.close_connection_database()
-
-                self.inserirUltimoUserInBD(self.contarRegistrosTabelaUser())
-
-                self.sc.password1.setStyleSheet("""
-                                            background-color: #8200c3;
-                                            color: rgb(208, 208, 208);
-                                            border:2px solid rgb(85, 255, 127);
-                                            border-radius:5px;""")
-                self.sc.password2.setStyleSheet("""
-                                            background-color: #8200c3;
-                                            color: rgb(208, 208, 208);
-                                            border:2px solid rgb(85, 255, 127);
-                                            border-radius:5px;""")
-                self.sc.email_singup.setStyleSheet("""
-                                            background-color: #8200c3;
-                                            color: rgb(208, 208, 208);
-                                            border:2px solid rgb(85, 255, 127);
-                                            border-radius:5px;""")
-
-                self.mainWindowMethod()
-                self.close()
+            self.emailsingupCont = len(self.sc.email_singup.text())
+            QTimer.singleShot(100, lambda: self.emailsingupTimer.start())
 
     # este metodo e responsavel pala cor voltar ao normal Quando erra a senha
     def emailsingup(self, n):
@@ -967,6 +987,7 @@ class SplashCreen(QMainWindow):
                     ultimasenha = d
         self.senhaUltimoUser = ultimasenha
         self.sc.NameEmp.setText(nomeUltimoUser)
+        self.nomeDoUsuario = nomeUltimoUser
 
     # este metodo envia o nome  e a senha do ultimo usuario
     def inserirUltimoUserInBD(self, id):
@@ -1008,13 +1029,30 @@ class SplashCreen(QMainWindow):
 
         return id
 
+    # este metodo e para saber se o nome do novo usuario ja existe
+    def IsNewUser(self, userNome):
+        self.database.connect_database()
+        self.database.connect_database()
+        usuario = self.database.executarFetchall("SELECT * FROM Usuario")
+        self.database.connect_database()
+        newuser = True
+        for user in usuario:
+            for n, use in enumerate(user):
+
+                if n == 1:
+                    if use == userNome:
+                        newuser = False
+        return newuser
+
+
 
 class MainwindowSC(QMainWindow):
     def __init__(self):
+        global UsuiarioGlobal
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindowMW()
         self.ui.setupUi(self)
-
+        print(UsuiarioGlobal)
         self.move(140, 15)
 
         self.setWindowFlags(Qt.FramelessWindowHint)
@@ -1071,7 +1109,13 @@ class MainwindowSC(QMainWindow):
         self.top = CustomGrip(self, Qt.TopEdge, True)
         self.bottom = CustomGrip(self, Qt.BottomEdge, True)
 
+
         self.show() # mostrar janela
+
+
+
+        if not UsuiarioGlobal == "":
+            self.demostraNomeUser()  # mostra o nome e depois troca a logo
 
         self.TimerFont = QTimer()
         self.TimerFont.timeout.connect(lambda: self.tamanhoFont())
@@ -1106,6 +1150,13 @@ class MainwindowSC(QMainWindow):
         self.ui.DNA_aoa_LEdit.textChanged.connect(self.DNA_aoa_LEditTextChanged)
 
 
+
+
+    # este metodo e responsavel por mostrar o nome do utilizador e depoi troca pelo do systema
+    def demostraNomeUser(self):
+        global UsuiarioGlobal
+        QTimer.singleShot(700, lambda: self.ui.NameEmp.setText(UsuiarioGlobal))
+        QTimer.singleShot(1000, lambda: self.ui.NameEmp.setText("Finacial Control"))
 
     # pega a posicao global
     def mousePressEvent(self, event):
@@ -1522,7 +1573,6 @@ class MainwindowSC(QMainWindow):
                 self.ui.toolButton.setIcon(icon15)
                 self.toobtn = True
                 QTimer.singleShot(100, lambda: self.lerText(self.ui.plainTextEdit.toPlainText()))
-
 
     # metodo que anima o frame onde esta o regulador de font
     def fontAnimation(self, n):

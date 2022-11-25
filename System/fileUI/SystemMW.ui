@@ -391,7 +391,7 @@ border-radius:0px;</string>
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/logoFC.png</normaloff>../img/logoFC.png</iconset>
+                             <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/logoFC.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/logoFC.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -494,7 +494,7 @@ QToolButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../img/24x24/cil-minus.png</normaloff>../img/24x24/cil-minus.png</iconset>
+                                <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-minus.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-minus.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -520,7 +520,7 @@ QToolButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../img/24x24/cil-media-stop.png</normaloff>../img/24x24/cil-media-stop.png</iconset>
+                                <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-media-stop.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-media-stop.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -540,7 +540,7 @@ QToolButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../img/24x24/cil-x.png</normaloff>../img/24x24/cil-x.png</iconset>
+                                <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-x.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-x.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -662,7 +662,7 @@ QPushButton:pressed{
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/24x24/cil-home.png</normaloff>../img/24x24/cil-home.png</iconset>
+                             <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-home.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-home.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -691,7 +691,7 @@ QPushButton:pressed{
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/web_50px.png</normaloff>../img/web_50px.png</iconset>
+                             <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/web_50px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/web_50px.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -720,7 +720,7 @@ QPushButton:pressed{
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/money_50px.png</normaloff>../img/money_50px.png</iconset>
+                             <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/money_50px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/money_50px.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -749,7 +749,7 @@ QPushButton:pressed{
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/24x24/cil-settings.png</normaloff>../img/24x24/cil-settings.png</iconset>
+                             <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-settings.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-settings.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -778,7 +778,7 @@ QPushButton:pressed{
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/24x24/cil-chevron-double-up-alt.png</normaloff>../img/24x24/cil-chevron-double-up-alt.png</iconset>
+                             <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-chevron-double-up-alt.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-chevron-double-up-alt.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -837,7 +837,7 @@ QPushButton:pressed{
                           <string/>
                          </property>
                          <property name="pixmap">
-                          <pixmap>../img/qr_code_120px.png</pixmap>
+                          <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/qr_code_120px.png</pixmap>
                          </property>
                         </widget>
                         <widget class="QLabel" name="data">
@@ -965,7 +965,7 @@ QPushButton:pressed{
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/24x24/help_30px.png</normaloff>../img/24x24/help_30px.png</iconset>
+                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/help_30px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/help_30px.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -997,7 +997,7 @@ QPushButton:pressed{
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/24x24/cil-user.png</normaloff>../img/24x24/cil-user.png</iconset>
+                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-user.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-user.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -1026,7 +1026,7 @@ QPushButton:pressed{
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/website_50px.png</normaloff>../img/website_50px.png</iconset>
+                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/website_50px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/website_50px.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -1055,7 +1055,7 @@ QPushButton:pressed{
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/24x24/settings_30px.png</normaloff>../img/24x24/settings_30px.png</iconset>
+                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/settings_30px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/settings_30px.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -1084,7 +1084,7 @@ QPushButton:pressed{
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/money_50px.png</normaloff>../img/money_50px.png</iconset>
+                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/money_50px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/money_50px.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -1113,7 +1113,7 @@ QPushButton:pressed{
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/24x24/admin_settings_male_30px.png</normaloff>../img/24x24/admin_settings_male_30px.png</iconset>
+                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/admin_settings_male_30px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/admin_settings_male_30px.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -1142,7 +1142,7 @@ QPushButton:pressed{
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/edit_folder_24px.png</normaloff>../img/edit_folder_24px.png</iconset>
+                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/edit_folder_24px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/edit_folder_24px.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -1214,7 +1214,7 @@ QPushButton:pressed{
                                </property>
                                <property name="icon">
                                 <iconset>
-                                 <normaloff>../img/24x24/cil-volume-off.png</normaloff>../img/24x24/cil-volume-off.png</iconset>
+                                 <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-volume-off.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-volume-off.png</iconset>
                                </property>
                               </widget>
                              </item>
@@ -1246,7 +1246,7 @@ border-top-left-radius:10px;
 border-bottom-left-radius:10px;</string>
                         </property>
                         <property name="currentIndex">
-                         <number>0</number>
+                         <number>2</number>
                         </property>
                         <widget class="QWidget" name="page_Home">
                          <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -1312,7 +1312,7 @@ padding-bottom:0px;
                                 <string/>
                                </property>
                                <property name="pixmap">
-                                <pixmap>../img/SystemMW.png</pixmap>
+                                <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/SystemMW.png</pixmap>
                                </property>
                                <property name="alignment">
                                 <set>Qt::AlignCenter</set>
@@ -1501,7 +1501,7 @@ border-radius:8px;}
                                   </property>
                                   <property name="icon">
                                    <iconset>
-                                    <normaloff>../img/search_30px.png</normaloff>../img/search_30px.png</iconset>
+                                    <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/search_30px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/search_30px.png</iconset>
                                   </property>
                                   <property name="iconSize">
                                    <size>
@@ -1533,7 +1533,7 @@ border-radius:8px;}
                                   </property>
                                   <property name="icon">
                                    <iconset>
-                                    <normaloff>../img/24x24/cil-loop-circular.png</normaloff>../img/24x24/cil-loop-circular.png</iconset>
+                                    <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-loop-circular.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-loop-circular.png</iconset>
                                   </property>
                                   <property name="iconSize">
                                    <size>
@@ -1618,7 +1618,7 @@ color:rgb(223, 223, 223);}
                                   </property>
                                   <property name="icon">
                                    <iconset>
-                                    <normaloff>../img/microphone_50px.png</normaloff>../img/microphone_50px.png</iconset>
+                                    <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/microphone_50px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/microphone_50px.png</iconset>
                                   </property>
                                   <property name="iconSize">
                                    <size>
@@ -1650,7 +1650,7 @@ color:rgb(223, 223, 223);}
                                   </property>
                                   <property name="icon">
                                    <iconset>
-                                    <normaloff>../img/24x24/cil-arrow-left.png</normaloff>../img/24x24/cil-arrow-left.png</iconset>
+                                    <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-arrow-left.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-arrow-left.png</iconset>
                                   </property>
                                   <property name="iconSize">
                                    <size>
@@ -1682,7 +1682,7 @@ color:rgb(223, 223, 223);}
                                   </property>
                                   <property name="icon">
                                    <iconset>
-                                    <normaloff>../img/24x24/cil-arrow-right.png</normaloff>../img/24x24/cil-arrow-right.png</iconset>
+                                    <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-arrow-right.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-arrow-right.png</iconset>
                                   </property>
                                   <property name="iconSize">
                                    <size>
@@ -2243,7 +2243,7 @@ border-radius:15px;
                                           </property>
                                           <property name="icon">
                                            <iconset>
-                                            <normaloff>../img/web_100px.png</normaloff>../img/web_100px.png</iconset>
+                                            <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/web_100px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/web_100px.png</iconset>
                                           </property>
                                           <property name="iconSize">
                                            <size>
@@ -2296,7 +2296,7 @@ border-radius:15px;
                                           </property>
                                           <property name="icon">
                                            <iconset>
-                                            <normaloff>../img/close_pane_120px.png</normaloff>../img/close_pane_120px.png</iconset>
+                                            <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/close_pane_120px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/close_pane_120px.png</iconset>
                                           </property>
                                           <property name="iconSize">
                                            <size>
@@ -2371,7 +2371,7 @@ border-radius:15px;
                                           </property>
                                           <property name="icon">
                                            <iconset>
-                                            <normaloff>../img/user_menu_female_120px.png</normaloff>../img/user_menu_female_120px.png</iconset>
+                                            <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/user_menu_female_120px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/user_menu_female_120px.png</iconset>
                                           </property>
                                           <property name="iconSize">
                                            <size>
@@ -2446,7 +2446,7 @@ border-radius:15px;
                                           </property>
                                           <property name="icon">
                                            <iconset>
-                                            <normaloff>../img/instagram_logo_120px.png</normaloff>../img/instagram_logo_120px.png</iconset>
+                                            <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/instagram_logo_120px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/instagram_logo_120px.png</iconset>
                                           </property>
                                           <property name="iconSize">
                                            <size>
@@ -2591,7 +2591,7 @@ border:3px solid rgb(170, 85, 255)</string>
                                           </property>
                                           <property name="icon">
                                            <iconset>
-                                            <normaloff>../img/mac_client_50px.png</normaloff>../img/mac_client_50px.png</iconset>
+                                            <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/mac_client_50px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/mac_client_50px.png</iconset>
                                           </property>
                                           <property name="iconSize">
                                            <size>
@@ -2625,7 +2625,7 @@ border:3px solid rgb(170, 85, 255)</string>
                                            <string/>
                                           </property>
                                           <property name="pixmap">
-                                           <pixmap>../img/ncicon.png</pixmap>
+                                           <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/ncicon.png</pixmap>
                                           </property>
                                           <property name="alignment">
                                            <set>Qt::AlignCenter</set>
@@ -2697,7 +2697,7 @@ border:3px solid rgb(170, 85, 255)</string>
                                           </property>
                                           <property name="icon">
                                            <iconset>
-                                            <normaloff>../img/ibm_70px.png</normaloff>../img/ibm_70px.png</iconset>
+                                            <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/ibm_70px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/ibm_70px.png</iconset>
                                           </property>
                                           <property name="iconSize">
                                            <size>
@@ -4063,7 +4063,7 @@ border-radius:10px;}</string>
                                     <rect>
                                      <x>0</x>
                                      <y>0</y>
-                                     <width>896</width>
+                                     <width>573</width>
                                      <height>352</height>
                                     </rect>
                                    </property>
@@ -5393,7 +5393,7 @@ color:rgb(255, 255, 255)
                               <rect>
                                <x>0</x>
                                <y>0</y>
-                               <width>912</width>
+                               <width>862</width>
                                <height>1830</height>
                               </rect>
                              </property>
@@ -5594,7 +5594,7 @@ border-radius:10px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/exchange_bitcoinn_30px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/exchange_bitcoinn_30px.png</pixmap>
                                              </property>
                                             </widget>
                                            </widget>
@@ -5663,7 +5663,7 @@ border-top-right-radius: 0px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/bitcoin_50px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/bitcoin_50px.png</pixmap>
                                              </property>
                                             </widget>
                                             <widget class="QLabel" name="bitcoin_aoa_lbl">
@@ -6508,7 +6508,7 @@ border-radius:10px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/synchronize_40px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/synchronize_40px.png</pixmap>
                                              </property>
                                             </widget>
                                             <widget class="QLabel" name="label_75">
@@ -6598,7 +6598,7 @@ border-top-right-radius: 0px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/round_50px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/round_50px.png</pixmap>
                                              </property>
                                             </widget>
                                             <widget class="QLabel" name="dk_aoa_lbl">
@@ -7514,7 +7514,7 @@ border-radius:10px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/synchronize_40px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/synchronize_40px.png</pixmap>
                                              </property>
                                             </widget>
                                             <widget class="QLabel" name="label_77">
@@ -7648,7 +7648,7 @@ border-top-right-radius: 0px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/round_50px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/round_50px.png</pixmap>
                                              </property>
                                             </widget>
                                             <zorder>label_34</zorder>
@@ -8498,7 +8498,7 @@ border-radius:10px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/synchronize_40px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/synchronize_40px.png</pixmap>
                                              </property>
                                             </widget>
                                             <widget class="QLabel" name="label_81">
@@ -8611,7 +8611,7 @@ border-top-right-radius: 0px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/round_50px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/round_50px.png</pixmap>
                                              </property>
                                             </widget>
                                             <widget class="QLabel" name="label_82">
@@ -9480,7 +9480,7 @@ border-radius:10px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/synchronize_40px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/synchronize_40px.png</pixmap>
                                              </property>
                                             </widget>
                                             <widget class="QLabel" name="label_84">
@@ -9592,7 +9592,7 @@ border-top-right-radius: 0px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/round_50px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/round_50px.png</pixmap>
                                              </property>
                                             </widget>
                                             <widget class="QLabel" name="label_159">
@@ -10459,7 +10459,7 @@ border-radius:10px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/synchronize_40px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/synchronize_40px.png</pixmap>
                                              </property>
                                             </widget>
                                             <widget class="QLabel" name="label_163">
@@ -10572,7 +10572,7 @@ border-top-right-radius: 0px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/round_50px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/round_50px.png</pixmap>
                                              </property>
                                             </widget>
                                             <widget class="QLabel" name="label_164">
@@ -11423,7 +11423,7 @@ border-radius:10px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/synchronize_40px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/synchronize_40px.png</pixmap>
                                              </property>
                                             </widget>
                                             <widget class="QLabel" name="label_158">
@@ -11536,7 +11536,7 @@ border-top-right-radius: 0px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/round_50px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/round_50px.png</pixmap>
                                              </property>
                                             </widget>
                                             <widget class="QLabel" name="label_161">
@@ -12408,7 +12408,7 @@ border-radius:10px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/synchronize_40px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/synchronize_40px.png</pixmap>
                                              </property>
                                             </widget>
                                             <widget class="QLabel" name="label_166">
@@ -12521,7 +12521,7 @@ border-top-right-radius: 0px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/round_50px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/round_50px.png</pixmap>
                                              </property>
                                             </widget>
                                             <widget class="QLabel" name="label_167">
@@ -13415,7 +13415,7 @@ border-radius:10px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/synchronize_40px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/synchronize_40px.png</pixmap>
                                              </property>
                                             </widget>
                                             <zorder>label_169</zorder>
@@ -13531,7 +13531,7 @@ border-top-right-radius: 0px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/round_50px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/round_50px.png</pixmap>
                                              </property>
                                             </widget>
                                             <zorder>label_52</zorder>
@@ -14402,7 +14402,7 @@ border-radius:10px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/synchronize_40px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/synchronize_40px.png</pixmap>
                                              </property>
                                             </widget>
                                             <zorder>label_172</zorder>
@@ -14518,7 +14518,7 @@ border-top-right-radius: 0px;</string>
                                               <string/>
                                              </property>
                                              <property name="pixmap">
-                                              <pixmap>../img/round_50px.png</pixmap>
+                                              <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/round_50px.png</pixmap>
                                              </property>
                                             </widget>
                                             <zorder>label_55</zorder>
@@ -15180,7 +15180,7 @@ border-bottom-right-radius:15px;</string>
                       <enum>Qt::ScrollBarAlwaysOff</enum>
                      </property>
                      <property name="horizontalScrollBarPolicy">
-                      <enum>Qt::ScrollBarAlwaysOff</enum>
+                      <enum>Qt::ScrollBarAlwaysOn</enum>
                      </property>
                      <property name="widgetResizable">
                       <bool>true</bool>
@@ -15190,8 +15190,8 @@ border-bottom-right-radius:15px;</string>
                        <rect>
                         <x>0</x>
                         <y>0</y>
-                        <width>1490</width>
-                        <height>120</height>
+                        <width>1655</width>
+                        <height>119</height>
                        </rect>
                       </property>
                       <property name="minimumSize">
@@ -15222,7 +15222,7 @@ border-radius:15px;
                         <number>9</number>
                        </property>
                        <item>
-                        <widget class="QFrame" name="frame_Blender">
+                        <widget class="QFrame" name="frame_GoogleFinance">
                          <property name="minimumSize">
                           <size>
                            <width>160</width>
@@ -15245,60 +15245,47 @@ border-radius:15px;
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <widget class="QLabel" name="Blender_lbl">
-                          <property name="geometry">
-                           <rect>
-                            <x>10</x>
-                            <y>70</y>
-                            <width>60</width>
-                            <height>20</height>
-                           </rect>
+                         <layout class="QVBoxLayout" name="verticalLayout_13">
+                          <property name="spacing">
+                           <number>0</number>
                           </property>
-                          <property name="font">
-                           <font>
-                            <pointsize>12</pointsize>
-                           </font>
+                          <property name="leftMargin">
+                           <number>0</number>
                           </property>
-                          <property name="whatsThis">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Unity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          <property name="topMargin">
+                           <number>0</number>
                           </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Blender&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          <property name="rightMargin">
+                           <number>0</number>
                           </property>
-                          <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                          <property name="bottomMargin">
+                           <number>0</number>
                           </property>
-                         </widget>
-                         <widget class="QPushButton" name="Blender_btl">
-                          <property name="geometry">
-                           <rect>
-                            <x>10</x>
-                            <y>10</y>
-                            <width>40</width>
-                            <height>40</height>
-                           </rect>
-                          </property>
-                          <property name="whatsThis">
-                           <string/>
-                          </property>
-                          <property name="text">
-                           <string/>
-                          </property>
-                          <property name="icon">
-                           <iconset>
-                            <normaloff>../img/blender_3d_40px.png</normaloff>../img/blender_3d_40px.png</iconset>
-                          </property>
-                          <property name="iconSize">
-                           <size>
-                            <width>40</width>
-                            <height>40</height>
-                           </size>
-                          </property>
-                         </widget>
+                          <item>
+                           <widget class="QPushButton" name="GoogleFinance_btl">
+                            <property name="whatsThis">
+                             <string/>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                            <property name="icon">
+                             <iconset>
+                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/fina.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/fina.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>153</width>
+                              <height>130</height>
+                             </size>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="frame_Unity">
+                        <widget class="QFrame" name="frame_YahooFinance">
                          <property name="minimumSize">
                           <size>
                            <width>160</width>
@@ -15322,60 +15309,47 @@ border-radius:15px;
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <widget class="QPushButton" name="unity_btn">
-                          <property name="geometry">
-                           <rect>
-                            <x>10</x>
-                            <y>10</y>
-                            <width>40</width>
-                            <height>40</height>
-                           </rect>
+                         <layout class="QVBoxLayout" name="verticalLayout_70">
+                          <property name="spacing">
+                           <number>0</number>
                           </property>
-                          <property name="whatsThis">
-                           <string/>
+                          <property name="leftMargin">
+                           <number>0</number>
                           </property>
-                          <property name="text">
-                           <string/>
+                          <property name="topMargin">
+                           <number>0</number>
                           </property>
-                          <property name="icon">
-                           <iconset>
-                            <normaloff>../img/unity_40px.png</normaloff>../img/unity_40px.png</iconset>
+                          <property name="rightMargin">
+                           <number>0</number>
                           </property>
-                          <property name="iconSize">
-                           <size>
-                            <width>40</width>
-                            <height>40</height>
-                           </size>
+                          <property name="bottomMargin">
+                           <number>0</number>
                           </property>
-                         </widget>
-                         <widget class="QLabel" name="unity_lbl">
-                          <property name="geometry">
-                           <rect>
-                            <x>10</x>
-                            <y>70</y>
-                            <width>40</width>
-                            <height>20</height>
-                           </rect>
-                          </property>
-                          <property name="font">
-                           <font>
-                            <pointsize>12</pointsize>
-                           </font>
-                          </property>
-                          <property name="whatsThis">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Unity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Unity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                          </property>
-                          <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                          </property>
-                         </widget>
+                          <item>
+                           <widget class="QPushButton" name="YahooFinance_btn">
+                            <property name="whatsThis">
+                             <string/>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                            <property name="icon">
+                             <iconset>
+                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/yahoo.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/yahoo.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>136</width>
+                              <height>111</height>
+                             </size>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="frame_Gmail">
+                        <widget class="QFrame" name="frame_Investing">
                          <property name="minimumSize">
                           <size>
                            <width>160</width>
@@ -15397,60 +15371,47 @@ border-radius:15px;
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <widget class="QLabel" name="gmail_lbl">
-                          <property name="geometry">
-                           <rect>
-                            <x>10</x>
-                            <y>70</y>
-                            <width>80</width>
-                            <height>20</height>
-                           </rect>
+                         <layout class="QVBoxLayout" name="verticalLayout_132">
+                          <property name="spacing">
+                           <number>0</number>
                           </property>
-                          <property name="font">
-                           <font>
-                            <pointsize>12</pointsize>
-                           </font>
+                          <property name="leftMargin">
+                           <number>0</number>
                           </property>
-                          <property name="whatsThis">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Unity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          <property name="topMargin">
+                           <number>0</number>
                           </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Gmail&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          <property name="rightMargin">
+                           <number>0</number>
                           </property>
-                          <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                          <property name="bottomMargin">
+                           <number>0</number>
                           </property>
-                         </widget>
-                         <widget class="QPushButton" name="gmail_btn">
-                          <property name="geometry">
-                           <rect>
-                            <x>10</x>
-                            <y>17</y>
-                            <width>40</width>
-                            <height>30</height>
-                           </rect>
-                          </property>
-                          <property name="whatsThis">
-                           <string/>
-                          </property>
-                          <property name="text">
-                           <string/>
-                          </property>
-                          <property name="icon">
-                           <iconset>
-                            <normaloff>../img/gmail_logo_40px.png</normaloff>../img/gmail_logo_40px.png</iconset>
-                          </property>
-                          <property name="iconSize">
-                           <size>
-                            <width>40</width>
-                            <height>40</height>
-                           </size>
-                          </property>
-                         </widget>
+                          <item>
+                           <widget class="QPushButton" name="Investing_btn">
+                            <property name="whatsThis">
+                             <string/>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                            <property name="icon">
+                             <iconset>
+                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/investing.com.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/investing.com.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>152</width>
+                              <height>114</height>
+                             </size>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="frame_Bing">
+                        <widget class="QFrame" name="frame_BLHL">
                          <property name="minimumSize">
                           <size>
                            <width>160</width>
@@ -15472,60 +15433,47 @@ border-radius:15px;
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <widget class="QLabel" name="bing_lbl">
-                          <property name="geometry">
-                           <rect>
-                            <x>13</x>
-                            <y>70</y>
-                            <width>40</width>
-                            <height>20</height>
-                           </rect>
+                         <layout class="QVBoxLayout" name="verticalLayout_136">
+                          <property name="spacing">
+                           <number>0</number>
                           </property>
-                          <property name="font">
-                           <font>
-                            <pointsize>12</pointsize>
-                           </font>
+                          <property name="leftMargin">
+                           <number>0</number>
                           </property>
-                          <property name="whatsThis">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Unity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          <property name="topMargin">
+                           <number>0</number>
                           </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Bing&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          <property name="rightMargin">
+                           <number>0</number>
                           </property>
-                          <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                          <property name="bottomMargin">
+                           <number>0</number>
                           </property>
-                         </widget>
-                         <widget class="QPushButton" name="bing_btn">
-                          <property name="geometry">
-                           <rect>
-                            <x>10</x>
-                            <y>10</y>
-                            <width>40</width>
-                            <height>40</height>
-                           </rect>
-                          </property>
-                          <property name="whatsThis">
-                           <string/>
-                          </property>
-                          <property name="text">
-                           <string/>
-                          </property>
-                          <property name="icon">
-                           <iconset>
-                            <normaloff>../img/bing_40px.png</normaloff>../img/bing_40px.png</iconset>
-                          </property>
-                          <property name="iconSize">
-                           <size>
-                            <width>40</width>
-                            <height>40</height>
-                           </size>
-                          </property>
-                         </widget>
+                          <item>
+                           <widget class="QPushButton" name="BLHL_btn">
+                            <property name="whatsThis">
+                             <string/>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                            <property name="icon">
+                             <iconset>
+                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/BLHL.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/BLHL.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>150</width>
+                              <height>105</height>
+                             </size>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="frame_HBOgo">
+                        <widget class="QFrame" name="frame_Infomaney">
                          <property name="minimumSize">
                           <size>
                            <width>160</width>
@@ -15547,60 +15495,47 @@ border-radius:15px;
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <widget class="QLabel" name="hboGo_lbl">
-                          <property name="geometry">
-                           <rect>
-                            <x>10</x>
-                            <y>70</y>
-                            <width>80</width>
-                            <height>20</height>
-                           </rect>
+                         <layout class="QVBoxLayout" name="verticalLayout_137">
+                          <property name="spacing">
+                           <number>0</number>
                           </property>
-                          <property name="font">
-                           <font>
-                            <pointsize>12</pointsize>
-                           </font>
+                          <property name="leftMargin">
+                           <number>0</number>
                           </property>
-                          <property name="whatsThis">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Unity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          <property name="topMargin">
+                           <number>0</number>
                           </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;HBO GO&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          <property name="rightMargin">
+                           <number>0</number>
                           </property>
-                          <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                          <property name="bottomMargin">
+                           <number>0</number>
                           </property>
-                         </widget>
-                         <widget class="QPushButton" name="hboGo_btn">
-                          <property name="geometry">
-                           <rect>
-                            <x>10</x>
-                            <y>11</y>
-                            <width>40</width>
-                            <height>40</height>
-                           </rect>
-                          </property>
-                          <property name="whatsThis">
-                           <string/>
-                          </property>
-                          <property name="text">
-                           <string/>
-                          </property>
-                          <property name="icon">
-                           <iconset>
-                            <normaloff>../img/hbo_go_53px.png</normaloff>../img/hbo_go_53px.png</iconset>
-                          </property>
-                          <property name="iconSize">
-                           <size>
-                            <width>53</width>
-                            <height>53</height>
-                           </size>
-                          </property>
-                         </widget>
+                          <item>
+                           <widget class="QPushButton" name="hboGo_btn">
+                            <property name="whatsThis">
+                             <string/>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                            <property name="icon">
+                             <iconset>
+                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/infomaney.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/infomaney.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>132</width>
+                              <height>81</height>
+                             </size>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="frame_Source">
+                        <widget class="QFrame" name="frame_Dinherama">
                          <property name="minimumSize">
                           <size>
                            <width>160</width>
@@ -15622,60 +15557,47 @@ border-radius:15px;
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <widget class="QLabel" name="source_lbl">
-                          <property name="geometry">
-                           <rect>
-                            <x>10</x>
-                            <y>70</y>
-                            <width>80</width>
-                            <height>20</height>
-                           </rect>
+                         <layout class="QVBoxLayout" name="verticalLayout_138">
+                          <property name="spacing">
+                           <number>0</number>
                           </property>
-                          <property name="font">
-                           <font>
-                            <pointsize>12</pointsize>
-                           </font>
+                          <property name="leftMargin">
+                           <number>0</number>
                           </property>
-                          <property name="whatsThis">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Unity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          <property name="topMargin">
+                           <number>0</number>
                           </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Source&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          <property name="rightMargin">
+                           <number>0</number>
                           </property>
-                          <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                          <property name="bottomMargin">
+                           <number>0</number>
                           </property>
-                         </widget>
-                         <widget class="QPushButton" name="source_btn">
-                          <property name="geometry">
-                           <rect>
-                            <x>10</x>
-                            <y>10</y>
-                            <width>40</width>
-                            <height>40</height>
-                           </rect>
-                          </property>
-                          <property name="whatsThis">
-                           <string/>
-                          </property>
-                          <property name="text">
-                           <string/>
-                          </property>
-                          <property name="icon">
-                           <iconset>
-                            <normaloff>../img/open_source_50px.png</normaloff>../img/open_source_50px.png</iconset>
-                          </property>
-                          <property name="iconSize">
-                           <size>
-                            <width>48</width>
-                            <height>48</height>
-                           </size>
-                          </property>
-                         </widget>
+                          <item>
+                           <widget class="QPushButton" name="Dinherama_btn">
+                            <property name="whatsThis">
+                             <string/>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                            <property name="icon">
+                             <iconset>
+                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/dinherama.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/dinherama.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>153</width>
+                              <height>108</height>
+                             </size>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                        <item>
-                        <widget class="QFrame" name="frame_Electron">
+                        <widget class="QFrame" name="frame_CMEgroup">
                          <property name="minimumSize">
                           <size>
                            <width>160</width>
@@ -15697,56 +15619,43 @@ border-radius:15px;
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <widget class="QLabel" name="electron_lbl">
-                          <property name="geometry">
-                           <rect>
-                            <x>10</x>
-                            <y>70</y>
-                            <width>80</width>
-                            <height>20</height>
-                           </rect>
+                         <layout class="QVBoxLayout" name="verticalLayout_139">
+                          <property name="spacing">
+                           <number>0</number>
                           </property>
-                          <property name="font">
-                           <font>
-                            <pointsize>12</pointsize>
-                           </font>
+                          <property name="leftMargin">
+                           <number>0</number>
                           </property>
-                          <property name="whatsThis">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Unity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          <property name="topMargin">
+                           <number>0</number>
                           </property>
-                          <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Electron&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                          <property name="rightMargin">
+                           <number>0</number>
                           </property>
-                          <property name="alignment">
-                           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                          <property name="bottomMargin">
+                           <number>0</number>
                           </property>
-                         </widget>
-                         <widget class="QPushButton" name="electron_btn">
-                          <property name="geometry">
-                           <rect>
-                            <x>10</x>
-                            <y>10</y>
-                            <width>40</width>
-                            <height>40</height>
-                           </rect>
-                          </property>
-                          <property name="whatsThis">
-                           <string/>
-                          </property>
-                          <property name="text">
-                           <string/>
-                          </property>
-                          <property name="icon">
-                           <iconset>
-                            <normaloff>../img/electronics_50px.png</normaloff>../img/electronics_50px.png</iconset>
-                          </property>
-                          <property name="iconSize">
-                           <size>
-                            <width>40</width>
-                            <height>40</height>
-                           </size>
-                          </property>
-                         </widget>
+                          <item>
+                           <widget class="QPushButton" name="CMEgroup_btn">
+                            <property name="whatsThis">
+                             <string/>
+                            </property>
+                            <property name="text">
+                             <string/>
+                            </property>
+                            <property name="icon">
+                             <iconset>
+                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/cme.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/cme.png</iconset>
+                            </property>
+                            <property name="iconSize">
+                             <size>
+                              <width>143</width>
+                              <height>123</height>
+                             </size>
+                            </property>
+                           </widget>
+                          </item>
+                         </layout>
                         </widget>
                        </item>
                        <item>
@@ -15772,7 +15681,58 @@ border-radius:15px;
                          <property name="frameShadow">
                           <enum>QFrame::Raised</enum>
                          </property>
-                         <widget class="QLabel" name="dropBox_lbl">
+                         <widget class="QPushButton" name="dropBox_btn">
+                          <property name="geometry">
+                           <rect>
+                            <x>10</x>
+                            <y>10</y>
+                            <width>81</width>
+                            <height>61</height>
+                           </rect>
+                          </property>
+                          <property name="whatsThis">
+                           <string/>
+                          </property>
+                          <property name="text">
+                           <string/>
+                          </property>
+                          <property name="icon">
+                           <iconset>
+                            <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/dropbox_50px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/dropbox_50px.png</iconset>
+                          </property>
+                          <property name="iconSize">
+                           <size>
+                            <width>40</width>
+                            <height>40</height>
+                           </size>
+                          </property>
+                         </widget>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QFrame" name="frame_raspberry">
+                         <property name="minimumSize">
+                          <size>
+                           <width>160</width>
+                           <height>110</height>
+                          </size>
+                         </property>
+                         <property name="maximumSize">
+                          <size>
+                           <width>90</width>
+                           <height>101</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">background-color: rgb(170, 85, 255);</string>
+                         </property>
+                         <property name="frameShape">
+                          <enum>QFrame::StyledPanel</enum>
+                         </property>
+                         <property name="frameShadow">
+                          <enum>QFrame::Raised</enum>
+                         </property>
+                         <widget class="QLabel" name="raspberry_lbl">
                           <property name="geometry">
                            <rect>
                             <x>10</x>
@@ -15790,13 +15750,13 @@ border-radius:15px;
                            <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;br/&gt;&lt;/p&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Unity&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                           </property>
                           <property name="text">
-                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;DropBox&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;Raspberry&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
                           </property>
                           <property name="alignment">
                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
                           </property>
                          </widget>
-                         <widget class="QPushButton" name="dropBox_btn">
+                         <widget class="QPushButton" name="raspberry_btn">
                           <property name="geometry">
                            <rect>
                             <x>10</x>
@@ -15808,17 +15768,20 @@ border-radius:15px;
                           <property name="whatsThis">
                            <string/>
                           </property>
+                          <property name="styleSheet">
+                           <string notr="true"/>
+                          </property>
                           <property name="text">
                            <string/>
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/dropbox_50px.png</normaloff>../img/dropbox_50px.png</iconset>
+                            <normaloff>../../../../3D Objects/pythonProject1/System/img/raspberry_pi_50px.png</normaloff>../../../../3D Objects/pythonProject1/System/img/raspberry_pi_50px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
-                            <width>40</width>
-                            <height>40</height>
+                            <width>50</width>
+                            <height>50</height>
                            </size>
                           </property>
                          </widget>
@@ -15888,7 +15851,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/help_70px.png</normaloff>../img/help_70px.png</iconset>
+                            <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/help_70px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/help_70px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>

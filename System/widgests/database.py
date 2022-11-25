@@ -84,4 +84,3 @@ class database():
 
     def __str__(self):
         return 'Class para criares o teu banco de dados'
-
