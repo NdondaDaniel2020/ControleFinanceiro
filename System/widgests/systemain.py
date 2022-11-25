@@ -10,6 +10,7 @@ from packeg.circular_progress import CircularProgress
 from database import database
 from ui_SystemSC import Ui_SplashCreen
 from ui_SystemMW import Ui_MainWindowMW
+from Criptografia import criptografar
 
 from time import sleep
 from datetime import date
@@ -29,7 +30,7 @@ PEGARaRQUIVO = False
 PEGARaUDIO = 0
 # temos dois bugs por enquanto no lin au clicar e ao navegar
 #
-
+a = Criptografia.
 
 class SplashCreen(QMainWindow):
     def __init__(self):
