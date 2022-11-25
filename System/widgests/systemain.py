@@ -1,5 +1,4 @@
 import json
-from unicodedata import UCD
 
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
@@ -8,10 +7,10 @@ from PySide6.QtGui import *
 from packeg.custom_grips import CustomGrip
 from packeg.circular_progress import CircularProgress
 # from System.widgests.ui_SystemMW import Ui_MainWindow
-from database import database
+from System.widgests.packeg.database import database
 from ui_SystemSC import Ui_SplashCreen
 from ui_SystemMW import Ui_MainWindowMW
-from Criptografia import criptografar
+from System.widgests.packeg.Criptografia import criptografar
 
 from time import sleep
 from datetime import date
