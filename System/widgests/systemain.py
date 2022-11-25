@@ -29,8 +29,6 @@ MNW = 0
 PEGARaRQUIVO = False
 PEGARaUDIO = 0
 # temos dois bugs por enquanto no lin au clicar e ao navegar
-#
-a = Criptografia.
 
 class SplashCreen(QMainWindow):
     def __init__(self):
@@ -444,7 +442,8 @@ class SplashCreen(QMainWindow):
 
     # verifica se a senha do do ultimo utilizador está certa ou não quando ele volta para entrar
     def confirma_senha(self):  # neste metodo fata addd o metodo que mostra a janela
-        if self.sc.senha.text() == self.senhaUltimoUser:
+        senha_ultimo_user = criptografar(self.sc.senha.text())
+        if senha_ultimo_user == self.senhaUltimoUser:
             self.sc.senha.setStyleSheet("""
             background-color: rgb(150, 76, 228);
             color: rgb(208, 208, 208);
@@ -539,7 +538,9 @@ class SplashCreen(QMainWindow):
                     QTimer.singleShot(200, lambda: self.nomeloginTimer.start())
 
         if user:
-            if self.sc.password.text() == self.listaSenha[id]:
+            senha = criptografar(self.sc.password.text())
+            #print(senha, self.listaSenha[id])
+            if senha == self.listaSenha[id]:
                 self.sc.password.setStyleSheet("""
                             background-color: #8200c3;
                             color: rgb(208, 208, 208);
@@ -551,8 +552,8 @@ class SplashCreen(QMainWindow):
                             border:2px solid rgb(85, 255, 127);
                             border-radius:5px;""")
                 self.inserirUltimoUserInBD(str(id+1))
-                self.mainWindowMethod()
-                self.close()
+                QTimer.singleShot(200, lambda: self.mainWindowMethod())
+                QTimer.singleShot(500, lambda: self.close())
             else:
                 self.passwordConst = len(self.sc.password.text())
                 self.sc.password.setStyleSheet("""background-color:rgb(134, 69, 208);
@@ -738,10 +739,10 @@ class SplashCreen(QMainWindow):
                 self.passwor2Cont = len(self.sc.password2.text())
                 QTimer.singleShot(300, lambda: self.password2Timer.start())
             else:
-
+                senha = criptografar(self.sc.password2.text())
                 self.database.connect_database()
                 self.database.executarComand(f"""
-                INSERT INTO Usuario (nome, password, admin) values ('{self.sc.email_singup.text()}','{self.sc.password2.text()}', 'F')
+                INSERT INTO Usuario (nome, password, admin) values ('{self.sc.email_singup.text()}','{senha}', 'F')
                                                 """)
                 self.database.close_connection_database()
 
@@ -2079,7 +2080,7 @@ class MainwindowSC(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = MainwindowSC()
+    window = SplashCreen()
     sys.exit(app.exec())
 
 ##            for itens in self.ui.webEngineView.page().history().items():

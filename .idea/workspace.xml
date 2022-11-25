@@ -5,7 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32879bff-b1fa-4e85-82a0-4fe749987451" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/System/widgests/Criptografia.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/Criptografia.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/ControloFinaceiro.db" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ControloFinaceiro.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/systemain.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/systemain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test z/rascunho.py" beforeDir="false" afterPath="$PROJECT_DIR$/test z/rascunho.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +41,7 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="Python.rascunho">
+  <component name="RunManager" selected="Python.systemain">
     <configuration name="rascunho" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ControleFinanceiro" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -83,8 +86,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.rascunho" />
         <item itemvalue="Python.systemain" />
+        <item itemvalue="Python.rascunho" />
       </list>
     </recent_temporary>
   </component>

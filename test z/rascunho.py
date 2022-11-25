@@ -14,7 +14,7 @@ def corrigirErroNamberPositivo(n):
             a = ancii[n]
             return n
         except:
-            n = n-(len(ancii)-1)
+            n = n-(len(ancii))
             return n
 
 def corrigirErroNamberNegativo(n):
@@ -45,7 +45,7 @@ def criptografar(chave, mensagem):
 
         while True:
             try:
-                novaMsm += chrSelf(novaLetra)
+                novaMsm += chrSelf(novaLetra) # o modulo
                 break
             except:
                 novaLetra = corrigirErroNamberPositivo(novaLetra)
@@ -71,10 +71,9 @@ def descriptografar(chave, mensagem):
     return novaMsm
 
 
-mensagem = 'Ndonda Daniel Matondo'
+mensagem = '123456789'
 
 chave = len(mensagem)
-#Ebojfm!Bmfy
 
 texto = criptografar(chave, mensagem)
 
