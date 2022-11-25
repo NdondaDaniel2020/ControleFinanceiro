@@ -1051,7 +1051,6 @@ class MainwindowSC(QMainWindow):
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindowMW()
         self.ui.setupUi(self)
-        print(UsuiarioGlobal)
         self.move(140, 15)
 
         self.setWindowFlags(Qt.FramelessWindowHint)
@@ -1060,6 +1059,9 @@ class MainwindowSC(QMainWindow):
         self.toobtn = True
 
         self.eventoConnect()
+
+        if not UsuiarioGlobal == "":
+            self.ui.NameEmp.setText(UsuiarioGlobal) # meter o nome do usuario por segundos na aplicação
 
         self.ui.minimisar.clicked.connect(lambda: self.showMinimized())
         self.ui.NormalMax.clicked.connect(lambda: self.MaxMin())
@@ -1095,7 +1097,6 @@ class MainwindowSC(QMainWindow):
         self.ui.arrow_right.clicked.connect(self.navegWeb)
         self.ui.voz_btn.clicked.connect(self.captacaoAudio)
 
-
         self.ui.LineUrl.returnPressed.connect(lambda: self.loandEx(self.ui.LineUrl.text()))
         self.ui.pesquisar_btn.clicked.connect(lambda: self.loandEx(self.ui.LineUrl.text()))
 
@@ -1108,13 +1109,7 @@ class MainwindowSC(QMainWindow):
         self.top = CustomGrip(self, Qt.TopEdge, True)
         self.bottom = CustomGrip(self, Qt.BottomEdge, True)
 
-
         self.show() # mostrar janela
-
-
-
-        if not UsuiarioGlobal == "":
-            self.demostraNomeUser()  # mostra o nome e depois troca a logo
 
         self.TimerFont = QTimer()
         self.TimerFont.timeout.connect(lambda: self.tamanhoFont())
@@ -1148,14 +1143,9 @@ class MainwindowSC(QMainWindow):
         self.ui.DNA_LEdit.textChanged.connect(self.DNA_LEditTextChanged)
         self.ui.DNA_aoa_LEdit.textChanged.connect(self.DNA_aoa_LEditTextChanged)
 
+        QTimer.singleShot(2800, lambda: self.ui.NameEmp.setText("Finacial Control")) # mostra o nome da app se tesr sido
+        # alterada pelo nome do usuario que utilizou
 
-
-
-    # este metodo e responsavel por mostrar o nome do utilizador e depoi troca pelo do systema
-    def demostraNomeUser(self):
-        global UsuiarioGlobal
-        QTimer.singleShot(700, lambda: self.ui.NameEmp.setText(UsuiarioGlobal))
-        QTimer.singleShot(1000, lambda: self.ui.NameEmp.setText("Finacial Control"))
 
     # pega a posicao global
     def mousePressEvent(self, event):
