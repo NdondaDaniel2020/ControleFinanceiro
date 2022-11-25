@@ -15188,7 +15188,7 @@ border-bottom-right-radius:15px;</string>
                      <widget class="QWidget" name="scrollAreaWidgetContents">
                       <property name="geometry">
                        <rect>
-                        <x>0</x>
+                        <x>-527</x>
                         <y>0</y>
                         <width>1655</width>
                         <height>119</height>
