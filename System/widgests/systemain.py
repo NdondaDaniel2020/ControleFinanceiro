@@ -1084,7 +1084,7 @@ class MainwindowSC(QMainWindow):
         self.ui.Infomaney_btn.clicked.connect(self.areaClick)
         self.ui.Dinherama_btn.clicked.connect(self.areaClick)
         self.ui.CMEgroup_btn.clicked.connect(self.areaClick)
-        self.ui.dropBox_btn.clicked.connect(self.areaClick)
+        self.ui.Economia_btn.clicked.connect(self.areaClick)
         self.ui.help_btnF_2.clicked.connect(self.areaClick)
 
         # responsavel por abrir salvar e criar arquivos
@@ -1203,7 +1203,7 @@ class MainwindowSC(QMainWindow):
             if event.button() == Qt.LeftButton:
                 self.simpficaLond(self.ui.page_Extras, 0, "https://www.cmegroup.com/")
 
-        def DropBoxMousePressEvent(event: QMouseEvent):
+        def EconomiaMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
                 self.simpficaLond(self.ui.page_Extras, 0, "https://www.dropbox.com/")
 
@@ -1228,10 +1228,10 @@ class MainwindowSC(QMainWindow):
         self.ui.Infomaney_lbl.mousePressEvent = InfomaneyMousePressEvent
         self.ui.frame_Dinherama.mousePressEvent = DinheramaMousePressEvent
         self.ui.Dinherama_lbl.mousePressEvent = DinheramaMousePressEvent
-        self.ui.frame_CMEgroup.mousePressEvent = CMEgroupnCMEgroupMousePressEvent
+        self.ui.frame_CMEgroup.mousePressEvent = CMEgroupMousePressEvent
         self.ui.CMEgroup_lbl.mousePressEvent = CMEgroupMousePressEvent
-        self.ui.frame_DropBox.mousePressEvent = DropBoxMousePressEvent
-        self.ui.dropBox_lbl.mousePressEvent = DropBoxMousePressEvent
+        self.ui.frame_Economia.mousePressEvent = EconomiaMousePressEvent
+        self.ui.Economia_lbl.mousePressEvent = EconomiaMousePressEvent
         self.ui.frame_Helpe.mousePressEvent = HelpMousePressEvent
         self.ui.help_lbl.mousePressEvent = HelpMousePressEvent
 
@@ -1275,8 +1275,8 @@ class MainwindowSC(QMainWindow):
         self.ui.frame_raspberry.mouseMoveEvent = moveScroll
         self.ui.frame_raspberry.mouseReleaseEvent = releasecroll
 
-        self.ui.frame_DropBox.mouseMoveEvent = moveScroll
-        self.ui.frame_DropBox.mouseReleaseEvent = releasecroll
+        self.ui.frame_Economia.mouseMoveEvent = moveScroll
+        self.ui.frame_Economia.mouseReleaseEvent = releasecroll
 
         self.ui.frame_Dinherama.mouseMoveEvent = moveScroll
         self.ui.frame_Dinherama.mouseReleaseEvent = releasecroll
@@ -1520,7 +1520,7 @@ class MainwindowSC(QMainWindow):
             self.simpficaLond(self.ui.page_Extras, 0, "https://dinheirama.com/")
         elif name_btn == 'CMEgroup_btn':
             self.simpficaLond(self.ui.page_Extras, 0, "https://www.cmegroup.com/")
-        elif name_btn == 'dropBox_btn':
+        elif name_btn == 'Economia_btn':
             self.simpficaLond(self.ui.page_Extras, 0, "https://www.dropbox.com/")
         elif name_btn == 'raspberry_btn':
             self.simpficaLond(self.ui.page_Extras, 0, "https://www.raspberrypi.org/")
