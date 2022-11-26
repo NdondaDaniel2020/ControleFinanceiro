@@ -1045,12 +1045,13 @@ class SplashCreen(QMainWindow):
 
 
 
+
 class MainwindowSC(QMainWindow):
     def __init__(self):
-        global UsuiarioGlobal
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindowMW()
         self.ui.setupUi(self)
+
         self.move(140, 15)
 
         self.setWindowFlags(Qt.FramelessWindowHint)
@@ -1059,9 +1060,6 @@ class MainwindowSC(QMainWindow):
         self.toobtn = True
 
         self.eventoConnect()
-
-        if not UsuiarioGlobal == "":
-            self.ui.NameEmp.setText(UsuiarioGlobal) # meter o nome do usuario por segundos na aplicação
 
         self.ui.minimisar.clicked.connect(lambda: self.showMinimized())
         self.ui.NormalMax.clicked.connect(lambda: self.MaxMin())
@@ -1078,14 +1076,14 @@ class MainwindowSC(QMainWindow):
         self.ui.perfil_btn.clicked.connect(self.areaClick)
         self.ui.web_btn_2.clicked.connect(self.areaClick)
         self.ui.Home.clicked.connect(self.areaClick)
-        self.ui.Blender_btl.clicked.connect(self.areaClick)
-        self.ui.unity_btn.clicked.connect(self.areaClick)
+        self.ui.GoogleFinance_btl.clicked.connect(self.areaClick)
+        self.ui.YahooFinance_btn.clicked.connect(self.areaClick)
 
-        self.ui.gmail_btn.clicked.connect(self.areaClick)
-        self.ui.bing_btn.clicked.connect(self.areaClick)
-        self.ui.hboGo_btn.clicked.connect(self.areaClick)
-        self.ui.source_btn.clicked.connect(self.areaClick)
-        self.ui.electron_btn.clicked.connect(self.areaClick)
+        self.ui.investing_btn.clicked.connect(self.areaClick)
+        self.ui.BLHL_btn.clicked.connect(self.areaClick)
+        self.ui.Infomaney_btn.clicked.connect(self.areaClick)
+        self.ui.Dinherama_btn.clicked.connect(self.areaClick)
+        self.ui.CMEgroup_btn.clicked.connect(self.areaClick)
         self.ui.dropBox_btn.clicked.connect(self.areaClick)
         self.ui.help_btnF_2.clicked.connect(self.areaClick)
 
@@ -1096,6 +1094,7 @@ class MainwindowSC(QMainWindow):
         self.ui.arrow_left.clicked.connect(self.navegWeb)
         self.ui.arrow_right.clicked.connect(self.navegWeb)
         self.ui.voz_btn.clicked.connect(self.captacaoAudio)
+
 
         self.ui.LineUrl.returnPressed.connect(lambda: self.loandEx(self.ui.LineUrl.text()))
         self.ui.pesquisar_btn.clicked.connect(lambda: self.loandEx(self.ui.LineUrl.text()))
@@ -1143,8 +1142,6 @@ class MainwindowSC(QMainWindow):
         self.ui.DNA_LEdit.textChanged.connect(self.DNA_LEditTextChanged)
         self.ui.DNA_aoa_LEdit.textChanged.connect(self.DNA_aoa_LEditTextChanged)
 
-        QTimer.singleShot(2800, lambda: self.ui.NameEmp.setText("Finacial Control")) # mostra o nome da app se tesr sido
-        # alterada pelo nome do usuario que utilizou
 
 
     # pega a posicao global
@@ -1178,35 +1175,33 @@ class MainwindowSC(QMainWindow):
         #############################################################################
         # TOSD OS EVENTOS A BAIXO SAO EVENTOS DE CLICK DO FRAMES DE TECNOLOGIA
 
-        def BlenderMousePressEvent(event: QMouseEvent):
+        def GoogleFinanceMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.blender.org/")
+                self.simpficaLond(self.ui.page_Extras, 0, "https://www.google.com/finance/?hl=pt")
 
-        def UnityMousePressEvent(event: QMouseEvent):
+        def YahooFinanceMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://unity.com/")
+                self.simpficaLond(self.ui.page_Extras, 0, "https://finance.yahoo.com/")
 
-        def GmailMousePressEvent(event: QMouseEvent):
+        def InvestingMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, """https://www.google.com/
-                                   search?q=gmail&rlz=1C1CHWL_pt-PTAO1018AO1018&oq=gmail&aqs=chrome..69i57j0i433i512j0i131i433i512l2j0i433i512j0i512j0i131i433i512j69i65.6095j0j4&sourceid=chrome&ie=UTF-8
-                                   """)
+                self.simpficaLond(self.ui.page_Extras, 0, """https://www.investing.com/""")
 
-        def BingMousePressEvent(event: QMouseEvent):
+        def BLHLMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.bing.com/")
+                self.simpficaLond(self.ui.page_Extras, 0, "https://www.nutsaboutmoney.com/investing/hargreaves-lansdown-alternatives")
 
-        def HBOgoMousePressEvent(event: QMouseEvent):
+        def InfomaneyMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.hbobrasil.com/")
+                self.simpficaLond(self.ui.page_Extras, 0, "https://www.infomoney.com.br/")
 
-        def SourceMousePressEvent(event: QMouseEvent):
+        def DinheramaMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.thesource.ca/en-ca")
+                self.simpficaLond(self.ui.page_Extras, 0, "https://dinheirama.com/")
 
-        def ElectronMousePressEvent(event: QMouseEvent):
+        def CMEgroupMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://tecnoblog.net/responde/o-que-e-um-processador/")
+                self.simpficaLond(self.ui.page_Extras, 0, "https://www.cmegroup.com/")
 
         def DropBoxMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
@@ -1218,23 +1213,23 @@ class MainwindowSC(QMainWindow):
 
         def HelpMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.thesource.ca/en-ca")
+                self.simpficaLond(self.ui.page_Extras, 0, "https://dinheirama.com/")
 
 
-        self.ui.frame_Blender.mousePressEvent = BlenderMousePressEvent
-        self.ui.Blender_lbl.mousePressEvent = BlenderMousePressEvent
-        self.ui.frame_Unity.mousePressEvent = UnityMousePressEvent
-        self.ui.unity_lbl.mousePressEvent = UnityMousePressEvent
-        self.ui.frame_Gmail.mousePressEvent = GmailMousePressEvent
-        self.ui.gmail_lbl.mousePressEvent = GmailMousePressEvent
-        self.ui.frame_Bing.mousePressEvent = BingMousePressEvent
-        self.ui.bing_lbl.mousePressEvent = BingMousePressEvent
-        self.ui.frame_HBOgo.mousePressEvent = HBOgoMousePressEvent
-        self.ui.hboGo_lbl.mousePressEvent = HBOgoMousePressEvent
-        self.ui.frame_Source.mousePressEvent = SourceMousePressEvent
-        self.ui.source_lbl.mousePressEvent = SourceMousePressEvent
-        self.ui.frame_Electron.mousePressEvent = ElectronMousePressEvent
-        self.ui.electron_lbl.mousePressEvent = ElectronMousePressEvent
+        self.ui.frame_GoogleFinance.mousePressEvent = GoogleFinanceMousePressEvent
+        self.ui.GoogleFinance_lbl.mousePressEvent = GoogleFinanceMousePressEvent
+        self.ui.frame_YahooFinance.mousePressEvent = YahooFinanceMousePressEvent
+        self.ui.YahooFinance_lbl.mousePressEvent = YahooFinanceMousePressEvent
+        self.ui.frame_Investing.mousePressEvent = InvestingMousePressEvent
+        self.ui.Investing_lbl.mousePressEvent = InvestingMousePressEvent
+        self.ui.frame_BLHL.mousePressEvent = BLHLMousePressEvent
+        self.ui.BLHL_lbl.mousePressEvent = BLHLMousePressEvent
+        self.ui.frame_Infomaney.mousePressEvent = InfomaneyMousePressEvent
+        self.ui.Infomaney_lbl.mousePressEvent = InfomaneyMousePressEvent
+        self.ui.frame_Dinherama.mousePressEvent = DinheramaMousePressEvent
+        self.ui.Dinherama_lbl.mousePressEvent = DinheramaMousePressEvent
+        self.ui.frame_CMEgroup.mousePressEvent = CMEgroupnCMEgroupMousePressEvent
+        self.ui.CMEgroup_lbl.mousePressEvent = CMEgroupMousePressEvent
         self.ui.frame_DropBox.mousePressEvent = DropBoxMousePressEvent
         self.ui.dropBox_lbl.mousePressEvent = DropBoxMousePressEvent
         self.ui.frame_Helpe.mousePressEvent = HelpMousePressEvent
@@ -1265,35 +1260,35 @@ class MainwindowSC(QMainWindow):
                 event.accept()
 
         # conectcoes responsavel por mover o scroll pelos frmames
-        self.ui.frame_Blender.mouseMoveEvent = moveScroll
-        self.ui.frame_Blender.mouseReleaseEvent = releasecroll
+        self.ui.frame_GoogleFinance.mouseMoveEvent = moveScroll
+        self.ui.frame_GoogleFinance.mouseReleaseEvent = releasecroll
 
-        self.ui.frame_Electron.mouseMoveEvent = moveScroll
-        self.ui.frame_Electron.mouseReleaseEvent = releasecroll
+        self.ui.frame_CMEgroup.mouseMoveEvent = moveScroll
+        self.ui.frame_CMEgroup.mouseReleaseEvent = releasecroll
 
-        self.ui.frame_Unity.mousePressEvent = moveScroll
-        self.ui.frame_Unity.mouseReleaseEvent = releasecroll
+        self.ui.frame_YahooFinance.mousePressEvent = moveScroll
+        self.ui.frame_YahooFinance.mouseReleaseEvent = releasecroll
 
         self.ui.frame_Helpe.mousePressEvent = moveScroll
         self.ui.frame_Helpe.mouseReleaseEvent = releasecroll
 
-        #self.ui.frame_raspberry.mouseMoveEvent = moveScroll
-        #.ui.frame_raspberry.mouseReleaseEvent = releasecroll
+        self.ui.frame_raspberry.mouseMoveEvent = moveScroll
+        self.ui.frame_raspberry.mouseReleaseEvent = releasecroll
 
         self.ui.frame_DropBox.mouseMoveEvent = moveScroll
         self.ui.frame_DropBox.mouseReleaseEvent = releasecroll
 
-        self.ui.frame_Source.mouseMoveEvent = moveScroll
-        self.ui.frame_Source.mouseReleaseEvent = releasecroll
+        self.ui.frame_Dinherama.mouseMoveEvent = moveScroll
+        self.ui.frame_Dinherama.mouseReleaseEvent = releasecroll
 
-        self.ui.frame_HBOgo.mouseMoveEvent = moveScroll
-        self.ui.frame_HBOgo.mouseReleaseEvent = releasecroll
+        self.ui.frame_Infomaney.mouseMoveEvent = moveScroll
+        self.ui.frame_Infomaney.mouseReleaseEvent = releasecroll
 
-        self.ui.frame_Bing.mouseMoveEvent = moveScroll
-        self.ui.frame_Bing.mouseReleaseEvent = releasecroll
+        self.ui.frame_BLHL.mouseMoveEvent = moveScroll
+        self.ui.frame_BLHL.mouseReleaseEvent = releasecroll
 
-        self.ui.frame_Gmail.mouseMoveEvent = moveScroll
-        self.ui.frame_Gmail.mouseReleaseEvent = releasecroll
+        self.ui.frame_Investing.mouseMoveEvent = moveScroll
+        self.ui.frame_Investing.mouseReleaseEvent = releasecroll
 
         self.ui.frame_MarcaTech.mouseMoveEvent = moveScroll
         self.ui.frame_MarcaTech.mouseReleaseEvent = releasecroll
@@ -1511,28 +1506,26 @@ class MainwindowSC(QMainWindow):
             self.simpficaLond(self.ui.page_web, 0)
         elif name_btn == 'help_btn':
             self.simpficaLond(self.ui.page_Extras, 0)
-        elif name_btn == 'Blender_btl':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.blender.org/")
-        elif name_btn == 'unity_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://unity.com/")
-        elif name_btn == 'gmail_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, """https://www.google.com/
-            search?q=gmail&rlz=1C1CHWL_pt-PTAO1018AO1018&oq=gmail&aqs=chrome..69i57j0i433i512j0i131i433i512l2j0i433i512j0i512j0i131i433i512j69i65.6095j0j4&sourceid=chrome&ie=UTF-8
-            """)
-        elif name_btn == 'bing_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.bing.com/")
-        elif name_btn == 'hboGo_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.hbobrasil.com/")
-        elif name_btn == 'source_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.thesource.ca/en-ca")
-        elif name_btn == 'electron_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://tecnoblog.net/responde/o-que-e-um-processador/")
+        elif name_btn == 'GoogleFinance_btl':
+            self.simpficaLond(self.ui.page_Extras, 0, "https://www.google.com/finance/?hl=pt")
+        elif name_btn == 'YahooFinance_btn':
+            self.simpficaLond(self.ui.page_Extras, 0, "https://finance.yahoo.com/")
+        elif name_btn == 'Investing_btn':
+            self.simpficaLond(self.ui.page_Extras, 0, """https://www.investing.com/""")
+        elif name_btn == 'BLHL_btn':
+            self.simpficaLond(self.ui.page_Extras, 0, "https://www.nutsaboutmoney.com/investing/hargreaves-lansdown-alternatives")
+        elif name_btn == 'Infomaney_btn':
+            self.simpficaLond(self.ui.page_Extras, 0, "https://www.infomoney.com.br/")
+        elif name_btn == 'Dinherama_btn':
+            self.simpficaLond(self.ui.page_Extras, 0, "https://dinheirama.com/")
+        elif name_btn == 'CMEgroup_btn':
+            self.simpficaLond(self.ui.page_Extras, 0, "https://www.cmegroup.com/")
         elif name_btn == 'dropBox_btn':
             self.simpficaLond(self.ui.page_Extras, 0, "https://www.dropbox.com/")
         elif name_btn == 'raspberry_btn':
             self.simpficaLond(self.ui.page_Extras, 0, "https://www.raspberrypi.org/")
         elif name_btn == 'help_btnF_2':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.thesource.ca/en-ca")
+            self.simpficaLond(self.ui.page_Extras, 0, "https://www.thesource.ca/en-ca")##############################
         elif name_btn == 'perfil_btn':
             self.simpficaLond(self.ui.page_perfil)
             self.fontAnimation(0)
@@ -1562,6 +1555,7 @@ class MainwindowSC(QMainWindow):
                 self.ui.toolButton.setIcon(icon15)
                 self.toobtn = True
                 QTimer.singleShot(100, lambda: self.lerText(self.ui.plainTextEdit.toPlainText()))
+
 
     # metodo que anima o frame onde esta o regulador de font
     def fontAnimation(self, n):
