@@ -1066,7 +1066,7 @@ class MainwindowSC(QMainWindow):
         self.ui.fechar.clicked.connect(lambda: quit())
 
         self.ui.settings.clicked.connect(self.leftmenu)
-        self.ui.double_up.clicked.connect(self.scrollAreaAnimat)
+        self.ui.double_up.clicked.connect(self.scrollAreaAnimat)##
         self.ui.web_btn.clicked.connect(self.areaClick)
         self.ui.help_btn.clicked.connect(self.areaClick)
         self.ui.setting_btn.clicked.connect(self.areaClick)
@@ -1079,7 +1079,7 @@ class MainwindowSC(QMainWindow):
         self.ui.GoogleFinance_btl.clicked.connect(self.areaClick)
         self.ui.YahooFinance_btn.clicked.connect(self.areaClick)
 
-        self.ui.investing_btn.clicked.connect(self.areaClick)
+        self.ui.Investing_btn.clicked.connect(self.areaClick)
         self.ui.BLHL_btn.clicked.connect(self.areaClick)
         self.ui.Infomaney_btn.clicked.connect(self.areaClick)
         self.ui.Dinherama_btn.clicked.connect(self.areaClick)
@@ -1217,21 +1217,13 @@ class MainwindowSC(QMainWindow):
 
 
         self.ui.frame_GoogleFinance.mousePressEvent = GoogleFinanceMousePressEvent
-        self.ui.GoogleFinance_lbl.mousePressEvent = GoogleFinanceMousePressEvent
         self.ui.frame_YahooFinance.mousePressEvent = YahooFinanceMousePressEvent
-        self.ui.YahooFinance_lbl.mousePressEvent = YahooFinanceMousePressEvent
         self.ui.frame_Investing.mousePressEvent = InvestingMousePressEvent
-        self.ui.Investing_lbl.mousePressEvent = InvestingMousePressEvent
         self.ui.frame_BLHL.mousePressEvent = BLHLMousePressEvent
-        self.ui.BLHL_lbl.mousePressEvent = BLHLMousePressEvent
         self.ui.frame_Infomaney.mousePressEvent = InfomaneyMousePressEvent
-        self.ui.Infomaney_lbl.mousePressEvent = InfomaneyMousePressEvent
         self.ui.frame_Dinherama.mousePressEvent = DinheramaMousePressEvent
-        self.ui.Dinherama_lbl.mousePressEvent = DinheramaMousePressEvent
         self.ui.frame_CMEgroup.mousePressEvent = CMEgroupMousePressEvent
-        self.ui.CMEgroup_lbl.mousePressEvent = CMEgroupMousePressEvent
         self.ui.frame_Economia.mousePressEvent = EconomiaMousePressEvent
-        self.ui.Economia_lbl.mousePressEvent = EconomiaMousePressEvent
         self.ui.frame_Helpe.mousePressEvent = HelpMousePressEvent
         self.ui.help_lbl.mousePressEvent = HelpMousePressEvent
 
@@ -1272,9 +1264,6 @@ class MainwindowSC(QMainWindow):
         self.ui.frame_Helpe.mousePressEvent = moveScroll
         self.ui.frame_Helpe.mouseReleaseEvent = releasecroll
 
-        self.ui.frame_raspberry.mouseMoveEvent = moveScroll
-        self.ui.frame_raspberry.mouseReleaseEvent = releasecroll
-
         self.ui.frame_Economia.mouseMoveEvent = moveScroll
         self.ui.frame_Economia.mouseReleaseEvent = releasecroll
 
@@ -1289,9 +1278,6 @@ class MainwindowSC(QMainWindow):
 
         self.ui.frame_Investing.mouseMoveEvent = moveScroll
         self.ui.frame_Investing.mouseReleaseEvent = releasecroll
-
-        self.ui.frame_MarcaTech.mouseMoveEvent = moveScroll
-        self.ui.frame_MarcaTech.mouseReleaseEvent = releasecroll
 
         ########################################################
         ##### scroll das configuaracoes #######################
@@ -1460,36 +1446,36 @@ class MainwindowSC(QMainWindow):
         self.leftmenuAnimation.start()
 
     # a metodo que anima o tec zone
-    def scrollAreaAnimat(self):
+    def scrollAreaAnimat(self):  #########################################################################################
         tamanho_atual = self.ui.scrollArea.height()
-
+        print(tamanho_atual)
 
         if tamanho_atual == 0:
             ai = 0
-            af = 107
+            af = 170
             i = 0
-            f = 105
+            f = 120
             icon = QIcon()
             icon.addFile(u"../img/24x24/cil-chevron-double-down-alt.png", QSize(), QIcon.Normal, QIcon.Off)
             self.ui.double_up.setIcon(icon)
             self.ui.double_up.setIconSize(QSize(50, 40))
 
         else:
-            i = 105
+            i = 10
             f = 0
-            ai = 107
+            ai = 170
             af = 0
             icon = QIcon()
             icon.addFile(u"../img/24x24/cil-chevron-double-up-alt.png", QSize(), QIcon.Normal, QIcon.Off)
             self.ui.double_up.setIcon(icon)
             self.ui.double_up.setIconSize(QSize(25, 25))
 
-        self.scrollAreaAnimaton = QPropertyAnimation(self.ui.scrollArea, b'minimumHeight')
-        self.scrollAreaAnimaton.setStartValue(i)
-        self.scrollAreaAnimaton.setEndValue(f)
-        self.scrollAreaAnimaton.setDuration(400)
-        self.scrollAreaAnimaton.setEasingCurve(QEasingCurve.InOutCirc)
-        self.scrollAreaAnimaton.start()
+        # self.scrollAreaAnimaton = QPropertyAnimation(self.ui.scrollArea, b'minimumHeight')
+        # self.scrollAreaAnimaton.setStartValue(i)
+        # self.scrollAreaAnimaton.setEndValue(f)
+        # self.scrollAreaAnimaton.setDuration(400)
+        # self.scrollAreaAnimaton.setEasingCurve(QEasingCurve.InOutCirc)
+        # self.scrollAreaAnimaton.start()
 
         self.scrollframeAreaAnimaton = QPropertyAnimation(self.ui.frame_MarcaTech, b'minimumHeight')
         self.scrollframeAreaAnimaton.setStartValue(ai)
@@ -1555,7 +1541,6 @@ class MainwindowSC(QMainWindow):
                 self.ui.toolButton.setIcon(icon15)
                 self.toobtn = True
                 QTimer.singleShot(100, lambda: self.lerText(self.ui.plainTextEdit.toPlainText()))
-
 
     # metodo que anima o frame onde esta o regulador de font
     def fontAnimation(self, n):
@@ -2113,7 +2098,7 @@ class MainwindowSC(QMainWindow):
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = SplashCreen()
+    window = MainwindowSC()
     sys.exit(app.exec())
 
 ##            for itens in self.ui.webEngineView.page().history().items():

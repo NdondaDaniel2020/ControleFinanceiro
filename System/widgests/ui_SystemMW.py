@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'SystemMWemHmYJ.ui'
+## Form generated from reading UI file 'SystemMWSUIhUT.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -6288,7 +6288,7 @@ class Ui_MainWindowMW(object):
 
         self.frame_MarcaTech = QFrame(self.frame_centaralCentral)
         self.frame_MarcaTech.setObjectName(u"frame_MarcaTech")
-        self.frame_MarcaTech.setMinimumSize(QSize(0, 120))
+        self.frame_MarcaTech.setMinimumSize(QSize(0, 170))
         self.frame_MarcaTech.setMaximumSize(QSize(16777215, 16777215))
         self.frame_MarcaTech.setStyleSheet(u"background-color: rgb(159, 80, 239);\n"
 "border-top-left-radius:0px;\n"
@@ -6313,7 +6313,7 @@ class Ui_MainWindowMW(object):
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
         self.scrollAreaWidgetContents.setGeometry(QRect(-362, 0, 1490, 119))
         self.scrollAreaWidgetContents.setMinimumSize(QSize(0, 0))
-        self.scrollAreaWidgetContents.setStyleSheet(u"background-color: rgb(159, 80, 239);\n"
+        self.scrollAreaWidgetContents.setStyleSheet(u"background-color: rgb(255, 0, 0);\n"
 "border-radius:15px;\n"
 "")
         self.horizontalLayout = QHBoxLayout(self.scrollAreaWidgetContents)
@@ -6426,14 +6426,14 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_137.setSpacing(0)
         self.verticalLayout_137.setObjectName(u"verticalLayout_137")
         self.verticalLayout_137.setContentsMargins(0, 0, 0, 0)
-        self.hboGo_btn = QPushButton(self.frame_Infomaney)
-        self.hboGo_btn.setObjectName(u"hboGo_btn")
+        self.Infomaney_btn = QPushButton(self.frame_Infomaney)
+        self.Infomaney_btn.setObjectName(u"Infomaney_btn")
         icon31 = QIcon()
         icon31.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/infomaney.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.hboGo_btn.setIcon(icon31)
-        self.hboGo_btn.setIconSize(QSize(132, 81))
+        self.Infomaney_btn.setIcon(icon31)
+        self.Infomaney_btn.setIconSize(QSize(132, 81))
 
-        self.verticalLayout_137.addWidget(self.hboGo_btn)
+        self.verticalLayout_137.addWidget(self.Infomaney_btn)
 
 
         self.horizontalLayout.addWidget(self.frame_Infomaney)
@@ -6495,14 +6495,14 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_140.setSpacing(0)
         self.verticalLayout_140.setObjectName(u"verticalLayout_140")
         self.verticalLayout_140.setContentsMargins(0, 0, 0, 0)
-        self.economia_btn = QPushButton(self.frame_Economia)
-        self.economia_btn.setObjectName(u"economia_btn")
+        self.Economia_btn = QPushButton(self.frame_Economia)
+        self.Economia_btn.setObjectName(u"Economia_btn")
         icon34 = QIcon()
         icon34.addFile(u"../img/uol economia.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.economia_btn.setIcon(icon34)
-        self.economia_btn.setIconSize(QSize(160, 100))
+        self.Economia_btn.setIcon(icon34)
+        self.Economia_btn.setIconSize(QSize(160, 100))
 
-        self.verticalLayout_140.addWidget(self.economia_btn)
+        self.verticalLayout_140.addWidget(self.Economia_btn)
 
 
         self.horizontalLayout.addWidget(self.frame_Economia)
@@ -6916,9 +6916,9 @@ class Ui_MainWindowMW(object):
 #endif // QT_CONFIG(whatsthis)
         self.BLHL_btn.setText("")
 #if QT_CONFIG(whatsthis)
-        self.hboGo_btn.setWhatsThis("")
+        self.Infomaney_btn.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.hboGo_btn.setText("")
+        self.Infomaney_btn.setText("")
 #if QT_CONFIG(whatsthis)
         self.Dinherama_btn.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
@@ -6928,9 +6928,9 @@ class Ui_MainWindowMW(object):
 #endif // QT_CONFIG(whatsthis)
         self.CMEgroup_btn.setText("")
 #if QT_CONFIG(whatsthis)
-        self.economia_btn.setWhatsThis("")
+        self.Economia_btn.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
-        self.economia_btn.setText("")
+        self.Economia_btn.setText("")
 #if QT_CONFIG(whatsthis)
         self.help_lbl.setWhatsThis(QCoreApplication.translate("MainWindowMW", u"<html><head/><body><p><br/></p><p><span style=\" color:#ffffff;\">Unity</span></p></body></html>", None))
 #endif // QT_CONFIG(whatsthis)

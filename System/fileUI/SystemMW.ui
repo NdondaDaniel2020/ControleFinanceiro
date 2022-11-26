@@ -15121,7 +15121,7 @@ border: 2px solid rgb(90, 173, 253);
                   <property name="minimumSize">
                    <size>
                     <width>0</width>
-                    <height>120</height>
+                    <height>170</height>
                    </size>
                   </property>
                   <property name="maximumSize">
@@ -15201,7 +15201,7 @@ border-bottom-right-radius:15px;</string>
                        </size>
                       </property>
                       <property name="styleSheet">
-                       <string notr="true">background-color: rgb(159, 80, 239);
+                       <string notr="true">background-color: rgb(255, 0, 0);
 border-radius:15px;
 </string>
                       </property>
@@ -15512,7 +15512,7 @@ border-radius:15px;
                            <number>0</number>
                           </property>
                           <item>
-                           <widget class="QPushButton" name="hboGo_btn">
+                           <widget class="QPushButton" name="Infomaney_btn">
                             <property name="whatsThis">
                              <string/>
                             </property>
@@ -15698,7 +15698,7 @@ border-radius:15px;
                            <number>0</number>
                           </property>
                           <item>
-                           <widget class="QPushButton" name="economia_btn">
+                           <widget class="QPushButton" name="Economia_btn">
                             <property name="whatsThis">
                              <string/>
                             </property>
