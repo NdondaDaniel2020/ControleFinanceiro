@@ -1205,7 +1205,7 @@ class MainwindowSC(QMainWindow):
 
         def EconomiaMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.dropbox.com/")
+                self.simpficaLond(self.ui.page_Extras, 0, "https://economia.uol.com.br/cotacoes/")
 
         def AndroidMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
@@ -1521,7 +1521,7 @@ class MainwindowSC(QMainWindow):
         elif name_btn == 'CMEgroup_btn':
             self.simpficaLond(self.ui.page_Extras, 0, "https://www.cmegroup.com/")
         elif name_btn == 'Economia_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.dropbox.com/")
+            self.simpficaLond(self.ui.page_Extras, 0, "https://economia.uol.com.br/cotacoes/")
         elif name_btn == 'raspberry_btn':
             self.simpficaLond(self.ui.page_Extras, 0, "https://www.raspberrypi.org/")
         elif name_btn == 'help_btnF_2':
