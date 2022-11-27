@@ -914,7 +914,7 @@ QPushButton:pressed{
                               </property>
                              </widget>
                             </item>
-                            <item alignment="Qt::AlignHCenter">
+                            <item>
                              <widget class="QLabel" name="data">
                               <property name="minimumSize">
                                <size>
@@ -942,7 +942,7 @@ QPushButton:pressed{
                               </property>
                              </widget>
                             </item>
-                            <item alignment="Qt::AlignHCenter">
+                            <item>
                              <widget class="QLabel" name="criadoPor">
                               <property name="minimumSize">
                                <size>
@@ -4179,7 +4179,7 @@ border-radius:10px;}</string>
                                     <rect>
                                      <x>0</x>
                                      <y>0</y>
-                                     <width>863</width>
+                                     <width>865</width>
                                      <height>352</height>
                                     </rect>
                                    </property>
@@ -5509,7 +5509,7 @@ color:rgb(255, 255, 255)
                               <rect>
                                <x>0</x>
                                <y>0</y>
-                               <width>879</width>
+                               <width>881</width>
                                <height>1830</height>
                               </rect>
                              </property>

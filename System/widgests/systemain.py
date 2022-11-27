@@ -3,13 +3,14 @@ import json
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
+from PySide6.QtCharts import *
 
 from packeg.custom_grips import CustomGrip
 from packeg.circular_progress import CircularProgress
-# from System.widgests.ui_SystemMW import Ui_MainWindow
+
 from System.widgests.packeg.database import database
 from ui_SystemSC import Ui_SplashCreen
-from ui_SystemMW2 import Ui_MainWindowMW
+from ui_SystemMW import Ui_MainWindowMW
 from System.widgests.packeg.Criptografia import criptografar
 
 from time import sleep
@@ -1108,6 +1109,8 @@ class MainwindowSC(QMainWindow):
         self.top = CustomGrip(self, Qt.TopEdge, True)
         self.bottom = CustomGrip(self, Qt.BottomEdge, True)
 
+        self.grafico()  # chamar o metodo que cria o grafico
+
         self.show() # mostrar janela
 
         self.TimerFont = QTimer()
@@ -2127,6 +2130,63 @@ class MainwindowSC(QMainWindow):
         return saida
 
 
+    def grafico(self):
+
+
+        self.set0 = QBarSet("Jane")
+        self.set1 = QBarSet("John")
+        self.set2 = QBarSet("Axel")
+        self.set3 = QBarSet("Mary")
+        self.set4 = QBarSet("Sam")
+
+        self.set0.append([1, 2, 3, 4, 5, 6])
+        self.set1.append([5, 0, 0, 4, 0, 7])
+        self.set2.append([3, 5, 8, 13, 8, 5])
+        self.set3.append([5, 6, 7, 3, 4, 5])
+        self.set4.append([9, 7, 5, 3, 1, 2])
+
+        self._bar_series = QBarSeries()
+        self._bar_series.append(self.set0)
+        self._bar_series.append(self.set1)
+        self._bar_series.append(self.set2)
+        self._bar_series.append(self.set3)
+        self._bar_series.append(self.set4)
+
+        self._line_series = QLineSeries()
+        self._line_series.setName("trend")
+        self._line_series.append(QPoint(0, 4))
+        self._line_series.append(QPoint(1, 15))
+        self._line_series.append(QPoint(2, 20))
+        self._line_series.append(QPoint(3, 4))
+        self._line_series.append(QPoint(4, 12))
+        self._line_series.append(QPoint(5, 17))
+
+        self.chart = QChart()
+        self.chart.addSeries(self._bar_series)
+        self.chart.addSeries(self._line_series)
+        self.chart.setTitle("Line and barchart example")
+
+        self.categories = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"]
+        self._axis_x = QBarCategoryAxis()
+        self._axis_x.append(self.categories)
+        self.chart.setAxisX(self._axis_x, self._line_series)
+        self.chart.setAxisX(self._axis_x, self._bar_series)
+        self._axis_x.setRange("Jan", "Jun")
+
+        self._axis_y = QValueAxis()
+        self.chart.setAxisY(self._axis_y, self._line_series)
+        self.chart.setAxisY(self._axis_y, self._bar_series)
+        self._axis_y.setRange(0, 20)
+
+        self.chart.legend().setVisible(True)
+        self.chart.legend().setAlignment(Qt.AlignBottom)
+
+        self._chart_view = QChartView(self.chart)
+        self._chart_view.setRenderHint(QPainter.Antialiasing)
+
+        # self.setCentralWidget(self._chart_view)
+
+        self.ui.verticalLayout_graficoMain.addWidget(self._chart_view)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
