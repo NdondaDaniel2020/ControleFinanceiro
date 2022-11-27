@@ -59,6 +59,9 @@ class Ui_MainWindow(object):
         self.frame.setFrameShadow(QFrame.Raised)
         self.verticalLayout_2 = QVBoxLayout(self.frame)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
+        self.verticalLayout_2.setSpacing(0)
+        self.verticalLayout_2.setContentsMargins(50, 50, 50, 50)
+
 
         self.verticalLayout.addWidget(self.frame)
 
