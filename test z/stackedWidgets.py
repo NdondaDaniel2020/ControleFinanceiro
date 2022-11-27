@@ -1,6 +1,4 @@
-import random
 from PySide6 import QtCore, QtGui, QtWidgets
-
 
 class SlidingStackedWidget(QtWidgets.QStackedWidget):
     def __init__(self, parent=None):
@@ -15,30 +13,34 @@ class SlidingStackedWidget(QtWidgets.QStackedWidget):
         self.m_pnow = QtCore.QPoint(0, 0)
         self.m_active = False
 
+    # neste metodo e opcional para configuar a direção do slide
     def setDirection(self, direction):
         self.m_direction = direction
 
     def setSpeed(self, speed):
         self.m_speed = speed
 
+    # neste metodo e opcional para configuar a aniamção
     def setAnimation(self, animationtype):
         self.m_animationtype = animationtype
 
     def setWrap(self, wrap):
         self.m_wrap = wrap
 #####################
+    # este metodo e responsal por criar animacção de pransição para fernte
     @QtCore.Slot()
     def slideInPrev(self):
         now = self.currentIndex()
         if self.m_wrap or now > 0:
             self.slideInIdx(now - 1)
-
+    # ESTe metodo e responsal por criar a animcaçõ de transiçºao para teas
     @QtCore.Slot()
     def slideInNext(self):
         now = self.currentIndex()
         if self.m_wrap or now < (self.count() - 1):
             self.slideInIdx(now + 1)
 
+    # este metodo e responsavel por levar em um especio widget
     def slideInIdx(self, idx):
         if idx > (self.count() - 1):
             idx = idx % self.count()
@@ -112,46 +114,3 @@ class SlidingStackedWidget(QtWidgets.QStackedWidget):
         self.m_active = False
 #############################
 
-class MainWindow(QtWidgets.QMainWindow):
-    def __init__(self, parent=None):
-        super(MainWindow, self).__init__(parent)
-
-        slidingStacked = SlidingStackedWidget()
-        for i in range(3):
-            label = QtWidgets.QLabel(
-                "Qt is cool " + i * "!", alignment=QtCore.Qt.AlignCenter
-            )
-            color = QtGui.QColor(*random.sample(range(255), 3))
-            label.setStyleSheet(
-                "QLabel{ background-color: %s; color : white; font: 40pt}"
-                % (color.name(),)
-            )
-            print(i)
-            slidingStacked.addWidget(label)
-
-        button_prev = QtWidgets.QPushButton(
-            "Previous", pressed=slidingStacked.slideInPrev
-        )
-        button_next = QtWidgets.QPushButton(
-            "Next", pressed=slidingStacked.slideInNext
-        )
-
-        hlay = QtWidgets.QHBoxLayout()
-        hlay.addWidget(button_prev)
-        hlay.addWidget(button_next)
-
-        central_widget = QtWidgets.QWidget()
-        self.setCentralWidget(central_widget)
-        lay = QtWidgets.QVBoxLayout(central_widget)
-        lay.addLayout(hlay)
-        lay.addWidget(slidingStacked)
-
-
-if __name__ == "__main__":
-    import sys
-
-    app = QtWidgets.QApplication(sys.argv)
-    w = MainWindow()
-    w.resize(640, 480)
-    w.show()
-    sys.exit(app.exec_())
