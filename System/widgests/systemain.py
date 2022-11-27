@@ -1447,12 +1447,12 @@ class MainwindowSC(QMainWindow):
 
     # a metodo que anima o tec zone
     def scrollAreaAnimat(self):  #########################################################################################
-        tamanho_atual = self.ui.scrollArea.height()
-        print(tamanho_atual)
+        tamanho_atual = self.ui.frame_MarcaTech.height() #self.ui.scrollArea.height()
+
 
         if tamanho_atual == 0:
             ai = 0
-            af = 170
+            af = 120
             i = 0
             f = 120
             icon = QIcon()
@@ -1461,21 +1461,21 @@ class MainwindowSC(QMainWindow):
             self.ui.double_up.setIconSize(QSize(50, 40))
 
         else:
-            i = 10
+            i = 120
             f = 0
-            ai = 170
+            ai = 120
             af = 0
             icon = QIcon()
             icon.addFile(u"../img/24x24/cil-chevron-double-up-alt.png", QSize(), QIcon.Normal, QIcon.Off)
             self.ui.double_up.setIcon(icon)
             self.ui.double_up.setIconSize(QSize(25, 25))
 
-        # self.scrollAreaAnimaton = QPropertyAnimation(self.ui.scrollArea, b'minimumHeight')
-        # self.scrollAreaAnimaton.setStartValue(i)
-        # self.scrollAreaAnimaton.setEndValue(f)
-        # self.scrollAreaAnimaton.setDuration(400)
-        # self.scrollAreaAnimaton.setEasingCurve(QEasingCurve.InOutCirc)
-        # self.scrollAreaAnimaton.start()
+        self.scrollAreaAnimaton = QPropertyAnimation(self.ui.scrollArea, b'minimumHeight')
+        self.scrollAreaAnimaton.setStartValue(i)
+        self.scrollAreaAnimaton.setEndValue(f)
+        self.scrollAreaAnimaton.setDuration(400)
+        self.scrollAreaAnimaton.setEasingCurve(QEasingCurve.InOutCirc)
+        self.scrollAreaAnimaton.start()
 
         self.scrollframeAreaAnimaton = QPropertyAnimation(self.ui.frame_MarcaTech, b'minimumHeight')
         self.scrollframeAreaAnimaton.setStartValue(ai)

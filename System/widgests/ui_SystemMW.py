@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'SystemMWSUIhUT.ui'
+## Form generated from reading UI file 'SystemMWpWJbmN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -26,7 +26,7 @@ class Ui_MainWindowMW(object):
     def setupUi(self, MainWindowMW):
         if not MainWindowMW.objectName():
             MainWindowMW.setObjectName(u"MainWindowMW")
-        MainWindowMW.resize(1138, 703)
+        MainWindowMW.resize(1138, 750)
         self.centralwidget_styleSheet = QWidget(MainWindowMW)
         self.centralwidget_styleSheet.setObjectName(u"centralwidget_styleSheet")
         self.centralwidget_styleSheet.setStyleSheet(u"QScrollBar:horizontal {\n"
@@ -6288,8 +6288,8 @@ class Ui_MainWindowMW(object):
 
         self.frame_MarcaTech = QFrame(self.frame_centaralCentral)
         self.frame_MarcaTech.setObjectName(u"frame_MarcaTech")
-        self.frame_MarcaTech.setMinimumSize(QSize(0, 170))
-        self.frame_MarcaTech.setMaximumSize(QSize(16777215, 16777215))
+        self.frame_MarcaTech.setMinimumSize(QSize(0, 0))
+        self.frame_MarcaTech.setMaximumSize(QSize(16777215, 0))
         self.frame_MarcaTech.setStyleSheet(u"background-color: rgb(159, 80, 239);\n"
 "border-top-left-radius:0px;\n"
 "border-top-right-radius:0px;\n"
@@ -6307,13 +6307,13 @@ class Ui_MainWindowMW(object):
         self.scrollArea.setMaximumSize(QSize(16777215, 100))
         self.scrollArea.setStyleSheet(u"")
         self.scrollArea.setVerticalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
-        self.scrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOn)
+        self.scrollArea.setHorizontalScrollBarPolicy(Qt.ScrollBarAlwaysOff)
         self.scrollArea.setWidgetResizable(True)
         self.scrollAreaWidgetContents = QWidget()
         self.scrollAreaWidgetContents.setObjectName(u"scrollAreaWidgetContents")
-        self.scrollAreaWidgetContents.setGeometry(QRect(-362, 0, 1490, 119))
+        self.scrollAreaWidgetContents.setGeometry(QRect(0, 0, 1490, 120))
         self.scrollAreaWidgetContents.setMinimumSize(QSize(0, 0))
-        self.scrollAreaWidgetContents.setStyleSheet(u"background-color: rgb(255, 0, 0);\n"
+        self.scrollAreaWidgetContents.setStyleSheet(u"background-color: rgb(159, 80, 239);\n"
 "border-radius:15px;\n"
 "")
         self.horizontalLayout = QHBoxLayout(self.scrollAreaWidgetContents)
