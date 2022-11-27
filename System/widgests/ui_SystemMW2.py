@@ -21,6 +21,7 @@ from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QFrame, QHBoxL
     QProgressBar, QPushButton, QScrollArea, QSizePolicy,
     QSlider, QSpacerItem, QStackedWidget, QToolButton,
     QVBoxLayout, QWidget)
+from packeg.slideStackedWidgets import SlidingStackedWidget
 
 class Ui_MainWindowMW(object):
     def setupUi(self, MainWindowMW):
@@ -653,11 +654,12 @@ class Ui_MainWindowMW(object):
 
         self.horizontalLayout_2.addWidget(self.left_menu)
 
-        self.stackedWidget = QStackedWidget(self.frame)
+        self.stackedWidget = SlidingStackedWidget(self.frame)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setStyleSheet(u"background-color: rgb(159, 80, 239);\n"
-"border-top-left-radius:10px;\n"
-"border-bottom-left-radius:10px;")
+                                         "border-top-left-radius:10px;\n"
+                                         "border-bottom-left-radius:10px;")
+
         self.page_Home = QWidget()
         self.page_Home.setObjectName(u"page_Home")
         self.verticalLayout_12 = QVBoxLayout(self.page_Home)
