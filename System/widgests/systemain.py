@@ -9,7 +9,7 @@ from packeg.circular_progress import CircularProgress
 # from System.widgests.ui_SystemMW import Ui_MainWindow
 from System.widgests.packeg.database import database
 from ui_SystemSC import Ui_SplashCreen
-from ui_SystemMW import Ui_MainWindowMW
+from ui_SystemMW2 import Ui_MainWindowMW
 from System.widgests.packeg.Criptografia import criptografar
 
 from time import sleep
@@ -17,8 +17,8 @@ from datetime import date
 import sys
 import cv2
 import pyttsx3
-import pyaudio
-from vosk import Model, KaldiRecognizer
+import pyaudio ###
+from vosk import Model, KaldiRecognizer ####
 
 
 # variavel global
@@ -1425,15 +1425,21 @@ class MainwindowSC(QMainWindow):
 
         i = 0
         f = 0
+        iqr = 0
+        fqr = 0
         if tamnho_atual == 8:
             i = 8
             f = 200
+            iqr = 0
+            fqr = 192
             icon = QIcon()
             icon.addFile(u"../img/24x24/cil-x-f.png", QSize(), QIcon.Normal, QIcon.Off)
             self.ui.settings.setIcon(icon)
         else:
             i = 200
             f = 8
+            iqr = 192
+            fqr = 0
             icon = QIcon()
             icon.addFile(u"../img/24x24/cil-settings.png", QSize(), QIcon.Normal, QIcon.Off)
             self.ui.settings.setIcon(icon)
@@ -1441,8 +1447,20 @@ class MainwindowSC(QMainWindow):
         self.leftmenuAnimation = QPropertyAnimation(self.ui.left_menu, b'minimumWidth')
         self.leftmenuAnimation.setStartValue(i)
         self.leftmenuAnimation.setEndValue(f)
-        self.leftmenuAnimation.setDuration(400)
+        self.leftmenuAnimation.setDuration(600)
         self.leftmenuAnimation.setEasingCurve(QEasingCurve.InOutCubic)
+
+        self.qranimation = QPropertyAnimation(self.ui.frame_zoneQR, b'minumumWidth')
+        self.qranimation.setStartValue(iqr)
+        self.qranimation.setEndValue(fqr)
+        self.qranimation.setDuration(600)
+        self.qranimation.setEasingCurve(QEasingCurve.InOutCubic)
+
+        self.grounpLeft = QParallelAnimationGroup()
+        self.grounpLeft.addAnimation(self.leftmenuAnimation)
+        self.grounpLeft.addAnimation(self.qranimation)
+        self.grounpLeft.start()
+
         self.leftmenuAnimation.start()
 
     # a metodo que anima o tec zone
@@ -2094,6 +2112,7 @@ class MainwindowSC(QMainWindow):
             saida = "ERROR"
 
         return saida
+
 
 
 if __name__ == "__main__":

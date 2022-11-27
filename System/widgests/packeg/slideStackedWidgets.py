@@ -1,4 +1,4 @@
-from PySide6 import QtCore, QtGui, QtWidgets
+from PySide6 import QtCore, QtWidgets
 
 class SlidingStackedWidget(QtWidgets.QStackedWidget):
     def __init__(self, parent=None):
@@ -17,6 +17,7 @@ class SlidingStackedWidget(QtWidgets.QStackedWidget):
     def setDirection(self, direction):
         self.m_direction = direction
 
+    # este metodo e responsavel pela velociade do slide
     def setSpeed(self, speed):
         self.m_speed = speed
 
@@ -24,15 +25,17 @@ class SlidingStackedWidget(QtWidgets.QStackedWidget):
     def setAnimation(self, animationtype):
         self.m_animationtype = animationtype
 
+    ##########
     def setWrap(self, wrap):
         self.m_wrap = wrap
-#####################
+
     # este metodo e responsal por criar animacção de pransição para fernte
     @QtCore.Slot()
     def slideInPrev(self):
         now = self.currentIndex()
         if self.m_wrap or now > 0:
             self.slideInIdx(now - 1)
+
     # ESTe metodo e responsal por criar a animcaçõ de transiçºao para teas
     @QtCore.Slot()
     def slideInNext(self):
