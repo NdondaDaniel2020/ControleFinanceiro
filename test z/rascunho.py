@@ -10,7 +10,7 @@ self.stackedWidget = SlidingStackedWidget(self.frame)
 "border-top-left-radius:10px;\n"
 "border-bottom-left-radius:10px;")
 
-
+from packeg.slideStackedWidgets import SlidingStackedWidget
 
 if __name__ == "__main__":
         import sys
