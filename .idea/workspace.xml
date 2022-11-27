@@ -5,11 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32879bff-b1fa-4e85-82a0-4fe749987451" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/test z/slide.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test z/rascunho.py" beforeDir="false" afterPath="$PROJECT_DIR$/test z/rascunho.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test z/slideStackedWidget.py" beforeDir="false" afterPath="$PROJECT_DIR$/test z/slideStackedWidget.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test z/test.py" beforeDir="false" afterPath="$PROJECT_DIR$/test z/stackedWidgets.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/fileUI/SystemMW.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/SystemMW.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test z/slide.py" beforeDir="false" afterPath="$PROJECT_DIR$/test z/slide.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +50,7 @@
       <recent name="C:\Users\Família Matondo\PycharmProjects\ControleFinanceiro\System\widgests\packeg" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.slide">
+  <component name="RunManager" selected="Python.systemain">
     <configuration name="slide" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ControleFinanceiro" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -160,11 +158,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.systemain" />
         <item itemvalue="Python.slide" />
         <item itemvalue="Python.slideStackedWidget" />
         <item itemvalue="Python.testGrafico001" />
         <item itemvalue="Python.testGrafico002" />
-        <item itemvalue="Python.systemain" />
       </list>
     </recent_temporary>
   </component>
