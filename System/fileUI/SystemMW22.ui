@@ -851,13 +851,13 @@ QPushButton:pressed{
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
-                             <height>171</height>
+                             <height>172</height>
                             </size>
                            </property>
                            <property name="maximumSize">
                             <size>
                              <width>0</width>
-                             <height>161</height>
+                             <height>162</height>
                             </size>
                            </property>
                            <property name="frameShape">
@@ -866,61 +866,122 @@ QPushButton:pressed{
                            <property name="frameShadow">
                             <enum>QFrame::Raised</enum>
                            </property>
-                           <widget class="QLabel" name="data">
-                            <property name="geometry">
-                             <rect>
-                              <x>40</x>
-                              <y>120</y>
-                              <width>101</width>
-                              <height>16</height>
-                             </rect>
+                           <layout class="QVBoxLayout" name="verticalLayout_142">
+                            <property name="spacing">
+                             <number>0</number>
                             </property>
-                            <property name="whatsThis">
-                             <string/>
+                            <property name="leftMargin">
+                             <number>0</number>
                             </property>
-                            <property name="styleSheet">
-                             <string notr="true"/>
+                            <property name="topMargin">
+                             <number>0</number>
                             </property>
-                            <property name="text">
-                             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#dcbbff;&quot;&gt;date: &lt;/span&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;28/06/2022&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                            <property name="rightMargin">
+                             <number>0</number>
                             </property>
-                            <property name="alignment">
-                             <set>Qt::AlignCenter</set>
+                            <property name="bottomMargin">
+                             <number>0</number>
                             </property>
-                           </widget>
-                           <widget class="QLabel" name="criadoPor">
-                            <property name="geometry">
-                             <rect>
-                              <x>34</x>
-                              <y>140</y>
-                              <width>110</width>
-                              <height>16</height>
-                             </rect>
-                            </property>
-                            <property name="styleSheet">
-                             <string notr="true">color:#ffffff;
+                            <item>
+                             <spacer name="verticalSpacer_6">
+                              <property name="orientation">
+                               <enum>Qt::Vertical</enum>
+                              </property>
+                              <property name="sizeHint" stdset="0">
+                               <size>
+                                <width>20</width>
+                                <height>40</height>
+                               </size>
+                              </property>
+                             </spacer>
+                            </item>
+                            <item>
+                             <widget class="QLabel" name="QRcode">
+                              <property name="maximumSize">
+                               <size>
+                                <width>16777215</width>
+                                <height>115</height>
+                               </size>
+                              </property>
+                              <property name="text">
+                               <string/>
+                              </property>
+                              <property name="pixmap">
+                               <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/qr_code_120px.png</pixmap>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="data">
+                              <property name="minimumSize">
+                               <size>
+                                <width>100</width>
+                                <height>15</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>100</width>
+                                <height>15</height>
+                               </size>
+                              </property>
+                              <property name="whatsThis">
+                               <string/>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true"/>
+                              </property>
+                              <property name="text">
+                               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#dcbbff;&quot;&gt;date: &lt;/span&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;28/06/2022&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item alignment="Qt::AlignHCenter">
+                             <widget class="QLabel" name="criadoPor">
+                              <property name="minimumSize">
+                               <size>
+                                <width>120</width>
+                                <height>15</height>
+                               </size>
+                              </property>
+                              <property name="maximumSize">
+                               <size>
+                                <width>120</width>
+                                <height>21</height>
+                               </size>
+                              </property>
+                              <property name="styleSheet">
+                               <string notr="true">color:#ffffff;
 </string>
-                            </property>
-                            <property name="text">
-                             <string>created by: NdDaniel</string>
-                            </property>
-                           </widget>
-                           <widget class="QLabel" name="QRcode">
-                            <property name="geometry">
-                             <rect>
-                              <x>30</x>
-                              <y>3</y>
-                              <width>111</width>
-                              <height>121</height>
-                             </rect>
-                            </property>
-                            <property name="text">
-                             <string/>
-                            </property>
-                            <property name="pixmap">
-                             <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/qr_code_120px.png</pixmap>
-                            </property>
-                           </widget>
+                              </property>
+                              <property name="text">
+                               <string>created by: NdDaniel</string>
+                              </property>
+                              <property name="alignment">
+                               <set>Qt::AlignCenter</set>
+                              </property>
+                             </widget>
+                            </item>
+                            <item>
+                             <spacer name="verticalSpacer_5">
+                              <property name="orientation">
+                               <enum>Qt::Vertical</enum>
+                              </property>
+                              <property name="sizeHint" stdset="0">
+                               <size>
+                                <width>20</width>
+                                <height>40</height>
+                               </size>
+                              </property>
+                             </spacer>
+                            </item>
+                           </layout>
                           </widget>
                          </item>
                          <item>
@@ -1285,7 +1346,7 @@ QPushButton:pressed{
                            <property name="sizeHint" stdset="0">
                             <size>
                              <width>5</width>
-                             <height>96</height>
+                             <height>95</height>
                             </size>
                            </property>
                           </spacer>

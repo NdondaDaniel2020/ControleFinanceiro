@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'SystemMW22ZLQJmc.ui'
+## Form generated from reading UI file 'SystemMW22uSqIiB.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -21,8 +21,6 @@ from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QFrame, QHBoxL
     QProgressBar, QPushButton, QScrollArea, QSizePolicy,
     QSlider, QSpacerItem, QStackedWidget, QToolButton,
     QVBoxLayout, QWidget)
-
-from packeg.slideStackedWidgets import SlidingStackedWidget
 
 class Ui_MainWindowMW(object):
     def setupUi(self, MainWindowMW):
@@ -455,24 +453,49 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_141.setContentsMargins(0, 0, 0, 0)
         self.frame_zoneQR = QFrame(self.left_menu)
         self.frame_zoneQR.setObjectName(u"frame_zoneQR")
-        self.frame_zoneQR.setMinimumSize(QSize(0, 171))
-        self.frame_zoneQR.setMaximumSize(QSize(0, 161))
+        self.frame_zoneQR.setMinimumSize(QSize(0, 172))
+        self.frame_zoneQR.setMaximumSize(QSize(0, 162))
         self.frame_zoneQR.setFrameShape(QFrame.StyledPanel)
         self.frame_zoneQR.setFrameShadow(QFrame.Raised)
-        self.data = QLabel(self.frame_zoneQR)
-        self.data.setObjectName(u"data")
-        self.data.setGeometry(QRect(40, 120, 101, 16))
-        self.data.setStyleSheet(u"")
-        self.data.setAlignment(Qt.AlignCenter)
-        self.criadoPor = QLabel(self.frame_zoneQR)
-        self.criadoPor.setObjectName(u"criadoPor")
-        self.criadoPor.setGeometry(QRect(34, 140, 110, 16))
-        self.criadoPor.setStyleSheet(u"color:#ffffff;\n"
-"")
+        self.verticalLayout_142 = QVBoxLayout(self.frame_zoneQR)
+        self.verticalLayout_142.setSpacing(0)
+        self.verticalLayout_142.setObjectName(u"verticalLayout_142")
+        self.verticalLayout_142.setContentsMargins(0, 0, 0, 0)
+        self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_142.addItem(self.verticalSpacer_6)
+
         self.QRcode = QLabel(self.frame_zoneQR)
         self.QRcode.setObjectName(u"QRcode")
-        self.QRcode.setGeometry(QRect(30, 3, 111, 121))
+        self.QRcode.setMaximumSize(QSize(16777215, 115))
         self.QRcode.setPixmap(QPixmap(u"../../../../3D Objects/ControleFinanceiro/System/img/qr_code_120px.png"))
+        self.QRcode.setAlignment(Qt.AlignBottom|Qt.AlignHCenter)
+
+        self.verticalLayout_142.addWidget(self.QRcode)
+
+        self.data = QLabel(self.frame_zoneQR)
+        self.data.setObjectName(u"data")
+        self.data.setMinimumSize(QSize(100, 15))
+        self.data.setMaximumSize(QSize(100, 15))
+        self.data.setStyleSheet(u"")
+        self.data.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_142.addWidget(self.data)
+
+        self.criadoPor = QLabel(self.frame_zoneQR)
+        self.criadoPor.setObjectName(u"criadoPor")
+        self.criadoPor.setMinimumSize(QSize(120, 15))
+        self.criadoPor.setMaximumSize(QSize(120, 21))
+        self.criadoPor.setStyleSheet(u"color:#ffffff;\n"
+"")
+        self.criadoPor.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_142.addWidget(self.criadoPor)
+
+        self.verticalSpacer_5 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_142.addItem(self.verticalSpacer_5)
+
 
         self.verticalLayout_141.addWidget(self.frame_zoneQR)
 
@@ -623,20 +646,18 @@ class Ui_MainWindowMW(object):
 
         self.verticalLayout_141.addWidget(self.frame_zone_btn)
 
-        self.verticalSpacer_2 = QSpacerItem(5, 96, QSizePolicy.Minimum, QSizePolicy.Expanding)
+        self.verticalSpacer_2 = QSpacerItem(5, 95, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
         self.verticalLayout_141.addItem(self.verticalSpacer_2)
 
 
         self.horizontalLayout_2.addWidget(self.left_menu)
 
-        self.stackedWidget = SlidingStackedWidget(self.frame)
+        self.stackedWidget = QStackedWidget(self.frame)
         self.stackedWidget.setObjectName(u"stackedWidget")
         self.stackedWidget.setStyleSheet(u"background-color: rgb(159, 80, 239);\n"
 "border-top-left-radius:10px;\n"
 "border-bottom-left-radius:10px;")
-
-
         self.page_Home = QWidget()
         self.page_Home.setObjectName(u"page_Home")
         self.verticalLayout_12 = QVBoxLayout(self.page_Home)
@@ -1770,7 +1791,7 @@ class Ui_MainWindowMW(object):
         self.scrollArea_5.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 863, 352))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 865, 352))
         self.verticalLayout_71 = QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_71.setObjectName(u"verticalLayout_71")
         self.frame_203 = QFrame(self.scrollAreaWidgetContents_3)
@@ -2507,7 +2528,7 @@ class Ui_MainWindowMW(object):
         self.scrollArea_4.setWidgetResizable(True)
         self.scrollAreaWidgetContents_Coins_2 = QWidget()
         self.scrollAreaWidgetContents_Coins_2.setObjectName(u"scrollAreaWidgetContents_Coins_2")
-        self.scrollAreaWidgetContents_Coins_2.setGeometry(QRect(0, 0, 879, 1830))
+        self.scrollAreaWidgetContents_Coins_2.setGeometry(QRect(0, 0, 881, 1830))
         self.verticalLayout_18 = QVBoxLayout(self.scrollAreaWidgetContents_Coins_2)
         self.verticalLayout_18.setSpacing(0)
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
@@ -6604,12 +6625,12 @@ class Ui_MainWindowMW(object):
         self.conntrole_finace.setText("")
         self.settings.setText("")
         self.double_up.setText("")
+        self.QRcode.setText("")
 #if QT_CONFIG(whatsthis)
         self.data.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
         self.data.setText(QCoreApplication.translate("MainWindowMW", u"<html><head/><body><p><span style=\" color:#dcbbff;\">date: </span><span style=\" color:#ffffff;\">28/06/2022</span></p></body></html>", None))
         self.criadoPor.setText(QCoreApplication.translate("MainWindowMW", u"created by: NdDaniel", None))
-        self.QRcode.setText("")
         self.help_btn.setText(QCoreApplication.translate("MainWindowMW", u"     Help", None))
         self.perfil_btn.setText(QCoreApplication.translate("MainWindowMW", u"     Perfil", None))
         self.web_btn.setText(QCoreApplication.translate("MainWindowMW", u"     Web", None))

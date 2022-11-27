@@ -1450,18 +1450,31 @@ class MainwindowSC(QMainWindow):
         self.leftmenuAnimation.setDuration(600)
         self.leftmenuAnimation.setEasingCurve(QEasingCurve.InOutCubic)
 
-        self.qranimation = QPropertyAnimation(self.ui.frame_zoneQR, b'minumumWidth')
+        self.qranimation = QPropertyAnimation(self.ui.frame_zoneQR, b'minimumWidth')
         self.qranimation.setStartValue(iqr)
         self.qranimation.setEndValue(fqr)
         self.qranimation.setDuration(600)
         self.qranimation.setEasingCurve(QEasingCurve.InOutCubic)
 
+        self.dataAnimation = QPropertyAnimation(self.ui.data, b'minimumWidth')
+        self.dataAnimation.setStartValue(iqr)
+        self.dataAnimation.setEndValue(fqr)
+        self.dataAnimation.setDuration(600)
+        self.dataAnimation.setEasingCurve(QEasingCurve.InOutCubic)
+
+        self.criadoAnimation = QPropertyAnimation(self.ui.criadoPor, b'minimumWidth')
+        self.criadoAnimation.setStartValue(iqr)
+        self.criadoAnimation.setEndValue(fqr)
+        self.criadoAnimation.setDuration(600)
+        self.criadoAnimation.setEasingCurve(QEasingCurve.InOutCubic)
+
         self.grounpLeft = QParallelAnimationGroup()
         self.grounpLeft.addAnimation(self.leftmenuAnimation)
         self.grounpLeft.addAnimation(self.qranimation)
+        self.grounpLeft.addAnimation(self.dataAnimation)
+        self.grounpLeft.addAnimation(self.criadoAnimation)
         self.grounpLeft.start()
 
-        self.leftmenuAnimation.start()
 
     # a metodo que anima o tec zone
     def scrollAreaAnimat(self):  #########################################################################################
@@ -1560,7 +1573,7 @@ class MainwindowSC(QMainWindow):
                 self.toobtn = True
                 QTimer.singleShot(100, lambda: self.lerText(self.ui.plainTextEdit.toPlainText()))
 
-    # metodo que anima o frame onde esta o regulador de font
+    # metodo que anima o frame onde esta o regulador de font do texto
     def fontAnimation(self, n):
 
         if n == 0:
