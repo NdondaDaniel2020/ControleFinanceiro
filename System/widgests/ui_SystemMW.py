@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'SystemMWNfXHis.ui'
+## Form generated from reading UI file 'SystemMWNblsku.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -247,12 +247,21 @@ class Ui_MainWindowMW(object):
         self.pushButton_5.setStyleSheet(u"QPushButton{\n"
 "border-color: rgb(170, 85, 255);\n"
 "background-color: rgb(170, 85, 255);\n"
-"border-radius:0px;}\n"
+"border-radius:0px;\n"
+"border-radius:15px}\n"
+"\n"
+"QPushButton:hover{\n"
+"border-color: rgb(170, 85, 255);\n"
+"background-color: rgb(170, 85, 255);\n"
+"border-radius:0px;\n"
+"border-radius:15px}\n"
 "\n"
 "QPushButton:pressed{\n"
 "border-color: rgb(170, 85, 255);\n"
 "background-color: rgb(170, 85, 255);\n"
-"border-radius:0px;}")
+"border-radius:0px;\n"
+"border-radius:15px}\n"
+"")
         icon = QIcon()
         icon.addFile(u"../img/logoFC.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_5.setIcon(icon)
@@ -749,7 +758,7 @@ class Ui_MainWindowMW(object):
         self.label_186.setStyleSheet(u"color: rgb(170, 85, 255);")
         self.label_187 = QLabel(self.frame_Browsin_history_2)
         self.label_187.setObjectName(u"label_187")
-        self.label_187.setGeometry(QRect(100, 85, 129, 41))
+        self.label_187.setGeometry(QRect(55, 88, 180, 41))
         font4 = QFont()
         font4.setFamilies([u"Segoe UI Semibold"])
         font4.setPointSize(21)
@@ -778,7 +787,7 @@ class Ui_MainWindowMW(object):
         self.frame_opening_history_btn_2.setIconSize(QSize(86, 100))
         self.label_189 = QLabel(self.frame_opening_history_2)
         self.label_189.setObjectName(u"label_189")
-        self.label_189.setGeometry(QRect(55, 85, 180, 41))
+        self.label_189.setGeometry(QRect(55, 88, 180, 41))
         self.label_189.setFont(font4)
         self.label_189.setStyleSheet(u"color: rgb(170, 85, 255);\n"
 "background-color: transparent")
@@ -805,7 +814,7 @@ class Ui_MainWindowMW(object):
         self.frame_user_list_2.setFrameShadow(QFrame.Raised)
         self.frame_user_list_btn_2 = QPushButton(self.frame_user_list_2)
         self.frame_user_list_btn_2.setObjectName(u"frame_user_list_btn_2")
-        self.frame_user_list_btn_2.setGeometry(QRect(3, 8, 109, 91))
+        self.frame_user_list_btn_2.setGeometry(QRect(3, 6, 109, 94))
         icon19 = QIcon()
         icon19.addFile(u"../img/adiantamento-de-dinheiroV.png", QSize(), QIcon.Normal, QIcon.Off)
         self.frame_user_list_btn_2.setIcon(icon19)
@@ -851,7 +860,7 @@ class Ui_MainWindowMW(object):
         self.label_205.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
         self.label_207 = QLabel(self.frame_user_list_2)
         self.label_207.setObjectName(u"label_207")
-        self.label_207.setGeometry(QRect(65, 85, 180, 41))
+        self.label_207.setGeometry(QRect(55, 88, 180, 41))
         self.label_207.setFont(font4)
         self.label_207.setStyleSheet(u"color: rgb(170, 85, 255);\n"
 "background-color: transparent")
@@ -868,14 +877,26 @@ class Ui_MainWindowMW(object):
         self.frame_password_faceId_2.setFrameShadow(QFrame.Raised)
         self.password_faceId_btn_3 = QPushButton(self.frame_password_faceId_2)
         self.password_faceId_btn_3.setObjectName(u"password_faceId_btn_3")
-        self.password_faceId_btn_3.setGeometry(QRect(13, 10, 91, 90))
+        self.password_faceId_btn_3.setGeometry(QRect(13, 8, 91, 94))
+        self.password_faceId_btn_3.setStyleSheet(u"QPushButoon{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}\n"
+"QPushButoon:hover{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}\n"
+"QPushButoon:pressed{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}")
         icon20 = QIcon()
         icon20.addFile(u"../img/adiantamento-de-dinheiroV5.png", QSize(), QIcon.Normal, QIcon.Off)
         self.password_faceId_btn_3.setIcon(icon20)
         self.password_faceId_btn_3.setIconSize(QSize(99, 130))
         self.label_208 = QLabel(self.frame_password_faceId_2)
         self.label_208.setObjectName(u"label_208")
-        self.label_208.setGeometry(QRect(61, 88, 180, 41))
+        self.label_208.setGeometry(QRect(55, 88, 180, 41))
         self.label_208.setFont(font4)
         self.label_208.setStyleSheet(u"color: rgb(170, 85, 255);\n"
 "background-color: transparent")
@@ -1047,6 +1068,21 @@ class Ui_MainWindowMW(object):
 "background-color: rgb(255, 255, 255);\n"
 "border-radius:0px;\n"
 "border-radius:15px}\n"
+"\n"
+"QPushButton:hover{\n"
+"border-color: rgb(170, 85, 255);\n"
+"border: 1px solid rgb(170, 85, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius:0px;\n"
+"border-radius:15px}\n"
+"\n"
+"QPushButton:pressed{\n"
+"border-color: rgb(170, 85, 255);\n"
+"border: 1px solid rgb(170, 85, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius:0px;\n"
+"border-radius:15px}\n"
+"\n"
 "")
         icon21 = QIcon()
         icon21.addFile(u"../img/Money Bag Pounds_30px.png", QSize(), QIcon.Normal, QIcon.Off)
@@ -1115,6 +1151,18 @@ class Ui_MainWindowMW(object):
         self.iconSis_2.setMaximumSize(QSize(30, 30))
         self.iconSis_2.setFont(font1)
         self.iconSis_2.setStyleSheet(u"QPushButton{\n"
+"border-color: rgb(170, 85, 255);\n"
+"background-color: rgb(170, 85, 255);\n"
+"border-radius:0px;\n"
+"border-radius:15px}\n"
+"\n"
+"QPushButton:hover{\n"
+"border-color: rgb(170, 85, 255);\n"
+"background-color: rgb(170, 85, 255);\n"
+"border-radius:0px;\n"
+"border-radius:15px}\n"
+"\n"
+"QPushButton:pressed{\n"
 "border-color: rgb(170, 85, 255);\n"
 "background-color: rgb(170, 85, 255);\n"
 "border-radius:0px;\n"
@@ -1199,6 +1247,21 @@ class Ui_MainWindowMW(object):
 "background-color: rgb(255, 255, 255);\n"
 "border-radius:0px;\n"
 "border-radius:15px}\n"
+"\n"
+"QPushButton:hover{\n"
+"border-color: rgb(170, 85, 255);\n"
+"border: 1px solid rgb(170, 85, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius:0px;\n"
+"border-radius:15px}\n"
+"\n"
+"QPushButton:pressed{\n"
+"border-color: rgb(170, 85, 255);\n"
+"border: 1px solid rgb(170, 85, 255);\n"
+"background-color: rgb(255, 255, 255);\n"
+"border-radius:0px;\n"
+"border-radius:15px}\n"
+"\n"
 "")
         icon22 = QIcon()
         icon22.addFile(u"../img/Money Bag Franc_30px.png", QSize(), QIcon.Normal, QIcon.Off)
@@ -1275,10 +1338,18 @@ class Ui_MainWindowMW(object):
 "border-radius:0px;\n"
 "border-radius:15px}\n"
 "\n"
+"QPushButton:hover{\n"
+"border-color: rgb(170, 85, 255);\n"
+"background-color: rgb(170, 85, 255);\n"
+"border-radius:0px;\n"
+"border-radius:15px}\n"
+"\n"
 "QPushButton:pressed{\n"
 "border-color: rgb(170, 85, 255);\n"
 "background-color: rgb(170, 85, 255);\n"
-"border-radius:0px;}")
+"border-radius:0px;\n"
+"border-radius:15px}\n"
+"")
         self.iconSis.setIcon(icon)
         self.iconSis.setIconSize(QSize(24, 26))
 
@@ -2408,7 +2479,7 @@ class Ui_MainWindowMW(object):
         self.scrollArea_5.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 908, 352))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 1040, 352))
         self.verticalLayout_71 = QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_71.setObjectName(u"verticalLayout_71")
         self.frame_203 = QFrame(self.scrollAreaWidgetContents_3)
@@ -3145,7 +3216,7 @@ class Ui_MainWindowMW(object):
         self.scrollArea_4.setWidgetResizable(True)
         self.scrollAreaWidgetContents_Coins_2 = QWidget()
         self.scrollAreaWidgetContents_Coins_2.setObjectName(u"scrollAreaWidgetContents_Coins_2")
-        self.scrollAreaWidgetContents_Coins_2.setGeometry(QRect(0, 0, 862, 1830))
+        self.scrollAreaWidgetContents_Coins_2.setGeometry(QRect(0, 0, 1056, 1830))
         self.verticalLayout_18 = QVBoxLayout(self.scrollAreaWidgetContents_Coins_2)
         self.verticalLayout_18.setSpacing(0)
         self.verticalLayout_18.setObjectName(u"verticalLayout_18")
@@ -7289,13 +7360,13 @@ class Ui_MainWindowMW(object):
         self.password_faceId_btn_3.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
         self.password_faceId_btn_3.setText("")
-        self.label_208.setText(QCoreApplication.translate("MainWindowMW", u"Kz  0", None))
+        self.label_208.setText(QCoreApplication.translate("MainWindowMW", u"Kz  0,00", None))
         self.label_209.setText(QCoreApplication.translate("MainWindowMW", u"Contas a pagar", None))
         self.label_210.setText(QCoreApplication.translate("MainWindowMW", u"em atraso", None))
         self.label_227.setText(QCoreApplication.translate("MainWindowMW", u"   Entradas ", None))
         self.label_228.setText(QCoreApplication.translate("MainWindowMW", u"    Saidas", None))
         self.pushButton_15.setText("")
-        self.label_188.setText(QCoreApplication.translate("MainWindowMW", u"  Casa", None))
+        self.label_188.setText(QCoreApplication.translate("MainWindowMW", u"  Esferografica", None))
         self.dataEntrada.setText(QCoreApplication.translate("MainWindowMW", u"2022-04-12", None))
         self.valoerEntrada.setText(QCoreApplication.translate("MainWindowMW", u"Kz 200 ", None))
         self.iconSis_2.setText("")
