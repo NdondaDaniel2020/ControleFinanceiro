@@ -3,14 +3,16 @@ import json
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
+from PySide6.QtCharts import QChart, QChartView
 
 from packeg.custom_grips import CustomGrip
 from packeg.circular_progress import CircularProgress
-# from System.widgests.ui_SystemMW import Ui_MainWindow
-from System.widgests.packeg.database import database
+from packeg.Criptografia import criptografar
+from packeg.chart import Chart
+from packeg.database import database
 from ui_SystemSC import Ui_SplashCreen
-from ui_SystemMW2 import Ui_MainWindowMW
-from System.widgests.packeg.Criptografia import criptografar
+from ui_SystemMW import Ui_MainWindowMW
+
 
 from time import sleep
 from datetime import date
@@ -1108,6 +1110,8 @@ class MainwindowSC(QMainWindow):
         self.top = CustomGrip(self, Qt.TopEdge, True)
         self.bottom = CustomGrip(self, Qt.BottomEdge, True)
 
+        self.adicionandoGrafico()
+
         self.show() # mostrar janela
 
         self.TimerFont = QTimer()
@@ -2126,7 +2130,16 @@ class MainwindowSC(QMainWindow):
 
         return saida
 
+    def adicionandoGrafico(self):
 
+        chart = Chart()
+        chart.setTitle("Dados de todas entradas saidas")
+        chart.legend().hide()
+        chart.setAnimationOptions(QChart.AllAnimations)
+        chart_view = QChartView(chart)
+        chart_view.setRenderHint(QPainter.Antialiasing)
+
+        self.ui.verticalLayout_graficoMain.addWidget(chart_view)
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

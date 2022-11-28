@@ -6,43 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="32879bff-b1fa-4e85-82a0-4fe749987451" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/SystemMW.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/SystemMW.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/SystemMW22.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/SystemMW22.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/SystemSC.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/SystemSC.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/page_CoinsQuote.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/page_CoinsQuote.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/page_ControlFinace.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/page_ControlFinace.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/page_Extras.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/page_Extras.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/page_Home.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/page_Home.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/page_edit.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/page_edit.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/page_perfil.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/page_perfil.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/page_web.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/page_web.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/re.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/re.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/ui_SystemMW2.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/ui_SystemMW2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/untitledmw.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/untitledmw.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/untitledtest.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/untitledtest.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/html/sc.html" beforeDir="false" afterPath="$PROJECT_DIR$/System/html/sc.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/html/ss.html" beforeDir="false" afterPath="$PROJECT_DIR$/System/html/ss.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/img/24x24/icon.qrc" beforeDir="false" afterPath="$PROJECT_DIR$/System/img/24x24/icon.qrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/SystemSC.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/SystemSC.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/Texto.txt" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/Texto.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/Criptografia.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/Criptografia.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/circular_progress.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/circular_progress.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/custom_grips.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/custom_grips.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/database.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/page_CoinsQuote.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/page_CoinsQuote.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/page_ControlFinace.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/page_ControlFinace.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/page_Extras.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/page_Extras.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/page_Home.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/page_Home.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/page_edit.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/page_edit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/page_perfil.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/page_perfil.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/page_web.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/page_web.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/slideStackedWidgets.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/slideStackedWidgets.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/System/widgests/systemain.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/systemain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/ui_SystemMW.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_SystemMW.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/ui_SystemMW2.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_SystemMW2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/ui_SystemSC.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_SystemSC.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/voz.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/voz.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test z/tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/test z/tests.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
