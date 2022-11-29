@@ -385,12 +385,21 @@ border-radius:13px;
                             <string notr="true">QPushButton{
 border-color: rgb(170, 85, 255);
 background-color: rgb(170, 85, 255);
-border-radius:0px;}
+border-radius:0px;
+border-radius:15px}
+
+QPushButton:hover{
+border-color: rgb(170, 85, 255);
+background-color: rgb(170, 85, 255);
+border-radius:0px;
+border-radius:15px}
 
 QPushButton:pressed{
 border-color: rgb(170, 85, 255);
 background-color: rgb(170, 85, 255);
-border-radius:0px;}</string>
+border-radius:0px;
+border-radius:15px}
+</string>
                            </property>
                            <property name="text">
                             <string/>
@@ -913,7 +922,7 @@ QPushButton:pressed{
                                <string/>
                               </property>
                               <property name="pixmap">
-                               <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/qr_code_120px.png</pixmap>
+                               <pixmap>../img/qr_code_120px.png</pixmap>
                               </property>
                               <property name="alignment">
                                <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -1561,6 +1570,20 @@ border-radius:15px;
                                           <property name="whatsThis">
                                            <string/>
                                           </property>
+                                          <property name="styleSheet">
+                                           <string notr="true">QPushButton{
+border: 0px;
+padding:0px;
+}
+QPushButton:hover{
+border: 0px;
+padding:0px;
+}
+QPushButton:pressed{
+border: 0px;
+padding:0px;
+}</string>
+                                          </property>
                                           <property name="text">
                                            <string/>
                                           </property>
@@ -1619,12 +1642,12 @@ border-radius:15px;
                                            <string>em atraso</string>
                                           </property>
                                          </widget>
-                                         <widget class="QLabel" name="label_187">
+                                         <widget class="QLabel" name="contasAreceberEmAtraso_lbl">
                                           <property name="geometry">
                                            <rect>
-                                            <x>100</x>
-                                            <y>85</y>
-                                            <width>129</width>
+                                            <x>55</x>
+                                            <y>88</y>
+                                            <width>180</width>
                                             <height>41</height>
                                            </rect>
                                           </property>
@@ -1684,6 +1707,20 @@ background-color: transparent</string>
                                           <property name="whatsThis">
                                            <string/>
                                           </property>
+                                          <property name="styleSheet">
+                                           <string notr="true">QPushButton{
+border: 0px;
+padding:0px;
+}
+QPushButton:hover{
+border: 0px;
+padding:0px;
+}
+QPushButton:pressed{
+border: 0px;
+padding:0px;
+}</string>
+                                          </property>
                                           <property name="text">
                                            <string/>
                                           </property>
@@ -1698,11 +1735,11 @@ background-color: transparent</string>
                                            </size>
                                           </property>
                                          </widget>
-                                         <widget class="QLabel" name="label_189">
+                                         <widget class="QLabel" name="contasAreceberEmAberto_label">
                                           <property name="geometry">
                                            <rect>
                                             <x>55</x>
-                                            <y>85</y>
+                                            <y>88</y>
                                             <width>180</width>
                                             <height>41</height>
                                            </rect>
@@ -1728,7 +1765,7 @@ background-color: transparent</string>
                                           <property name="geometry">
                                            <rect>
                                             <x>116</x>
-                                            <y>33</y>
+                                            <y>34</y>
                                             <width>122</width>
                                             <height>20</height>
                                            </rect>
@@ -1771,7 +1808,7 @@ background-color: transparent</string>
                                         </widget>
                                        </item>
                                        <item>
-                                        <widget class="QFrame" name="frame_user_list_2">
+                                        <widget class="QFrame" name="frameContasApagarEmaberto">
                                          <property name="minimumSize">
                                           <size>
                                            <width>250</width>
@@ -1797,13 +1834,27 @@ background-color: transparent</string>
                                           <property name="geometry">
                                            <rect>
                                             <x>3</x>
-                                            <y>8</y>
+                                            <y>6</y>
                                             <width>109</width>
-                                            <height>91</height>
+                                            <height>94</height>
                                            </rect>
                                           </property>
                                           <property name="whatsThis">
                                            <string/>
+                                          </property>
+                                          <property name="styleSheet">
+                                           <string notr="true">QPushButton{
+border: 0px;
+padding:0px;
+}
+QPushButton:hover{
+border: 0px;
+padding:0px;
+}
+QPushButton:pressed{
+border: 0px;
+padding:0px;
+}</string>
                                           </property>
                                           <property name="text">
                                            <string/>
@@ -1823,9 +1874,9 @@ background-color: transparent</string>
                                           <property name="geometry">
                                            <rect>
                                             <x>100</x>
-                                            <y>20</y>
+                                            <y>16</y>
                                             <width>141</width>
-                                            <height>20</height>
+                                            <height>22</height>
                                            </rect>
                                           </property>
                                           <property name="font">
@@ -1845,9 +1896,9 @@ background-color: transparent</string>
                                           <property name="geometry">
                                            <rect>
                                             <x>110</x>
-                                            <y>37</y>
+                                            <y>42</y>
                                             <width>122</width>
-                                            <height>20</height>
+                                            <height>15</height>
                                            </rect>
                                           </property>
                                           <property name="font">
@@ -1857,7 +1908,8 @@ background-color: transparent</string>
                                            </font>
                                           </property>
                                           <property name="styleSheet">
-                                           <string notr="true">color: rgb(170, 85, 255);</string>
+                                           <string notr="true">color: rgb(170, 85, 255);
+padding-bottom:2px</string>
                                           </property>
                                           <property name="text">
                                            <string>aberto este mês</string>
@@ -1989,11 +2041,11 @@ background-color: transparent</string>
                                            </property>
                                           </widget>
                                          </widget>
-                                         <widget class="QLabel" name="label_207">
+                                         <widget class="QLabel" name="contasApagarEmaberto_label">
                                           <property name="geometry">
                                            <rect>
-                                            <x>65</x>
-                                            <y>85</y>
+                                            <x>55</x>
+                                            <y>88</y>
                                             <width>180</width>
                                             <height>41</height>
                                            </rect>
@@ -2018,7 +2070,7 @@ background-color: transparent</string>
                                         </widget>
                                        </item>
                                        <item>
-                                        <widget class="QFrame" name="frame_password_faceId_2">
+                                        <widget class="QFrame" name="frameContasApagarEmatraso">
                                          <property name="minimumSize">
                                           <size>
                                            <width>250</width>
@@ -2044,13 +2096,27 @@ background-color: transparent</string>
                                           <property name="geometry">
                                            <rect>
                                             <x>13</x>
-                                            <y>10</y>
+                                            <y>8</y>
                                             <width>91</width>
-                                            <height>90</height>
+                                            <height>94</height>
                                            </rect>
                                           </property>
                                           <property name="whatsThis">
                                            <string/>
+                                          </property>
+                                          <property name="styleSheet">
+                                           <string notr="true">QPushButton{
+border: 0px;
+padding:0px;
+}
+QPushButton:hover{
+border: 0px;
+padding:0px;
+}
+QPushButton:pressed{
+border: 0px;
+padding:0px;
+}</string>
                                           </property>
                                           <property name="text">
                                            <string/>
@@ -2066,10 +2132,10 @@ background-color: transparent</string>
                                            </size>
                                           </property>
                                          </widget>
-                                         <widget class="QLabel" name="label_208">
+                                         <widget class="QLabel" name="contasApagarEmAtraso_label">
                                           <property name="geometry">
                                            <rect>
-                                            <x>61</x>
+                                            <x>55</x>
                                             <y>88</y>
                                             <width>180</width>
                                             <height>41</height>
@@ -2086,7 +2152,7 @@ background-color: transparent</string>
 background-color: transparent</string>
                                           </property>
                                           <property name="text">
-                                           <string>Kz  0</string>
+                                           <string>Kz  0,00</string>
                                           </property>
                                           <property name="alignment">
                                            <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -2096,9 +2162,9 @@ background-color: transparent</string>
                                           <property name="geometry">
                                            <rect>
                                             <x>121</x>
-                                            <y>23</y>
+                                            <y>16</y>
                                             <width>111</width>
-                                            <height>20</height>
+                                            <height>22</height>
                                            </rect>
                                           </property>
                                           <property name="font">
@@ -2114,13 +2180,13 @@ background-color: transparent</string>
                                            <string>Contas a pagar</string>
                                           </property>
                                          </widget>
-                                         <widget class="QLabel" name="label_210">
+                                         <widget class="QLabel" name="label_187">
                                           <property name="geometry">
                                            <rect>
                                             <x>140</x>
                                             <y>42</y>
-                                            <width>71</width>
-                                            <height>20</height>
+                                            <width>80</width>
+                                            <height>16</height>
                                            </rect>
                                           </property>
                                           <property name="font">
@@ -2130,7 +2196,8 @@ background-color: transparent</string>
                                            </font>
                                           </property>
                                           <property name="styleSheet">
-                                           <string notr="true">color: rgb(170, 85, 255);</string>
+                                           <string notr="true">color: rgb(170, 85, 255);
+padding-bottom:3px</string>
                                           </property>
                                           <property name="text">
                                            <string>em atraso</string>
@@ -2536,6 +2603,22 @@ border: 1px solid rgb(170, 85, 255);
 background-color: rgb(255, 255, 255);
 border-radius:0px;
 border-radius:15px}
+
+QPushButton:hover{
+border-color: rgb(170, 85, 255);
+border: 1px solid rgb(170, 85, 255);
+background-color: rgb(255, 255, 255);
+border-radius:0px;
+border-radius:15px}
+
+QPushButton:pressed{
+border-color: rgb(170, 85, 255);
+border: 1px solid rgb(170, 85, 255);
+background-color: rgb(255, 255, 255);
+border-radius:0px;
+border-radius:15px;
+padding: 0px}
+
 </string>
                                                         </property>
                                                         <property name="text">
@@ -2577,7 +2660,7 @@ border-radius:15px}
                                                             <string notr="true">color: rgb(170, 85, 255);</string>
                                                            </property>
                                                            <property name="text">
-                                                            <string>  Casa</string>
+                                                            <string>  Esferografica</string>
                                                            </property>
                                                            <property name="alignment">
                                                             <set>Qt::AlignJustify|Qt::AlignVCenter</set>
@@ -2674,6 +2757,19 @@ border-color: rgb(170, 85, 255);
 background-color: rgb(170, 85, 255);
 border-radius:0px;
 border-radius:15px}
+
+QPushButton:hover{
+border-color: rgb(170, 85, 255);
+background-color: rgb(170, 85, 255);
+border-radius:0px;
+border-radius:15px}
+
+QPushButton:pressed{
+border-color: rgb(170, 85, 255);
+background-color: rgb(170, 85, 255);
+border-radius:0px;
+border-radius:15px;
+padding: 0px}
 </string>
                                                      </property>
                                                      <property name="text">
@@ -2874,6 +2970,22 @@ border: 1px solid rgb(170, 85, 255);
 background-color: rgb(255, 255, 255);
 border-radius:0px;
 border-radius:15px}
+
+QPushButton:hover{
+border-color: rgb(170, 85, 255);
+border: 1px solid rgb(170, 85, 255);
+background-color: rgb(255, 255, 255);
+border-radius:0px;
+border-radius:15px}
+
+QPushButton:pressed{
+border-color: rgb(170, 85, 255);
+border: 1px solid rgb(170, 85, 255);
+background-color: rgb(255, 255, 255);
+border-radius:0px;
+border-radius:15px;
+padding: 0px}
+
 </string>
                                                   </property>
                                                   <property name="text">
@@ -3040,10 +3152,20 @@ background-color: rgb(170, 85, 255);
 border-radius:0px;
 border-radius:15px}
 
+QPushButton:hover{
+border-color: rgb(170, 85, 255);
+background-color: rgb(170, 85, 255);
+border-radius:0px;
+border-radius:15px}
+
 QPushButton:pressed{
 border-color: rgb(170, 85, 255);
 background-color: rgb(170, 85, 255);
-border-radius:0px;}</string>
+border-radius:0px;
+border-radius:15px;
+padding: 0px
+}
+</string>
                                                   </property>
                                                   <property name="text">
                                                    <string/>
@@ -5836,7 +5958,7 @@ border-radius:10px;}</string>
                                     <rect>
                                      <x>0</x>
                                      <y>0</y>
-                                     <width>908</width>
+                                     <width>1040</width>
                                      <height>352</height>
                                     </rect>
                                    </property>
@@ -7166,7 +7288,7 @@ color:rgb(255, 255, 255)
                               <rect>
                                <x>0</x>
                                <y>0</y>
-                               <width>862</width>
+                               <width>1056</width>
                                <height>1830</height>
                               </rect>
                              </property>

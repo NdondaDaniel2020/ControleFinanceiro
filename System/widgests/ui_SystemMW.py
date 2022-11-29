@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'SystemMWNblsku.ui'
+## Form generated from reading UI file 'SystemMWEhxiYd.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -483,7 +483,7 @@ class Ui_MainWindowMW(object):
         self.QRcode = QLabel(self.frame_zoneQR)
         self.QRcode.setObjectName(u"QRcode")
         self.QRcode.setMaximumSize(QSize(16777215, 115))
-        self.QRcode.setPixmap(QPixmap(u"../../../../3D Objects/ControleFinanceiro/System/img/qr_code_120px.png"))
+        self.QRcode.setPixmap(QPixmap(u"../img/qr_code_120px.png"))
         self.QRcode.setAlignment(Qt.AlignBottom|Qt.AlignHCenter)
 
         self.verticalLayout_142.addWidget(self.QRcode)
@@ -739,6 +739,18 @@ class Ui_MainWindowMW(object):
         self.frame_Browsin_history_btn_2 = QPushButton(self.frame_Browsin_history_2)
         self.frame_Browsin_history_btn_2.setObjectName(u"frame_Browsin_history_btn_2")
         self.frame_Browsin_history_btn_2.setGeometry(QRect(10, 7, 88, 83))
+        self.frame_Browsin_history_btn_2.setStyleSheet(u"QPushButton{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}")
         icon17 = QIcon()
         icon17.addFile(u"../img/atrasado.png", QSize(), QIcon.Normal, QIcon.Off)
         self.frame_Browsin_history_btn_2.setIcon(icon17)
@@ -756,16 +768,16 @@ class Ui_MainWindowMW(object):
         self.label_186.setGeometry(QRect(141, 33, 81, 20))
         self.label_186.setFont(font3)
         self.label_186.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.label_187 = QLabel(self.frame_Browsin_history_2)
-        self.label_187.setObjectName(u"label_187")
-        self.label_187.setGeometry(QRect(55, 88, 180, 41))
+        self.contasAreceberEmAtraso_lbl = QLabel(self.frame_Browsin_history_2)
+        self.contasAreceberEmAtraso_lbl.setObjectName(u"contasAreceberEmAtraso_lbl")
+        self.contasAreceberEmAtraso_lbl.setGeometry(QRect(55, 88, 180, 41))
         font4 = QFont()
         font4.setFamilies([u"Segoe UI Semibold"])
         font4.setPointSize(21)
-        self.label_187.setFont(font4)
-        self.label_187.setStyleSheet(u"color: rgb(170, 85, 255);\n"
+        self.contasAreceberEmAtraso_lbl.setFont(font4)
+        self.contasAreceberEmAtraso_lbl.setStyleSheet(u"color: rgb(170, 85, 255);\n"
 "background-color: transparent")
-        self.label_187.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.contasAreceberEmAtraso_lbl.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.horizontalLayout_109.addWidget(self.frame_Browsin_history_2)
 
@@ -781,20 +793,32 @@ class Ui_MainWindowMW(object):
         self.frame_opening_history_btn_2 = QPushButton(self.frame_opening_history_2)
         self.frame_opening_history_btn_2.setObjectName(u"frame_opening_history_btn_2")
         self.frame_opening_history_btn_2.setGeometry(QRect(9, 11, 90, 85))
+        self.frame_opening_history_btn_2.setStyleSheet(u"QPushButton{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}")
         icon18 = QIcon()
         icon18.addFile(u"../img/adiantamento-de-dinheiroV2.png", QSize(), QIcon.Normal, QIcon.Off)
         self.frame_opening_history_btn_2.setIcon(icon18)
         self.frame_opening_history_btn_2.setIconSize(QSize(86, 100))
-        self.label_189 = QLabel(self.frame_opening_history_2)
-        self.label_189.setObjectName(u"label_189")
-        self.label_189.setGeometry(QRect(55, 88, 180, 41))
-        self.label_189.setFont(font4)
-        self.label_189.setStyleSheet(u"color: rgb(170, 85, 255);\n"
+        self.contasAreceberEmAberto_label = QLabel(self.frame_opening_history_2)
+        self.contasAreceberEmAberto_label.setObjectName(u"contasAreceberEmAberto_label")
+        self.contasAreceberEmAberto_label.setGeometry(QRect(55, 88, 180, 41))
+        self.contasAreceberEmAberto_label.setFont(font4)
+        self.contasAreceberEmAberto_label.setStyleSheet(u"color: rgb(170, 85, 255);\n"
 "background-color: transparent")
-        self.label_189.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.contasAreceberEmAberto_label.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
         self.label_194 = QLabel(self.frame_opening_history_2)
         self.label_194.setObjectName(u"label_194")
-        self.label_194.setGeometry(QRect(116, 33, 122, 20))
+        self.label_194.setGeometry(QRect(116, 34, 122, 20))
         self.label_194.setFont(font3)
         self.label_194.setStyleSheet(u"color: rgb(170, 85, 255);")
         self.label_195 = QLabel(self.frame_opening_history_2)
@@ -805,31 +829,44 @@ class Ui_MainWindowMW(object):
 
         self.horizontalLayout_109.addWidget(self.frame_opening_history_2)
 
-        self.frame_user_list_2 = QFrame(self.scrollAreaWidgetContents_5)
-        self.frame_user_list_2.setObjectName(u"frame_user_list_2")
-        self.frame_user_list_2.setMinimumSize(QSize(250, 130))
-        self.frame_user_list_2.setMaximumSize(QSize(310, 135))
-        self.frame_user_list_2.setStyleSheet(u"background-color: rgb(255, 255, 255);")
-        self.frame_user_list_2.setFrameShape(QFrame.StyledPanel)
-        self.frame_user_list_2.setFrameShadow(QFrame.Raised)
-        self.frame_user_list_btn_2 = QPushButton(self.frame_user_list_2)
+        self.frameContasApagarEmaberto = QFrame(self.scrollAreaWidgetContents_5)
+        self.frameContasApagarEmaberto.setObjectName(u"frameContasApagarEmaberto")
+        self.frameContasApagarEmaberto.setMinimumSize(QSize(250, 130))
+        self.frameContasApagarEmaberto.setMaximumSize(QSize(310, 135))
+        self.frameContasApagarEmaberto.setStyleSheet(u"background-color: rgb(255, 255, 255);")
+        self.frameContasApagarEmaberto.setFrameShape(QFrame.StyledPanel)
+        self.frameContasApagarEmaberto.setFrameShadow(QFrame.Raised)
+        self.frame_user_list_btn_2 = QPushButton(self.frameContasApagarEmaberto)
         self.frame_user_list_btn_2.setObjectName(u"frame_user_list_btn_2")
         self.frame_user_list_btn_2.setGeometry(QRect(3, 6, 109, 94))
+        self.frame_user_list_btn_2.setStyleSheet(u"QPushButton{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}")
         icon19 = QIcon()
         icon19.addFile(u"../img/adiantamento-de-dinheiroV.png", QSize(), QIcon.Normal, QIcon.Off)
         self.frame_user_list_btn_2.setIcon(icon19)
         self.frame_user_list_btn_2.setIconSize(QSize(100, 115))
-        self.label_196 = QLabel(self.frame_user_list_2)
+        self.label_196 = QLabel(self.frameContasApagarEmaberto)
         self.label_196.setObjectName(u"label_196")
-        self.label_196.setGeometry(QRect(100, 20, 141, 20))
+        self.label_196.setGeometry(QRect(100, 16, 141, 22))
         self.label_196.setFont(font3)
         self.label_196.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.label_197 = QLabel(self.frame_user_list_2)
+        self.label_197 = QLabel(self.frameContasApagarEmaberto)
         self.label_197.setObjectName(u"label_197")
-        self.label_197.setGeometry(QRect(110, 37, 122, 20))
+        self.label_197.setGeometry(QRect(110, 42, 122, 15))
         self.label_197.setFont(font3)
-        self.label_197.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.frame_user_list_3 = QFrame(self.frame_user_list_2)
+        self.label_197.setStyleSheet(u"color: rgb(170, 85, 255);\n"
+"padding-bottom:2px")
+        self.frame_user_list_3 = QFrame(self.frameContasApagarEmaberto)
         self.frame_user_list_3.setObjectName(u"frame_user_list_3")
         self.frame_user_list_3.setGeometry(QRect(507, 18, 250, 135))
         self.frame_user_list_3.setMinimumSize(QSize(250, 130))
@@ -858,35 +895,35 @@ class Ui_MainWindowMW(object):
         self.label_205.setFont(font4)
         self.label_205.setStyleSheet(u"color: rgb(170, 85, 255);")
         self.label_205.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.label_207 = QLabel(self.frame_user_list_2)
-        self.label_207.setObjectName(u"label_207")
-        self.label_207.setGeometry(QRect(55, 88, 180, 41))
-        self.label_207.setFont(font4)
-        self.label_207.setStyleSheet(u"color: rgb(170, 85, 255);\n"
+        self.contasApagarEmaberto_label = QLabel(self.frameContasApagarEmaberto)
+        self.contasApagarEmaberto_label.setObjectName(u"contasApagarEmaberto_label")
+        self.contasApagarEmaberto_label.setGeometry(QRect(55, 88, 180, 41))
+        self.contasApagarEmaberto_label.setFont(font4)
+        self.contasApagarEmaberto_label.setStyleSheet(u"color: rgb(170, 85, 255);\n"
 "background-color: transparent")
-        self.label_207.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.contasApagarEmaberto_label.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
-        self.horizontalLayout_109.addWidget(self.frame_user_list_2)
+        self.horizontalLayout_109.addWidget(self.frameContasApagarEmaberto)
 
-        self.frame_password_faceId_2 = QFrame(self.scrollAreaWidgetContents_5)
-        self.frame_password_faceId_2.setObjectName(u"frame_password_faceId_2")
-        self.frame_password_faceId_2.setMinimumSize(QSize(250, 130))
-        self.frame_password_faceId_2.setMaximumSize(QSize(310, 135))
-        self.frame_password_faceId_2.setStyleSheet(u"background-color: rgb(255, 255, 255)")
-        self.frame_password_faceId_2.setFrameShape(QFrame.StyledPanel)
-        self.frame_password_faceId_2.setFrameShadow(QFrame.Raised)
-        self.password_faceId_btn_3 = QPushButton(self.frame_password_faceId_2)
+        self.frameContasApagarEmatraso = QFrame(self.scrollAreaWidgetContents_5)
+        self.frameContasApagarEmatraso.setObjectName(u"frameContasApagarEmatraso")
+        self.frameContasApagarEmatraso.setMinimumSize(QSize(250, 130))
+        self.frameContasApagarEmatraso.setMaximumSize(QSize(310, 135))
+        self.frameContasApagarEmatraso.setStyleSheet(u"background-color: rgb(255, 255, 255)")
+        self.frameContasApagarEmatraso.setFrameShape(QFrame.StyledPanel)
+        self.frameContasApagarEmatraso.setFrameShadow(QFrame.Raised)
+        self.password_faceId_btn_3 = QPushButton(self.frameContasApagarEmatraso)
         self.password_faceId_btn_3.setObjectName(u"password_faceId_btn_3")
         self.password_faceId_btn_3.setGeometry(QRect(13, 8, 91, 94))
-        self.password_faceId_btn_3.setStyleSheet(u"QPushButoon{\n"
+        self.password_faceId_btn_3.setStyleSheet(u"QPushButton{\n"
 "border: 0px;\n"
 "padding:0px;\n"
 "}\n"
-"QPushButoon:hover{\n"
+"QPushButton:hover{\n"
 "border: 0px;\n"
 "padding:0px;\n"
 "}\n"
-"QPushButoon:pressed{\n"
+"QPushButton:pressed{\n"
 "border: 0px;\n"
 "padding:0px;\n"
 "}")
@@ -894,25 +931,26 @@ class Ui_MainWindowMW(object):
         icon20.addFile(u"../img/adiantamento-de-dinheiroV5.png", QSize(), QIcon.Normal, QIcon.Off)
         self.password_faceId_btn_3.setIcon(icon20)
         self.password_faceId_btn_3.setIconSize(QSize(99, 130))
-        self.label_208 = QLabel(self.frame_password_faceId_2)
-        self.label_208.setObjectName(u"label_208")
-        self.label_208.setGeometry(QRect(55, 88, 180, 41))
-        self.label_208.setFont(font4)
-        self.label_208.setStyleSheet(u"color: rgb(170, 85, 255);\n"
+        self.contasApagarEmAtraso_label = QLabel(self.frameContasApagarEmatraso)
+        self.contasApagarEmAtraso_label.setObjectName(u"contasApagarEmAtraso_label")
+        self.contasApagarEmAtraso_label.setGeometry(QRect(55, 88, 180, 41))
+        self.contasApagarEmAtraso_label.setFont(font4)
+        self.contasApagarEmAtraso_label.setStyleSheet(u"color: rgb(170, 85, 255);\n"
 "background-color: transparent")
-        self.label_208.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
-        self.label_209 = QLabel(self.frame_password_faceId_2)
+        self.contasApagarEmAtraso_label.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.label_209 = QLabel(self.frameContasApagarEmatraso)
         self.label_209.setObjectName(u"label_209")
-        self.label_209.setGeometry(QRect(121, 23, 111, 20))
+        self.label_209.setGeometry(QRect(121, 16, 111, 22))
         self.label_209.setFont(font3)
         self.label_209.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.label_210 = QLabel(self.frame_password_faceId_2)
-        self.label_210.setObjectName(u"label_210")
-        self.label_210.setGeometry(QRect(140, 42, 71, 20))
-        self.label_210.setFont(font3)
-        self.label_210.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_187 = QLabel(self.frameContasApagarEmatraso)
+        self.label_187.setObjectName(u"label_187")
+        self.label_187.setGeometry(QRect(140, 42, 80, 16))
+        self.label_187.setFont(font3)
+        self.label_187.setStyleSheet(u"color: rgb(170, 85, 255);\n"
+"padding-bottom:3px")
 
-        self.horizontalLayout_109.addWidget(self.frame_password_faceId_2)
+        self.horizontalLayout_109.addWidget(self.frameContasApagarEmatraso)
 
         self.scrollArea_7.setWidget(self.scrollAreaWidgetContents_5)
 
@@ -1081,7 +1119,8 @@ class Ui_MainWindowMW(object):
 "border: 1px solid rgb(170, 85, 255);\n"
 "background-color: rgb(255, 255, 255);\n"
 "border-radius:0px;\n"
-"border-radius:15px}\n"
+"border-radius:15px;\n"
+"padding: 0px}\n"
 "\n"
 "")
         icon21 = QIcon()
@@ -1166,7 +1205,8 @@ class Ui_MainWindowMW(object):
 "border-color: rgb(170, 85, 255);\n"
 "background-color: rgb(170, 85, 255);\n"
 "border-radius:0px;\n"
-"border-radius:15px}\n"
+"border-radius:15px;\n"
+"padding: 0px}\n"
 "")
         self.iconSis_2.setIcon(icon)
         self.iconSis_2.setIconSize(QSize(24, 26))
@@ -1260,7 +1300,8 @@ class Ui_MainWindowMW(object):
 "border: 1px solid rgb(170, 85, 255);\n"
 "background-color: rgb(255, 255, 255);\n"
 "border-radius:0px;\n"
-"border-radius:15px}\n"
+"border-radius:15px;\n"
+"padding: 0px}\n"
 "\n"
 "")
         icon22 = QIcon()
@@ -1348,7 +1389,9 @@ class Ui_MainWindowMW(object):
 "border-color: rgb(170, 85, 255);\n"
 "background-color: rgb(170, 85, 255);\n"
 "border-radius:0px;\n"
-"border-radius:15px}\n"
+"border-radius:15px;\n"
+"padding: 0px\n"
+"}\n"
 "")
         self.iconSis.setIcon(icon)
         self.iconSis.setIconSize(QSize(24, 26))
@@ -7334,12 +7377,12 @@ class Ui_MainWindowMW(object):
         self.frame_Browsin_history_btn_2.setText("")
         self.label_31.setText(QCoreApplication.translate("MainWindowMW", u"Contas a receber", None))
         self.label_186.setText(QCoreApplication.translate("MainWindowMW", u"em atraso", None))
-        self.label_187.setText(QCoreApplication.translate("MainWindowMW", u"Kz  0,00", None))
+        self.contasAreceberEmAtraso_lbl.setText(QCoreApplication.translate("MainWindowMW", u"Kz  0,00", None))
 #if QT_CONFIG(whatsthis)
         self.frame_opening_history_btn_2.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
         self.frame_opening_history_btn_2.setText("")
-        self.label_189.setText(QCoreApplication.translate("MainWindowMW", u"Kz  2.200,00", None))
+        self.contasAreceberEmAberto_label.setText(QCoreApplication.translate("MainWindowMW", u"Kz  2.200,00", None))
         self.label_194.setText(QCoreApplication.translate("MainWindowMW", u"aberto este m\u00eas", None))
         self.label_195.setText(QCoreApplication.translate("MainWindowMW", u"Contas a receber em", None))
 #if QT_CONFIG(whatsthis)
@@ -7355,14 +7398,14 @@ class Ui_MainWindowMW(object):
         self.label_203.setText(QCoreApplication.translate("MainWindowMW", u"Contas a receber", None))
         self.label_204.setText(QCoreApplication.translate("MainWindowMW", u"em atraso", None))
         self.label_205.setText(QCoreApplication.translate("MainWindowMW", u"Kz  0,00", None))
-        self.label_207.setText(QCoreApplication.translate("MainWindowMW", u"Kz  2.700,00", None))
+        self.contasApagarEmaberto_label.setText(QCoreApplication.translate("MainWindowMW", u"Kz  2.700,00", None))
 #if QT_CONFIG(whatsthis)
         self.password_faceId_btn_3.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)
         self.password_faceId_btn_3.setText("")
-        self.label_208.setText(QCoreApplication.translate("MainWindowMW", u"Kz  0,00", None))
+        self.contasApagarEmAtraso_label.setText(QCoreApplication.translate("MainWindowMW", u"Kz  0,00", None))
         self.label_209.setText(QCoreApplication.translate("MainWindowMW", u"Contas a pagar", None))
-        self.label_210.setText(QCoreApplication.translate("MainWindowMW", u"em atraso", None))
+        self.label_187.setText(QCoreApplication.translate("MainWindowMW", u"em atraso", None))
         self.label_227.setText(QCoreApplication.translate("MainWindowMW", u"   Entradas ", None))
         self.label_228.setText(QCoreApplication.translate("MainWindowMW", u"    Saidas", None))
         self.pushButton_15.setText("")

@@ -2133,7 +2133,7 @@ class MainwindowSC(QMainWindow):
     def adicionandoGrafico(self):
 
         chart = Chart()
-        chart.setTitle("Dados de todas entradas saidas")
+        # chart.setTitle("Dados de todas entradas saidas")
         chart.legend().hide()
         chart.setAnimationOptions(QChart.AllAnimations)
         chart_view = QChartView(chart)
