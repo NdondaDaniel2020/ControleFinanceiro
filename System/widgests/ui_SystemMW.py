@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'SystemMWnUIQzP.ui'
+## Form generated from reading UI file 'SystemMWpJyFZA.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -19,15 +19,14 @@ from PySide6.QtWebEngineWidgets import QWebEngineView
 from PySide6.QtWidgets import (QAbstractScrollArea, QApplication, QComboBox, QDateEdit,
     QFrame, QHBoxLayout, QHeaderView, QLabel,
     QLineEdit, QMainWindow, QPushButton, QScrollArea,
-    QSizePolicy, QSlider, QSpacerItem, QStackedWidget,
-    QTableWidget, QTableWidgetItem, QToolButton, QVBoxLayout,
-    QWidget)
+    QSizePolicy, QSpacerItem, QStackedWidget, QTableWidget,
+    QTableWidgetItem, QToolButton, QVBoxLayout, QWidget)
 
 class Ui_MainWindowMW(object):
     def setupUi(self, MainWindowMW):
         if not MainWindowMW.objectName():
             MainWindowMW.setObjectName(u"MainWindowMW")
-        MainWindowMW.resize(1033, 664)
+        MainWindowMW.resize(1122, 664)
         self.centralwidget_styleSheet = QWidget(MainWindowMW)
         self.centralwidget_styleSheet.setObjectName(u"centralwidget_styleSheet")
         self.centralwidget_styleSheet.setStyleSheet(u"QScrollBar:horizontal {\n"
@@ -417,24 +416,13 @@ class Ui_MainWindowMW(object):
 
         self.verticalLayout_9.addWidget(self.web_btn_2)
 
-        self.conntrole_finace = QPushButton(self.xone_btn_left)
-        self.conntrole_finace.setObjectName(u"conntrole_finace")
-        self.conntrole_finace.setMinimumSize(QSize(0, 35))
-        self.conntrole_finace.setMaximumSize(QSize(35, 35))
-        icon6 = QIcon()
-        icon6.addFile(u"../img/money_50px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.conntrole_finace.setIcon(icon6)
-        self.conntrole_finace.setIconSize(QSize(27, 27))
-
-        self.verticalLayout_9.addWidget(self.conntrole_finace)
-
         self.settings = QPushButton(self.xone_btn_left)
         self.settings.setObjectName(u"settings")
         self.settings.setMinimumSize(QSize(0, 35))
         self.settings.setMaximumSize(QSize(35, 16777215))
-        icon7 = QIcon()
-        icon7.addFile(u"../img/24x24/cil-settings.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.settings.setIcon(icon7)
+        icon6 = QIcon()
+        icon6.addFile(u"../img/24x24/cil-settings.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.settings.setIcon(icon6)
         self.settings.setIconSize(QSize(25, 25))
 
         self.verticalLayout_9.addWidget(self.settings, 0, Qt.AlignRight)
@@ -443,9 +431,9 @@ class Ui_MainWindowMW(object):
         self.double_up.setObjectName(u"double_up")
         self.double_up.setMinimumSize(QSize(0, 35))
         self.double_up.setMaximumSize(QSize(35, 35))
-        icon8 = QIcon()
-        icon8.addFile(u"../img/24x24/cil-chevron-double-up-alt.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.double_up.setIcon(icon8)
+        icon7 = QIcon()
+        icon7.addFile(u"../img/24x24/cil-x-f.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.double_up.setIcon(icon7)
         self.double_up.setIconSize(QSize(25, 25))
 
         self.verticalLayout_9.addWidget(self.double_up, 0, Qt.AlignRight)
@@ -456,6 +444,191 @@ class Ui_MainWindowMW(object):
 
 
         self.horizontalLayout_2.addWidget(self.xone_btn_left)
+
+        self.left_menu = QFrame(self.frame)
+        self.left_menu.setObjectName(u"left_menu")
+        self.left_menu.setMinimumSize(QSize(8, 0))
+        self.left_menu.setMaximumSize(QSize(0, 16777215))
+        self.left_menu.setFrameShape(QFrame.StyledPanel)
+        self.left_menu.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_141 = QVBoxLayout(self.left_menu)
+        self.verticalLayout_141.setSpacing(0)
+        self.verticalLayout_141.setObjectName(u"verticalLayout_141")
+        self.verticalLayout_141.setContentsMargins(0, 0, 0, 0)
+        self.frame_zoneQR = QFrame(self.left_menu)
+        self.frame_zoneQR.setObjectName(u"frame_zoneQR")
+        self.frame_zoneQR.setMinimumSize(QSize(0, 260))
+        self.frame_zoneQR.setMaximumSize(QSize(0, 257))
+        self.frame_zoneQR.setFrameShape(QFrame.StyledPanel)
+        self.frame_zoneQR.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_142 = QVBoxLayout(self.frame_zoneQR)
+        self.verticalLayout_142.setSpacing(0)
+        self.verticalLayout_142.setObjectName(u"verticalLayout_142")
+        self.verticalLayout_142.setContentsMargins(0, 0, 0, 0)
+        self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_142.addItem(self.verticalSpacer_6)
+
+        self.QRcode = QLabel(self.frame_zoneQR)
+        self.QRcode.setObjectName(u"QRcode")
+        self.QRcode.setMaximumSize(QSize(16777215, 184))
+        self.QRcode.setPixmap(QPixmap(u"../img/qr_code_120px.png"))
+        self.QRcode.setAlignment(Qt.AlignBottom|Qt.AlignHCenter)
+
+        self.verticalLayout_142.addWidget(self.QRcode)
+
+        self.data = QLabel(self.frame_zoneQR)
+        self.data.setObjectName(u"data")
+        self.data.setMinimumSize(QSize(100, 15))
+        self.data.setMaximumSize(QSize(100, 15))
+        self.data.setStyleSheet(u"")
+        self.data.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_142.addWidget(self.data)
+
+        self.criadoPor = QLabel(self.frame_zoneQR)
+        self.criadoPor.setObjectName(u"criadoPor")
+        self.criadoPor.setMinimumSize(QSize(120, 15))
+        self.criadoPor.setMaximumSize(QSize(120, 21))
+        self.criadoPor.setStyleSheet(u"color:#ffffff;\n"
+"")
+        self.criadoPor.setAlignment(Qt.AlignCenter)
+
+        self.verticalLayout_142.addWidget(self.criadoPor)
+
+        self.verticalSpacer_5 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_142.addItem(self.verticalSpacer_5)
+
+
+        self.verticalLayout_141.addWidget(self.frame_zoneQR)
+
+        self.frame_zone_btn = QFrame(self.left_menu)
+        self.frame_zone_btn.setObjectName(u"frame_zone_btn")
+        self.frame_zone_btn.setMinimumSize(QSize(180, 300))
+        self.frame_zone_btn.setMaximumSize(QSize(180, 300))
+        self.frame_zone_btn.setStyleSheet(u"QPushButton{\n"
+"	color: rgb(255, 255, 255);\n"
+"    text-align: left;\n"
+"	padding-left: 18px;\n"
+"	border-radius:4px;\n"
+"}\n"
+"QFrame{\n"
+"	background-color: rgb(159, 80, 239);\n"
+"}\n"
+"QPushButton:hover{\n"
+"	color: rgb(255, 255, 255);\n"
+"	border-ra\n"
+"    text-align: left;\n"
+"	padding-left: 18px;\n"
+"	border-radius:4px;\n"
+"	background-color: rgb(170, 85, 255);\n"
+"}\n"
+"\n"
+"QPushButton:pressed{\n"
+"	color: rgb(255, 255, 255);\n"
+"    text-align: left;\n"
+"	padding-left: 18px;\n"
+"	border-radius:4px;\n"
+"	background-color: rgb(159, 80, 239);\n"
+"}")
+        self.frame_zone_btn.setFrameShape(QFrame.StyledPanel)
+        self.frame_zone_btn.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_10 = QVBoxLayout(self.frame_zone_btn)
+        self.verticalLayout_10.setSpacing(0)
+        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
+        self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
+        self.help_btn = QPushButton(self.frame_zone_btn)
+        self.help_btn.setObjectName(u"help_btn")
+        self.help_btn.setMinimumSize(QSize(0, 34))
+        self.help_btn.setMaximumSize(QSize(16777215, 34))
+        icon8 = QIcon()
+        icon8.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/24x24/help_30px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.help_btn.setIcon(icon8)
+        self.help_btn.setIconSize(QSize(18, 18))
+        self.help_btn.setCheckable(False)
+
+        self.verticalLayout_10.addWidget(self.help_btn)
+
+        self.perfil_btn = QPushButton(self.frame_zone_btn)
+        self.perfil_btn.setObjectName(u"perfil_btn")
+        self.perfil_btn.setMinimumSize(QSize(0, 34))
+        self.perfil_btn.setMaximumSize(QSize(16777215, 34))
+        icon9 = QIcon()
+        icon9.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-user.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.perfil_btn.setIcon(icon9)
+        self.perfil_btn.setIconSize(QSize(18, 18))
+
+        self.verticalLayout_10.addWidget(self.perfil_btn)
+
+        self.web_btn = QPushButton(self.frame_zone_btn)
+        self.web_btn.setObjectName(u"web_btn")
+        self.web_btn.setMinimumSize(QSize(0, 34))
+        self.web_btn.setMaximumSize(QSize(16777215, 34))
+        icon10 = QIcon()
+        icon10.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/website_50px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.web_btn.setIcon(icon10)
+        self.web_btn.setIconSize(QSize(18, 18))
+
+        self.verticalLayout_10.addWidget(self.web_btn)
+
+        self.setting_btn = QPushButton(self.frame_zone_btn)
+        self.setting_btn.setObjectName(u"setting_btn")
+        self.setting_btn.setMinimumSize(QSize(0, 34))
+        self.setting_btn.setMaximumSize(QSize(16777215, 34))
+        icon11 = QIcon()
+        icon11.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/24x24/settings_30px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.setting_btn.setIcon(icon11)
+        self.setting_btn.setIconSize(QSize(18, 18))
+
+        self.verticalLayout_10.addWidget(self.setting_btn)
+
+        self.coins_btn = QPushButton(self.frame_zone_btn)
+        self.coins_btn.setObjectName(u"coins_btn")
+        self.coins_btn.setMinimumSize(QSize(0, 34))
+        self.coins_btn.setMaximumSize(QSize(16777215, 34))
+        icon12 = QIcon()
+        icon12.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/money_50px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.coins_btn.setIcon(icon12)
+        self.coins_btn.setIconSize(QSize(25, 25))
+
+        self.verticalLayout_10.addWidget(self.coins_btn)
+
+        self.setting_user_btn = QPushButton(self.frame_zone_btn)
+        self.setting_user_btn.setObjectName(u"setting_user_btn")
+        self.setting_user_btn.setMinimumSize(QSize(0, 34))
+        self.setting_user_btn.setMaximumSize(QSize(16777215, 34))
+        icon13 = QIcon()
+        icon13.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/24x24/admin_settings_male_30px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.setting_user_btn.setIcon(icon13)
+        self.setting_user_btn.setIconSize(QSize(18, 18))
+
+        self.verticalLayout_10.addWidget(self.setting_user_btn)
+
+        self.editTest = QPushButton(self.frame_zone_btn)
+        self.editTest.setObjectName(u"editTest")
+        self.editTest.setMinimumSize(QSize(0, 34))
+        self.editTest.setMaximumSize(QSize(16777215, 34))
+        icon14 = QIcon()
+        icon14.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/edit_folder_24px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.editTest.setIcon(icon14)
+        self.editTest.setIconSize(QSize(18, 18))
+
+        self.verticalLayout_10.addWidget(self.editTest)
+
+        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_10.addItem(self.verticalSpacer_3)
+
+
+        self.verticalLayout_141.addWidget(self.frame_zone_btn)
+
+        self.verticalSpacer_2 = QSpacerItem(5, 152, QSizePolicy.Minimum, QSizePolicy.Expanding)
+
+        self.verticalLayout_141.addItem(self.verticalSpacer_2)
+
+
+        self.horizontalLayout_2.addWidget(self.left_menu)
 
         self.stackedWidget = QStackedWidget(self.frame)
         self.stackedWidget.setObjectName(u"stackedWidget")
@@ -554,9 +727,9 @@ class Ui_MainWindowMW(object):
 "border: 0px;\n"
 "padding:0px;\n"
 "}")
-        icon9 = QIcon()
-        icon9.addFile(u"../img/atrasado.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.frame_Browsin_history_btn_2.setIcon(icon9)
+        icon15 = QIcon()
+        icon15.addFile(u"../img/atrasado.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.frame_Browsin_history_btn_2.setIcon(icon15)
         self.frame_Browsin_history_btn_2.setIconSize(QSize(86, 101))
         self.label_186 = QLabel(self.frame_205)
         self.label_186.setObjectName(u"label_186")
@@ -624,9 +797,9 @@ class Ui_MainWindowMW(object):
 "border: 0px;\n"
 "padding:0px;\n"
 "}")
-        icon10 = QIcon()
-        icon10.addFile(u"../img/adiantamento-de-dinheiroV2.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.frame_opening_history_btn_2.setIcon(icon10)
+        icon16 = QIcon()
+        icon16.addFile(u"../img/adiantamento-de-dinheiroV2.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.frame_opening_history_btn_2.setIcon(icon16)
         self.frame_opening_history_btn_2.setIconSize(QSize(86, 100))
         self.label_195 = QLabel(self.frame_207)
         self.label_195.setObjectName(u"label_195")
@@ -685,9 +858,21 @@ class Ui_MainWindowMW(object):
         self.frame_user_list_btn_3 = QPushButton(self.frame_user_list_3)
         self.frame_user_list_btn_3.setObjectName(u"frame_user_list_btn_3")
         self.frame_user_list_btn_3.setGeometry(QRect(6, 6, 93, 90))
-        icon11 = QIcon()
-        icon11.addFile(u"../img/adiantamento-de-dinheiroV.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.frame_user_list_btn_3.setIcon(icon11)
+        self.frame_user_list_btn_3.setStyleSheet(u"QPushButton{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}\n"
+"QPushButton:hover{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}\n"
+"QPushButton:pressed{\n"
+"border: 0px;\n"
+"padding:0px;\n"
+"}")
+        icon17 = QIcon()
+        icon17.addFile(u"../img/adiantamento-de-dinheiroV.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.frame_user_list_btn_3.setIcon(icon17)
         self.frame_user_list_btn_3.setIconSize(QSize(100, 130))
         self.label_203 = QLabel(self.frame_user_list_3)
         self.label_203.setObjectName(u"label_203")
@@ -755,9 +940,9 @@ class Ui_MainWindowMW(object):
 "border: 0px;\n"
 "padding:0px;\n"
 "}")
-        icon12 = QIcon()
-        icon12.addFile(u"../img/adiantamento-de-dinheiroV5.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.password_faceId_btn_3.setIcon(icon12)
+        icon18 = QIcon()
+        icon18.addFile(u"../img/adiantamento-de-dinheiroV5.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.password_faceId_btn_3.setIcon(icon18)
         self.password_faceId_btn_3.setIconSize(QSize(100, 130))
         self.label_209 = QLabel(self.frame_210)
         self.label_209.setObjectName(u"label_209")
@@ -896,7 +1081,7 @@ class Ui_MainWindowMW(object):
         self.scrollArea_2.setWidgetResizable(True)
         self.scrollAreaWidgetContents_2 = QWidget()
         self.scrollAreaWidgetContents_2.setObjectName(u"scrollAreaWidgetContents_2")
-        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 944, 155))
+        self.scrollAreaWidgetContents_2.setGeometry(QRect(0, 0, 1033, 155))
         self.horizontalLayout_46 = QHBoxLayout(self.scrollAreaWidgetContents_2)
         self.horizontalLayout_46.setSpacing(0)
         self.horizontalLayout_46.setObjectName(u"horizontalLayout_46")
@@ -969,9 +1154,9 @@ class Ui_MainWindowMW(object):
 "padding: 0px}\n"
 "\n"
 "")
-        icon13 = QIcon()
-        icon13.addFile(u"../img/Money Bag Pounds_30px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_15.setIcon(icon13)
+        icon19 = QIcon()
+        icon19.addFile(u"../img/Money Bag Pounds_30px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_15.setIcon(icon19)
         self.pushButton_15.setIconSize(QSize(22, 24))
 
         self.horizontalLayout_100.addWidget(self.pushButton_15)
@@ -1150,9 +1335,9 @@ class Ui_MainWindowMW(object):
 "padding: 0px}\n"
 "\n"
 "")
-        icon14 = QIcon()
-        icon14.addFile(u"../img/Money Bag Franc_30px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_16.setIcon(icon14)
+        icon20 = QIcon()
+        icon20.addFile(u"../img/Money Bag Franc_30px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_16.setIcon(icon20)
         self.pushButton_16.setIconSize(QSize(24, 26))
 
         self.horizontalLayout_116.addWidget(self.pushButton_16)
@@ -1383,9 +1568,9 @@ class Ui_MainWindowMW(object):
         self.pushButton_8 = QPushButton(self.frame_238)
         self.pushButton_8.setObjectName(u"pushButton_8")
         self.pushButton_8.setGeometry(QRect(3, 15, 66, 57))
-        icon15 = QIcon()
-        icon15.addFile(u"../img/totalTitulos.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_8.setIcon(icon15)
+        icon21 = QIcon()
+        icon21.addFile(u"../img/totalTitulos.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_8.setIcon(icon21)
         self.pushButton_8.setIconSize(QSize(73, 73))
         self.label_133 = QLabel(self.frame_238)
         self.label_133.setObjectName(u"label_133")
@@ -1452,9 +1637,9 @@ class Ui_MainWindowMW(object):
         self.pushButton_9 = QPushButton(self.frame_241)
         self.pushButton_9.setObjectName(u"pushButton_9")
         self.pushButton_9.setGeometry(QRect(4, 27, 67, 46))
-        icon16 = QIcon()
-        icon16.addFile(u"../img/carduse_card_payment_.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_9.setIcon(icon16)
+        icon22 = QIcon()
+        icon22.addFile(u"../img/carduse_card_payment_.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_9.setIcon(icon22)
         self.pushButton_9.setIconSize(QSize(64, 68))
 
         self.verticalLayout_189.addWidget(self.frame_241)
@@ -1505,9 +1690,9 @@ class Ui_MainWindowMW(object):
         self.pushButton_10 = QPushButton(self.frame_255)
         self.pushButton_10.setObjectName(u"pushButton_10")
         self.pushButton_10.setGeometry(QRect(5, 5, 68, 60))
-        icon17 = QIcon()
-        icon17.addFile(u"../img/Total em Aberto.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_10.setIcon(icon17)
+        icon23 = QIcon()
+        icon23.addFile(u"../img/Total em Aberto.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_10.setIcon(icon23)
         self.pushButton_10.setIconSize(QSize(68, 73))
 
         self.verticalLayout_191.addWidget(self.frame_255)
@@ -2052,7 +2237,7 @@ class Ui_MainWindowMW(object):
         self.scrollArea_8.setWidgetResizable(True)
         self.scrollAreaWidgetContents_6 = QWidget()
         self.scrollAreaWidgetContents_6.setObjectName(u"scrollAreaWidgetContents_6")
-        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 945, 305))
+        self.scrollAreaWidgetContents_6.setGeometry(QRect(0, 0, 1034, 305))
         self.verticalLayout_199 = QVBoxLayout(self.scrollAreaWidgetContents_6)
         self.verticalLayout_199.setSpacing(3)
         self.verticalLayout_199.setObjectName(u"verticalLayout_199")
@@ -2591,7 +2776,7 @@ class Ui_MainWindowMW(object):
         self.pushButton_14 = QPushButton(self.frame_296)
         self.pushButton_14.setObjectName(u"pushButton_14")
         self.pushButton_14.setGeometry(QRect(3, 15, 66, 57))
-        self.pushButton_14.setIcon(icon15)
+        self.pushButton_14.setIcon(icon21)
         self.pushButton_14.setIconSize(QSize(73, 73))
         self.label_174 = QLabel(self.frame_296)
         self.label_174.setObjectName(u"label_174")
@@ -2648,7 +2833,7 @@ class Ui_MainWindowMW(object):
         self.pushButton_23 = QPushButton(self.frame_299)
         self.pushButton_23.setObjectName(u"pushButton_23")
         self.pushButton_23.setGeometry(QRect(4, 27, 67, 46))
-        self.pushButton_23.setIcon(icon16)
+        self.pushButton_23.setIcon(icon22)
         self.pushButton_23.setIconSize(QSize(64, 68))
 
         self.verticalLayout_223.addWidget(self.frame_299)
@@ -2699,7 +2884,7 @@ class Ui_MainWindowMW(object):
         self.pushButton_24 = QPushButton(self.frame_302)
         self.pushButton_24.setObjectName(u"pushButton_24")
         self.pushButton_24.setGeometry(QRect(5, 5, 68, 60))
-        self.pushButton_24.setIcon(icon17)
+        self.pushButton_24.setIcon(icon23)
         self.pushButton_24.setIconSize(QSize(68, 73))
 
         self.verticalLayout_225.addWidget(self.frame_302)
@@ -3232,7 +3417,7 @@ class Ui_MainWindowMW(object):
         self.scrollArea_9.setWidgetResizable(True)
         self.scrollAreaWidgetContents_7 = QWidget()
         self.scrollAreaWidgetContents_7.setObjectName(u"scrollAreaWidgetContents_7")
-        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 945, 305))
+        self.scrollAreaWidgetContents_7.setGeometry(QRect(0, 0, 1034, 305))
         self.verticalLayout_236 = QVBoxLayout(self.scrollAreaWidgetContents_7)
         self.verticalLayout_236.setSpacing(3)
         self.verticalLayout_236.setObjectName(u"verticalLayout_236")
@@ -3752,9 +3937,9 @@ class Ui_MainWindowMW(object):
         self.frame_Browsin_history_btn = QPushButton(self.frame_Browsin_history)
         self.frame_Browsin_history_btn.setObjectName(u"frame_Browsin_history_btn")
         self.frame_Browsin_history_btn.setGeometry(QRect(13, 13, 90, 71))
-        icon18 = QIcon()
-        icon18.addFile(u"../img/web_100px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.frame_Browsin_history_btn.setIcon(icon18)
+        icon24 = QIcon()
+        icon24.addFile(u"../img/web_100px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.frame_Browsin_history_btn.setIcon(icon24)
         self.frame_Browsin_history_btn.setIconSize(QSize(100, 100))
 
         self.horizontalLayout_108.addWidget(self.frame_Browsin_history)
@@ -3771,9 +3956,9 @@ class Ui_MainWindowMW(object):
         self.frame_opening_history_btn = QPushButton(self.frame_opening_history)
         self.frame_opening_history_btn.setObjectName(u"frame_opening_history_btn")
         self.frame_opening_history_btn.setGeometry(QRect(13, 13, 90, 71))
-        icon19 = QIcon()
-        icon19.addFile(u"../img/close_pane_120px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.frame_opening_history_btn.setIcon(icon19)
+        icon25 = QIcon()
+        icon25.addFile(u"../img/close_pane_120px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.frame_opening_history_btn.setIcon(icon25)
         self.frame_opening_history_btn.setIconSize(QSize(100, 100))
         self.frame_opening_history_lbl = QLabel(self.frame_opening_history)
         self.frame_opening_history_lbl.setObjectName(u"frame_opening_history_lbl")
@@ -3795,9 +3980,9 @@ class Ui_MainWindowMW(object):
         self.frame_user_list_btn = QPushButton(self.frame_user_list)
         self.frame_user_list_btn.setObjectName(u"frame_user_list_btn")
         self.frame_user_list_btn.setGeometry(QRect(10, 17, 91, 71))
-        icon20 = QIcon()
-        icon20.addFile(u"../img/user_menu_female_120px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.frame_user_list_btn.setIcon(icon20)
+        icon26 = QIcon()
+        icon26.addFile(u"../img/user_menu_female_120px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.frame_user_list_btn.setIcon(icon26)
         self.frame_user_list_btn.setIconSize(QSize(115, 115))
         self.frame_user_list_lbl = QLabel(self.frame_user_list)
         self.frame_user_list_lbl.setObjectName(u"frame_user_list_lbl")
@@ -3817,9 +4002,9 @@ class Ui_MainWindowMW(object):
         self.password_faceId_btn_2 = QPushButton(self.frame_password_faceId)
         self.password_faceId_btn_2.setObjectName(u"password_faceId_btn_2")
         self.password_faceId_btn_2.setGeometry(QRect(13, 10, 90, 90))
-        icon21 = QIcon()
-        icon21.addFile(u"../img/instagram_logo_120px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.password_faceId_btn_2.setIcon(icon21)
+        icon27 = QIcon()
+        icon27.addFile(u"../img/instagram_logo_120px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.password_faceId_btn_2.setIcon(icon27)
         self.password_faceId_btn_2.setIconSize(QSize(110, 130))
         self.lineEdit_2 = QLineEdit(self.frame_password_faceId)
         self.lineEdit_2.setObjectName(u"lineEdit_2")
@@ -3860,9 +4045,9 @@ class Ui_MainWindowMW(object):
         self.ios_btn_2 = QPushButton(self.frame_IOs_2)
         self.ios_btn_2.setObjectName(u"ios_btn_2")
         self.ios_btn_2.setGeometry(QRect(7, 7, 50, 50))
-        icon22 = QIcon()
-        icon22.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/mac_client_50px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.ios_btn_2.setIcon(icon22)
+        icon28 = QIcon()
+        icon28.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/mac_client_50px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.ios_btn_2.setIcon(icon28)
         self.ios_btn_2.setIconSize(QSize(60, 60))
         self.iconWindow_4 = QLabel(self.frame_IOs_2)
         self.iconWindow_4.setObjectName(u"iconWindow_4")
@@ -3889,9 +4074,9 @@ class Ui_MainWindowMW(object):
         self.ibm_btn_2 = QPushButton(self.frame_IBM_2)
         self.ibm_btn_2.setObjectName(u"ibm_btn_2")
         self.ibm_btn_2.setGeometry(QRect(10, 15, 50, 30))
-        icon23 = QIcon()
-        icon23.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/ibm_70px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.ibm_btn_2.setIcon(icon23)
+        icon29 = QIcon()
+        icon29.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/ibm_70px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.ibm_btn_2.setIcon(icon29)
         self.ibm_btn_2.setIconSize(QSize(50, 50))
 
         self.horizontalLayout_108.addWidget(self.frame_IBM_2)
@@ -4027,9 +4212,9 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_150.setContentsMargins(0, 0, 0, 0)
         self.pushButton_13 = QPushButton(self.frame_223)
         self.pushButton_13.setObjectName(u"pushButton_13")
-        icon24 = QIcon()
-        icon24.addFile(u"../img/daniel.jpg", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_13.setIcon(icon24)
+        icon30 = QIcon()
+        icon30.addFile(u"../img/daniel.jpg", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_13.setIcon(icon30)
         self.pushButton_13.setIconSize(QSize(147, 154))
 
         self.verticalLayout_150.addWidget(self.pushButton_13)
@@ -4371,7 +4556,7 @@ class Ui_MainWindowMW(object):
 
         self.frame_173 = QFrame(self.frame_100)
         self.frame_173.setObjectName(u"frame_173")
-        self.frame_173.setMinimumSize(QSize(3, 0))
+        self.frame_173.setMinimumSize(QSize(220, 0))
         self.frame_173.setMaximumSize(QSize(220, 16777215))
         self.frame_173.setStyleSheet(u"QFrame{\n"
 "background-color: rgb(170, 85, 255);\n"
@@ -4386,7 +4571,7 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_34.setContentsMargins(8, 8, 8, 8)
         self.frame_174 = QFrame(self.frame_173)
         self.frame_174.setObjectName(u"frame_174")
-        self.frame_174.setMinimumSize(QSize(3, 0))
+        self.frame_174.setMinimumSize(QSize(210, 0))
         self.frame_174.setMaximumSize(QSize(210, 16777215))
         self.frame_174.setStyleSheet(u"QFrame{\n"
 "background-color: rgb(255, 255, 255);\n"
@@ -4749,9 +4934,9 @@ class Ui_MainWindowMW(object):
         self.pushButton_7 = QPushButton(self.frame_187)
         self.pushButton_7.setObjectName(u"pushButton_7")
         self.pushButton_7.setGeometry(QRect(5, 5, 80, 70))
-        icon25 = QIcon()
-        icon25.addFile(u"../img/fluxoEntrada.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_7.setIcon(icon25)
+        icon31 = QIcon()
+        icon31.addFile(u"../img/fluxoEntrada.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_7.setIcon(icon31)
         self.pushButton_7.setIconSize(QSize(73, 76))
         self.label_121 = QLabel(self.frame_187)
         self.label_121.setObjectName(u"label_121")
@@ -4808,9 +4993,9 @@ class Ui_MainWindowMW(object):
         self.pushButton_6 = QPushButton(self.frame_189)
         self.pushButton_6.setObjectName(u"pushButton_6")
         self.pushButton_6.setGeometry(QRect(5, 5, 80, 71))
-        icon26 = QIcon()
-        icon26.addFile(u"../img/fluxoSaida.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_6.setIcon(icon26)
+        icon32 = QIcon()
+        icon32.addFile(u"../img/fluxoSaida.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_6.setIcon(icon32)
         self.pushButton_6.setIconSize(QSize(73, 73))
 
         self.verticalLayout_160.addWidget(self.frame_189)
@@ -4861,9 +5046,9 @@ class Ui_MainWindowMW(object):
         self.pushButton_3 = QPushButton(self.frame_191)
         self.pushButton_3.setObjectName(u"pushButton_3")
         self.pushButton_3.setGeometry(QRect(5, 5, 81, 71))
-        icon27 = QIcon()
-        icon27.addFile(u"../img/fluxoTotal.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_3.setIcon(icon27)
+        icon33 = QIcon()
+        icon33.addFile(u"../img/fluxoTotal.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_3.setIcon(icon33)
         self.pushButton_3.setIconSize(QSize(73, 73))
 
         self.verticalLayout_162.addWidget(self.frame_191)
@@ -4905,16 +5090,16 @@ class Ui_MainWindowMW(object):
         self.horizontalLayout_8.setSpacing(0)
         self.horizontalLayout_8.setObjectName(u"horizontalLayout_8")
         self.horizontalLayout_8.setContentsMargins(0, 0, 0, 0)
-        self.pushButton_4 = QPushButton(self.frame_183)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-        self.pushButton_4.setMinimumSize(QSize(150, 33))
-        self.pushButton_4.setMaximumSize(QSize(12345, 33))
-        self.pushButton_4.setFont(font11)
-        self.pushButton_4.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.novaMovimentacao = QPushButton(self.frame_183)
+        self.novaMovimentacao.setObjectName(u"novaMovimentacao")
+        self.novaMovimentacao.setMinimumSize(QSize(150, 33))
+        self.novaMovimentacao.setMaximumSize(QSize(12345, 33))
+        self.novaMovimentacao.setFont(font11)
+        self.novaMovimentacao.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
 "border-radius:5px;\n"
 "color: rgb(255, 255, 255);")
 
-        self.horizontalLayout_8.addWidget(self.pushButton_4, 0, Qt.AlignTop)
+        self.horizontalLayout_8.addWidget(self.novaMovimentacao, 0, Qt.AlignTop)
 
 
         self.horizontalLayout_7.addWidget(self.frame_183)
@@ -5201,7 +5386,7 @@ class Ui_MainWindowMW(object):
         self.scrollArea_5.setWidgetResizable(True)
         self.scrollAreaWidgetContents_3 = QWidget()
         self.scrollAreaWidgetContents_3.setObjectName(u"scrollAreaWidgetContents_3")
-        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 955, 345))
+        self.scrollAreaWidgetContents_3.setGeometry(QRect(0, 0, 1044, 345))
         self.verticalLayout_71 = QVBoxLayout(self.scrollAreaWidgetContents_3)
         self.verticalLayout_71.setSpacing(3)
         self.verticalLayout_71.setObjectName(u"verticalLayout_71")
@@ -5535,9 +5720,9 @@ class Ui_MainWindowMW(object):
 "border-radius: 5px;\n"
 "color: rgb(255, 255, 255);\n"
 "}")
-        icon28 = QIcon()
-        icon28.addFile(u"../img/search_30px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_29.setIcon(icon28)
+        icon34 = QIcon()
+        icon34.addFile(u"../img/search_30px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.pushButton_29.setIcon(icon34)
         self.pushButton_29.setIconSize(QSize(19, 16))
         self.BuscarStatus_5 = QLineEdit(self.frame_4)
         self.BuscarStatus_5.setObjectName(u"BuscarStatus_5")
@@ -5619,220 +5804,6 @@ class Ui_MainWindowMW(object):
 
         self.horizontalLayout_2.addWidget(self.stackedWidget)
 
-        self.left_menu = QFrame(self.frame)
-        self.left_menu.setObjectName(u"left_menu")
-        self.left_menu.setMinimumSize(QSize(8, 0))
-        self.left_menu.setMaximumSize(QSize(0, 16777215))
-        self.left_menu.setFrameShape(QFrame.StyledPanel)
-        self.left_menu.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_141 = QVBoxLayout(self.left_menu)
-        self.verticalLayout_141.setSpacing(0)
-        self.verticalLayout_141.setObjectName(u"verticalLayout_141")
-        self.verticalLayout_141.setContentsMargins(0, 0, 0, 0)
-        self.frame_zoneQR = QFrame(self.left_menu)
-        self.frame_zoneQR.setObjectName(u"frame_zoneQR")
-        self.frame_zoneQR.setMinimumSize(QSize(0, 172))
-        self.frame_zoneQR.setMaximumSize(QSize(0, 162))
-        self.frame_zoneQR.setFrameShape(QFrame.StyledPanel)
-        self.frame_zoneQR.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_142 = QVBoxLayout(self.frame_zoneQR)
-        self.verticalLayout_142.setSpacing(0)
-        self.verticalLayout_142.setObjectName(u"verticalLayout_142")
-        self.verticalLayout_142.setContentsMargins(0, 0, 0, 0)
-        self.verticalSpacer_6 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_142.addItem(self.verticalSpacer_6)
-
-        self.QRcode = QLabel(self.frame_zoneQR)
-        self.QRcode.setObjectName(u"QRcode")
-        self.QRcode.setMaximumSize(QSize(16777215, 115))
-        self.QRcode.setPixmap(QPixmap(u"../img/qr_code_120px.png"))
-        self.QRcode.setAlignment(Qt.AlignBottom|Qt.AlignHCenter)
-
-        self.verticalLayout_142.addWidget(self.QRcode)
-
-        self.data = QLabel(self.frame_zoneQR)
-        self.data.setObjectName(u"data")
-        self.data.setMinimumSize(QSize(100, 15))
-        self.data.setMaximumSize(QSize(100, 15))
-        self.data.setStyleSheet(u"")
-        self.data.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_142.addWidget(self.data)
-
-        self.criadoPor = QLabel(self.frame_zoneQR)
-        self.criadoPor.setObjectName(u"criadoPor")
-        self.criadoPor.setMinimumSize(QSize(120, 15))
-        self.criadoPor.setMaximumSize(QSize(120, 21))
-        self.criadoPor.setStyleSheet(u"color:#ffffff;\n"
-"")
-        self.criadoPor.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_142.addWidget(self.criadoPor)
-
-        self.verticalSpacer_5 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_142.addItem(self.verticalSpacer_5)
-
-
-        self.verticalLayout_141.addWidget(self.frame_zoneQR)
-
-        self.frame_zone_btn = QFrame(self.left_menu)
-        self.frame_zone_btn.setObjectName(u"frame_zone_btn")
-        self.frame_zone_btn.setMinimumSize(QSize(180, 300))
-        self.frame_zone_btn.setMaximumSize(QSize(180, 300))
-        self.frame_zone_btn.setStyleSheet(u"QPushButton{\n"
-"	color: rgb(255, 255, 255);\n"
-"    text-align: left;\n"
-"	padding-left: 18px;\n"
-"	border-radius:4px;\n"
-"}\n"
-"QFrame{\n"
-"	background-color: rgb(159, 80, 239);\n"
-"}\n"
-"QPushButton:hover{\n"
-"	color: rgb(255, 255, 255);\n"
-"	border-ra\n"
-"    text-align: left;\n"
-"	padding-left: 18px;\n"
-"	border-radius:4px;\n"
-"	background-color: rgb(170, 85, 255);\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"	color: rgb(255, 255, 255);\n"
-"    text-align: left;\n"
-"	padding-left: 18px;\n"
-"	border-radius:4px;\n"
-"	background-color: rgb(159, 80, 239);\n"
-"}")
-        self.frame_zone_btn.setFrameShape(QFrame.StyledPanel)
-        self.frame_zone_btn.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_10 = QVBoxLayout(self.frame_zone_btn)
-        self.verticalLayout_10.setSpacing(0)
-        self.verticalLayout_10.setObjectName(u"verticalLayout_10")
-        self.verticalLayout_10.setContentsMargins(0, 0, 0, 0)
-        self.help_btn = QPushButton(self.frame_zone_btn)
-        self.help_btn.setObjectName(u"help_btn")
-        self.help_btn.setMinimumSize(QSize(0, 34))
-        self.help_btn.setMaximumSize(QSize(16777215, 34))
-        icon29 = QIcon()
-        icon29.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/24x24/help_30px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.help_btn.setIcon(icon29)
-        self.help_btn.setIconSize(QSize(18, 18))
-        self.help_btn.setCheckable(False)
-
-        self.verticalLayout_10.addWidget(self.help_btn)
-
-        self.perfil_btn = QPushButton(self.frame_zone_btn)
-        self.perfil_btn.setObjectName(u"perfil_btn")
-        self.perfil_btn.setMinimumSize(QSize(0, 34))
-        self.perfil_btn.setMaximumSize(QSize(16777215, 34))
-        icon30 = QIcon()
-        icon30.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-user.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.perfil_btn.setIcon(icon30)
-        self.perfil_btn.setIconSize(QSize(18, 18))
-
-        self.verticalLayout_10.addWidget(self.perfil_btn)
-
-        self.web_btn = QPushButton(self.frame_zone_btn)
-        self.web_btn.setObjectName(u"web_btn")
-        self.web_btn.setMinimumSize(QSize(0, 34))
-        self.web_btn.setMaximumSize(QSize(16777215, 34))
-        icon31 = QIcon()
-        icon31.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/website_50px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.web_btn.setIcon(icon31)
-        self.web_btn.setIconSize(QSize(18, 18))
-
-        self.verticalLayout_10.addWidget(self.web_btn)
-
-        self.setting_btn = QPushButton(self.frame_zone_btn)
-        self.setting_btn.setObjectName(u"setting_btn")
-        self.setting_btn.setMinimumSize(QSize(0, 34))
-        self.setting_btn.setMaximumSize(QSize(16777215, 34))
-        icon32 = QIcon()
-        icon32.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/24x24/settings_30px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.setting_btn.setIcon(icon32)
-        self.setting_btn.setIconSize(QSize(18, 18))
-
-        self.verticalLayout_10.addWidget(self.setting_btn)
-
-        self.coins_btn = QPushButton(self.frame_zone_btn)
-        self.coins_btn.setObjectName(u"coins_btn")
-        self.coins_btn.setMinimumSize(QSize(0, 34))
-        self.coins_btn.setMaximumSize(QSize(16777215, 34))
-        icon33 = QIcon()
-        icon33.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/money_50px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.coins_btn.setIcon(icon33)
-        self.coins_btn.setIconSize(QSize(25, 25))
-
-        self.verticalLayout_10.addWidget(self.coins_btn)
-
-        self.setting_user_btn = QPushButton(self.frame_zone_btn)
-        self.setting_user_btn.setObjectName(u"setting_user_btn")
-        self.setting_user_btn.setMinimumSize(QSize(0, 34))
-        self.setting_user_btn.setMaximumSize(QSize(16777215, 34))
-        icon34 = QIcon()
-        icon34.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/24x24/admin_settings_male_30px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.setting_user_btn.setIcon(icon34)
-        self.setting_user_btn.setIconSize(QSize(18, 18))
-
-        self.verticalLayout_10.addWidget(self.setting_user_btn)
-
-        self.editTest = QPushButton(self.frame_zone_btn)
-        self.editTest.setObjectName(u"editTest")
-        self.editTest.setMinimumSize(QSize(0, 34))
-        self.editTest.setMaximumSize(QSize(16777215, 34))
-        icon35 = QIcon()
-        icon35.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/edit_folder_24px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.editTest.setIcon(icon35)
-        self.editTest.setIconSize(QSize(18, 18))
-
-        self.verticalLayout_10.addWidget(self.editTest)
-
-        self.editTestFrame = QFrame(self.frame_zone_btn)
-        self.editTestFrame.setObjectName(u"editTestFrame")
-        self.editTestFrame.setMinimumSize(QSize(0, 0))
-        self.editTestFrame.setMaximumSize(QSize(16777215, 0))
-        self.editTestFrame.setFrameShape(QFrame.StyledPanel)
-        self.editTestFrame.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_10 = QHBoxLayout(self.editTestFrame)
-        self.horizontalLayout_10.setSpacing(10)
-        self.horizontalLayout_10.setObjectName(u"horizontalLayout_10")
-        self.horizontalLayout_10.setContentsMargins(11, 0, 8, 0)
-        self.horizontalSlider = QSlider(self.editTestFrame)
-        self.horizontalSlider.setObjectName(u"horizontalSlider")
-        self.horizontalSlider.setOrientation(Qt.Horizontal)
-
-        self.horizontalLayout_10.addWidget(self.horizontalSlider)
-
-        self.toolButton = QToolButton(self.editTestFrame)
-        self.toolButton.setObjectName(u"toolButton")
-        self.toolButton.setMinimumSize(QSize(20, 20))
-        self.toolButton.setMaximumSize(QSize(20, 20))
-        icon36 = QIcon()
-        icon36.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-volume-off.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.toolButton.setIcon(icon36)
-
-        self.horizontalLayout_10.addWidget(self.toolButton)
-
-
-        self.verticalLayout_10.addWidget(self.editTestFrame)
-
-        self.verticalSpacer_3 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_10.addItem(self.verticalSpacer_3)
-
-
-        self.verticalLayout_141.addWidget(self.frame_zone_btn)
-
-        self.verticalSpacer_2 = QSpacerItem(5, 152, QSizePolicy.Minimum, QSizePolicy.Expanding)
-
-        self.verticalLayout_141.addItem(self.verticalSpacer_2)
-
-
-        self.horizontalLayout_2.addWidget(self.left_menu)
-
 
         self.verticalLayout_7.addWidget(self.frame)
 
@@ -5887,9 +5858,9 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
         self.GoogleFinance_btl = QPushButton(self.frame_GoogleFinance)
         self.GoogleFinance_btl.setObjectName(u"GoogleFinance_btl")
-        icon37 = QIcon()
-        icon37.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/fina.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.GoogleFinance_btl.setIcon(icon37)
+        icon35 = QIcon()
+        icon35.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/fina.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.GoogleFinance_btl.setIcon(icon35)
         self.GoogleFinance_btl.setIconSize(QSize(153, 130))
 
         self.verticalLayout_13.addWidget(self.GoogleFinance_btl)
@@ -5912,9 +5883,9 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_70.setContentsMargins(0, 0, 0, 0)
         self.YahooFinance_btn = QPushButton(self.frame_YahooFinance)
         self.YahooFinance_btn.setObjectName(u"YahooFinance_btn")
-        icon38 = QIcon()
-        icon38.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/yahoo.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.YahooFinance_btn.setIcon(icon38)
+        icon36 = QIcon()
+        icon36.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/yahoo.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.YahooFinance_btn.setIcon(icon36)
         self.YahooFinance_btn.setIconSize(QSize(136, 111))
 
         self.verticalLayout_70.addWidget(self.YahooFinance_btn)
@@ -5935,9 +5906,9 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_132.setContentsMargins(0, 0, 0, 0)
         self.Investing_btn = QPushButton(self.frame_Investing)
         self.Investing_btn.setObjectName(u"Investing_btn")
-        icon39 = QIcon()
-        icon39.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/investing.com.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.Investing_btn.setIcon(icon39)
+        icon37 = QIcon()
+        icon37.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/investing.com.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.Investing_btn.setIcon(icon37)
         self.Investing_btn.setIconSize(QSize(152, 114))
 
         self.verticalLayout_132.addWidget(self.Investing_btn)
@@ -5958,9 +5929,9 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_136.setContentsMargins(0, 0, 0, 0)
         self.BLHL_btn = QPushButton(self.frame_BLHL)
         self.BLHL_btn.setObjectName(u"BLHL_btn")
-        icon40 = QIcon()
-        icon40.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/BLHL.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.BLHL_btn.setIcon(icon40)
+        icon38 = QIcon()
+        icon38.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/BLHL.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.BLHL_btn.setIcon(icon38)
         self.BLHL_btn.setIconSize(QSize(150, 105))
 
         self.verticalLayout_136.addWidget(self.BLHL_btn)
@@ -5981,9 +5952,9 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_137.setContentsMargins(0, 0, 0, 0)
         self.Infomaney_btn = QPushButton(self.frame_Infomaney)
         self.Infomaney_btn.setObjectName(u"Infomaney_btn")
-        icon41 = QIcon()
-        icon41.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/infomaney.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.Infomaney_btn.setIcon(icon41)
+        icon39 = QIcon()
+        icon39.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/infomaney.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.Infomaney_btn.setIcon(icon39)
         self.Infomaney_btn.setIconSize(QSize(132, 81))
 
         self.verticalLayout_137.addWidget(self.Infomaney_btn)
@@ -6004,9 +5975,9 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_138.setContentsMargins(0, 0, 0, 0)
         self.Dinherama_btn = QPushButton(self.frame_Dinherama)
         self.Dinherama_btn.setObjectName(u"Dinherama_btn")
-        icon42 = QIcon()
-        icon42.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/dinherama.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.Dinherama_btn.setIcon(icon42)
+        icon40 = QIcon()
+        icon40.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/dinherama.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.Dinherama_btn.setIcon(icon40)
         self.Dinherama_btn.setIconSize(QSize(153, 108))
 
         self.verticalLayout_138.addWidget(self.Dinherama_btn)
@@ -6027,9 +5998,9 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_139.setContentsMargins(0, 0, 0, 0)
         self.CMEgroup_btn = QPushButton(self.frame_CMEgroup)
         self.CMEgroup_btn.setObjectName(u"CMEgroup_btn")
-        icon43 = QIcon()
-        icon43.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/cme.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.CMEgroup_btn.setIcon(icon43)
+        icon41 = QIcon()
+        icon41.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/cme.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.CMEgroup_btn.setIcon(icon41)
         self.CMEgroup_btn.setIconSize(QSize(143, 123))
 
         self.verticalLayout_139.addWidget(self.CMEgroup_btn)
@@ -6050,9 +6021,9 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_140.setContentsMargins(0, 0, 0, 0)
         self.Economia_btn = QPushButton(self.frame_Economia)
         self.Economia_btn.setObjectName(u"Economia_btn")
-        icon44 = QIcon()
-        icon44.addFile(u"../img/uol economia.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.Economia_btn.setIcon(icon44)
+        icon42 = QIcon()
+        icon42.addFile(u"../img/uol economia.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.Economia_btn.setIcon(icon42)
         self.Economia_btn.setIconSize(QSize(160, 100))
 
         self.verticalLayout_140.addWidget(self.Economia_btn)
@@ -6075,9 +6046,9 @@ class Ui_MainWindowMW(object):
         self.help_btnF_2 = QPushButton(self.frame_Helpe)
         self.help_btnF_2.setObjectName(u"help_btnF_2")
         self.help_btnF_2.setGeometry(QRect(10, 10, 40, 40))
-        icon45 = QIcon()
-        icon45.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/help_70px.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.help_btnF_2.setIcon(icon45)
+        icon43 = QIcon()
+        icon43.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/help_70px.png", QSize(), QIcon.Normal, QIcon.Off)
+        self.help_btnF_2.setIcon(icon43)
         self.help_btnF_2.setIconSize(QSize(60, 60))
 
         self.horizontalLayout.addWidget(self.frame_Helpe)
@@ -6105,7 +6076,7 @@ class Ui_MainWindowMW(object):
 
         self.retranslateUi(MainWindowMW)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(5)
         self.stackedWidget_2.setCurrentIndex(0)
 
 
@@ -6130,9 +6101,21 @@ class Ui_MainWindowMW(object):
         self.fechar.setText(QCoreApplication.translate("MainWindowMW", u"...", None))
         self.Home.setText("")
         self.web_btn_2.setText("")
-        self.conntrole_finace.setText("")
         self.settings.setText("")
         self.double_up.setText("")
+        self.QRcode.setText("")
+#if QT_CONFIG(whatsthis)
+        self.data.setWhatsThis("")
+#endif // QT_CONFIG(whatsthis)
+        self.data.setText(QCoreApplication.translate("MainWindowMW", u"<html><head/><body><p><span style=\" color:#dcbbff;\">date: </span><span style=\" color:#ffffff;\">28/06/2022</span></p></body></html>", None))
+        self.criadoPor.setText(QCoreApplication.translate("MainWindowMW", u"created by: NdDaniel", None))
+        self.help_btn.setText(QCoreApplication.translate("MainWindowMW", u"     Help", None))
+        self.perfil_btn.setText(QCoreApplication.translate("MainWindowMW", u"     Perfil", None))
+        self.web_btn.setText(QCoreApplication.translate("MainWindowMW", u"     Web", None))
+        self.setting_btn.setText(QCoreApplication.translate("MainWindowMW", u"     Setting", None))
+        self.coins_btn.setText(QCoreApplication.translate("MainWindowMW", u"   Coins Quote", None))
+        self.setting_user_btn.setText(QCoreApplication.translate("MainWindowMW", u"     Fluxo Diario", None))
+        self.editTest.setText(QCoreApplication.translate("MainWindowMW", u"     Fluxo Mensal", None))
         self.label_31.setText(QCoreApplication.translate("MainWindowMW", u"Contas a receber", None))
 #if QT_CONFIG(whatsthis)
         self.frame_Browsin_history_btn_2.setWhatsThis("")
@@ -6356,7 +6339,7 @@ class Ui_MainWindowMW(object):
         self.label_113.setText(QCoreApplication.translate("MainWindowMW", u"Total", None))
         self.pushButton_3.setText("")
         self.label_131.setText(QCoreApplication.translate("MainWindowMW", u"Kz 600.900,00", None))
-        self.pushButton_4.setText(QCoreApplication.translate("MainWindowMW", u"Nova Movimenta\u00e7\u00e3o", None))
+        self.novaMovimentacao.setText(QCoreApplication.translate("MainWindowMW", u"Nova Movimenta\u00e7\u00e3o", None))
         self.label_61.setText(QCoreApplication.translate("MainWindowMW", u"Data de Movimenta\u00e7\u00e3o", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindowMW", u"Buscar", None))
         self.label_8.setText(QCoreApplication.translate("MainWindowMW", u"C\u00f3digo", None))
@@ -6387,20 +6370,6 @@ class Ui_MainWindowMW(object):
         ___qtablewidgetitem2.setText(QCoreApplication.translate("MainWindowMW", u"Entradas", None));
         ___qtablewidgetitem3 = self.tableWidget.horizontalHeaderItem(3)
         ___qtablewidgetitem3.setText(QCoreApplication.translate("MainWindowMW", u"Saldo do Dia", None));
-        self.QRcode.setText("")
-#if QT_CONFIG(whatsthis)
-        self.data.setWhatsThis("")
-#endif // QT_CONFIG(whatsthis)
-        self.data.setText(QCoreApplication.translate("MainWindowMW", u"<html><head/><body><p><span style=\" color:#dcbbff;\">date: </span><span style=\" color:#ffffff;\">28/06/2022</span></p></body></html>", None))
-        self.criadoPor.setText(QCoreApplication.translate("MainWindowMW", u"created by: NdDaniel", None))
-        self.help_btn.setText(QCoreApplication.translate("MainWindowMW", u"     Help", None))
-        self.perfil_btn.setText(QCoreApplication.translate("MainWindowMW", u"     Perfil", None))
-        self.web_btn.setText(QCoreApplication.translate("MainWindowMW", u"     Web", None))
-        self.setting_btn.setText(QCoreApplication.translate("MainWindowMW", u"     Setting", None))
-        self.coins_btn.setText(QCoreApplication.translate("MainWindowMW", u"   Coins Quote", None))
-        self.setting_user_btn.setText(QCoreApplication.translate("MainWindowMW", u"     User settings", None))
-        self.editTest.setText(QCoreApplication.translate("MainWindowMW", u"     Edit Text", None))
-        self.toolButton.setText(QCoreApplication.translate("MainWindowMW", u"...", None))
 #if QT_CONFIG(whatsthis)
         self.GoogleFinance_btl.setWhatsThis("")
 #endif // QT_CONFIG(whatsthis)

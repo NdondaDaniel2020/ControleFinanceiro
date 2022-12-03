@@ -1053,11 +1053,11 @@ class MainwindowSC(QMainWindow):
         self.ui = Ui_MainWindowMW()
         self.ui.setupUi(self)
 
-        self.move(140, 15)
+        self.move(100, 7)
 
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
-        self.setMinimumSize(1117, 712)
+        self.setMinimumSize(1195, 760)
         self.toobtn = True
 
         self.eventoConnect()
@@ -1088,33 +1088,18 @@ class MainwindowSC(QMainWindow):
         self.ui.Economia_btn.clicked.connect(self.areaClick)
         self.ui.help_btnF_2.clicked.connect(self.areaClick)
 
-        # responsavel por abrir salvar e criar arquivos
-        self.ui.save.clicked.connect(self.editArq)
-        self.ui.open.clicked.connect(self.editArq)
-        self.ui.update.clicked.connect(self.navegWeb)
-        self.ui.arrow_left.clicked.connect(self.navegWeb)
-        self.ui.arrow_right.clicked.connect(self.navegWeb)
-        self.ui.voz_btn.clicked.connect(self.captacaoAudio)
-
-
-        self.ui.LineUrl.returnPressed.connect(lambda: self.loandEx(self.ui.LineUrl.text()))
-        self.ui.pesquisar_btn.clicked.connect(lambda: self.loandEx(self.ui.LineUrl.text()))
+        self.ui.novaMovimentacao.clicked.connect()
 
         # ler texto
-        self.ui.toolButton.clicked.connect(self.areaClick)
-        self.toobtn = False
 
         self.left = CustomGrip(self, Qt.LeftEdge, True)
         self.right = CustomGrip(self, Qt.RightEdge, True)
         self.top = CustomGrip(self, Qt.TopEdge, True)
         self.bottom = CustomGrip(self, Qt.BottomEdge, True)
 
-        self.adicionandoGrafico()
+        # self.adicionandoGrafico()
 
         self.show() # mostrar janela
-
-        self.TimerFont = QTimer()
-        self.TimerFont.timeout.connect(lambda: self.tamanhoFont())
 
         self.timerHistorico = QTimer()
         self.timerHistorico.timeout.connect(lambda: self.pegarURLcriarHistorico())
@@ -1123,28 +1108,6 @@ class MainwindowSC(QMainWindow):
         self.repAudioTimer.timeout.connect(lambda: self.repAudio())
 
         self.listaURL = []
-        # conectar com metodo textChanged para a aconversao  de moeda
-        self.ui.bitcoin_LEdit.textChanged.connect(self.bitcoin_LEditTextChanged)
-        self.ui.bitcoin_aoa_LEdit.textChanged.connect(self.bitcoin_aoa_LEditTextChanged)
-        self.ui.DK_LEdit.textChanged.connect(self.DK_LEditTextChanged)
-        self.ui.DK_aoa_LEdit.textChanged.connect(self.DK_aoa_LEditTextChanged)
-        self.ui.DB_LEdit.textChanged.connect(self.DB_LEditTextChanged)
-        self.ui.DB_aoa_LEdit.textChanged.connect(self.DB_aoa_LEditTextChanged)
-        self.ui.RO_LEdit.textChanged.connect(self.RO_LEditTextChanged)
-        self.ui.RO_aoa_LEdit.textChanged.connect(self.RO_aoa_LEditTextChanged)
-        self.ui.DJ_LEdit.textChanged.connect(self.DJ_LEditTextChanged)
-        self.ui.DJ_aoa_LEdit.textChanged.connect(self.DJ_aoa_LEditTextChanged)
-        self.ui.DC_LEdit.textChanged.connect(self.DC_LEditTextChanged)
-        self.ui.DC_aoa_LEdit.textChanged.connect(self.DC_aoa_LEditTextChanged)
-        self.ui.LE_LEdit.textChanged.connect(self.LE_LEditTextChanged)
-        self.ui.LE_aoa_LEdit.textChanged.connect(self.LE_aoa_LEditTextChanged)
-        self.ui.E_LEdit.textChanged.connect(self.E_LEditTextChanged)
-        self.ui.E_aoa_LEdit.textChanged.connect(self.E_aoa_LEditTextChanged)
-        self.ui.FS_LEdit.textChanged.connect(self.FS_LEditTextChanged)
-        self.ui.FS_aoa_LEdit.textChanged.connect(self.FS_aoa_LEditTextChanged)
-        self.ui.DNA_LEdit.textChanged.connect(self.DNA_LEditTextChanged)
-        self.ui.DNA_aoa_LEdit.textChanged.connect(self.DNA_aoa_LEditTextChanged)
-
 
 
     # pega a posicao global
@@ -1152,7 +1115,6 @@ class MainwindowSC(QMainWindow):
         self.dragPos = event.globalPos()
         self.dragPosScroll = self.ui.scrollArea.horizontalScrollBar().value()
         self.dragPosScroll2 = self.ui.scrollArea_6.horizontalScrollBar().value()
-        self.dragPosScrollV = self.ui.scrollArea_4.verticalScrollBar().value()
 
     # eventos e coneccoes
     def eventoConnect(self):
@@ -1319,57 +1281,8 @@ class MainwindowSC(QMainWindow):
 
         self.ui.frame_password_faceId.mouseMoveEvent = moveScroll2
         self.ui.frame_password_faceId.mouseReleaseEvent = releasecroll2
-        # faltam dois historicoa
 
-        ################################################################
-        ################### mover os scroll verticamente  ##############
-
-
-        self.scrollPrimary = 0
-        self.cursorPrimary = 0
-        self.logCursor = True
-        self.dragPosScroll = self.ui.scrollArea_4.verticalScrollBar().value()
-        def moveScrollV(event: QMouseEvent):
-            if event.buttons() == Qt.LeftButton:
-                if self.cursorPrimary == 0 and self.logCursor == True:
-                    self.cursorPrimary = self.cursor().pos().y()
-                    self.logCursor = False
-
-                valor = (self.cursor().pos().y() - (self.cursorPrimary+self.scrollPrimary))
-                self.ui.scrollArea_4.verticalScrollBar().setValue(self.dragPosScroll - valor)
-                event.accept()
-
-        def releasecrollV(event: QMouseEvent):
-            if event.type() == QEvent.MouseButtonRelease:
-                self.cursorPrimary = 0
-                self.logCursor = True
-                self.scrollPrimary = self.ui.scrollArea_4.verticalScrollBar().value()
-                event.accept()
-
-        self.ui.frame_scrollBTC.mouseMoveEvent = moveScrollV
-        self.ui.frame_scrollBTC.mouseReleaseEvent = releasecrollV
-        self.ui.frame_scrollCHF.mouseMoveEvent = moveScrollV
-        self.ui.frame_scrollCHF.mouseReleaseEvent = releasecrollV
-        self.ui.frame_scrollEUR.mouseMoveEvent = moveScrollV
-        self.ui.frame_scrollEUR.mouseReleaseEvent = releasecrollV
-        self.ui.frame_scrollGBP.mouseMoveEvent = moveScrollV
-        self.ui.frame_scrollGBP.mouseReleaseEvent = releasecrollV
-        self.ui.frame_scrollJOD.mouseMoveEvent = moveScrollV
-        self.ui.frame_scrollJOD.mouseReleaseEvent = releasecrollV
-        self.ui.frame_scrollKWD.mouseMoveEvent = moveScrollV
-        self.ui.frame_scrollKWD.mouseReleaseEvent = releasecrollV
-        self.ui.frame_scrollKYD.mouseMoveEvent = moveScrollV
-        self.ui.frame_scrollKYD.mouseReleaseEvent = releasecrollV
-        self.ui.frame_scrollOMR.mouseMoveEvent = moveScrollV
-        self.ui.frame_scrollOMR.mouseReleaseEvent = releasecrollV
-        self.ui.frame_scrollUSD.mouseMoveEvent = moveScrollV
-        self.ui.frame_scrollUSD.mouseReleaseEvent = releasecrollV
-        self.ui.frame_scrollBHD.mouseMoveEvent = moveScrollV
-        self.ui.frame_scrollBHD.mouseReleaseEvent = releasecrollV
-
-
-        # metodo responsavel por maximizar e minimizar
-
+    # metodo responsavel por maximizar e minimizar
     def MaxMin(self):
         global MNW
 
@@ -1478,7 +1391,6 @@ class MainwindowSC(QMainWindow):
         self.grounpLeft.addAnimation(self.criadoAnimation)
         self.grounpLeft.start()
 
-
     # a metodo que anima o tec zone
     def scrollAreaAnimat(self):  #########################################################################################
         tamanho_atual = self.ui.frame_MarcaTech.height() #self.ui.scrollArea.height()
@@ -1523,7 +1435,7 @@ class MainwindowSC(QMainWindow):
         name_btn = self.sender().objectName()
 
         if name_btn == 'web_btn' or name_btn == 'web_btn_2':
-            self.simpficaLond(self.ui.page_web, 0)
+            self.simpficaLond(self.ui.page_ControleDeContaAReceber, 0)
         elif name_btn == 'help_btn':
             self.simpficaLond(self.ui.page_Extras, 0)
         elif name_btn == 'GoogleFinance_btl':
@@ -1550,9 +1462,8 @@ class MainwindowSC(QMainWindow):
             self.simpficaLond(self.ui.page_perfil)
             self.fontAnimation(0)
         elif name_btn == 'setting_btn':
-            self.simpficaLond(self.ui.page_perfil, 0)
+            self.simpficaLond(self.ui.page_ControlFinace, 0)
         elif name_btn == 'coins_btn':
-            self.animationProgressB()
             self.simpficaLond(self.ui.page_CoinsQuote, 0)
         elif name_btn == 'setting_user_btn':
             self.simpficaLond(self.ui.page_perfil, 0)
@@ -1567,51 +1478,11 @@ class MainwindowSC(QMainWindow):
                 icon15 = QIcon()
                 icon15.addFile(u"../img/24x24/cil-volume-off.png", QSize(), QIcon.Normal, QIcon.Off)
                 self.ui.toolButton.setIcon(icon15)
-                self.toobtn = False
-                self.engine.stop()
             else:
                 icon15 = QIcon()
                 icon15.addFile(u"../img/24x24/cil-volume-high.png", QSize(), QIcon.Normal, QIcon.Off)
                 self.ui.toolButton.setIcon(icon15)
-                self.toobtn = True
-                QTimer.singleShot(100, lambda: self.lerText(self.ui.plainTextEdit.toPlainText()))
 
-    # metodo que anima o frame onde esta o regulador de font do texto
-    def fontAnimation(self, n):
-
-        if n == 0:
-            tamanho = self.ui.editTestFrame.height()
-            if not tamanho == 0:
-                self.frameFont = QPropertyAnimation(self.ui.editTestFrame, b'maximumHeight')
-                self.frameFont.setStartValue(30)
-                self.frameFont.setEndValue(0)
-                self.frameFont.setDuration(400)
-                self.frameFont.setEasingCurve(QEasingCurve.InOutCirc)
-                self.frameFont.start()
-        else:
-            tamanho = self.ui.editTestFrame.height()
-
-            if tamanho == 0:
-                self.TimerFont.start()
-                i = 0
-                f = 30
-            else:
-                self.TimerFont.stop()
-                i = 30
-                f = 0
-
-            self.frameFont = QPropertyAnimation(self.ui.editTestFrame, b'maximumHeight')
-            self.frameFont.setStartValue(i)
-            self.frameFont.setEndValue(f)
-            self.frameFont.setDuration(400)
-            self.frameFont.setEasingCurve(QEasingCurve.InOutCirc)
-            self.frameFont.start()
-
-    # metodo responsavel por aumentar e diminuir o tamanho da font
-    def tamanhoFont(self):
-        font = QFont()
-        font.setPointSize(15+int(self.ui.horizontalSlider.value()))
-        self.ui.plainTextEdit.setFont(font)
 
     #  lond e o metodo que carrega o segundo webBroeser navegagor
     def loand(self, inputURL):
@@ -1620,12 +1491,6 @@ class MainwindowSC(QMainWindow):
         if url.isValid():
             self.ui.webEngineView_2.load(url)
 
-    #  lond e o metodo que carrega o primeiro navegagor
-    def loandEx(self, inputURL):
-        url = QUrl.fromUserInput(inputURL)
-        if url.isValid():
-            self.ui.webEngineView.load(url)
-            self.timerHistorico.start()
 
     # este metodo simplifica o processamento web e a troca de pagina
     def simpficaLond(self, page=None, n=0, url=''):
@@ -1684,364 +1549,7 @@ class MainwindowSC(QMainWindow):
                 self.listaURL.append(self.ui.webEngineView.history().currentItem().url().url())
                 self.ui.LineUrl.setText(self.ui.webEngineView.history().currentItem().url().url())
 
-    # este metodo le text 0
-    def lerText(self, text):
-        text = str(text)
-        self.engine = pyttsx3.init()
-        voices = self.engine.getProperty('voices')
-        self.engine.setProperty('voice', voices[1].id)
-        self.engine.say(text)
-        self.engine.runAndWait()
-
-        icon15 = QIcon()
-        icon15.addFile(u"../img/24x24/cil-volume-off.png", QSize(), QIcon.Normal, QIcon.Off)
-        QTimer.singleShot(100,lambda:self.ui.toolButton.setIcon(icon15))
-        self.toobtn = False
-
-######## tentar um ouro reconhecedor de voz
-    # este metodo e esponsavel por ppegar a voz
-    def captacaoAudio(self):
-        model = Model('model')
-        self.rec = KaldiRecognizer(model, 14000)
-
-        pyaud = pyaudio.PyAudio()
-        self.stream = pyaud.open(format=pyaudio.paInt16, channels=1, rate=16000, input=True, frames_per_buffer=2048)
-        self.stream.start_stream()
-        QTimer.singleShot(300, lambda: self.repAudioTimer.start())
-
-    # repeticao do pegar audio
-    def repAudio(self):
-        global PEGARaUDIO
-        data = self.stream.read(8000)
-        if len(data) == 0 or PEGARaUDIO == 5:
-            self.repAudioTimer.stop()
-        if self.rec.AcceptWaveform(data):
-            result = self.rec.Result()
-            result = json.loads(result)
-            if result is not None:
-                text = result['text']
-            PEGARaUDIO += 1
-
-    def animationProgressB(self):
-
-        self.progBrarAnimation1 = QPropertyAnimation(self.ui.progressBar_1, b'value')
-        self.progBrarAnimation1.setStartValue(0)
-        self.progBrarAnimation1.setDuration(600)
-        self.progBrarAnimation1.setEndValue(100)
-        self.progBrarAnimation1.setEasingCurve(QEasingCurve.InOutCirc)
-
-        self.progBrarAnimation2 = QPropertyAnimation(self.ui.progressBar_2, b'value')
-        self.progBrarAnimation2.setStartValue(0)
-        self.progBrarAnimation2.setDuration(600)
-        self.progBrarAnimation2.setEndValue(100)
-        self.progBrarAnimation2.setEasingCurve(QEasingCurve.InOutCirc)
-
-        self.progBrarAnimation3 = QPropertyAnimation(self.ui.progressBar_3, b'value')
-        self.progBrarAnimation3.setStartValue(0)
-        self.progBrarAnimation3.setDuration(600)
-        self.progBrarAnimation3.setEndValue(100)
-        self.progBrarAnimation3.setEasingCurve(QEasingCurve.InOutCirc)
-
-        self.progBrarAnimation4 = QPropertyAnimation(self.ui.progressBar_4, b'value')
-        self.progBrarAnimation4.setStartValue(0)
-        self.progBrarAnimation4.setDuration(600)
-        self.progBrarAnimation4.setEndValue(100)
-        self.progBrarAnimation4.setEasingCurve(QEasingCurve.InOutCirc)
-
-        self.progBrarAnimation5 = QPropertyAnimation(self.ui.progressBar_5, b'value')
-        self.progBrarAnimation5.setStartValue(0)
-        self.progBrarAnimation5.setDuration(600)
-        self.progBrarAnimation5.setEndValue(100)
-        self.progBrarAnimation5.setEasingCurve(QEasingCurve.InOutCirc)
-
-        self.progBrarAnimation6 = QPropertyAnimation(self.ui.progressBar_6, b'value')
-        self.progBrarAnimation6.setStartValue(0)
-        self.progBrarAnimation6.setDuration(600)
-        self.progBrarAnimation6.setEndValue(100)
-        self.progBrarAnimation6.setEasingCurve(QEasingCurve.InOutCirc)
-
-        self.progBrarAnimation7 = QPropertyAnimation(self.ui.progressBar_7, b'value')
-        self.progBrarAnimation7.setStartValue(0)
-        self.progBrarAnimation7.setDuration(600)
-        self.progBrarAnimation7.setEndValue(100)
-        self.progBrarAnimation7.setEasingCurve(QEasingCurve.InOutCirc)
-
-        self.progBrarAnimation8 = QPropertyAnimation(self.ui.progressBar_8, b'value')
-        self.progBrarAnimation8.setStartValue(0)
-        self.progBrarAnimation8.setDuration(600)
-        self.progBrarAnimation8.setEndValue(100)
-        self.progBrarAnimation8.setEasingCurve(QEasingCurve.InOutCirc)
-
-        self.progBrarAnimation9 = QPropertyAnimation(self.ui.progressBar_9, b'value')
-        self.progBrarAnimation9.setStartValue(0)
-        self.progBrarAnimation9.setDuration(600)
-        self.progBrarAnimation9.setEndValue(100)
-        self.progBrarAnimation9.setEasingCurve(QEasingCurve.InOutCirc)
-
-        self.progBrarAnimation10 = QPropertyAnimation(self.ui.progressBar_10, b'value')
-        self.progBrarAnimation10.setStartValue(0)
-        self.progBrarAnimation10.setDuration(600)
-        self.progBrarAnimation10.setEndValue(100)
-        self.progBrarAnimation10.setEasingCurve(QEasingCurve.InOutCirc)
-
-        self.group_pb_animation = QParallelAnimationGroup()
-        self.group_pb_animation.addAnimation(self.progBrarAnimation1)
-        self.group_pb_animation.addAnimation(self.progBrarAnimation2)
-        self.group_pb_animation.addAnimation(self.progBrarAnimation3)
-        self.group_pb_animation.addAnimation(self.progBrarAnimation4)
-        self.group_pb_animation.addAnimation(self.progBrarAnimation5)
-        self.group_pb_animation.addAnimation(self.progBrarAnimation6)
-        self.group_pb_animation.addAnimation(self.progBrarAnimation7)
-        self.group_pb_animation.addAnimation(self.progBrarAnimation8)
-        self.group_pb_animation.addAnimation(self.progBrarAnimation9)
-        self.group_pb_animation.addAnimation(self.progBrarAnimation10)
-        self.group_pb_animation.start()
-
-####### OS METODOS A BAIXO SERAM METODOS DE QUE CONFIGURARAM AS CONVERCOES DE MOEDA #####
-    # crie um metod que ira receber o valores de apis
-
-    def bitcoin_LEditTextChanged(self, s):
-
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS * 8482783.07:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.bitcoin_aoa_LEdit.setText(conversao)
-        except:
-                pass
-
-    def bitcoin_aoa_LEditTextChanged(self, s):
-
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS/8482783.07:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.bitcoin_LEdit.setText(conversao)
-        except:
-                pass
-
-    def DK_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS * 138973:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.DK_aoa_LEdit.setText(conversao)
-        except:
-                pass
-
-    def DK_aoa_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS / 138973:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.DK_LEdit.setText(conversao)
-        except:
-
-                pass
-
-    def DB_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS * 1389.73:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.DB_aoa_LEdit.setText(conversao)
-        except:
-                pass
-
-    def DB_aoa_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS / 1389.73:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.DB_LEdit.setText(conversao)
-        except:
-            pass
-
-    def RO_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS * 1113.22:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.RO_aoa_LEdit.setText(conversao)
-        except:
-            pass
-
-    def RO_aoa_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS / 1113.22:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.RO_LEdit.setText(conversao)
-        except:
-            pass
-
-    def DJ_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS * 604.49:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.DJ_aoa_LEdit.setText(conversao)
-        except:
-            pass
-
-    def DJ_aoa_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS / 604.49:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.DJ_LEdit.setText(conversao)
-        except:
-            pass
-
-    def DC_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS * 514.50:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.DC_aoa_LEdit.setText(conversao)
-        except:
-            pass
-
-    def DC_aoa_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS / 514.50:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.DC_LEdit.setText(conversao)
-        except:
-            pass
-
-    def LE_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS * 493.30:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.LE_aoa_LEdit.setText(conversao)
-        except:
-            pass
-
-    def LE_aoa_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS / 493.30:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.LE_LEdit.setText(conversao)
-        except:
-            pass
-
-    def E_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS * 426.57:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.E_aoa_LEdit.setText(conversao)
-        except:
-            pass
-
-    def E_aoa_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS /426.57:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.E_LEdit.setText(conversao)
-        except:
-            pass
-
-    def FS_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS * 436.79:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.FS_aoa_LEdit.setText(conversao)
-        except:
-            pass
-
-    def FS_aoa_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS / 436.79:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.FS_LEdit.setText(conversao)
-        except:
-            pass
-
-    def DNA_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS * 428.58:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.DNA_aoa_LEdit.setText(conversao)
-        except:
-            pass
-
-    def DNA_aoa_LEditTextChanged(self, s):
-        try:
-            s = self.tirarPontoValor(s)
-            intS = float(s.replace(',', '.'))
-            conversao = str(f"{intS / 428.58:.2f}")
-            conversao = self.porPontoValor(conversao)
-            self.ui.DNA_LEdit.setText(conversao)
-        except:
-            pass
-
-
-    def tirarPontoValor(self, valor):
-
-        saida = ''
-        anlz = False
-        valor = list(valor)
-        pre = 0
-        for n, c in enumerate(valor):
-
-            if n == 0:
-                if c == ".":
-                    saida = "ERROR"
-                else:
-                    saida += c
-            else:
-
-                if c == ".":
-                    pre += 4
-
-                if c == ",":
-                    pre += 3
-
-                if valor.count("."):
-                    if c == ".":
-                        anlz = True
-                    else:
-                        saida += c
-
-                    if anlz:
-                        pre -= 1
-
-                else:
-                    saida += c
-
-        if not pre == 0 and anlz == True:
-            saida = "ERROR"
-
-        return saida
-
+    # este metodo e responsavel por add  o grafico na interface na HOME page
     def adicionandoGrafico(self):
 
         chart = Chart()
@@ -2053,10 +1561,11 @@ class MainwindowSC(QMainWindow):
 
         self.ui.verticalLayout_graficoMain.addWidget(chart_view)
 
+    # este metodo é reponsavelo pela movimentação
+    def novaMovimentacao(self):
+
+
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = MainwindowSC()
     sys.exit(app.exec())
-
-##            for itens in self.ui.webEngineView.page().history().items():
-##                print(itens.url())

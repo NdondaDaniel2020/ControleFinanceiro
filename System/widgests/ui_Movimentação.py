@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MovimentaçãoCKAgDF.ui'
+## Form generated from reading UI file 'MovimentaçãowpGHhN.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -17,7 +17,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
     QLabel, QLineEdit, QPushButton, QSizePolicy,
-    QSpacerItem, QVBoxLayout, QWidget)
+    QSpacerItem, QVBoxLayout, QWidget, QMainWindow)
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -36,16 +36,16 @@ class Ui_Form(object):
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.frame_2 = QFrame(self.CentraFrame)
-        self.frame_2.setObjectName(u"frame_2")
-        self.frame_2.setMaximumSize(QSize(16777215, 40))
-        self.frame_2.setFrameShape(QFrame.StyledPanel)
-        self.frame_2.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout = QHBoxLayout(self.frame_2)
+        self.barraTitulo = QFrame(self.CentraFrame)
+        self.barraTitulo.setObjectName(u"barraTitulo")
+        self.barraTitulo.setMaximumSize(QSize(16777215, 40))
+        self.barraTitulo.setFrameShape(QFrame.StyledPanel)
+        self.barraTitulo.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout = QHBoxLayout(self.barraTitulo)
         self.horizontalLayout.setSpacing(3)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
         self.horizontalLayout.setContentsMargins(-1, 7, 6, -1)
-        self.label = QLabel(self.frame_2)
+        self.label = QLabel(self.barraTitulo)
         self.label.setObjectName(u"label")
         font = QFont()
         font.setFamilies([u"Segoe UI Semibold"])
@@ -59,11 +59,11 @@ class Ui_Form(object):
 
         self.horizontalLayout.addItem(self.horizontalSpacer)
 
-        self.pushButton = QPushButton(self.frame_2)
-        self.pushButton.setObjectName(u"pushButton")
-        self.pushButton.setMinimumSize(QSize(28, 25))
-        self.pushButton.setMaximumSize(QSize(28, 26))
-        self.pushButton.setStyleSheet(u"QPushButton{\n"
+        self.minimizar = QPushButton(self.barraTitulo)
+        self.minimizar.setObjectName(u"minimizar")
+        self.minimizar.setMinimumSize(QSize(28, 25))
+        self.minimizar.setMaximumSize(QSize(28, 26))
+        self.minimizar.setStyleSheet(u"QPushButton{\n"
 "background-color: rgb(170, 85, 255);\n"
 "border-radius: 5px;\n"
 "color: rgb(255, 255, 255);\n"
@@ -82,16 +82,16 @@ class Ui_Form(object):
 "}")
         icon = QIcon()
         icon.addFile(u"../img/24x24/cil-minus.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton.setIcon(icon)
-        self.pushButton.setIconSize(QSize(20, 20))
+        self.minimizar.setIcon(icon)
+        self.minimizar.setIconSize(QSize(20, 20))
 
-        self.horizontalLayout.addWidget(self.pushButton)
+        self.horizontalLayout.addWidget(self.minimizar)
 
-        self.pushButton_2 = QPushButton(self.frame_2)
-        self.pushButton_2.setObjectName(u"pushButton_2")
-        self.pushButton_2.setMinimumSize(QSize(28, 26))
-        self.pushButton_2.setMaximumSize(QSize(28, 26))
-        self.pushButton_2.setStyleSheet(u"QPushButton{\n"
+        self.fechar = QPushButton(self.barraTitulo)
+        self.fechar.setObjectName(u"fechar")
+        self.fechar.setMinimumSize(QSize(28, 26))
+        self.fechar.setMaximumSize(QSize(28, 26))
+        self.fechar.setStyleSheet(u"QPushButton{\n"
 "background-color: rgb(170, 85, 255);\n"
 "border-radius: 5px;\n"
 "color: rgb(255, 255, 255);\n"
@@ -110,51 +110,51 @@ class Ui_Form(object):
 "}")
         icon1 = QIcon()
         icon1.addFile(u"../img/24x24/cil-x-f.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_2.setIcon(icon1)
-        self.pushButton_2.setIconSize(QSize(20, 20))
+        self.fechar.setIcon(icon1)
+        self.fechar.setIconSize(QSize(20, 20))
 
-        self.horizontalLayout.addWidget(self.pushButton_2)
+        self.horizontalLayout.addWidget(self.fechar)
 
 
-        self.verticalLayout_2.addWidget(self.frame_2)
+        self.verticalLayout_2.addWidget(self.barraTitulo)
 
         self.frame = QFrame(self.CentraFrame)
         self.frame.setObjectName(u"frame")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
-        self.BuscarStatus_4 = QLineEdit(self.frame)
-        self.BuscarStatus_4.setObjectName(u"BuscarStatus_4")
-        self.BuscarStatus_4.setGeometry(QRect(20, 20, 290, 36))
-        self.BuscarStatus_4.setMinimumSize(QSize(290, 36))
-        self.BuscarStatus_4.setMaximumSize(QSize(290, 36))
+        self.Titulo = QLineEdit(self.frame)
+        self.Titulo.setObjectName(u"Titulo")
+        self.Titulo.setGeometry(QRect(20, 20, 290, 36))
+        self.Titulo.setMinimumSize(QSize(290, 36))
+        self.Titulo.setMaximumSize(QSize(290, 36))
         font1 = QFont()
         font1.setFamilies([u"Segoe UI Semibold"])
         font1.setPointSize(11)
-        self.BuscarStatus_4.setFont(font1)
-        self.BuscarStatus_4.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.Titulo.setFont(font1)
+        self.Titulo.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
 "border-radius:5px;\n"
 "color: rgb(255, 255, 255);\n"
 "padding-left:5px;")
-        self.BuscarStatus_5 = QLineEdit(self.frame)
-        self.BuscarStatus_5.setObjectName(u"BuscarStatus_5")
-        self.BuscarStatus_5.setGeometry(QRect(20, 80, 290, 36))
-        self.BuscarStatus_5.setMinimumSize(QSize(290, 36))
-        self.BuscarStatus_5.setMaximumSize(QSize(290, 36))
-        self.BuscarStatus_5.setFont(font1)
-        self.BuscarStatus_5.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.valor = QLineEdit(self.frame)
+        self.valor.setObjectName(u"valor")
+        self.valor.setGeometry(QRect(20, 80, 290, 36))
+        self.valor.setMinimumSize(QSize(290, 36))
+        self.valor.setMaximumSize(QSize(290, 36))
+        self.valor.setFont(font1)
+        self.valor.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
 "border-radius:5px;\n"
 "color: rgb(255, 255, 255);\n"
 "padding-left:5px;")
-        self.pushButton_3 = QPushButton(self.frame)
-        self.pushButton_3.setObjectName(u"pushButton_3")
-        self.pushButton_3.setGeometry(QRect(20, 140, 130, 36))
-        self.pushButton_3.setMinimumSize(QSize(130, 36))
-        self.pushButton_3.setMaximumSize(QSize(130, 36))
+        self.entrada = QPushButton(self.frame)
+        self.entrada.setObjectName(u"entrada")
+        self.entrada.setGeometry(QRect(20, 140, 130, 36))
+        self.entrada.setMinimumSize(QSize(130, 36))
+        self.entrada.setMaximumSize(QSize(130, 36))
         font2 = QFont()
         font2.setFamilies([u"Segoe UI Semibold"])
         font2.setPointSize(12)
-        self.pushButton_3.setFont(font2)
-        self.pushButton_3.setStyleSheet(u"QPushButton{\n"
+        self.entrada.setFont(font2)
+        self.entrada.setStyleSheet(u"QPushButton{\n"
 "background-color: rgb(170, 85, 255);\n"
 "border-radius: 5px;\n"
 "color: rgb(85, 255, 127);\n"
@@ -171,15 +171,15 @@ class Ui_Form(object):
 "}")
         icon2 = QIcon()
         icon2.addFile(u"../img/cil-vertical-align-top.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_3.setIcon(icon2)
-        self.pushButton_3.setIconSize(QSize(20, 20))
-        self.pushButton_4 = QPushButton(self.frame)
-        self.pushButton_4.setObjectName(u"pushButton_4")
-        self.pushButton_4.setGeometry(QRect(180, 140, 130, 36))
-        self.pushButton_4.setMinimumSize(QSize(130, 36))
-        self.pushButton_4.setMaximumSize(QSize(130, 36))
-        self.pushButton_4.setFont(font2)
-        self.pushButton_4.setStyleSheet(u"QPushButton{\n"
+        self.entrada.setIcon(icon2)
+        self.entrada.setIconSize(QSize(20, 20))
+        self.saida = QPushButton(self.frame)
+        self.saida.setObjectName(u"saida")
+        self.saida.setGeometry(QRect(180, 140, 130, 36))
+        self.saida.setMinimumSize(QSize(130, 36))
+        self.saida.setMaximumSize(QSize(130, 36))
+        self.saida.setFont(font2)
+        self.saida.setStyleSheet(u"QPushButton{\n"
 "background-color: rgb(170, 85, 255);\n"
 "border-radius: 5px;\n"
 "	color: rgb(255, 0, 0);\n"
@@ -196,15 +196,15 @@ class Ui_Form(object):
 "}")
         icon3 = QIcon()
         icon3.addFile(u"../img/cil-vertical-align-bottom.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.pushButton_4.setIcon(icon3)
-        self.pushButton_4.setIconSize(QSize(20, 20))
-        self.comboBox_5 = QComboBox(self.frame)
-        self.comboBox_5.setObjectName(u"comboBox_5")
-        self.comboBox_5.setGeometry(QRect(20, 200, 290, 36))
-        self.comboBox_5.setMinimumSize(QSize(290, 36))
-        self.comboBox_5.setMaximumSize(QSize(290, 36))
-        self.comboBox_5.setFont(font2)
-        self.comboBox_5.setStyleSheet(u"\n"
+        self.saida.setIcon(icon3)
+        self.saida.setIconSize(QSize(20, 20))
+        self.categoria = QComboBox(self.frame)
+        self.categoria.setObjectName(u"categoria")
+        self.categoria.setGeometry(QRect(20, 200, 290, 36))
+        self.categoria.setMinimumSize(QSize(290, 36))
+        self.categoria.setMaximumSize(QSize(290, 36))
+        self.categoria.setFont(font2)
+        self.categoria.setStyleSheet(u"\n"
 "\n"
 "\n"
 "QComboBox{\n"
@@ -237,13 +237,13 @@ class Ui_Form(object):
 "border:2px solid  rgb(255, 255, 255);\n"
 "border-radius:5px;\n"
 "}")
-        self.pushButton_5 = QPushButton(self.frame)
-        self.pushButton_5.setObjectName(u"pushButton_5")
-        self.pushButton_5.setGeometry(QRect(70, 260, 180, 36))
-        self.pushButton_5.setMinimumSize(QSize(180, 36))
-        self.pushButton_5.setMaximumSize(QSize(180, 1234567))
-        self.pushButton_5.setFont(font1)
-        self.pushButton_5.setStyleSheet(u"QPushButton{\n"
+        self.movimentar = QPushButton(self.frame)
+        self.movimentar.setObjectName(u"movimentar")
+        self.movimentar.setGeometry(QRect(70, 260, 180, 36))
+        self.movimentar.setMinimumSize(QSize(180, 36))
+        self.movimentar.setMaximumSize(QSize(180, 1234567))
+        self.movimentar.setFont(font1)
+        self.movimentar.setStyleSheet(u"QPushButton{\n"
 "background-color: rgb(170, 85, 255);\n"
 "border-radius: 5px;\n"
 "color: rgb(255, 255, 255);\n"
@@ -260,7 +260,7 @@ class Ui_Form(object):
 "border-radius: 5px;\n"
 "color: rgb(255, 255, 255);\n"
 "}")
-        self.pushButton_5.setIconSize(QSize(20, 20))
+        self.movimentar.setIconSize(QSize(20, 20))
 
         self.verticalLayout_2.addWidget(self.frame)
 
@@ -276,14 +276,62 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.label.setText(QCoreApplication.translate("Form", u"Nova Movimenta\u00e7\u00e3o", None))
-        self.pushButton.setText("")
-        self.pushButton_2.setText("")
-        self.BuscarStatus_4.setPlaceholderText(QCoreApplication.translate("Form", u"Titulo", None))
-        self.BuscarStatus_5.setPlaceholderText(QCoreApplication.translate("Form", u"Valor", None))
-        self.pushButton_3.setText(QCoreApplication.translate("Form", u"Entrada", None))
-        self.pushButton_4.setText(QCoreApplication.translate("Form", u"Saida", None))
-        self.comboBox_5.setCurrentText("")
-        self.comboBox_5.setPlaceholderText(QCoreApplication.translate("Form", u"Selecione a categoria", None))
-        self.pushButton_5.setText(QCoreApplication.translate("Form", u"Movimentar", None))
+        self.minimizar.setText("")
+        self.fechar.setText("")
+        self.Titulo.setPlaceholderText(QCoreApplication.translate("Form", u"Titulo", None))
+        self.valor.setPlaceholderText(QCoreApplication.translate("Form", u"Valor", None))
+        self.entrada.setText(QCoreApplication.translate("Form", u"Entrada", None))
+        self.saida.setText(QCoreApplication.translate("Form", u"Saida", None))
+        self.categoria.setCurrentText("")
+        self.categoria.setPlaceholderText(QCoreApplication.translate("Form", u"Selecione a categoria", None))
+        self.movimentar.setText(QCoreApplication.translate("Form", u"Movimentar", None))
     # retranslateUi
+
+
+class Movimentacao(QMainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.mov = Ui_Form()
+        self.mov.setupUi(self)
+
+        self.mov.CentraFrame.setGeometry(9, 9, 325, 355)
+
+        self.categoria = False
+        self.EntSai = False
+
+        self.setWindowFlags(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+
+        self.mov.fechar.clicked.connect(lambda: self.close())
+        self.mov.minimizar.clicked.connect(lambda: self.showMinimized())
+        self.mov.movimentar.clicked.connect(self.retornarValoresObtidos)
+
+        def moveWindow(event):
+            if event.buttons() == Qt.LeftButton:
+                self.move(self.pos() + event.globalPos() - self.dragPos)
+                self.dragPos = event.globalPos()
+                event.accept()
+
+        self.mov.barraTitulo.mouseMoveEvent = moveWindow
+
+        self.show()
+
+    def mousePressEvent(self, event):
+        self.dragPos = event.globalPos()
+
+    def retornarValoresObtidos(self):
+        titulo = self.mov.Titulo.text()
+        valor = self.mov.valor.text()
+        
+        print(titulo, valor)
+
+        self.close()
+
+
+if __name__ == "__main__":
+    import sys
+
+    app = QApplication(sys.argv)
+    window = Movimentacao()
+    sys.exit(app.exec())
 

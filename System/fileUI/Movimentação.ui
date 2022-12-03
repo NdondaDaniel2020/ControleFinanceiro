@@ -43,7 +43,7 @@ border-radius: 8px;</string>
        <number>0</number>
       </property>
       <item>
-       <widget class="QFrame" name="frame_2">
+       <widget class="QFrame" name="barraTitulo">
         <property name="maximumSize">
          <size>
           <width>16777215</width>
@@ -96,7 +96,7 @@ border-radius: 8px;</string>
           </spacer>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton">
+          <widget class="QPushButton" name="minimizar">
            <property name="minimumSize">
             <size>
              <width>28</width>
@@ -144,7 +144,7 @@ color: rgb(255, 255, 255);
           </widget>
          </item>
          <item>
-          <widget class="QPushButton" name="pushButton_2">
+          <widget class="QPushButton" name="fechar">
            <property name="minimumSize">
             <size>
              <width>28</width>
@@ -202,7 +202,7 @@ color: rgb(255, 255, 255);
         <property name="frameShadow">
          <enum>QFrame::Raised</enum>
         </property>
-        <widget class="QLineEdit" name="BuscarStatus_4">
+        <widget class="QLineEdit" name="Titulo">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -239,7 +239,7 @@ padding-left:5px;</string>
           <string>Titulo</string>
          </property>
         </widget>
-        <widget class="QLineEdit" name="BuscarStatus_5">
+        <widget class="QLineEdit" name="valor">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -276,7 +276,7 @@ padding-left:5px;</string>
           <string>Valor</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_3">
+        <widget class="QPushButton" name="entrada">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -334,7 +334,7 @@ border-radius: 5px;
           </size>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_4">
+        <widget class="QPushButton" name="saida">
          <property name="geometry">
           <rect>
            <x>180</x>
@@ -392,7 +392,7 @@ border-radius: 5px;
           </size>
          </property>
         </widget>
-        <widget class="QComboBox" name="comboBox_5">
+        <widget class="QComboBox" name="categoria">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -461,7 +461,7 @@ border-radius:5px;
           <string>Selecione a categoria</string>
          </property>
         </widget>
-        <widget class="QPushButton" name="pushButton_5">
+        <widget class="QPushButton" name="movimentar">
          <property name="geometry">
           <rect>
            <x>70</x>

@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1033</width>
+    <width>1122</width>
     <height>664</height>
    </rect>
   </property>
@@ -722,35 +722,6 @@ QPushButton:pressed{
                            </property>
                           </widget>
                          </item>
-                         <item>
-                          <widget class="QPushButton" name="conntrole_finace">
-                           <property name="minimumSize">
-                            <size>
-                             <width>0</width>
-                             <height>35</height>
-                            </size>
-                           </property>
-                           <property name="maximumSize">
-                            <size>
-                             <width>35</width>
-                             <height>35</height>
-                            </size>
-                           </property>
-                           <property name="text">
-                            <string/>
-                           </property>
-                           <property name="icon">
-                            <iconset>
-                             <normaloff>../img/money_50px.png</normaloff>../img/money_50px.png</iconset>
-                           </property>
-                           <property name="iconSize">
-                            <size>
-                             <width>27</width>
-                             <height>27</height>
-                            </size>
-                           </property>
-                          </widget>
-                         </item>
                          <item alignment="Qt::AlignRight">
                           <widget class="QPushButton" name="settings">
                            <property name="minimumSize">
@@ -799,7 +770,7 @@ QPushButton:pressed{
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/24x24/cil-chevron-double-up-alt.png</normaloff>../img/24x24/cil-chevron-double-up-alt.png</iconset>
+                             <normaloff>../img/24x24/cil-x-f.png</normaloff>../img/24x24/cil-x-f.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -866,13 +837,13 @@ QPushButton:pressed{
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
-                             <height>172</height>
+                             <height>260</height>
                             </size>
                            </property>
                            <property name="maximumSize">
                             <size>
                              <width>0</width>
-                             <height>162</height>
+                             <height>257</height>
                             </size>
                            </property>
                            <property name="frameShape">
@@ -915,14 +886,14 @@ QPushButton:pressed{
                               <property name="maximumSize">
                                <size>
                                 <width>16777215</width>
-                                <height>115</height>
+                                <height>184</height>
                                </size>
                               </property>
                               <property name="text">
                                <string/>
                               </property>
                               <property name="pixmap">
-                               <pixmap>../img/qr_code_120px.png</pixmap>
+                               <pixmap>../img/QRcode3.png</pixmap>
                               </property>
                               <property name="alignment">
                                <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -1225,7 +1196,7 @@ QPushButton:pressed{
                                </size>
                               </property>
                               <property name="text">
-                               <string>     User settings</string>
+                               <string>     Fluxo Diario</string>
                               </property>
                               <property name="icon">
                                <iconset>
@@ -1254,7 +1225,7 @@ QPushButton:pressed{
                                </size>
                               </property>
                               <property name="text">
-                               <string>     Edit Text</string>
+                               <string>     Fluxo Mensal</string>
                               </property>
                               <property name="icon">
                                <iconset>
@@ -1266,75 +1237,6 @@ QPushButton:pressed{
                                 <height>18</height>
                                </size>
                               </property>
-                             </widget>
-                            </item>
-                            <item>
-                             <widget class="QFrame" name="editTestFrame">
-                              <property name="minimumSize">
-                               <size>
-                                <width>0</width>
-                                <height>0</height>
-                               </size>
-                              </property>
-                              <property name="maximumSize">
-                               <size>
-                                <width>16777215</width>
-                                <height>0</height>
-                               </size>
-                              </property>
-                              <property name="frameShape">
-                               <enum>QFrame::StyledPanel</enum>
-                              </property>
-                              <property name="frameShadow">
-                               <enum>QFrame::Raised</enum>
-                              </property>
-                              <layout class="QHBoxLayout" name="horizontalLayout_10">
-                               <property name="spacing">
-                                <number>10</number>
-                               </property>
-                               <property name="leftMargin">
-                                <number>11</number>
-                               </property>
-                               <property name="topMargin">
-                                <number>0</number>
-                               </property>
-                               <property name="rightMargin">
-                                <number>8</number>
-                               </property>
-                               <property name="bottomMargin">
-                                <number>0</number>
-                               </property>
-                               <item>
-                                <widget class="QSlider" name="horizontalSlider">
-                                 <property name="orientation">
-                                  <enum>Qt::Horizontal</enum>
-                                 </property>
-                                </widget>
-                               </item>
-                               <item>
-                                <widget class="QToolButton" name="toolButton">
-                                 <property name="minimumSize">
-                                  <size>
-                                   <width>20</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                 <property name="maximumSize">
-                                  <size>
-                                   <width>20</width>
-                                   <height>20</height>
-                                  </size>
-                                 </property>
-                                 <property name="text">
-                                  <string>...</string>
-                                 </property>
-                                 <property name="icon">
-                                  <iconset>
-                                   <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-volume-off.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-volume-off.png</iconset>
-                                 </property>
-                                </widget>
-                               </item>
-                              </layout>
                              </widget>
                             </item>
                             <item>
@@ -1377,7 +1279,7 @@ border-top-left-radius:10px;
 border-bottom-left-radius:10px;</string>
                         </property>
                         <property name="currentIndex">
-                         <number>6</number>
+                         <number>0</number>
                         </property>
                         <widget class="QWidget" name="page_Home">
                          <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -1983,6 +1885,20 @@ background-color: transparent</string>
                                              <property name="whatsThis">
                                               <string/>
                                              </property>
+                                             <property name="styleSheet">
+                                              <string notr="true">QPushButton{
+border: 0px;
+padding:0px;
+}
+QPushButton:hover{
+border: 0px;
+padding:0px;
+}
+QPushButton:pressed{
+border: 0px;
+padding:0px;
+}</string>
+                                             </property>
                                              <property name="text">
                                               <string/>
                                              </property>
@@ -2531,7 +2447,7 @@ border-radius:10px;
                                           <rect>
                                            <x>0</x>
                                            <y>0</y>
-                                           <width>944</width>
+                                           <width>1033</width>
                                            <height>155</height>
                                           </rect>
                                          </property>
@@ -5307,7 +5223,7 @@ QDateEdit:hover{
                                           <rect>
                                            <x>0</x>
                                            <y>0</y>
-                                           <width>945</width>
+                                           <width>1034</width>
                                            <height>305</height>
                                           </rect>
                                          </property>
@@ -6573,13 +6489,13 @@ background-color: rgb(170, 85, 255);</string>
                                  <number>0</number>
                                 </property>
                                 <property name="leftMargin">
-                                 <number>0</number>
+                                 <number>8</number>
                                 </property>
                                 <property name="topMargin">
                                  <number>0</number>
                                 </property>
                                 <property name="rightMargin">
-                                 <number>0</number>
+                                 <number>8</number>
                                 </property>
                                 <property name="bottomMargin">
                                  <number>0</number>
@@ -8479,7 +8395,7 @@ QDateEdit:hover{
                                              <rect>
                                               <x>0</x>
                                               <y>0</y>
-                                              <width>961</width>
+                                              <width>1034</width>
                                               <height>305</height>
                                              </rect>
                                             </property>
@@ -11441,7 +11357,7 @@ border-radius:0px;
                                  <widget class="QFrame" name="frame_174">
                                   <property name="minimumSize">
                                    <size>
-                                    <width>3</width>
+                                    <width>210</width>
                                     <height>0</height>
                                    </size>
                                   </property>
@@ -13599,7 +13515,7 @@ Movimentação</string>
                                     <rect>
                                      <x>0</x>
                                      <y>0</y>
-                                     <width>955</width>
+                                     <width>1044</width>
                                      <height>345</height>
                                     </rect>
                                    </property>
@@ -14466,6 +14382,62 @@ color: rgb(255, 255, 255);
 border-radius:5px;
 color: rgb(255, 255, 255);
 padding-left:3px;</string>
+                                </property>
+                               </widget>
+                               <widget class="QPushButton" name="pushButton_30">
+                                <property name="geometry">
+                                 <rect>
+                                  <x>830</x>
+                                  <y>110</y>
+                                  <width>80</width>
+                                  <height>34</height>
+                                 </rect>
+                                </property>
+                                <property name="minimumSize">
+                                 <size>
+                                  <width>80</width>
+                                  <height>34</height>
+                                 </size>
+                                </property>
+                                <property name="maximumSize">
+                                 <size>
+                                  <width>80</width>
+                                  <height>34</height>
+                                 </size>
+                                </property>
+                                <property name="font">
+                                 <font>
+                                  <pointsize>10</pointsize>
+                                  <bold>false</bold>
+                                 </font>
+                                </property>
+                                <property name="styleSheet">
+                                 <string notr="true">QPushButton{
+background-color: rgb(170, 85, 255);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(165, 82, 247);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:pressed{
+background-color: rgb(170, 85, 255);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}</string>
+                                </property>
+                                <property name="text">
+                                 <string>Exportar PDF</string>
+                                </property>
+                                <property name="iconSize">
+                                 <size>
+                                  <width>19</width>
+                                  <height>16</height>
+                                 </size>
                                 </property>
                                </widget>
                               </widget>
