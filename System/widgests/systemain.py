@@ -13,14 +13,13 @@ from packeg.database import database
 from ui_SystemSC import Ui_SplashCreen
 from ui_SystemMW import Ui_MainWindowMW
 
-
 from time import sleep
 from datetime import date
 import sys
 import cv2
-import pyttsx3
-import pyaudio ###
-from vosk import Model, KaldiRecognizer ####
+# import pyttsx3
+# import pyaudio ###
+# from vosk import Model, KaldiRecognizer ####
 
 
 # variavel global
