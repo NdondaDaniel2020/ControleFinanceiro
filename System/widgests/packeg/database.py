@@ -85,10 +85,12 @@ class database():
     def __str__(self):
         return 'Class para criares o teu banco de dados'
 
-database = database("ControloFinaceiro")
+database = database("Contro")
+database.connect_database()
 database.executarComand("""
-         CREATE TABLE IF NOT EXISTS Fornecedor(
+         CREATE TABLE Fornecedor(
          id integer PRIMARY KEY AUTOINCREMENT,
          nome Varchar(30) NOT NULL
          )
 """)
+database.close_connection_database()
