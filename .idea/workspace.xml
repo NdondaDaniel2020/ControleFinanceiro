@@ -7,6 +7,8 @@
     <list default="true" id="32879bff-b1fa-4e85-82a0-4fe749987451" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/System/widgests/ControloFinaceiro.db" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ControloFinaceiro.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/Contro.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/SQLite.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/System/widgests/packeg/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test z/rascunho.py" beforeDir="false" afterPath="$PROJECT_DIR$/test z/rascunho.py" afterDir="false" />
     </list>

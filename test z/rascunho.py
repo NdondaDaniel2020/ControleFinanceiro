@@ -1,5 +1,5 @@
 database.executarComand("""
-         CREATE TABLE IF NOT EXISTS Cliente(
+         CREATE TABLE IF NOT EXISTS Fornecedor(
          id integer PRIMARY KEY AUTOINCREMENT,
          nome varchar(30) NOT NULL,
          telefone varchar(20) NOT NULL,
@@ -10,7 +10,7 @@ database.executarComand("""
          CONSTRAINT CatCli FOREIGN KEY (categoria) REFERENCES categoria (id)
          )
          """)
-
+INSERT INTO categoria (nome) values ('Prestação de serviço')
 
 database.executarComand("""
          CREATE TABLE IF NOT EXISTS categoria(
