@@ -12,12 +12,12 @@ from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
     QMetaObject, QObject, QPoint, QRect,
     QSize, QTime, QUrl, Qt)
 from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
+    QFont, QFontDatabase, QGradient, QIcon)
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
                                QLabel, QLineEdit, QPushButton, QSizePolicy,
                                QSpacerItem, QVBoxLayout, QWidget, QMainWindow, QGraphicsDropShadowEffect)
+
+from packeg.database import database
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -199,9 +199,6 @@ class Ui_Form(object):
         self.saida.setIcon(icon3)
         self.saida.setIconSize(QSize(20, 20))
         self.categoria = QComboBox(self.frame)
-        self.categoria.addItem("")
-        self.categoria.addItem("")
-        self.categoria.addItem("")
         self.categoria.setObjectName(u"categoria")
         self.categoria.setGeometry(QRect(20, 200, 290, 36))
         self.categoria.setMinimumSize(QSize(290, 36))
@@ -285,13 +282,18 @@ class Ui_Form(object):
         self.valor.setPlaceholderText(QCoreApplication.translate("Form", u"Valor", None))
         self.entrada.setText(QCoreApplication.translate("Form", u"Entrada", None))
         self.saida.setText(QCoreApplication.translate("Form", u"Saida", None))
-        self.categoria.setItemText(0, QCoreApplication.translate("Form", u"", None))
-        self.categoria.setItemText(1, QCoreApplication.translate("Form", u"Presta\u00e7\u00e3o de servi\u00e7o", None))
-        self.categoria.setItemText(2, QCoreApplication.translate("Form", u"Casa", None))
-        self.categoria.setItemText(3, QCoreApplication.translate("Form", u"Produto", None))
 
-        self.categoria.setCurrentText("")
-        self.categoria.setPlaceholderText(QCoreApplication.translate("Form", u"Selecione a categoria", None))
+
+        self.categoria.setPlaceholderText("Selecione a categoria")
+        self.database = database("ControloFinaceiro")
+        self.database.connect_database()
+        dados = self.database.executarFetchall("SELECT * FROM Categoria")
+        self.database.close_connection_database()
+
+        for dado in dados:
+            self.categoria.addItem("")
+            self.categoria.setItemText(dado[0]-1, QCoreApplication.translate("Form", dado[1], None))
+
         self.movimentar.setText(QCoreApplication.translate("Form", u"Movimentar", None))
     # retranslateUi
 
@@ -307,6 +309,7 @@ class Movimentacao(QMainWindow):
         self.dados = ''
         self.categoria = ''
         self.movimentarNome = ''
+
 
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
@@ -333,7 +336,6 @@ class Movimentacao(QMainWindow):
         self.mov.barraTitulo.mouseMoveEvent = moveWindow
 
 
-
     def mousePressEvent(self, event):
         self.dragPos = event.globalPos()
 
@@ -348,11 +350,12 @@ class Movimentacao(QMainWindow):
         elif object == "saida":
             self.movimentarNome = "saida"
 
-
     def closefrom(self):
         self.mov.Titulo.setText("")
         self.mov.valor.setText("")
         self.close()
+
+
 
 
 if __name__ == "__main__":

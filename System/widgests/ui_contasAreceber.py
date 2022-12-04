@@ -18,6 +18,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
 from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QFrame,
     QHBoxLayout, QLabel, QLineEdit, QPushButton,
     QSizePolicy, QSpacerItem, QVBoxLayout, QWidget, QMainWindow, QGraphicsDropShadowEffect)
+from packeg.database import database
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -150,10 +151,6 @@ class Ui_Form(object):
 "}")
         self.adicionarConta.setIconSize(QSize(20, 20))
         self.categoria = QComboBox(self.frame)
-        self.categoria.addItem("")
-        self.categoria.addItem("")
-        self.categoria.addItem("")
-        self.categoria.addItem("")
         self.categoria.setObjectName(u"categoria")
         self.categoria.setGeometry(QRect(20, 20, 290, 36))
         self.categoria.setMinimumSize(QSize(290, 36))
@@ -193,9 +190,6 @@ class Ui_Form(object):
 "border-radius:5px;\n"
 "}")
         self.cliente = QComboBox(self.frame)
-        self.cliente.addItem("")
-        self.cliente.addItem("")
-        self.cliente.addItem("")
         self.cliente.setObjectName(u"cliente")
         self.cliente.setGeometry(QRect(20, 80, 290, 36))
         self.cliente.setMinimumSize(QSize(290, 36))
@@ -282,20 +276,26 @@ class Ui_Form(object):
         self.label.setText(QCoreApplication.translate("Form", u"Adicionar conta a receber", None))
         self.minimizar.setText("")
         self.fechar.setText("")
-        self.adicionarConta.setText(QCoreApplication.translate("Form", u"Adicionar conta", None))
-        self.categoria.setItemText(0, "")
-        self.categoria.setItemText(1, QCoreApplication.translate("Form", u"Presta\u00e7\u00e3o de servi\u00e7o", None))
-        self.categoria.setItemText(2, QCoreApplication.translate("Form", u"Casa", None))
-        self.categoria.setItemText(3, QCoreApplication.translate("Form", u"Produto", None))
 
-        self.categoria.setCurrentText("")
-        self.categoria.setPlaceholderText(QCoreApplication.translate("Form", u"Selecione a categoria", None))
-        self.cliente.setItemText(0, "")
-        self.cliente.setItemText(1, QCoreApplication.translate("Form", u"Daniel", None))
-        self.cliente.setItemText(2, QCoreApplication.translate("Form", u"WhiteSpot", None))
+        self.database = database("ControloFinaceiro")
 
-        self.cliente.setCurrentText("")
-        self.cliente.setPlaceholderText(QCoreApplication.translate("Form", u"Selecione o cliente", None))
+        self.categoria.setPlaceholderText("Selecione a categoria")
+        self.database.connect_database()
+        dados = self.database.executarFetchall("SELECT * FROM Categoria")
+        self.database.close_connection_database()
+        for dado in dados:
+            self.categoria.addItem("")
+            self.categoria.setItemText(dado[0]-1, QCoreApplication.translate("Form", dado[1], None))
+
+
+        self.cliente.setPlaceholderText("Selecione o cliente")
+        self.database.connect_database()
+        dados = self.database.executarFetchall("SELECT * FROM Cliente")
+        self.database.close_connection_database()
+        for dado in dados:
+            self.cliente.addItem("")
+            self.cliente.setItemText(dado[0]-1, QCoreApplication.translate("Form", dado[1], None))
+
         self.valorTotal.setPlaceholderText(QCoreApplication.translate("Form", u"Valor Total", None))
     # retranslateUi
 
@@ -334,7 +334,6 @@ class ContasAreceber(QMainWindow):
 
         self.ca.barraTitulo.mouseMoveEvent = moveWindow
 
-        # self.show()
 
     def mousePressEvent(self, event):
         self.dragPos = event.globalPos()

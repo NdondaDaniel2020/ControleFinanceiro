@@ -80,17 +80,25 @@ class database():
         # CONSTRAINT UsuUlus FOREIGN KEY (UltimoUsuario) REFERENCES Usuario (id)
         # )
         # INSERT INTO UltimoUsuario (Data, UltimoUsuario)values('2022-10-22','6')
+        # INSERT INTO Categoria (nome) values ('Compra')
+        #
+        # database = database("../ControloFinaceiro")
+        # database.connect_database()
+        # database.executarComand("""
+        # INSERT INTO Categoria (nome) values ('Compra')
+        # """)
+        # database.close_connection_database()
+        # database = database("../ControloFinaceiro.db")
+        # database.connect_database()
+        # database.executarComand("""
+        # INSERT INTO Fornecedor (nome, telefone, email, cidade, categoria)
+        # values
+        # ('Luciano Luzembo', '923442065', 'lucianoluzembo@gmail.com', 'Lunada', '1')
+        # """)
+        # database.close_connection_database()
         pass
 
     def __str__(self):
         return 'Class para criares o teu banco de dados'
 
-database = database("../ControloFinaceiro")
-database.connect_database()
-database.executarComand("""
-         CREATE TABLE IF NOT EXISTS Categoria(
-         id integer PRIMARY KEY AUTOINCREMENT,
-         nome varchar(30) NOT NULL UNIQUE
-         )
-""")
-database.close_connection_database()
+

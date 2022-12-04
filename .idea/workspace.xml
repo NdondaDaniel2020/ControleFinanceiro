@@ -7,9 +7,13 @@
     <list default="true" id="32879bff-b1fa-4e85-82a0-4fe749987451" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/System/widgests/ControloFinaceiro.db" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ControloFinaceiro.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/Contro.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/SQLite.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/ControloFinaceiro.db" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/System/widgests/packeg/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/systemain.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/systemain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/ui_Movimentação.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_Movimentação.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/ui_ReceberPagamento.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_ReceberPagamento.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/ui_barraReceberConta.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_barraReceberConta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/ui_contasAreceber.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_contasAreceber.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test z/rascunho.py" beforeDir="false" afterPath="$PROJECT_DIR$/test z/rascunho.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,7 +61,7 @@
       <recent name="C:\Users\Família Matondo\PycharmProjects\ControleFinanceiro\System\widgests\packeg" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.database">
+  <component name="RunManager" selected="Python.systemain">
     <configuration name="database" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ControleFinanceiro" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -79,27 +83,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="rascunho" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
-      <module name="ControleFinanceiro" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/test z" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test z/rascunho.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <configuration name="systemain" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ControleFinanceiro" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -113,6 +96,27 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/System/widgests/systemain.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="ui_Movimentação" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="ControleFinanceiro" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/System/widgests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/System/widgests/ui_Movimentação.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,11 +169,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.database" />
         <item itemvalue="Python.systemain" />
-        <item itemvalue="Python.ui_ReceberPagamento" />
         <item itemvalue="Python.ui_contasAreceber" />
-        <item itemvalue="Python.rascunho" />
+        <item itemvalue="Python.ui_ReceberPagamento" />
+        <item itemvalue="Python.ui_Movimentação" />
+        <item itemvalue="Python.database" />
       </list>
     </recent_temporary>
   </component>
@@ -189,53 +193,58 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1519</line>
+          <line>1512</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1599</line>
+          <line>1592</line>
           <option name="timeStamp" value="4" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1608</line>
+          <line>1601</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1592</line>
+          <line>1585</line>
           <option name="timeStamp" value="6" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1070</line>
+          <line>1063</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1071</line>
+          <line>1064</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1073</line>
+          <line>1066</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1621</line>
+          <line>1614</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1618</line>
+          <line>1611</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1631</line>
+          <line>1624</line>
           <option name="timeStamp" value="14" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/System/widgests/ui_ReceberPagamento.py</url>
+          <line>261</line>
+          <option name="timeStamp" value="15" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

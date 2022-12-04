@@ -1,5 +1,3 @@
-import json
-
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
@@ -23,11 +21,6 @@ from time import sleep
 from datetime import date
 import sys
 import cv2
-
-# import pyttsx3
-# import pyaudio ###
-# from vosk import Model, KaldiRecognizer ####
-
 
 # variavel global
 UsuiarioGlobal = ''
@@ -1061,7 +1054,7 @@ class MainwindowSC(QMainWindow):
         self.ui = Ui_MainWindowMW()
         self.ui.setupUi(self)
 
-        self.move(100, 7)
+        self.move(100, 4)
 
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
