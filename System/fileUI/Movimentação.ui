@@ -15,7 +15,7 @@
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <widget class="QFrame" name="CentraFrame">
+    <widget class="QFrame" name="CentralFrame">
      <property name="styleSheet">
       <string notr="true">background-color: rgb(255, 255, 255);
 border-radius: 8px;</string>
@@ -416,7 +416,7 @@ border-radius: 5px;
          <property name="font">
           <font>
            <family>Segoe UI Semibold</family>
-           <pointsize>12</pointsize>
+           <pointsize>11</pointsize>
           </font>
          </property>
          <property name="styleSheet">
@@ -460,6 +460,26 @@ border-radius:5px;
          <property name="placeholderText">
           <string>Selecione a categoria</string>
          </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Prestação de serviço</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Casa</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Produto</string>
+          </property>
+         </item>
         </widget>
         <widget class="QPushButton" name="movimentar">
          <property name="geometry">

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MovimentaçãowpGHhN.ui'
+## Form generated from reading UI file 'MovimentaçãoVDJsdK.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -16,8 +16,8 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
-    QLabel, QLineEdit, QPushButton, QSizePolicy,
-    QSpacerItem, QVBoxLayout, QWidget, QMainWindow)
+                               QLabel, QLineEdit, QPushButton, QSizePolicy,
+                               QSpacerItem, QVBoxLayout, QWidget, QMainWindow, QGraphicsDropShadowEffect)
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -26,17 +26,17 @@ class Ui_Form(object):
         Form.resize(343, 373)
         self.verticalLayout = QVBoxLayout(Form)
         self.verticalLayout.setObjectName(u"verticalLayout")
-        self.CentraFrame = QFrame(Form)
-        self.CentraFrame.setObjectName(u"CentraFrame")
-        self.CentraFrame.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
+        self.CentralFrame = QFrame(Form)
+        self.CentralFrame.setObjectName(u"CentraFrame")
+        self.CentralFrame.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 "border-radius: 8px;")
-        self.CentraFrame.setFrameShape(QFrame.StyledPanel)
-        self.CentraFrame.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_2 = QVBoxLayout(self.CentraFrame)
+        self.CentralFrame.setFrameShape(QFrame.StyledPanel)
+        self.CentralFrame.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_2 = QVBoxLayout(self.CentralFrame)
         self.verticalLayout_2.setSpacing(0)
         self.verticalLayout_2.setObjectName(u"verticalLayout_2")
         self.verticalLayout_2.setContentsMargins(0, 0, 0, 0)
-        self.barraTitulo = QFrame(self.CentraFrame)
+        self.barraTitulo = QFrame(self.CentralFrame)
         self.barraTitulo.setObjectName(u"barraTitulo")
         self.barraTitulo.setMaximumSize(QSize(16777215, 40))
         self.barraTitulo.setFrameShape(QFrame.StyledPanel)
@@ -118,7 +118,7 @@ class Ui_Form(object):
 
         self.verticalLayout_2.addWidget(self.barraTitulo)
 
-        self.frame = QFrame(self.CentraFrame)
+        self.frame = QFrame(self.CentralFrame)
         self.frame.setObjectName(u"frame")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
@@ -199,11 +199,14 @@ class Ui_Form(object):
         self.saida.setIcon(icon3)
         self.saida.setIconSize(QSize(20, 20))
         self.categoria = QComboBox(self.frame)
+        self.categoria.addItem("")
+        self.categoria.addItem("")
+        self.categoria.addItem("")
         self.categoria.setObjectName(u"categoria")
         self.categoria.setGeometry(QRect(20, 200, 290, 36))
         self.categoria.setMinimumSize(QSize(290, 36))
         self.categoria.setMaximumSize(QSize(290, 36))
-        self.categoria.setFont(font2)
+        self.categoria.setFont(font1)
         self.categoria.setStyleSheet(u"\n"
 "\n"
 "\n"
@@ -265,7 +268,7 @@ class Ui_Form(object):
         self.verticalLayout_2.addWidget(self.frame)
 
 
-        self.verticalLayout.addWidget(self.CentraFrame)
+        self.verticalLayout.addWidget(self.CentralFrame)
 
 
         self.retranslateUi(Form)
@@ -282,10 +285,16 @@ class Ui_Form(object):
         self.valor.setPlaceholderText(QCoreApplication.translate("Form", u"Valor", None))
         self.entrada.setText(QCoreApplication.translate("Form", u"Entrada", None))
         self.saida.setText(QCoreApplication.translate("Form", u"Saida", None))
+        self.categoria.setItemText(0, QCoreApplication.translate("Form", u"", None))
+        self.categoria.setItemText(1, QCoreApplication.translate("Form", u"Presta\u00e7\u00e3o de servi\u00e7o", None))
+        self.categoria.setItemText(2, QCoreApplication.translate("Form", u"Casa", None))
+        self.categoria.setItemText(3, QCoreApplication.translate("Form", u"Produto", None))
+
         self.categoria.setCurrentText("")
         self.categoria.setPlaceholderText(QCoreApplication.translate("Form", u"Selecione a categoria", None))
         self.movimentar.setText(QCoreApplication.translate("Form", u"Movimentar", None))
     # retranslateUi
+
 
 
 class Movimentacao(QMainWindow):
@@ -294,17 +303,26 @@ class Movimentacao(QMainWindow):
         self.mov = Ui_Form()
         self.mov.setupUi(self)
 
-        self.mov.CentraFrame.setGeometry(9, 9, 325, 355)
-
-        self.categoria = False
-        self.EntSai = False
+        self.mov.CentralFrame.setGeometry(9, 9, 325, 355)
+        self.dados = ''
+        self.categoria = ''
+        self.movimentarNome = ''
 
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
 
+        self.shadow = QGraphicsDropShadowEffect(self)
+        self.shadow.setBlurRadius(15)
+        self.shadow.setXOffset(0)
+        self.shadow.setYOffset(0)
+        self.shadow.setColor(QColor(255, 255, 255, 120))
+        self.mov.CentralFrame.setGraphicsEffect(self.shadow)
+
         self.mov.fechar.clicked.connect(lambda: self.close())
         self.mov.minimizar.clicked.connect(lambda: self.showMinimized())
-        self.mov.movimentar.clicked.connect(self.retornarValoresObtidos)
+        self.mov.entrada.clicked.connect(self.entradaSanida)
+        self.mov.saida.clicked.connect(self.entradaSanida)
+        self.mov.categoria.currentTextChanged.connect(self.selectCategoria)
 
         def moveWindow(event):
             if event.buttons() == Qt.LeftButton:
@@ -314,18 +332,21 @@ class Movimentacao(QMainWindow):
 
         self.mov.barraTitulo.mouseMoveEvent = moveWindow
 
-        self.show()
+
 
     def mousePressEvent(self, event):
         self.dragPos = event.globalPos()
 
-    def retornarValoresObtidos(self):
-        titulo = self.mov.Titulo.text()
-        valor = self.mov.valor.text()
-        
-        print(titulo, valor)
+    def selectCategoria(self, txt):
+        self.categoria = txt
 
-        self.close()
+    def entradaSanida(self):
+        object = self.sender().objectName()
+
+        if object == "entrada":
+            self.movimentar = "entrada"
+        elif object == "saida":
+            self.movimentar = "saida"
 
 
 if __name__ == "__main__":
@@ -334,4 +355,3 @@ if __name__ == "__main__":
     app = QApplication(sys.argv)
     window = Movimentacao()
     sys.exit(app.exec())
-

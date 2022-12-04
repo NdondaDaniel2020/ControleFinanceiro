@@ -7,10 +7,9 @@
     <list default="true" id="32879bff-b1fa-4e85-82a0-4fe749987451" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/System/fileUI/Movimentação.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/Movimentação.ui" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/SystemMW.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/SystemMW.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/System/widgests/systemain.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/systemain.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/System/widgests/ui_Movimentação.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_Movimentação.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/ui_SystemMW.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_SystemMW.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test z/rascunho.py" beforeDir="false" afterPath="$PROJECT_DIR$/test z/rascunho.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -57,8 +56,8 @@
       <recent name="C:\Users\Família Matondo\PycharmProjects\ControleFinanceiro\System\widgests\packeg" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.ui_Movimentação">
-    <configuration name="slide" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="Python.systemain">
+    <configuration name="rascunho" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ControleFinanceiro" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -70,7 +69,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test z/slide.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/test z/rascunho.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,11 +164,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.ui_Movimentação" />
         <item itemvalue="Python.systemain" />
+        <item itemvalue="Python.ui_Movimentação" />
+        <item itemvalue="Python.rascunho" />
         <item itemvalue="Python.testGrafico001" />
         <item itemvalue="Python.ui_SystemMW2" />
-        <item itemvalue="Python.slide" />
       </list>
     </recent_temporary>
   </component>
@@ -189,8 +188,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1506</line>
+          <line>1509</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
+          <line>1580</line>
+          <option name="timeStamp" value="3" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

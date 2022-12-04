@@ -12,6 +12,7 @@ from packeg.chart import Chart
 from packeg.database import database
 from ui_SystemSC import Ui_SplashCreen
 from ui_SystemMW import Ui_MainWindowMW
+from ui_Movimentação import Movimentacao
 
 from time import sleep
 from datetime import date
@@ -1060,6 +1061,7 @@ class MainwindowSC(QMainWindow):
         self.setMinimumSize(1195, 760)
         self.toobtn = True
 
+        self.novMovimentacao = Movimentacao()
         self.eventoConnect()
 
         self.ui.minimisar.clicked.connect(lambda: self.showMinimized())
@@ -1088,7 +1090,8 @@ class MainwindowSC(QMainWindow):
         self.ui.Economia_btn.clicked.connect(self.areaClick)
         self.ui.help_btnF_2.clicked.connect(self.areaClick)
 
-        self.ui.novaMovimentacao.clicked.connect()
+        self.novMovimentacao.mov.movimentar.clicked.connect(self.ValorNomvaMovimentacao)
+        self.ui.novaMovimentacao.clicked.connect(self.novaMovimentacao)
 
         # ler texto
 
@@ -1563,6 +1566,15 @@ class MainwindowSC(QMainWindow):
 
     # este metodo é reponsavelo pela movimentação
     def novaMovimentacao(self):
+        self.novMovimentacao.show()
+
+    def ValorNomvaMovimentacao(self):
+        titulo = self.novMovimentacao.mov.Titulo.text()
+        valor = self.novMovimentacao.mov.valor.text()
+        nomeMovimetacao = self.novMovimentacao.movimentarNome
+        categoria = self.novMovimentacao.categoria
+
+        print(titulo, valor, nomeMovimetacao, categoria)
 
 
 if __name__ == "__main__":
