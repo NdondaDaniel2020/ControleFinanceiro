@@ -13,7 +13,7 @@
   <property name="windowTitle">
    <string>Form</string>
   </property>
-  <widget class="QFrame" name="pequenoHistoricoEntrada_5">
+  <widget class="QFrame" name="pequenoHistoricoEntrada">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -143,7 +143,7 @@ border-radius:4px;</string>
         <number>0</number>
        </property>
        <item>
-        <widget class="QLabel" name="data_2">
+        <widget class="QLabel" name="data">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -198,7 +198,7 @@ border-radius:4px;</string>
         <number>0</number>
        </property>
        <item>
-        <widget class="QLabel" name="categoria_2">
+        <widget class="QLabel" name="categoria">
          <property name="font">
           <font>
            <family>Segoe UI Semibold</family>
@@ -320,7 +320,7 @@ border-radius:4px;</string>
         <number>0</number>
        </property>
        <item>
-        <widget class="QLabel" name="label_223">
+        <widget class="QLabel" name="valor">
          <property name="font">
           <font>
            <family>Segoe UI Semibold</family>

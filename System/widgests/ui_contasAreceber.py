@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'MovimentaçãoVDJsdK.ui'
+## Form generated from reading UI file 'contasAreceberpmcHcZ.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -15,9 +15,9 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QFont, QFontDatabase, QGradient, QIcon,
     QImage, QKeySequence, QLinearGradient, QPainter,
     QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
-                               QLabel, QLineEdit, QPushButton, QSizePolicy,
-                               QSpacerItem, QVBoxLayout, QWidget, QMainWindow, QGraphicsDropShadowEffect)
+from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QFrame,
+    QHBoxLayout, QLabel, QLineEdit, QPushButton,
+    QSizePolicy, QSpacerItem, QVBoxLayout, QWidget, QMainWindow, QGraphicsDropShadowEffect)
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -27,7 +27,7 @@ class Ui_Form(object):
         self.verticalLayout = QVBoxLayout(Form)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.CentralFrame = QFrame(Form)
-        self.CentralFrame.setObjectName(u"CentraFrame")
+        self.CentralFrame.setObjectName(u"CentralFrame")
         self.CentralFrame.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 "border-radius: 8px;")
         self.CentralFrame.setFrameShape(QFrame.StyledPanel)
@@ -44,7 +44,7 @@ class Ui_Form(object):
         self.horizontalLayout = QHBoxLayout(self.barraTitulo)
         self.horizontalLayout.setSpacing(3)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalLayout.setContentsMargins(-1, 7, 6, -1)
+        self.horizontalLayout.setContentsMargins(6, 4, 4, -1)
         self.label = QLabel(self.barraTitulo)
         self.label.setObjectName(u"label")
         font = QFont()
@@ -122,88 +122,40 @@ class Ui_Form(object):
         self.frame.setObjectName(u"frame")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
-        self.Titulo = QLineEdit(self.frame)
-        self.Titulo.setObjectName(u"Titulo")
-        self.Titulo.setGeometry(QRect(20, 20, 290, 36))
-        self.Titulo.setMinimumSize(QSize(290, 36))
-        self.Titulo.setMaximumSize(QSize(290, 36))
+        self.adicionarConta = QPushButton(self.frame)
+        self.adicionarConta.setObjectName(u"adicionarConta")
+        self.adicionarConta.setGeometry(QRect(70, 260, 180, 36))
+        self.adicionarConta.setMinimumSize(QSize(180, 36))
+        self.adicionarConta.setMaximumSize(QSize(180, 1234567))
         font1 = QFont()
         font1.setFamilies([u"Segoe UI Semibold"])
         font1.setPointSize(11)
-        self.Titulo.setFont(font1)
-        self.Titulo.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
-"border-radius:5px;\n"
-"color: rgb(255, 255, 255);\n"
-"padding-left:5px;")
-        self.valor = QLineEdit(self.frame)
-        self.valor.setObjectName(u"valor")
-        self.valor.setGeometry(QRect(20, 80, 290, 36))
-        self.valor.setMinimumSize(QSize(290, 36))
-        self.valor.setMaximumSize(QSize(290, 36))
-        self.valor.setFont(font1)
-        self.valor.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
-"border-radius:5px;\n"
-"color: rgb(255, 255, 255);\n"
-"padding-left:5px;")
-        self.entrada = QPushButton(self.frame)
-        self.entrada.setObjectName(u"entrada")
-        self.entrada.setGeometry(QRect(20, 140, 130, 36))
-        self.entrada.setMinimumSize(QSize(130, 36))
-        self.entrada.setMaximumSize(QSize(130, 36))
-        font2 = QFont()
-        font2.setFamilies([u"Segoe UI Semibold"])
-        font2.setPointSize(12)
-        self.entrada.setFont(font2)
-        self.entrada.setStyleSheet(u"QPushButton{\n"
+        self.adicionarConta.setFont(font1)
+        self.adicionarConta.setStyleSheet(u"QPushButton{\n"
 "background-color: rgb(170, 85, 255);\n"
 "border-radius: 5px;\n"
-"color: rgb(85, 255, 127);\n"
+"color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
 "background-color: rgb(165, 82, 247);\n"
 "border-radius: 5px;\n"
+"color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
 "background-color: rgb(170, 85, 255);\n"
 "border-radius: 5px;\n"
+"color: rgb(255, 255, 255);\n"
 "}")
-        icon2 = QIcon()
-        icon2.addFile(u"../img/cil-vertical-align-top.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.entrada.setIcon(icon2)
-        self.entrada.setIconSize(QSize(20, 20))
-        self.saida = QPushButton(self.frame)
-        self.saida.setObjectName(u"saida")
-        self.saida.setGeometry(QRect(180, 140, 130, 36))
-        self.saida.setMinimumSize(QSize(130, 36))
-        self.saida.setMaximumSize(QSize(130, 36))
-        self.saida.setFont(font2)
-        self.saida.setStyleSheet(u"QPushButton{\n"
-"background-color: rgb(170, 85, 255);\n"
-"border-radius: 5px;\n"
-"	color: rgb(255, 0, 0);\n"
-"}\n"
-"\n"
-"QPushButton:hover{\n"
-"background-color: rgb(165, 82, 247);\n"
-"border-radius: 5px;\n"
-"}\n"
-"\n"
-"QPushButton:pressed{\n"
-"background-color: rgb(170, 85, 255);\n"
-"border-radius: 5px;\n"
-"}")
-        icon3 = QIcon()
-        icon3.addFile(u"../img/cil-vertical-align-bottom.png", QSize(), QIcon.Normal, QIcon.Off)
-        self.saida.setIcon(icon3)
-        self.saida.setIconSize(QSize(20, 20))
+        self.adicionarConta.setIconSize(QSize(20, 20))
         self.categoria = QComboBox(self.frame)
         self.categoria.addItem("")
         self.categoria.addItem("")
         self.categoria.addItem("")
+        self.categoria.addItem("")
         self.categoria.setObjectName(u"categoria")
-        self.categoria.setGeometry(QRect(20, 200, 290, 36))
+        self.categoria.setGeometry(QRect(20, 20, 290, 36))
         self.categoria.setMinimumSize(QSize(290, 36))
         self.categoria.setMaximumSize(QSize(290, 36))
         self.categoria.setFont(font1)
@@ -240,30 +192,79 @@ class Ui_Form(object):
 "border:2px solid  rgb(255, 255, 255);\n"
 "border-radius:5px;\n"
 "}")
-        self.movimentar = QPushButton(self.frame)
-        self.movimentar.setObjectName(u"movimentar")
-        self.movimentar.setGeometry(QRect(70, 260, 180, 36))
-        self.movimentar.setMinimumSize(QSize(180, 36))
-        self.movimentar.setMaximumSize(QSize(180, 1234567))
-        self.movimentar.setFont(font1)
-        self.movimentar.setStyleSheet(u"QPushButton{\n"
-"background-color: rgb(170, 85, 255);\n"
-"border-radius: 5px;\n"
+        self.cliente = QComboBox(self.frame)
+        self.cliente.addItem("")
+        self.cliente.addItem("")
+        self.cliente.addItem("")
+        self.cliente.setObjectName(u"cliente")
+        self.cliente.setGeometry(QRect(20, 80, 290, 36))
+        self.cliente.setMinimumSize(QSize(290, 36))
+        self.cliente.setMaximumSize(QSize(290, 36))
+        self.cliente.setFont(font1)
+        self.cliente.setStyleSheet(u"\n"
+"\n"
+"\n"
+"QComboBox{\n"
+"background-color:rgb(170, 85, 255);\n"
+"border-radius:5px;\n"
+"border: 2px solid rgb(170, 85, 255);\n"
+"padding: 5px;\n"
+"padding-left: 10px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
-"QPushButton:hover{\n"
-"background-color: rgb(165, 82, 247);\n"
-"border-radius: 5px;\n"
-"color: rgb(255, 255, 255);\n"
+"QComboBox:hover{\n"
+" border: 2px solid rgb(170, 85, 255);\n"
 "}\n"
-"\n"
-"QPushButton:pressed{\n"
-"background-color: rgb(170, 85, 255);\n"
-"border-radius: 5px;\n"
-"color: rgb(255, 255, 255);\n"
+"QComboBox::drop-down {\n"
+"subcontrol-origin: padding;\n"
+"subcontrol-position: top right;\n"
+"width: 25px; \n"
+"border-left-width: 3px;\n"
+"border-left-color: rgb(255, 255, 255);\n"
+"border-left-style: solid;\n"
+"border-top-right-radius: 3px;\n"
+"border-bottom-right-radius: 3px;\n"
+"}\n"
+"QComboBox QAbstractItemView {\n"
+"color: rgb(255, 255, 255);	\n"
+"background-color:rgb(170, 85, 255);\n"
+"padding: 10px;\n"
+"selection-background-color: rgb(195, 155, 255);\n"
+"border:2px solid  rgb(255, 255, 255);\n"
+"border-radius:5px;\n"
 "}")
-        self.movimentar.setIconSize(QSize(20, 20))
+        self.valorTotal = QLineEdit(self.frame)
+        self.valorTotal.setObjectName(u"valorTotal")
+        self.valorTotal.setGeometry(QRect(20, 140, 290, 36))
+        self.valorTotal.setMinimumSize(QSize(290, 36))
+        self.valorTotal.setMaximumSize(QSize(290, 36))
+        self.valorTotal.setFont(font1)
+        self.valorTotal.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+"border-radius:5px;\n"
+"color: rgb(255, 255, 255);\n"
+"padding-left:5px;")
+        self.dataVenciamento = QDateEdit(self.frame)
+        self.dataVenciamento.setObjectName(u"dataVenciamento")
+        self.dataVenciamento.setGeometry(QRect(20, 200, 291, 36))
+        font2 = QFont()
+        font2.setPointSize(12)
+        font2.setBold(False)
+        self.dataVenciamento.setFont(font2)
+        self.dataVenciamento.setStyleSheet(u"QDateEdit{\n"
+"background-color:rgb(170, 85, 255);\n"
+"border-radius:5px;\n"
+"border: 2px solid rgb(170, 85, 255);\n"
+"padding: 5px;\n"
+"padding-left: 10px;\n"
+"color: rgb(255, 255, 255);\n"
+"}\n"
+"\n"
+"QDateEdit:hover{\n"
+" border: 2px solid rgb(170, 85, 255);\n"
+"}\n"
+"")
+        self.dataVenciamento.setDate(QDate(2022, 12, 4))
 
         self.verticalLayout_2.addWidget(self.frame)
 
@@ -278,35 +279,34 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.label.setText(QCoreApplication.translate("Form", u"Nova Movimenta\u00e7\u00e3o", None))
+        self.label.setText(QCoreApplication.translate("Form", u"Adicionar conta a receber", None))
         self.minimizar.setText("")
         self.fechar.setText("")
-        self.Titulo.setPlaceholderText(QCoreApplication.translate("Form", u"Titulo", None))
-        self.valor.setPlaceholderText(QCoreApplication.translate("Form", u"Valor", None))
-        self.entrada.setText(QCoreApplication.translate("Form", u"Entrada", None))
-        self.saida.setText(QCoreApplication.translate("Form", u"Saida", None))
-        self.categoria.setItemText(0, QCoreApplication.translate("Form", u"", None))
+        self.adicionarConta.setText(QCoreApplication.translate("Form", u"Adicionar conta", None))
+        self.categoria.setItemText(0, "")
         self.categoria.setItemText(1, QCoreApplication.translate("Form", u"Presta\u00e7\u00e3o de servi\u00e7o", None))
         self.categoria.setItemText(2, QCoreApplication.translate("Form", u"Casa", None))
         self.categoria.setItemText(3, QCoreApplication.translate("Form", u"Produto", None))
 
         self.categoria.setCurrentText("")
         self.categoria.setPlaceholderText(QCoreApplication.translate("Form", u"Selecione a categoria", None))
-        self.movimentar.setText(QCoreApplication.translate("Form", u"Movimentar", None))
+        self.cliente.setItemText(0, "")
+        self.cliente.setItemText(1, QCoreApplication.translate("Form", u"Daniel", None))
+        self.cliente.setItemText(2, QCoreApplication.translate("Form", u"WhiteSpot", None))
+
+        self.cliente.setCurrentText("")
+        self.cliente.setPlaceholderText(QCoreApplication.translate("Form", u"Selecione o cliente", None))
+        self.valorTotal.setPlaceholderText(QCoreApplication.translate("Form", u"Valor Total", None))
     # retranslateUi
 
 
-
-class Movimentacao(QMainWindow):
+class ContasAreceber(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
-        self.mov = Ui_Form()
-        self.mov.setupUi(self)
+        self.ca = Ui_Form()
+        self.ca.setupUi(self)
 
-        self.mov.CentralFrame.setGeometry(9, 9, 325, 355)
-        self.dados = ''
-        self.categoria = ''
-        self.movimentarNome = ''
+        self.ca.CentralFrame.setGeometry(9, 9, 325, 355)
 
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
@@ -316,13 +316,15 @@ class Movimentacao(QMainWindow):
         self.shadow.setXOffset(0)
         self.shadow.setYOffset(0)
         self.shadow.setColor(QColor(255, 255, 255, 120))
-        self.mov.CentralFrame.setGraphicsEffect(self.shadow)
+        self.ca.CentralFrame.setGraphicsEffect(self.shadow)
 
-        self.mov.fechar.clicked.connect(lambda: self.closefrom())
-        self.mov.minimizar.clicked.connect(lambda: self.showMinimized())
-        self.mov.entrada.clicked.connect(self.entradaSanida)
-        self.mov.saida.clicked.connect(self.entradaSanida)
-        self.mov.categoria.currentTextChanged.connect(self.selectCategoria)
+        self.ca.fechar.clicked.connect(lambda: self.closefrom())
+        self.ca.minimizar.clicked.connect(lambda: self.showMinimized())
+        self.ca.categoria.currentTextChanged.connect(self.selectCategoria)
+        self.ca.cliente.currentTextChanged.connect(self.selectCliente)
+
+        self.cliente = ''
+        self.categoria = ''
 
         def moveWindow(event):
             if event.buttons() == Qt.LeftButton:
@@ -330,9 +332,9 @@ class Movimentacao(QMainWindow):
                 self.dragPos = event.globalPos()
                 event.accept()
 
-        self.mov.barraTitulo.mouseMoveEvent = moveWindow
+        self.ca.barraTitulo.mouseMoveEvent = moveWindow
 
-
+        # self.show()
 
     def mousePressEvent(self, event):
         self.dragPos = event.globalPos()
@@ -340,18 +342,11 @@ class Movimentacao(QMainWindow):
     def selectCategoria(self, txt):
         self.categoria = txt
 
-    def entradaSanida(self):
-        object = self.sender().objectName()
-
-        if object == "entrada":
-            self.movimentarNome = "entrada"
-        elif object == "saida":
-            self.movimentarNome = "saida"
-
+    def selectCliente(self, txt):
+        self.cliente = txt
 
     def closefrom(self):
-        self.mov.Titulo.setText("")
-        self.mov.valor.setText("")
+        self.ca.valorTotal.setText("")
         self.close()
 
 
@@ -359,5 +354,5 @@ if __name__ == "__main__":
     import sys
 
     app = QApplication(sys.argv)
-    window = Movimentacao()
+    window = ContasAreceber()
     sys.exit(app.exec())

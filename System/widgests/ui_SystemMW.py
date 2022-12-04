@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'SystemMWcJgjak.ui'
+## Form generated from reading UI file 'SystemMWRgojQH.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -1090,23 +1090,19 @@ class Ui_MainWindowMW(object):
         self.frame_47.setObjectName(u"frame_47")
         self.frame_47.setFrameShape(QFrame.StyledPanel)
         self.frame_47.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_146 = QVBoxLayout(self.frame_47)
-        self.verticalLayout_146.setSpacing(3)
-        self.verticalLayout_146.setObjectName(u"verticalLayout_146")
-        self.verticalLayout_146.setContentsMargins(3, 5, 3, 5)
-        self.frame_224 = QFrame(self.frame_47)
-        self.frame_224.setObjectName(u"frame_224")
-        self.frame_224.setMaximumSize(QSize(16777215, 38))
-        self.frame_224.setStyleSheet(u"QFrame{\n"
-"background-color: rgb(255, 255, 255);\n"
-"border-radius:10px;}")
-        self.frame_224.setFrameShape(QFrame.StyledPanel)
-        self.frame_224.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_96 = QHBoxLayout(self.frame_224)
-        self.horizontalLayout_96.setSpacing(3)
-        self.horizontalLayout_96.setObjectName(u"horizontalLayout_96")
-        self.horizontalLayout_96.setContentsMargins(0, 0, 0, 0)
-        self.pequenoHistoricoEntrada = QFrame(self.frame_224)
+        self.verticalLayout_22 = QVBoxLayout(self.frame_47)
+        self.verticalLayout_22.setSpacing(0)
+        self.verticalLayout_22.setObjectName(u"verticalLayout_22")
+        self.verticalLayout_22.setContentsMargins(0, 0, 0, -1)
+        self.zonaHistoricoEntrada = QFrame(self.frame_47)
+        self.zonaHistoricoEntrada.setObjectName(u"zonaHistoricoEntrada")
+        self.zonaHistoricoEntrada.setFrameShape(QFrame.StyledPanel)
+        self.zonaHistoricoEntrada.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_ZonaEntrada = QVBoxLayout(self.zonaHistoricoEntrada)
+        self.verticalLayout_ZonaEntrada.setSpacing(3)
+        self.verticalLayout_ZonaEntrada.setObjectName(u"verticalLayout_ZonaEntrada")
+        self.verticalLayout_ZonaEntrada.setContentsMargins(3, 5, 3, 5)
+        self.pequenoHistoricoEntrada = QFrame(self.zonaHistoricoEntrada)
         self.pequenoHistoricoEntrada.setObjectName(u"pequenoHistoricoEntrada")
         self.pequenoHistoricoEntrada.setStyleSheet(u"QFrame{\n"
 "background-color: rgb(255, 255, 255);\n"
@@ -1245,44 +1241,14 @@ class Ui_MainWindowMW(object):
         self.horizontalLayout_98.addWidget(self.iconSis_2)
 
 
-        self.horizontalLayout_96.addWidget(self.pequenoHistoricoEntrada)
+        self.verticalLayout_ZonaEntrada.addWidget(self.pequenoHistoricoEntrada)
 
 
-        self.verticalLayout_146.addWidget(self.frame_224)
-
-        self.frame_247 = QFrame(self.frame_47)
-        self.frame_247.setObjectName(u"frame_247")
-        self.frame_247.setMaximumSize(QSize(16777215, 38))
-        self.frame_247.setStyleSheet(u"QFrame{\n"
-"background-color: rgb(255, 255, 255);\n"
-"border-radius:10px;}")
-        self.frame_247.setFrameShape(QFrame.StyledPanel)
-        self.frame_247.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_122 = QHBoxLayout(self.frame_247)
-        self.horizontalLayout_122.setSpacing(3)
-        self.horizontalLayout_122.setObjectName(u"horizontalLayout_122")
-        self.horizontalLayout_122.setContentsMargins(0, 0, 0, 0)
-
-        self.verticalLayout_146.addWidget(self.frame_247)
-
-        self.frame_261 = QFrame(self.frame_47)
-        self.frame_261.setObjectName(u"frame_261")
-        self.frame_261.setMaximumSize(QSize(16777215, 38))
-        self.frame_261.setStyleSheet(u"QFrame{\n"
-"background-color: rgb(255, 255, 255);\n"
-"border-radius:10px;}")
-        self.frame_261.setFrameShape(QFrame.StyledPanel)
-        self.frame_261.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_107 = QHBoxLayout(self.frame_261)
-        self.horizontalLayout_107.setSpacing(3)
-        self.horizontalLayout_107.setObjectName(u"horizontalLayout_107")
-        self.horizontalLayout_107.setContentsMargins(0, 0, 0, 0)
-
-        self.verticalLayout_146.addWidget(self.frame_261)
+        self.verticalLayout_22.addWidget(self.zonaHistoricoEntrada)
 
         self.verticalSpacer_7 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.verticalLayout_146.addItem(self.verticalSpacer_7)
+        self.verticalLayout_22.addItem(self.verticalSpacer_7)
 
 
         self.horizontalLayout_46.addWidget(self.frame_47)
@@ -1291,11 +1257,19 @@ class Ui_MainWindowMW(object):
         self.frame_48.setObjectName(u"frame_48")
         self.frame_48.setFrameShape(QFrame.StyledPanel)
         self.frame_48.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_145 = QVBoxLayout(self.frame_48)
-        self.verticalLayout_145.setSpacing(3)
-        self.verticalLayout_145.setObjectName(u"verticalLayout_145")
-        self.verticalLayout_145.setContentsMargins(3, 5, 3, 5)
-        self.pequenoHistoricoSaida = QFrame(self.frame_48)
+        self.verticalLayout_24 = QVBoxLayout(self.frame_48)
+        self.verticalLayout_24.setSpacing(0)
+        self.verticalLayout_24.setObjectName(u"verticalLayout_24")
+        self.verticalLayout_24.setContentsMargins(0, 0, 0, 0)
+        self.zonaHistoricoSaida = QFrame(self.frame_48)
+        self.zonaHistoricoSaida.setObjectName(u"zonaHistoricoSaida")
+        self.zonaHistoricoSaida.setFrameShape(QFrame.StyledPanel)
+        self.zonaHistoricoSaida.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_zonaSaida = QVBoxLayout(self.zonaHistoricoSaida)
+        self.verticalLayout_zonaSaida.setSpacing(3)
+        self.verticalLayout_zonaSaida.setObjectName(u"verticalLayout_zonaSaida")
+        self.verticalLayout_zonaSaida.setContentsMargins(3, 5, 3, 5)
+        self.pequenoHistoricoSaida = QFrame(self.zonaHistoricoSaida)
         self.pequenoHistoricoSaida.setObjectName(u"pequenoHistoricoSaida")
         self.pequenoHistoricoSaida.setMaximumSize(QSize(16777215, 38))
         self.pequenoHistoricoSaida.setStyleSheet(u"QFrame{\n"
@@ -1430,11 +1404,14 @@ class Ui_MainWindowMW(object):
         self.horizontalLayout_116.addWidget(self.iconSis)
 
 
-        self.verticalLayout_145.addWidget(self.pequenoHistoricoSaida)
+        self.verticalLayout_zonaSaida.addWidget(self.pequenoHistoricoSaida)
+
+
+        self.verticalLayout_24.addWidget(self.zonaHistoricoSaida)
 
         self.verticalSpacer_8 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
-        self.verticalLayout_145.addItem(self.verticalSpacer_8)
+        self.verticalLayout_24.addItem(self.verticalSpacer_8)
 
 
         self.horizontalLayout_46.addWidget(self.frame_48)
@@ -1734,16 +1711,16 @@ class Ui_MainWindowMW(object):
         self.horizontalLayout_62.setSpacing(0)
         self.horizontalLayout_62.setObjectName(u"horizontalLayout_62")
         self.horizontalLayout_62.setContentsMargins(0, 0, 0, 0)
-        self.pushButton_11 = QPushButton(self.frame_257)
-        self.pushButton_11.setObjectName(u"pushButton_11")
-        self.pushButton_11.setMinimumSize(QSize(150, 33))
-        self.pushButton_11.setMaximumSize(QSize(12345, 33))
+        self.contaReceber = QPushButton(self.frame_257)
+        self.contaReceber.setObjectName(u"contaReceber")
+        self.contaReceber.setMinimumSize(QSize(150, 33))
+        self.contaReceber.setMaximumSize(QSize(12345, 33))
         font11 = QFont()
         font11.setFamilies([u"Segoe UI Semibold"])
         font11.setPointSize(10)
         font11.setBold(False)
-        self.pushButton_11.setFont(font11)
-        self.pushButton_11.setStyleSheet(u"QPushButton{\n"
+        self.contaReceber.setFont(font11)
+        self.contaReceber.setStyleSheet(u"QPushButton{\n"
 "background-color: rgb(170, 85, 255);\n"
 "border-radius: 5px;\n"
 "color: rgb(255, 255, 255);\n"
@@ -1761,7 +1738,7 @@ class Ui_MainWindowMW(object):
 "color: rgb(255, 255, 255);\n"
 "}")
 
-        self.horizontalLayout_62.addWidget(self.pushButton_11, 0, Qt.AlignTop)
+        self.horizontalLayout_62.addWidget(self.contaReceber, 0, Qt.AlignTop)
 
 
         self.horizontalLayout_55.addWidget(self.frame_257)
@@ -4955,14 +4932,14 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_159.setSpacing(0)
         self.verticalLayout_159.setObjectName(u"verticalLayout_159")
         self.verticalLayout_159.setContentsMargins(0, 0, 7, 7)
-        self.label_103 = QLabel(self.frame_188)
-        self.label_103.setObjectName(u"label_103")
-        self.label_103.setMaximumSize(QSize(16777215, 35))
-        self.label_103.setFont(font9)
-        self.label_103.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.label_103.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.entradaValor = QLabel(self.frame_188)
+        self.entradaValor.setObjectName(u"entradaValor")
+        self.entradaValor.setMaximumSize(QSize(16777215, 35))
+        self.entradaValor.setFont(font9)
+        self.entradaValor.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.entradaValor.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
-        self.verticalLayout_159.addWidget(self.label_103)
+        self.verticalLayout_159.addWidget(self.entradaValor)
 
 
         self.verticalLayout_154.addWidget(self.frame_188)
@@ -5009,13 +4986,13 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_161.setSpacing(0)
         self.verticalLayout_161.setObjectName(u"verticalLayout_161")
         self.verticalLayout_161.setContentsMargins(0, 0, 11, 7)
-        self.label_123 = QLabel(self.frame_190)
-        self.label_123.setObjectName(u"label_123")
-        self.label_123.setFont(font10)
-        self.label_123.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.label_123.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.saidaValor = QLabel(self.frame_190)
+        self.saidaValor.setObjectName(u"saidaValor")
+        self.saidaValor.setFont(font10)
+        self.saidaValor.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.saidaValor.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
-        self.verticalLayout_161.addWidget(self.label_123)
+        self.verticalLayout_161.addWidget(self.saidaValor)
 
 
         self.verticalLayout_160.addWidget(self.frame_190)
@@ -5062,14 +5039,14 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_176.setSpacing(0)
         self.verticalLayout_176.setObjectName(u"verticalLayout_176")
         self.verticalLayout_176.setContentsMargins(0, 0, 11, 7)
-        self.label_131 = QLabel(self.frame_204)
-        self.label_131.setObjectName(u"label_131")
-        self.label_131.setMaximumSize(QSize(16777215, 35))
-        self.label_131.setFont(font10)
-        self.label_131.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.label_131.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.totalValor = QLabel(self.frame_204)
+        self.totalValor.setObjectName(u"totalValor")
+        self.totalValor.setMaximumSize(QSize(16777215, 35))
+        self.totalValor.setFont(font10)
+        self.totalValor.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.totalValor.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
-        self.verticalLayout_176.addWidget(self.label_131)
+        self.verticalLayout_176.addWidget(self.totalValor)
 
 
         self.verticalLayout_162.addWidget(self.frame_204)
@@ -6073,7 +6050,7 @@ class Ui_MainWindowMW(object):
 
         self.retranslateUi(MainWindowMW)
 
-        self.stackedWidget.setCurrentIndex(5)
+        self.stackedWidget.setCurrentIndex(0)
         self.stackedWidget_2.setCurrentIndex(0)
 
 
@@ -6162,7 +6139,7 @@ class Ui_MainWindowMW(object):
         self.label_153.setText(QCoreApplication.translate("MainWindowMW", u"Total em Aberto", None))
         self.pushButton_10.setText("")
         self.label_155.setText(QCoreApplication.translate("MainWindowMW", u"Kz 600.900,00", None))
-        self.pushButton_11.setText(QCoreApplication.translate("MainWindowMW", u"Adicionar contas a receber", None))
+        self.contaReceber.setText(QCoreApplication.translate("MainWindowMW", u"Adicionar contas a receber", None))
         self.pushButton_12.setText(QCoreApplication.translate("MainWindowMW", u"Buscar", None))
         self.label_184.setText(QCoreApplication.translate("MainWindowMW", u"Cliente", None))
         self.comboBox_4.setItemText(0, "")
@@ -6181,7 +6158,7 @@ class Ui_MainWindowMW(object):
         self.label_233.setText(QCoreApplication.translate("MainWindowMW", u"Planos de Contas", None))
         self.label_246.setText(QCoreApplication.translate("MainWindowMW", u"Cliente", None))
         self.label_248.setText(QCoreApplication.translate("MainWindowMW", u"Vencimento", None))
-        self.label_234.setText(QCoreApplication.translate("MainWindowMW", u"Valor", None))
+        self.label_234.setText(QCoreApplication.translate("MainWindowMW", u"Valor Total", None))
         self.label_235.setText(QCoreApplication.translate("MainWindowMW", u"Valor Pago", None))
         self.label_249.setText(QCoreApplication.translate("MainWindowMW", u"Status", None))
         self.label_236.setText(QCoreApplication.translate("MainWindowMW", u"1", None))
@@ -6234,7 +6211,7 @@ class Ui_MainWindowMW(object):
         self.label_261.setText(QCoreApplication.translate("MainWindowMW", u"1", None))
         self.label_262.setText(QCoreApplication.translate("MainWindowMW", u"12/04/2022", None))
         self.label_263.setText(QCoreApplication.translate("MainWindowMW", u"2-presta\u00e7\u00e3o de servi\u00e7o", None))
-        self.label_264.setText(QCoreApplication.translate("MainWindowMW", u"2-Beltrano", None))
+        self.label_264.setText(QCoreApplication.translate("MainWindowMW", u"Beltrano", None))
         self.label_265.setText(QCoreApplication.translate("MainWindowMW", u"12/04/2022", None))
         self.label_266.setText(QCoreApplication.translate("MainWindowMW", u"20.000", None))
         self.label_267.setText(QCoreApplication.translate("MainWindowMW", u"100,00", None))
@@ -6242,7 +6219,7 @@ class Ui_MainWindowMW(object):
         self.label_268.setText(QCoreApplication.translate("MainWindowMW", u"1", None))
         self.label_269.setText(QCoreApplication.translate("MainWindowMW", u"12/04/2022", None))
         self.label_270.setText(QCoreApplication.translate("MainWindowMW", u"2-presta\u00e7\u00e3o de servi\u00e7o", None))
-        self.label_271.setText(QCoreApplication.translate("MainWindowMW", u"2-Beltrano", None))
+        self.label_271.setText(QCoreApplication.translate("MainWindowMW", u"Beltrano", None))
         self.label_272.setText(QCoreApplication.translate("MainWindowMW", u"12/04/2022", None))
         self.label_273.setText(QCoreApplication.translate("MainWindowMW", u"20.000", None))
         self.label_274.setText(QCoreApplication.translate("MainWindowMW", u"100,00", None))
@@ -6329,13 +6306,13 @@ class Ui_MainWindowMW(object):
         self.label_19.setText(QCoreApplication.translate("MainWindowMW", u"07/09/2022", None))
         self.pushButton_7.setText("")
         self.label_121.setText(QCoreApplication.translate("MainWindowMW", u"Entrada", None))
-        self.label_103.setText(QCoreApplication.translate("MainWindowMW", u"Kz 700.000,00", None))
+        self.entradaValor.setText(QCoreApplication.translate("MainWindowMW", u"Kz 0", None))
         self.label_111.setText(QCoreApplication.translate("MainWindowMW", u"Saida", None))
         self.pushButton_6.setText("")
-        self.label_123.setText(QCoreApplication.translate("MainWindowMW", u"Kz 100,00", None))
+        self.saidaValor.setText(QCoreApplication.translate("MainWindowMW", u"Kz 0", None))
         self.label_113.setText(QCoreApplication.translate("MainWindowMW", u"Total", None))
         self.pushButton_3.setText("")
-        self.label_131.setText(QCoreApplication.translate("MainWindowMW", u"Kz 600.900,00", None))
+        self.totalValor.setText(QCoreApplication.translate("MainWindowMW", u"Kz 600.900,00", None))
         self.novaMovimentacao.setText(QCoreApplication.translate("MainWindowMW", u"Nova Movimenta\u00e7\u00e3o", None))
         self.label_61.setText(QCoreApplication.translate("MainWindowMW", u"Data de Movimenta\u00e7\u00e3o", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindowMW", u"Buscar", None))

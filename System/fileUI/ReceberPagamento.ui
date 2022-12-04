@@ -1,0 +1,505 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Form</class>
+ <widget class="QWidget" name="Form">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>343</width>
+    <height>356</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="CentralFrame">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(255, 255, 255);
+border-radius: 8px;</string>
+     </property>
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <property name="spacing">
+       <number>0</number>
+      </property>
+      <property name="leftMargin">
+       <number>0</number>
+      </property>
+      <property name="topMargin">
+       <number>0</number>
+      </property>
+      <property name="rightMargin">
+       <number>0</number>
+      </property>
+      <property name="bottomMargin">
+       <number>0</number>
+      </property>
+      <item>
+       <widget class="QFrame" name="barraTitulo">
+        <property name="maximumSize">
+         <size>
+          <width>16777215</width>
+          <height>40</height>
+         </size>
+        </property>
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <layout class="QHBoxLayout" name="horizontalLayout">
+         <property name="spacing">
+          <number>3</number>
+         </property>
+         <property name="leftMargin">
+          <number>10</number>
+         </property>
+         <property name="topMargin">
+          <number>4</number>
+         </property>
+         <property name="rightMargin">
+          <number>4</number>
+         </property>
+         <item>
+          <widget class="QLabel" name="label">
+           <property name="font">
+            <font>
+             <family>Segoe UI Semibold</family>
+             <pointsize>15</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(170, 85, 255);</string>
+           </property>
+           <property name="text">
+            <string>Receber Pagamento</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>55</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QPushButton" name="minimizar">
+           <property name="minimumSize">
+            <size>
+             <width>28</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>28</width>
+             <height>26</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color: rgb(170, 85, 255);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(165, 82, 247);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:pressed{
+background-color: rgb(170, 85, 255);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../img/24x24/cil-minus.png</normaloff>../img/24x24/cil-minus.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="fechar">
+           <property name="minimumSize">
+            <size>
+             <width>28</width>
+             <height>26</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>28</width>
+             <height>26</height>
+            </size>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton{
+background-color: rgb(170, 85, 255);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(165, 82, 247);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:pressed{
+background-color: rgb(170, 85, 255);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset>
+             <normaloff>../img/24x24/cil-x-f.png</normaloff>../img/24x24/cil-x-f.png</iconset>
+           </property>
+           <property name="iconSize">
+            <size>
+             <width>20</width>
+             <height>20</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QFrame" name="frame">
+        <property name="frameShape">
+         <enum>QFrame::StyledPanel</enum>
+        </property>
+        <property name="frameShadow">
+         <enum>QFrame::Raised</enum>
+        </property>
+        <widget class="QPushButton" name="adicionarConta">
+         <property name="geometry">
+          <rect>
+           <x>70</x>
+           <y>200</y>
+           <width>180</width>
+           <height>36</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>180</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>180</width>
+           <height>1234567</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">QPushButton{
+background-color: rgb(170, 85, 255);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(165, 82, 247);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:pressed{
+background-color: rgb(170, 85, 255);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}</string>
+         </property>
+         <property name="text">
+          <string>Adicionar conta</string>
+         </property>
+         <property name="iconSize">
+          <size>
+           <width>20</width>
+           <height>20</height>
+          </size>
+         </property>
+        </widget>
+        <widget class="QComboBox" name="categoria">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>20</y>
+           <width>290</width>
+           <height>36</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>290</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>290</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+
+
+QComboBox{
+background-color:rgb(170, 85, 255);
+border-radius:5px;
+border: 2px solid rgb(170, 85, 255);
+padding: 5px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+}
+
+QComboBox:hover{
+ border: 2px solid rgb(170, 85, 255);
+}
+QComboBox::drop-down {
+subcontrol-origin: padding;
+subcontrol-position: top right;
+width: 25px; 
+border-left-width: 3px;
+border-left-color: rgb(255, 255, 255);
+border-left-style: solid;
+border-top-right-radius: 3px;
+border-bottom-right-radius: 3px;
+}
+QComboBox QAbstractItemView {
+color: rgb(255, 255, 255);	
+background-color:rgb(170, 85, 255);
+padding: 10px;
+selection-background-color: rgb(195, 155, 255);
+border:2px solid  rgb(255, 255, 255);
+border-radius:5px;
+}</string>
+         </property>
+         <property name="currentText">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Selecione a categoria</string>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Prestação de serviço</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Casa</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Produto</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QComboBox" name="cliente">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>80</y>
+           <width>290</width>
+           <height>36</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>290</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>290</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">
+
+
+QComboBox{
+background-color:rgb(170, 85, 255);
+border-radius:5px;
+border: 2px solid rgb(170, 85, 255);
+padding: 5px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+}
+
+QComboBox:hover{
+ border: 2px solid rgb(170, 85, 255);
+}
+QComboBox::drop-down {
+subcontrol-origin: padding;
+subcontrol-position: top right;
+width: 25px; 
+border-left-width: 3px;
+border-left-color: rgb(255, 255, 255);
+border-left-style: solid;
+border-top-right-radius: 3px;
+border-bottom-right-radius: 3px;
+}
+QComboBox QAbstractItemView {
+color: rgb(255, 255, 255);	
+background-color:rgb(170, 85, 255);
+padding: 10px;
+selection-background-color: rgb(195, 155, 255);
+border:2px solid  rgb(255, 255, 255);
+border-radius:5px;
+}</string>
+         </property>
+         <property name="currentText">
+          <string/>
+         </property>
+         <property name="placeholderText">
+          <string>Selecione o cliente</string>
+         </property>
+         <item>
+          <property name="text">
+           <string/>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Daniel</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>WhiteSpot</string>
+          </property>
+         </item>
+        </widget>
+        <widget class="QLineEdit" name="valorTotal">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>140</y>
+           <width>290</width>
+           <height>36</height>
+          </rect>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>290</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="maximumSize">
+          <size>
+           <width>290</width>
+           <height>36</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(170, 85, 255);
+border-radius:5px;
+color: rgb(255, 255, 255);
+padding-left:5px;</string>
+         </property>
+         <property name="placeholderText">
+          <string>Valor</string>
+         </property>
+        </widget>
+        <widget class="QLabel" name="label_2">
+         <property name="geometry">
+          <rect>
+           <x>20</x>
+           <y>250</y>
+           <width>170</width>
+           <height>27</height>
+          </rect>
+         </property>
+         <property name="font">
+          <font>
+           <family>Segoe UI Semibold</family>
+           <pointsize>15</pointsize>
+          </font>
+         </property>
+         <property name="styleSheet">
+          <string notr="true">color: rgb(170, 85, 255);</string>
+         </property>
+         <property name="text">
+          <string>Total a Pagar: Kz 0</string>
+         </property>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

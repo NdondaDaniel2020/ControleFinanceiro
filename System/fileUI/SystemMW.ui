@@ -1279,7 +1279,7 @@ border-top-left-radius:10px;
 border-bottom-left-radius:10px;</string>
                         </property>
                         <property name="currentIndex">
-                         <number>5</number>
+                         <number>0</number>
                         </property>
                         <widget class="QWidget" name="page_Home">
                          <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -2475,56 +2475,42 @@ border-radius:10px;
                                             <property name="frameShadow">
                                              <enum>QFrame::Raised</enum>
                                             </property>
-                                            <layout class="QVBoxLayout" name="verticalLayout_146">
+                                            <layout class="QVBoxLayout" name="verticalLayout_22">
                                              <property name="spacing">
-                                              <number>3</number>
+                                              <number>0</number>
                                              </property>
                                              <property name="leftMargin">
-                                              <number>3</number>
+                                              <number>0</number>
                                              </property>
                                              <property name="topMargin">
-                                              <number>5</number>
+                                              <number>0</number>
                                              </property>
                                              <property name="rightMargin">
-                                              <number>3</number>
-                                             </property>
-                                             <property name="bottomMargin">
-                                              <number>5</number>
+                                              <number>0</number>
                                              </property>
                                              <item>
-                                              <widget class="QFrame" name="frame_224">
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>16777215</width>
-                                                 <height>38</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true">QFrame{
-background-color: rgb(255, 255, 255);
-border-radius:10px;}</string>
-                                               </property>
+                                              <widget class="QFrame" name="zonaHistoricoEntrada">
                                                <property name="frameShape">
                                                 <enum>QFrame::StyledPanel</enum>
                                                </property>
                                                <property name="frameShadow">
                                                 <enum>QFrame::Raised</enum>
                                                </property>
-                                               <layout class="QHBoxLayout" name="horizontalLayout_96">
+                                               <layout class="QVBoxLayout" name="verticalLayout_ZonaEntrada">
                                                 <property name="spacing">
                                                  <number>3</number>
                                                 </property>
                                                 <property name="leftMargin">
-                                                 <number>0</number>
+                                                 <number>3</number>
                                                 </property>
                                                 <property name="topMargin">
-                                                 <number>0</number>
+                                                 <number>5</number>
                                                 </property>
                                                 <property name="rightMargin">
-                                                 <number>0</number>
+                                                 <number>3</number>
                                                 </property>
                                                 <property name="bottomMargin">
-                                                 <number>0</number>
+                                                 <number>5</number>
                                                 </property>
                                                 <item>
                                                  <widget class="QFrame" name="pequenoHistoricoEntrada">
@@ -2799,82 +2785,6 @@ padding: 0px}
                                               </widget>
                                              </item>
                                              <item>
-                                              <widget class="QFrame" name="frame_247">
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>16777215</width>
-                                                 <height>38</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true">QFrame{
-background-color: rgb(255, 255, 255);
-border-radius:10px;}</string>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QHBoxLayout" name="horizontalLayout_122">
-                                                <property name="spacing">
-                                                 <number>3</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_261">
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>16777215</width>
-                                                 <height>38</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true">QFrame{
-background-color: rgb(255, 255, 255);
-border-radius:10px;}</string>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QHBoxLayout" name="horizontalLayout_107">
-                                                <property name="spacing">
-                                                 <number>3</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
                                               <spacer name="verticalSpacer_7">
                                                <property name="orientation">
                                                 <enum>Qt::Vertical</enum>
@@ -2898,78 +2808,102 @@ border-radius:10px;}</string>
                                             <property name="frameShadow">
                                              <enum>QFrame::Raised</enum>
                                             </property>
-                                            <layout class="QVBoxLayout" name="verticalLayout_145">
+                                            <layout class="QVBoxLayout" name="verticalLayout_24">
                                              <property name="spacing">
-                                              <number>3</number>
+                                              <number>0</number>
                                              </property>
                                              <property name="leftMargin">
-                                              <number>3</number>
+                                              <number>0</number>
                                              </property>
                                              <property name="topMargin">
-                                              <number>5</number>
+                                              <number>0</number>
                                              </property>
                                              <property name="rightMargin">
-                                              <number>3</number>
+                                              <number>0</number>
                                              </property>
                                              <property name="bottomMargin">
-                                              <number>5</number>
+                                              <number>0</number>
                                              </property>
                                              <item>
-                                              <widget class="QFrame" name="pequenoHistoricoSaida">
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>16777215</width>
-                                                 <height>38</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true">QFrame{
-background-color: rgb(255, 255, 255);
-border-radius:4px;}</string>
-                                               </property>
+                                              <widget class="QFrame" name="zonaHistoricoSaida">
                                                <property name="frameShape">
                                                 <enum>QFrame::StyledPanel</enum>
                                                </property>
                                                <property name="frameShadow">
                                                 <enum>QFrame::Raised</enum>
                                                </property>
-                                               <layout class="QHBoxLayout" name="horizontalLayout_116">
+                                               <layout class="QVBoxLayout" name="verticalLayout_zonaSaida">
                                                 <property name="spacing">
                                                  <number>3</number>
                                                 </property>
                                                 <property name="leftMargin">
-                                                 <number>10</number>
+                                                 <number>3</number>
                                                 </property>
                                                 <property name="topMargin">
-                                                 <number>0</number>
+                                                 <number>5</number>
                                                 </property>
                                                 <property name="rightMargin">
                                                  <number>3</number>
                                                 </property>
                                                 <property name="bottomMargin">
-                                                 <number>0</number>
+                                                 <number>5</number>
                                                 </property>
                                                 <item>
-                                                 <widget class="QPushButton" name="pushButton_16">
-                                                  <property name="minimumSize">
-                                                   <size>
-                                                    <width>30</width>
-                                                    <height>30</height>
-                                                   </size>
-                                                  </property>
+                                                 <widget class="QFrame" name="pequenoHistoricoSaida">
                                                   <property name="maximumSize">
                                                    <size>
-                                                    <width>30</width>
-                                                    <height>30</height>
+                                                    <width>16777215</width>
+                                                    <height>38</height>
                                                    </size>
                                                   </property>
-                                                  <property name="font">
-                                                   <font>
-                                                    <pointsize>2</pointsize>
-                                                   </font>
-                                                  </property>
                                                   <property name="styleSheet">
-                                                   <string notr="true">QPushButton{
+                                                   <string notr="true">QFrame{
+background-color: rgb(255, 255, 255);
+border-radius:4px;}</string>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QHBoxLayout" name="horizontalLayout_116">
+                                                   <property name="spacing">
+                                                    <number>3</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>10</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>3</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QPushButton" name="pushButton_16">
+                                                     <property name="minimumSize">
+                                                      <size>
+                                                       <width>30</width>
+                                                       <height>30</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="maximumSize">
+                                                      <size>
+                                                       <width>30</width>
+                                                       <height>30</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="font">
+                                                      <font>
+                                                       <pointsize>2</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">QPushButton{
 border-color: rgb(170, 85, 255);
 border: 1px solid rgb(170, 85, 255);
 background-color: rgb(255, 255, 255);
@@ -2992,51 +2926,24 @@ border-radius:15px;
 padding: 0px}
 
 </string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string/>
-                                                  </property>
-                                                  <property name="icon">
-                                                   <iconset>
-                                                    <normaloff>../img/Money Bag Franc_30px.png</normaloff>../img/Money Bag Franc_30px.png</iconset>
-                                                  </property>
-                                                  <property name="iconSize">
-                                                   <size>
-                                                    <width>24</width>
-                                                    <height>26</height>
-                                                   </size>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                                <item>
-                                                 <widget class="QFrame" name="frame_243">
-                                                  <property name="styleSheet">
-                                                   <string notr="true"/>
-                                                  </property>
-                                                  <property name="frameShape">
-                                                   <enum>QFrame::StyledPanel</enum>
-                                                  </property>
-                                                  <property name="frameShadow">
-                                                   <enum>QFrame::Raised</enum>
-                                                  </property>
-                                                  <layout class="QHBoxLayout" name="horizontalLayout_118">
-                                                   <property name="spacing">
-                                                    <number>0</number>
-                                                   </property>
-                                                   <property name="leftMargin">
-                                                    <number>0</number>
-                                                   </property>
-                                                   <property name="topMargin">
-                                                    <number>0</number>
-                                                   </property>
-                                                   <property name="rightMargin">
-                                                    <number>0</number>
-                                                   </property>
-                                                   <property name="bottomMargin">
-                                                    <number>0</number>
-                                                   </property>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string/>
+                                                     </property>
+                                                     <property name="icon">
+                                                      <iconset>
+                                                       <normaloff>../img/Money Bag Franc_30px.png</normaloff>../img/Money Bag Franc_30px.png</iconset>
+                                                     </property>
+                                                     <property name="iconSize">
+                                                      <size>
+                                                       <width>24</width>
+                                                       <height>26</height>
+                                                      </size>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
                                                    <item>
-                                                    <widget class="QFrame" name="frame_245">
+                                                    <widget class="QFrame" name="frame_243">
                                                      <property name="styleSheet">
                                                       <string notr="true"/>
                                                      </property>
@@ -3046,112 +2953,139 @@ padding: 0px}
                                                      <property name="frameShadow">
                                                       <enum>QFrame::Raised</enum>
                                                      </property>
-                                                     <layout class="QHBoxLayout" name="horizontalLayout_120">
+                                                     <layout class="QHBoxLayout" name="horizontalLayout_118">
+                                                      <property name="spacing">
+                                                       <number>0</number>
+                                                      </property>
+                                                      <property name="leftMargin">
+                                                       <number>0</number>
+                                                      </property>
+                                                      <property name="topMargin">
+                                                       <number>0</number>
+                                                      </property>
+                                                      <property name="rightMargin">
+                                                       <number>0</number>
+                                                      </property>
+                                                      <property name="bottomMargin">
+                                                       <number>0</number>
+                                                      </property>
                                                       <item>
-                                                       <widget class="QLabel" name="label_206">
+                                                       <widget class="QFrame" name="frame_245">
+                                                        <property name="styleSheet">
+                                                         <string notr="true"/>
+                                                        </property>
+                                                        <property name="frameShape">
+                                                         <enum>QFrame::StyledPanel</enum>
+                                                        </property>
+                                                        <property name="frameShadow">
+                                                         <enum>QFrame::Raised</enum>
+                                                        </property>
+                                                        <layout class="QHBoxLayout" name="horizontalLayout_120">
+                                                         <item>
+                                                          <widget class="QLabel" name="label_206">
+                                                           <property name="font">
+                                                            <font>
+                                                             <family>Segoe UI Semibold</family>
+                                                             <pointsize>11</pointsize>
+                                                            </font>
+                                                           </property>
+                                                           <property name="styleSheet">
+                                                            <string notr="true">color: rgb(170, 85, 255);</string>
+                                                           </property>
+                                                           <property name="text">
+                                                            <string>  Teiser</string>
+                                                           </property>
+                                                           <property name="alignment">
+                                                            <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                           </property>
+                                                          </widget>
+                                                         </item>
+                                                        </layout>
+                                                       </widget>
+                                                      </item>
+                                                     </layout>
+                                                    </widget>
+                                                   </item>
+                                                   <item>
+                                                    <widget class="QFrame" name="frame_244">
+                                                     <property name="styleSheet">
+                                                      <string notr="true"/>
+                                                     </property>
+                                                     <property name="frameShape">
+                                                      <enum>QFrame::StyledPanel</enum>
+                                                     </property>
+                                                     <property name="frameShadow">
+                                                      <enum>QFrame::Raised</enum>
+                                                     </property>
+                                                     <layout class="QHBoxLayout" name="horizontalLayout_119">
+                                                      <item>
+                                                       <widget class="QLabel" name="dataSaida">
                                                         <property name="font">
                                                          <font>
                                                           <family>Segoe UI Semibold</family>
-                                                          <pointsize>11</pointsize>
+                                                          <pointsize>10</pointsize>
                                                          </font>
                                                         </property>
                                                         <property name="styleSheet">
                                                          <string notr="true">color: rgb(170, 85, 255);</string>
                                                         </property>
                                                         <property name="text">
-                                                         <string>  Teiser</string>
+                                                         <string>2022-04-12</string>
                                                         </property>
                                                         <property name="alignment">
-                                                         <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                         <set>Qt::AlignCenter</set>
+                                                        </property>
+                                                       </widget>
+                                                      </item>
+                                                      <item>
+                                                       <widget class="QLabel" name="valoSaidas">
+                                                        <property name="maximumSize">
+                                                         <size>
+                                                          <width>147</width>
+                                                          <height>16777215</height>
+                                                         </size>
+                                                        </property>
+                                                        <property name="font">
+                                                         <font>
+                                                          <family>Segoe UI Semibold</family>
+                                                          <pointsize>10</pointsize>
+                                                         </font>
+                                                        </property>
+                                                        <property name="styleSheet">
+                                                         <string notr="true">color: rgb(255, 0, 0);</string>
+                                                        </property>
+                                                        <property name="text">
+                                                         <string>Kz 100</string>
+                                                        </property>
+                                                        <property name="alignment">
+                                                         <set>Qt::AlignCenter</set>
                                                         </property>
                                                        </widget>
                                                       </item>
                                                      </layout>
                                                     </widget>
                                                    </item>
-                                                  </layout>
-                                                 </widget>
-                                                </item>
-                                                <item>
-                                                 <widget class="QFrame" name="frame_244">
-                                                  <property name="styleSheet">
-                                                   <string notr="true"/>
-                                                  </property>
-                                                  <property name="frameShape">
-                                                   <enum>QFrame::StyledPanel</enum>
-                                                  </property>
-                                                  <property name="frameShadow">
-                                                   <enum>QFrame::Raised</enum>
-                                                  </property>
-                                                  <layout class="QHBoxLayout" name="horizontalLayout_119">
                                                    <item>
-                                                    <widget class="QLabel" name="dataSaida">
-                                                     <property name="font">
-                                                      <font>
-                                                       <family>Segoe UI Semibold</family>
-                                                       <pointsize>10</pointsize>
-                                                      </font>
+                                                    <widget class="QPushButton" name="iconSis">
+                                                     <property name="minimumSize">
+                                                      <size>
+                                                       <width>30</width>
+                                                       <height>30</height>
+                                                      </size>
                                                      </property>
-                                                     <property name="styleSheet">
-                                                      <string notr="true">color: rgb(170, 85, 255);</string>
-                                                     </property>
-                                                     <property name="text">
-                                                      <string>2022-04-12</string>
-                                                     </property>
-                                                     <property name="alignment">
-                                                      <set>Qt::AlignCenter</set>
-                                                     </property>
-                                                    </widget>
-                                                   </item>
-                                                   <item>
-                                                    <widget class="QLabel" name="valoSaidas">
                                                      <property name="maximumSize">
                                                       <size>
-                                                       <width>147</width>
-                                                       <height>16777215</height>
+                                                       <width>30</width>
+                                                       <height>30</height>
                                                       </size>
                                                      </property>
                                                      <property name="font">
                                                       <font>
-                                                       <family>Segoe UI Semibold</family>
-                                                       <pointsize>10</pointsize>
+                                                       <pointsize>2</pointsize>
                                                       </font>
                                                      </property>
                                                      <property name="styleSheet">
-                                                      <string notr="true">color: rgb(255, 0, 0);</string>
-                                                     </property>
-                                                     <property name="text">
-                                                      <string>Kz 100</string>
-                                                     </property>
-                                                     <property name="alignment">
-                                                      <set>Qt::AlignCenter</set>
-                                                     </property>
-                                                    </widget>
-                                                   </item>
-                                                  </layout>
-                                                 </widget>
-                                                </item>
-                                                <item>
-                                                 <widget class="QPushButton" name="iconSis">
-                                                  <property name="minimumSize">
-                                                   <size>
-                                                    <width>30</width>
-                                                    <height>30</height>
-                                                   </size>
-                                                  </property>
-                                                  <property name="maximumSize">
-                                                   <size>
-                                                    <width>30</width>
-                                                    <height>30</height>
-                                                   </size>
-                                                  </property>
-                                                  <property name="font">
-                                                   <font>
-                                                    <pointsize>2</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">QPushButton{
+                                                      <string notr="true">QPushButton{
 border-color: rgb(170, 85, 255);
 background-color: rgb(170, 85, 255);
 border-radius:0px;
@@ -3171,20 +3105,23 @@ border-radius:15px;
 padding: 0px
 }
 </string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string/>
-                                                  </property>
-                                                  <property name="icon">
-                                                   <iconset>
-                                                    <normaloff>../img/logoFC.png</normaloff>../img/logoFC.png</iconset>
-                                                  </property>
-                                                  <property name="iconSize">
-                                                   <size>
-                                                    <width>24</width>
-                                                    <height>26</height>
-                                                   </size>
-                                                  </property>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string/>
+                                                     </property>
+                                                     <property name="icon">
+                                                      <iconset>
+                                                       <normaloff>../img/logoFC.png</normaloff>../img/logoFC.png</iconset>
+                                                     </property>
+                                                     <property name="iconSize">
+                                                      <size>
+                                                       <width>24</width>
+                                                       <height>26</height>
+                                                      </size>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
                                                  </widget>
                                                 </item>
                                                </layout>
@@ -3996,7 +3933,7 @@ border-radius: 10px</string>
                                              <number>0</number>
                                             </property>
                                             <item alignment="Qt::AlignTop">
-                                             <widget class="QPushButton" name="pushButton_11">
+                                             <widget class="QPushButton" name="contaReceber">
                                               <property name="minimumSize">
                                                <size>
                                                 <width>150</width>
@@ -5099,7 +5036,7 @@ QDateEdit:hover{
                                                <string notr="true">color: rgb(255, 255, 255);</string>
                                               </property>
                                               <property name="text">
-                                               <string>Valor</string>
+                                               <string>Valor Total</string>
                                               </property>
                                               <property name="alignment">
                                                <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -8692,7 +8629,7 @@ border-radius:4px;</string>
                                                       <string notr="true">color: rgb(170, 85, 255);</string>
                                                      </property>
                                                      <property name="text">
-                                                      <string>2-Beltrano</string>
+                                                      <string>Beltrano</string>
                                                      </property>
                                                      <property name="alignment">
                                                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -9237,7 +9174,7 @@ border-radius:4px;</string>
                                                       <string notr="true">color: rgb(170, 85, 255);</string>
                                                      </property>
                                                      <property name="text">
-                                                      <string>2-Beltrano</string>
+                                                      <string>Beltrano</string>
                                                      </property>
                                                      <property name="alignment">
                                                       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -12401,7 +12338,7 @@ border-radius: 10px</string>
                                                    <number>7</number>
                                                   </property>
                                                   <item>
-                                                   <widget class="QLabel" name="label_103">
+                                                   <widget class="QLabel" name="entradaValor">
                                                     <property name="maximumSize">
                                                      <size>
                                                       <width>16777215</width>
@@ -12419,7 +12356,7 @@ border-radius: 10px</string>
                                                      <string notr="true">color: rgb(255, 255, 255);</string>
                                                     </property>
                                                     <property name="text">
-                                                     <string>Kz 700.000,00</string>
+                                                     <string>Kz 0</string>
                                                     </property>
                                                     <property name="alignment">
                                                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -12557,7 +12494,7 @@ border-radius: 10px</string>
                                                    <number>7</number>
                                                   </property>
                                                   <item>
-                                                   <widget class="QLabel" name="label_123">
+                                                   <widget class="QLabel" name="saidaValor">
                                                     <property name="font">
                                                      <font>
                                                       <family>Segoe UI Semibold</family>
@@ -12568,7 +12505,7 @@ border-radius: 10px</string>
                                                      <string notr="true">color: rgb(255, 255, 255);</string>
                                                     </property>
                                                     <property name="text">
-                                                     <string>Kz 100,00</string>
+                                                     <string>Kz 0</string>
                                                     </property>
                                                     <property name="alignment">
                                                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -12706,7 +12643,7 @@ border-radius: 10px</string>
                                                    <number>7</number>
                                                   </property>
                                                   <item>
-                                                   <widget class="QLabel" name="label_131">
+                                                   <widget class="QLabel" name="totalValor">
                                                     <property name="maximumSize">
                                                      <size>
                                                       <width>16777215</width>

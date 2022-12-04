@@ -14,11 +14,15 @@ from ui_SystemSC import Ui_SplashCreen
 from ui_SystemMW import Ui_MainWindowMW
 from ui_Movimentação import Movimentacao
 from ui_barraMovimentação import BarraMovimentacao
+from ui_HistoricoEntradaSaida import HistoricoEntradaSaida
+from ui_contasAreceber import ContasAreceber
+
 
 from time import sleep
 from datetime import date
 import sys
 import cv2
+
 # import pyttsx3
 # import pyaudio ###
 # from vosk import Model, KaldiRecognizer ####
@@ -36,6 +40,7 @@ PEGARaUDIO = 0
 # temos dois bugs por enquanto no lin au clicar e ao navegar
 PEGARaUDIO = 0
 
+
 class SplashCreen(QMainWindow):
 
     def __init__(self):
@@ -45,13 +50,13 @@ class SplashCreen(QMainWindow):
             self.Fonte = cv2.FONT_HERSHEY_COMPLEX_SMALL  # definir fonty do reconhecimento
             self.Reconhecedor = cv2.face.LBPHFaceRecognizer_create()  # metodo reponsavelo por conpara as imagens do reconhecidor com a que e pega na camera
             self.Reconhecedor.read(CLASSIFICADORLBPH)  # pegar a base de dados de imagns
-            self.Redimencionar = True # ele vai dizer se no reconhecimento qunado o resultado sair se vai
+            self.Redimencionar = True  # ele vai dizer se no reconhecimento qunado o resultado sair se vai
             # redimencionar a tela ou não
         except:
             quit()
             pass
 
-        sleep(2)  #paramos 1 segundo para nao atrapalhar na performace da Ui
+        sleep(2)  # paramos 1 segundo para nao atrapalhar na performace da Ui
         # inicio da interfaceGrafica
         QMainWindow.__init__(self)
         self.sc = Ui_SplashCreen()
@@ -64,7 +69,7 @@ class SplashCreen(QMainWindow):
 
         self.database = database("ControloFinaceiro.db")
         self.senhaUltimoUser = ''
-        self.nomeDoUsuario = ''    ## ele será Usado para o main window
+        self.nomeDoUsuario = ''  ## ele será Usado para o main window
         self.VerificarUltimoUser()
 
         # lista ficticia de usuario e suas senhas
@@ -125,6 +130,7 @@ class SplashCreen(QMainWindow):
         self.senha_login_name = 0
         self.passwor2Cont = 0
         self.passwor1Cont = 0
+
         # para mover a SplashScreen
         def moveWindow(event):
             if event.buttons() == Qt.LeftButton:
@@ -212,7 +218,7 @@ class SplashCreen(QMainWindow):
         QTimer.singleShot(6000, lambda: self.AnimatioOpacity())
         QTimer.singleShot(6100, lambda: self.OpenResize())  # funcão com documentação. está com controlador de tempo
         # esta é uma das formas de corrigir o erro de aimagem mudar de posição só
-        #QTimer.singleShot(2500, lambda: self.opacityLabel())
+        # QTimer.singleShot(2500, lambda: self.opacityLabel())
         QTimer.singleShot(7500, lambda: self.TestWebCam())
 
     # responsael pela animação do circupal progres Bar e as outras animation
@@ -311,7 +317,7 @@ class SplashCreen(QMainWindow):
         self.group_animation.start()
 
         # esta é uma das formas de corrigir o erro de aimagem mudar de posição só
-        QTimer.singleShot(500, lambda:print())
+        QTimer.singleShot(500, lambda: print())
         self.logoPrincipal_opacityt = QGraphicsOpacityEffect(self.sc.logoPrincipal)
         self.logoPrincipal_opacityt.setOpacity(0.9)
         self.sc.logoPrincipal.setGraphicsEffect(self.logoPrincipal_opacityt)
@@ -361,25 +367,25 @@ class SplashCreen(QMainWindow):
     # este é reponavel pela aniamçao da opacidade
     def animation_senha(self):
 
-            self.senha_opacity = QGraphicsOpacityEffect(self.sc.senha)
-            self.senha_opacity.setOpacity(0.9)
-            self.sc.senha.setGraphicsEffect(self.senha_opacity)
+        self.senha_opacity = QGraphicsOpacityEffect(self.sc.senha)
+        self.senha_opacity.setOpacity(0.9)
+        self.sc.senha.setGraphicsEffect(self.senha_opacity)
 
-            posicao_atual = self.sc.senha.pos().x()
+        posicao_atual = self.sc.senha.pos().x()
 
-            oi = 0
+        oi = 0
+        of = 0
+
+        if posicao_atual == 210:
+            po1 = QPoint(210, 25)
+            po2 = QPoint(100, 25)
+            oi = 0.9
             of = 0
-
-            if posicao_atual == 210:
-                po1 = QPoint(210, 25)
-                po2 = QPoint(100, 25)
-                oi = 0.9
-                of = 0
-                lpoi = QPoint(165, 5)
-                lpof = QPoint(230, 5)
-                self.sc.troca.setText('Usar Password')
-                self.sc.senha.setText('')
-                self.sc.senha.setStyleSheet("""
+            lpoi = QPoint(165, 5)
+            lpof = QPoint(230, 5)
+            self.sc.troca.setText('Usar Password')
+            self.sc.senha.setText('')
+            self.sc.senha.setStyleSheet("""
                 QLineEdit{background-color: rgb(160, 80, 240);
                 border:1px solid rgb(230, 187, 255);border-radius:5px;
                 color: rgb(208, 208, 208)}
@@ -388,9 +394,9 @@ class SplashCreen(QMainWindow):
                 QLineEdit:focus{background-color: rgb(130, 0, 195);
                 border:2px solid rgb(230, 187, 255);border-radius:5px;
                 color: rgb(230, 187, 255);}""")
-                self.sc.senhaIncorreta.close()
-            else:
-                self.sc.senha.setStyleSheet("""
+            self.sc.senhaIncorreta.close()
+        else:
+            self.sc.senha.setStyleSheet("""
                                             QLineEdit{
                                             background-color: rgb(150, 76, 228);
                                             border:1px solid rgb(230, 187, 255);
@@ -405,38 +411,38 @@ class SplashCreen(QMainWindow):
                                             border:2px solid rgb(230, 187, 255);
                                             border-radius:5px;
                                             color: rgb(230, 187, 255);}""")
-                self.sc.senhaIncorreta.close()
-                self.sc.senha.setText('')
-                po2 = QPoint(210, 30)
-                po1 = QPoint(100, 30)
-                oi = 0
-                of = 0.9
-                lpof = QPoint(165, 10)
-                lpoi = QPoint(230, 10)
-                self.sc.troca.setText('Usar Face id')
+            self.sc.senhaIncorreta.close()
+            self.sc.senha.setText('')
+            po2 = QPoint(210, 30)
+            po1 = QPoint(100, 30)
+            oi = 0
+            of = 0.9
+            lpof = QPoint(165, 10)
+            lpoi = QPoint(230, 10)
+            self.sc.troca.setText('Usar Face id')
 
-            self.senha_pos = QPropertyAnimation(self.sc.senha, b'pos')
-            self.senha_pos.setStartValue(po1)
-            self.senha_pos.setEndValue(po2)
-            self.senha_pos.setDuration(300)
-            self.senha_pos.setEasingCurve(QEasingCurve.InOutBack)
+        self.senha_pos = QPropertyAnimation(self.sc.senha, b'pos')
+        self.senha_pos.setStartValue(po1)
+        self.senha_pos.setEndValue(po2)
+        self.senha_pos.setDuration(300)
+        self.senha_pos.setEasingCurve(QEasingCurve.InOutBack)
 
-            self.senha_opacity = QPropertyAnimation(self.senha_opacity, b'opacity')
-            self.senha_opacity.setStartValue(oi)
-            self.senha_opacity.setEndValue(of)
-            self.senha_opacity.setDuration(300)
+        self.senha_opacity = QPropertyAnimation(self.senha_opacity, b'opacity')
+        self.senha_opacity.setStartValue(oi)
+        self.senha_opacity.setEndValue(of)
+        self.senha_opacity.setDuration(300)
 
-            self.logocam_animatio = QPropertyAnimation(self.sc.logoCamera, b'pos')
-            self.logocam_animatio.setStartValue(lpoi)
-            self.logocam_animatio.setEndValue(lpof)
-            self.logocam_animatio.setEasingCurve(QEasingCurve.InOutBack)
-            self.logocam_animatio.setDuration(300)
+        self.logocam_animatio = QPropertyAnimation(self.sc.logoCamera, b'pos')
+        self.logocam_animatio.setStartValue(lpoi)
+        self.logocam_animatio.setEndValue(lpof)
+        self.logocam_animatio.setEasingCurve(QEasingCurve.InOutBack)
+        self.logocam_animatio.setDuration(300)
 
-            self.anima_goup_senha = QParallelAnimationGroup()
-            self.anima_goup_senha.addAnimation(self.senha_pos)
-            self.anima_goup_senha.addAnimation(self.senha_opacity)
-            self.anima_goup_senha.addAnimation(self.logocam_animatio)
-            self.anima_goup_senha.start()
+        self.anima_goup_senha = QParallelAnimationGroup()
+        self.anima_goup_senha.addAnimation(self.senha_pos)
+        self.anima_goup_senha.addAnimation(self.senha_opacity)
+        self.anima_goup_senha.addAnimation(self.logocam_animatio)
+        self.anima_goup_senha.start()
 
     # corrigis o bug daa animação da troca de senha e face id
     def corrigi_bug(self):
@@ -559,7 +565,7 @@ class SplashCreen(QMainWindow):
                             color: rgb(208, 208, 208);
                             border:2px solid rgb(85, 255, 127);
                             border-radius:5px;""")
-                self.inserirUltimoUserInBD(str(id+1))
+                self.inserirUltimoUserInBD(str(id + 1))
                 UsuiarioGlobal = self.listaUsuarios[id]
                 QTimer.singleShot(200, lambda: self.mainWindowMethod())
                 QTimer.singleShot(500, lambda: self.close())
@@ -881,7 +887,7 @@ class SplashCreen(QMainWindow):
 
             detect = self.ClassificadorDeVideo.detectMultiScale(cinzaImg)
             for (x, y, l, a) in detect:
-                imagem = cv2.rectangle(imagem, (x, y), (x+l, y+a), (22, 22, 22), 1)
+                imagem = cv2.rectangle(imagem, (x, y), (x + l, y + a), (22, 22, 22), 1)
                 faceImg = cv2.resize(cinzaImg[y:y + a, x:x + l], (100, 100))
 
                 iden, conf = self.Reconhecedor.predict(faceImg)
@@ -903,8 +909,8 @@ class SplashCreen(QMainWindow):
                     self.sc.logoCamera.setPixmap(QPixmap(u"../img/Instagram_90_openv_px.png"))
                     self.inserirUltimoUserInBD(1)
                     fontColor = (85, 255, 127)
-                    if not self.sc.CentralFrame.height() == 250 and self.Redimencionar:#########################
-                        QTimer.singleShot(30, lambda: self.OpenResize())###
+                    if not self.sc.CentralFrame.height() == 250 and self.Redimencionar:  #########################
+                        QTimer.singleShot(30, lambda: self.OpenResize())  ###
                         QTimer.singleShot(900, lambda: self.mainWindowMethod())
                         QTimer.singleShot(1000, lambda: self.close())
                     else:
@@ -929,7 +935,7 @@ class SplashCreen(QMainWindow):
                     CONT = 0
                     # fontColor = (170, 85, 255)
 
-                cv2.putText(imagem, name, (x, y + (a+30)), self.Fonte, 1, fontColor)
+                cv2.putText(imagem, name, (x, y + (a + 30)), self.Fonte, 1, fontColor)
 
             height, width, channel = imagem.shape
             step = channel * width
@@ -972,6 +978,7 @@ class SplashCreen(QMainWindow):
     # este metodo é respposavel por mostrar a tela principal
     def mainWindowMethod(self):
         self.mainWindow = MainwindowSC()
+
     # este metodo e esponsaver por verificar o ultimo usuario e lhe facilitar em por apana a senha
     def VerificarUltimoUser(self):
         nomeUltimoUser = ''
@@ -1006,7 +1013,7 @@ class SplashCreen(QMainWindow):
         registro = self.database.executarFetchall("SELECT * FROM Usuario")
         self.database.close_connection_database()
 
-        return str(len(registro)+1)
+        return str(len(registro) + 1)
 
     # este metodo e responvael por saber a posição no ultimo usuario
     def identificarUltimoUsuario(self, nome):
@@ -1047,8 +1054,6 @@ class SplashCreen(QMainWindow):
         return newuser
 
 
-
-
 class MainwindowSC(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
@@ -1062,19 +1067,18 @@ class MainwindowSC(QMainWindow):
         self.setMinimumSize(1195, 760)
         self.toobtn = True
 
-        self.novMovimentacao = Movimentacao()
-
+        self.novaMovimentacao = Movimentacao()
+        self.contaReceber = ContasAreceber()
         self.dataAtual = self.pegarData()
 
         self.eventoConnect()
-
 
         self.ui.minimisar.clicked.connect(lambda: self.showMinimized())
         self.ui.NormalMax.clicked.connect(lambda: self.MaxMin())
         self.ui.fechar.clicked.connect(lambda: quit())
 
         self.ui.settings.clicked.connect(self.leftmenu)
-        self.ui.double_up.clicked.connect(self.scrollAreaAnimat)##
+        self.ui.double_up.clicked.connect(self.scrollAreaAnimat)  ##
         self.ui.web_btn.clicked.connect(self.areaClick)
         self.ui.help_btn.clicked.connect(self.areaClick)
         self.ui.setting_btn.clicked.connect(self.areaClick)
@@ -1095,9 +1099,10 @@ class MainwindowSC(QMainWindow):
         self.ui.Economia_btn.clicked.connect(self.areaClick)
         self.ui.help_btnF_2.clicked.connect(self.areaClick)
 
-        self.novMovimentacao.mov.movimentar.clicked.connect(self.ValorNomvaMovimentacao)
-        self.ui.novaMovimentacao.clicked.connect(self.novaMovimentacao)
-
+        self.novaMovimentacao.mov.movimentar.clicked.connect(self.ValorNomvaMovimentacao)
+        self.ui.novaMovimentacao.clicked.connect(self.showMovimentacao)
+        self.ui.contaReceber.clicked.connect(self.adicionarContasAReceber)
+        
         # ler texto
 
         self.left = CustomGrip(self, Qt.LeftEdge, True)
@@ -1107,7 +1112,7 @@ class MainwindowSC(QMainWindow):
 
         # self.adicionandoGrafico()
 
-        self.show() # mostrar janela
+        self.show()  # mostrar janela
 
         self.timerHistorico = QTimer()
         self.timerHistorico.timeout.connect(lambda: self.pegarURLcriarHistorico())
@@ -1116,7 +1121,6 @@ class MainwindowSC(QMainWindow):
         self.repAudioTimer.timeout.connect(lambda: self.repAudio())
 
         self.listaURL = []
-
 
     # pega a posicao global
     def mousePressEvent(self, event):
@@ -1162,7 +1166,8 @@ class MainwindowSC(QMainWindow):
 
         def BLHLMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.nutsaboutmoney.com/investing/hargreaves-lansdown-alternatives")
+                self.simpficaLond(self.ui.page_Extras, 0,
+                                  "https://www.nutsaboutmoney.com/investing/hargreaves-lansdown-alternatives")
 
         def InfomaneyMousePressEvent(event: QMouseEvent):
             if event.button() == Qt.LeftButton:
@@ -1188,7 +1193,6 @@ class MainwindowSC(QMainWindow):
             if event.button() == Qt.LeftButton:
                 self.simpficaLond(self.ui.page_Extras, 0, "https://dinheirama.com/")
 
-
         self.ui.frame_GoogleFinance.mousePressEvent = GoogleFinanceMousePressEvent
         self.ui.frame_YahooFinance.mousePressEvent = YahooFinanceMousePressEvent
         self.ui.frame_Investing.mousePressEvent = InvestingMousePressEvent
@@ -1200,13 +1204,14 @@ class MainwindowSC(QMainWindow):
         self.ui.frame_Helpe.mousePressEvent = HelpMousePressEvent
         self.ui.help_lbl.mousePressEvent = HelpMousePressEvent
 
-       #######################################################################
+        #######################################################################
         # evento responsavel por mover o scroll pelos frmames
 
         self.scrollPrimary = 0
         self.cursorPrimary = 0
         self.logCursor = True
         self.dragPosScroll = self.ui.scrollArea.horizontalScrollBar().value()
+
         def moveScroll(event: QMouseEvent):
             if event.buttons() == Qt.LeftButton:
                 if self.cursorPrimary == 0 and self.logCursor == True:
@@ -1400,9 +1405,9 @@ class MainwindowSC(QMainWindow):
         self.grounpLeft.start()
 
     # a metodo que anima o tec zone
-    def scrollAreaAnimat(self):  #########################################################################################
-        tamanho_atual = self.ui.frame_MarcaTech.height() #self.ui.scrollArea.height()
-
+    def scrollAreaAnimat(self):
+        #########################################################################################
+        tamanho_atual = self.ui.frame_MarcaTech.height()  # self.ui.scrollArea.height()
 
         if tamanho_atual == 0:
             ai = 0
@@ -1453,7 +1458,8 @@ class MainwindowSC(QMainWindow):
         elif name_btn == 'Investing_btn':
             self.simpficaLond(self.ui.page_Extras, 0, """https://www.investing.com/""")
         elif name_btn == 'BLHL_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.nutsaboutmoney.com/investing/hargreaves-lansdown-alternatives")
+            self.simpficaLond(self.ui.page_Extras, 0,
+                              "https://www.nutsaboutmoney.com/investing/hargreaves-lansdown-alternatives")
         elif name_btn == 'Infomaney_btn':
             self.simpficaLond(self.ui.page_Extras, 0, "https://www.infomoney.com.br/")
         elif name_btn == 'Dinherama_btn':
@@ -1465,7 +1471,7 @@ class MainwindowSC(QMainWindow):
         elif name_btn == 'raspberry_btn':
             self.simpficaLond(self.ui.page_Extras, 0, "https://www.raspberrypi.org/")
         elif name_btn == 'help_btnF_2':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.thesource.ca/en-ca")##############################
+            self.simpficaLond(self.ui.page_Extras, 0, "https://www.thesource.ca/en-ca")  ##############################
         elif name_btn == 'perfil_btn':
             self.simpficaLond(self.ui.page_perfil)
             self.fontAnimation(0)
@@ -1491,7 +1497,6 @@ class MainwindowSC(QMainWindow):
                 icon15.addFile(u"../img/24x24/cil-volume-high.png", QSize(), QIcon.Normal, QIcon.Off)
                 self.ui.toolButton.setIcon(icon15)
 
-
     #  lond e o metodo que carrega o segundo webBroeser navegagor
     def loand(self, inputURL):
         url = QUrl.fromUserInput(inputURL)
@@ -1499,17 +1504,14 @@ class MainwindowSC(QMainWindow):
         if url.isValid():
             self.ui.webEngineView_2.load(url)
 
-
     # este metodo simplifica o processamento web e a troca de pagina
     def simpficaLond(self, page=None, n=0, url=''):
 
         if url != "":
             self.loand(url)
             self.ui.stackedWidget.setCurrentWidget(page)
-            self.fontAnimation(n)
         else:
             self.ui.stackedWidget.setCurrentWidget(page)
-            self.fontAnimation(n)
 
     # metodo que abri , salva, e cria um arquivo de texto para as suas escritas
     def editArq(self):
@@ -1522,7 +1524,7 @@ class MainwindowSC(QMainWindow):
                     # criar u arquivo
                     arquivNew = QFileDialog.getOpenFileUrls(self, self.tr("Creat File"), self.tr("Text (*.txt)"))
                 else:
-                    saveArq = QFileDialog.getSaveFileName(self, self.tr("Save File"),"",self.tr("Text (*.txt)"))
+                    saveArq = QFileDialog.getSaveFileName(self, self.tr("Save File"), "", self.tr("Text (*.txt)"))
                     # se nao ter um aberto , criar um
                     if not saveArq[0] == "":
                         with open(saveArq[0], 'w') as file:
@@ -1536,7 +1538,7 @@ class MainwindowSC(QMainWindow):
                     with open(openArq[0][0], 'r') as file:
                         self.ui.plainTextEdit.setPlainText(file.read())
 
-     # navegar na web
+    # navegar na web
     def navegWeb(self):
         objname = self.sender().objectName()
 
@@ -1546,16 +1548,6 @@ class MainwindowSC(QMainWindow):
             self.ui.webEngineView.history().forward()
         elif objname == "update":
             self.ui.webEngineView.reload()
-
-    # este metodo e respnsavel por passar as urls na barra de link
-    def pegarURLcriarHistorico(self):
-
-        if len(self.listaURL) == 0:
-            self.listaURL.append(self.ui.webEngineView.history().currentItem().url().url())
-        else:
-            if self.listaURL[-1] != self.ui.webEngineView.history().currentItem().url().url():
-                self.listaURL.append(self.ui.webEngineView.history().currentItem().url().url())
-                self.ui.LineUrl.setText(self.ui.webEngineView.history().currentItem().url().url())
 
     # este metodo e responsavel por add  o grafico na interface na HOME page
     def adicionandoGrafico(self):
@@ -1570,9 +1562,10 @@ class MainwindowSC(QMainWindow):
         self.ui.verticalLayout_graficoMain.addWidget(chart_view)
 
     # este metodo é reponsavelo pela movimentação
-    def novaMovimentacao(self):
-        self.novMovimentacao.show()
+    def showMovimentacao(self):
+        self.novaMovimentacao.show()
 
+    # est6e metodo e responsavel por pegar data
     def pegarData(self):
 
         dataAgoara = date.today()
@@ -1593,21 +1586,41 @@ class MainwindowSC(QMainWindow):
         novadata = f"{dia}/{mes}/{ano}"
         return novadata
 
+    # este metodo mostra ajanela de movimentação
     def ValorNomvaMovimentacao(self):
         self.barraMovimentacao = BarraMovimentacao()
-        titulo = self.novMovimentacao.mov.Titulo.text()
-        valor = self.novMovimentacao.mov.valor.text()
-        nomeMovimetacao = self.novMovimentacao.movimentarNome
-        categoria = self.novMovimentacao.categoria
-
+        titulo = self.novaMovimentacao.mov.Titulo.text()
+        valor = self.novaMovimentacao.mov.valor.text()
+        nomeMovimetacao = self.novaMovimentacao.movimentarNome
+        categoria = self.novaMovimentacao.categoria
 
         if titulo != "" and valor != "" and nomeMovimetacao != "" and categoria != "":
-            print(titulo, valor, nomeMovimetacao, categoria, self.dataAtual)
             self.barraMovimentacao.setValues(10, self.dataAtual, categoria, titulo, valor, nomeMovimetacao)
-            self.ui.verticalLayout_ScrolNovaTranzacao.addWidget(self.barraMovimentacao)
-            self.novMovimentacao.close()
-            self.novMovimentacao.mov.Titulo.setText("")
-            self.novMovimentacao.mov.valor.setText("")
+            self.ui.verticalLayout_ScrolNovaTranzacao.addWidget(self.barraMovimentacao.bm.pequenoHistoricoEntrada)
+            self.novaMovimentacao.close()
+            self.historicoMovimentacao(titulo, valor, nomeMovimetacao)
+            self.novaMovimentacao.mov.Titulo.setText("")
+            self.novaMovimentacao.mov.valor.setText("")
+    
+    # add o widget do historico de movimentação 
+    def historicoMovimentacao(self, nome, valor, tranzacao):
+        historicoEntradaSaida = HistoricoEntradaSaida()
+
+        if tranzacao == "entrada":
+            historicoEntradaSaida.setEntrada(nome, self.dataAtual, "Kz "+valor)
+            self.ui.verticalLayout_ZonaEntrada.addWidget(historicoEntradaSaida.hes.pequenoHistoricoEntrada)
+        else:
+            historicoEntradaSaida.setSaida(nome, self.dataAtual, "Kz "+valor)
+            self.ui.verticalLayout_zonaSaida.addWidget(historicoEntradaSaida.hes.pequenoHistoricoSaida)
+
+    def adicionarContasAReceber(self):
+        self.contaReceber.show()
+
+        valorTotal = self.contaReceber.ca.valorTotal.text()
+
+        if valorTotal != "":
+            print(valorTotal)
+            self.novaMovimentacao.close()
 
 
 if __name__ == "__main__":
