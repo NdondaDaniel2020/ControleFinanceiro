@@ -13,6 +13,7 @@ from packeg.database import database
 from ui_SystemSC import Ui_SplashCreen
 from ui_SystemMW import Ui_MainWindowMW
 from ui_Movimentação import Movimentacao
+from ui_barraMovimentação import BarraMovimentacao
 
 from time import sleep
 from datetime import date
@@ -1062,7 +1063,11 @@ class MainwindowSC(QMainWindow):
         self.toobtn = True
 
         self.novMovimentacao = Movimentacao()
+
+        self.dataAtual = self.pegarData()
+
         self.eventoConnect()
+
 
         self.ui.minimisar.clicked.connect(lambda: self.showMinimized())
         self.ui.NormalMax.clicked.connect(lambda: self.MaxMin())
@@ -1568,13 +1573,41 @@ class MainwindowSC(QMainWindow):
     def novaMovimentacao(self):
         self.novMovimentacao.show()
 
+    def pegarData(self):
+
+        dataAgoara = date.today()
+
+        dataAgoara = str(dataAgoara)
+
+        ano = ""
+        mes = ""
+        dia = ""
+        for n, c in enumerate(dataAgoara):
+            if n < 4:
+                ano += c
+            if n > 4 and n < 7:
+                mes += c
+            if n > 7:
+                dia += c
+
+        novadata = f"{dia}/{mes}/{ano}"
+        return novadata
+
     def ValorNomvaMovimentacao(self):
+        self.barraMovimentacao = BarraMovimentacao()
         titulo = self.novMovimentacao.mov.Titulo.text()
         valor = self.novMovimentacao.mov.valor.text()
         nomeMovimetacao = self.novMovimentacao.movimentarNome
         categoria = self.novMovimentacao.categoria
 
-        print(titulo, valor, nomeMovimetacao, categoria)
+
+        if titulo != "" and valor != "" and nomeMovimetacao != "" and categoria != "":
+            print(titulo, valor, nomeMovimetacao, categoria, self.dataAtual)
+            self.barraMovimentacao.setValues(10, self.dataAtual, categoria, titulo, valor, nomeMovimetacao)
+            self.ui.verticalLayout_ScrolNovaTranzacao.addWidget(self.barraMovimentacao)
+            self.novMovimentacao.close()
+            self.novMovimentacao.mov.Titulo.setText("")
+            self.novMovimentacao.mov.valor.setText("")
 
 
 if __name__ == "__main__":

@@ -318,7 +318,7 @@ class Movimentacao(QMainWindow):
         self.shadow.setColor(QColor(255, 255, 255, 120))
         self.mov.CentralFrame.setGraphicsEffect(self.shadow)
 
-        self.mov.fechar.clicked.connect(lambda: self.close())
+        self.mov.fechar.clicked.connect(lambda: self.closefrom())
         self.mov.minimizar.clicked.connect(lambda: self.showMinimized())
         self.mov.entrada.clicked.connect(self.entradaSanida)
         self.mov.saida.clicked.connect(self.entradaSanida)
@@ -344,9 +344,15 @@ class Movimentacao(QMainWindow):
         object = self.sender().objectName()
 
         if object == "entrada":
-            self.movimentar = "entrada"
+            self.movimentarNome = "entrada"
         elif object == "saida":
-            self.movimentar = "saida"
+            self.movimentarNome = "saida"
+
+
+    def closefrom(self):
+        self.mov.Titulo.setText("")
+        self.mov.valor.setText("")
+        self.close()
 
 
 if __name__ == "__main__":

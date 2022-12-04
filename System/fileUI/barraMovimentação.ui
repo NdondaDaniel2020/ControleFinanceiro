@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>946</width>
-    <height>131</height>
+    <width>1018</width>
+    <height>88</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -17,8 +17,8 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>50</y>
-     <width>937</width>
+     <y>10</y>
+     <width>1011</width>
      <height>40</height>
     </rect>
    </property>
@@ -143,7 +143,7 @@ border-radius:4px;</string>
         <number>0</number>
        </property>
        <item>
-        <widget class="QLabel" name="data">
+        <widget class="QLabel" name="data_2">
          <property name="maximumSize">
           <size>
            <width>16777215</width>
@@ -198,7 +198,7 @@ border-radius:4px;</string>
         <number>0</number>
        </property>
        <item>
-        <widget class="QLabel" name="categoria">
+        <widget class="QLabel" name="categoria_2">
          <property name="font">
           <font>
            <family>Segoe UI Semibold</family>
@@ -247,22 +247,49 @@ border-radius:4px;</string>
         <number>0</number>
        </property>
        <item>
-        <widget class="QLabel" name="produto">
-         <property name="font">
-          <font>
-           <family>Segoe UI Semibold</family>
-           <pointsize>11</pointsize>
-          </font>
-         </property>
+        <widget class="QFrame" name="frame_251">
          <property name="styleSheet">
-          <string notr="true">color: rgb(170, 85, 255);</string>
+          <string notr="true"/>
          </property>
-         <property name="text">
-          <string>Pó de cafe</string>
+         <property name="frameShape">
+          <enum>QFrame::StyledPanel</enum>
          </property>
-         <property name="alignment">
-          <set>Qt::AlignCenter</set>
+         <property name="frameShadow">
+          <enum>QFrame::Raised</enum>
          </property>
+         <layout class="QHBoxLayout" name="horizontalLayout_128">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QLabel" name="complemento">
+            <property name="font">
+             <font>
+              <family>Segoe UI Semibold</family>
+              <pointsize>11</pointsize>
+             </font>
+            </property>
+            <property name="styleSheet">
+             <string notr="true">color: rgb(170, 85, 255);</string>
+            </property>
+            <property name="text">
+             <string>Pó de cafe</string>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+           </widget>
+          </item>
+         </layout>
         </widget>
        </item>
       </layout>
@@ -293,7 +320,7 @@ border-radius:4px;</string>
         <number>0</number>
        </property>
        <item>
-        <widget class="QLabel" name="valor">
+        <widget class="QLabel" name="label_223">
          <property name="font">
           <font>
            <family>Segoe UI Semibold</family>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'barra de trasferencia MovimentaçãoDmtDoM.ui'
+## Form generated from reading UI file 'barraMovimentaçãoWaDJOa.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -22,10 +22,10 @@ class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(946, 131)
+        Form.resize(1018, 88)
         self.pequenoHistoricoEntrada_5 = QFrame(Form)
         self.pequenoHistoricoEntrada_5.setObjectName(u"pequenoHistoricoEntrada_5")
-        self.pequenoHistoricoEntrada_5.setGeometry(QRect(0, 50, 937, 40))
+        self.pequenoHistoricoEntrada_5.setGeometry(QRect(0, 10, 1011, 40))
         self.pequenoHistoricoEntrada_5.setMinimumSize(QSize(0, 40))
         self.pequenoHistoricoEntrada_5.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
 "border-radius:4px;")
@@ -69,14 +69,14 @@ class Ui_Form(object):
         self.verticalLayout_169.setSpacing(0)
         self.verticalLayout_169.setObjectName(u"verticalLayout_169")
         self.verticalLayout_169.setContentsMargins(0, 0, 0, 0)
-        self.data = QLabel(self.frame_197)
-        self.data.setObjectName(u"data")
-        self.data.setMaximumSize(QSize(16777215, 38))
-        self.data.setFont(font)
-        self.data.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.data.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.data_2 = QLabel(self.frame_197)
+        self.data_2.setObjectName(u"data_2")
+        self.data_2.setMaximumSize(QSize(16777215, 38))
+        self.data_2.setFont(font)
+        self.data_2.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.data_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
-        self.verticalLayout_169.addWidget(self.data)
+        self.verticalLayout_169.addWidget(self.data_2)
 
 
         self.horizontalLayout_126.addWidget(self.frame_197)
@@ -90,13 +90,13 @@ class Ui_Form(object):
         self.verticalLayout_170.setSpacing(0)
         self.verticalLayout_170.setObjectName(u"verticalLayout_170")
         self.verticalLayout_170.setContentsMargins(0, 0, 0, 0)
-        self.categoria = QLabel(self.frame_198)
-        self.categoria.setObjectName(u"categoria")
-        self.categoria.setFont(font)
-        self.categoria.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.categoria.setAlignment(Qt.AlignCenter)
+        self.categoria_2 = QLabel(self.frame_198)
+        self.categoria_2.setObjectName(u"categoria_2")
+        self.categoria_2.setFont(font)
+        self.categoria_2.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.categoria_2.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_170.addWidget(self.categoria)
+        self.verticalLayout_170.addWidget(self.categoria_2)
 
 
         self.horizontalLayout_126.addWidget(self.frame_198)
@@ -110,13 +110,24 @@ class Ui_Form(object):
         self.horizontalLayout_127.setSpacing(0)
         self.horizontalLayout_127.setObjectName(u"horizontalLayout_127")
         self.horizontalLayout_127.setContentsMargins(0, 0, 0, 0)
-        self.produto = QLabel(self.frame_250)
-        self.produto.setObjectName(u"produto")
-        self.produto.setFont(font)
-        self.produto.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.produto.setAlignment(Qt.AlignCenter)
+        self.frame_251 = QFrame(self.frame_250)
+        self.frame_251.setObjectName(u"frame_251")
+        self.frame_251.setStyleSheet(u"")
+        self.frame_251.setFrameShape(QFrame.StyledPanel)
+        self.frame_251.setFrameShadow(QFrame.Raised)
+        self.horizontalLayout_128 = QHBoxLayout(self.frame_251)
+        self.horizontalLayout_128.setObjectName(u"horizontalLayout_128")
+        self.horizontalLayout_128.setContentsMargins(0, 0, 0, 0)
+        self.complemento = QLabel(self.frame_251)
+        self.complemento.setObjectName(u"complemento")
+        self.complemento.setFont(font)
+        self.complemento.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.complemento.setAlignment(Qt.AlignCenter)
 
-        self.horizontalLayout_127.addWidget(self.produto)
+        self.horizontalLayout_128.addWidget(self.complemento)
+
+
+        self.horizontalLayout_127.addWidget(self.frame_251)
 
 
         self.horizontalLayout_126.addWidget(self.frame_250)
@@ -129,13 +140,13 @@ class Ui_Form(object):
         self.verticalLayout_171 = QVBoxLayout(self.frame_199)
         self.verticalLayout_171.setObjectName(u"verticalLayout_171")
         self.verticalLayout_171.setContentsMargins(0, 0, 0, 0)
-        self.valor = QLabel(self.frame_199)
-        self.valor.setObjectName(u"valor")
-        self.valor.setFont(font)
-        self.valor.setStyleSheet(u"color: rgb(255, 0, 0)")
-        self.valor.setAlignment(Qt.AlignCenter)
+        self.label_223 = QLabel(self.frame_199)
+        self.label_223.setObjectName(u"label_223")
+        self.label_223.setFont(font)
+        self.label_223.setStyleSheet(u"color: rgb(255, 0, 0)")
+        self.label_223.setAlignment(Qt.AlignCenter)
 
-        self.verticalLayout_171.addWidget(self.valor)
+        self.verticalLayout_171.addWidget(self.label_223)
 
 
         self.horizontalLayout_126.addWidget(self.frame_199)
@@ -149,9 +160,9 @@ class Ui_Form(object):
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
         self.codigo.setText(QCoreApplication.translate("Form", u"1", None))
-        self.data.setText(QCoreApplication.translate("Form", u"12/04/2022", None))
-        self.categoria.setText(QCoreApplication.translate("Form", u"Alimenta\u00e7\u00e3o", None))
-        self.produto.setText(QCoreApplication.translate("Form", u"P\u00f3 de cafe", None))
-        self.valor.setText(QCoreApplication.translate("Form", u"100,00", None))
+        self.data_2.setText(QCoreApplication.translate("Form", u"12/04/2022", None))
+        self.categoria_2.setText(QCoreApplication.translate("Form", u"Alimenta\u00e7\u00e3o", None))
+        self.complemento.setText(QCoreApplication.translate("Form", u"P\u00f3 de cafe", None))
+        self.label_223.setText(QCoreApplication.translate("Form", u"100,00", None))
     # retranslateUi
 

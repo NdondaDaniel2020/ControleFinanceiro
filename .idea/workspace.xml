@@ -6,9 +6,11 @@
   <component name="ChangeListManager">
     <list default="true" id="32879bff-b1fa-4e85-82a0-4fe749987451" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/fileUI/Movimentação.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/Movimentação.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/fileUI/barraMovimentação.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/barraMovimentação.ui" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/System/widgests/systemain.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/systemain.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/System/widgests/ui_Movimentação.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_Movimentação.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/ui_SystemMW.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_SystemMW.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/ui_barraMovimentação.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_barraMovimentação.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/test z/rascunho.py" beforeDir="false" afterPath="$PROJECT_DIR$/test z/rascunho.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -141,7 +143,7 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="ui_SystemMW2" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+    <configuration name="ui_barraMovimentação" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ControleFinanceiro" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -153,7 +155,7 @@
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/System/widgests/ui_SystemMW2.py" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/System/widgests/ui_barraMovimentação.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -165,10 +167,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="Python.systemain" />
-        <item itemvalue="Python.ui_Movimentação" />
         <item itemvalue="Python.rascunho" />
+        <item itemvalue="Python.ui_barraMovimentação" />
+        <item itemvalue="Python.ui_Movimentação" />
         <item itemvalue="Python.testGrafico001" />
-        <item itemvalue="Python.ui_SystemMW2" />
       </list>
     </recent_temporary>
   </component>
@@ -188,8 +190,13 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1509</line>
+          <line>1514</line>
           <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
+          <line>1603</line>
+          <option name="timeStamp" value="4" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

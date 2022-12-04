@@ -1,32 +1,22 @@
-from PySide6.QtWidgets import QComboBox, QMainWindow, QApplication
-import sys
+
+from datetime import date
 
 
-class MainWindow(QMainWindow):
 
-    def __init__(self):
-        super().__init__()
+dataAgoara = date.today()
 
-        combobox = QComboBox()
-        combobox.addItems(['One', 'Two', 'Three', 'Four'])
+dataAgoara = str(dataAgoara)
 
-        # Connect signals to the methods.
-        combobox.activated.connect(self.activated)
-        combobox.currentTextChanged.connect(self.text_changed)
-        combobox.currentIndexChanged.connect(self.index_changed)
+ano = ""
+mes = ""
+dia = ""
+for n, c in enumerate(dataAgoara):
+    if n < 4:
+        ano += c
+    if n > 4 and n <7:
+        mes += c
+    if n > 7:
+        dia += c
 
-        self.setCentralWidget(combobox)
-
-    def activated(Self, index):
-        print("Activated index:", index)
-
-    def text_changed(self, s):
-        print("Text changed:", s)
-
-    def index_changed(self, index):
-        print("Index changed", index)
-
-app = QApplication(sys.argv)
-w = MainWindow()
-w.show()
-app.exec_()
+novadata = f"{dia}/{mes}/{ano}"
+print(novadata)
