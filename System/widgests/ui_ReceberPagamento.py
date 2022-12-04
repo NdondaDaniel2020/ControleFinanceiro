@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'ReceberPagamentonVURLd.ui'
+## Form generated from reading UI file 'ReceberPagamentoWXCKDX.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -17,7 +17,7 @@ from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
     QPalette, QPixmap, QRadialGradient, QTransform)
 from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
     QLabel, QLineEdit, QPushButton, QSizePolicy,
-    QSpacerItem, QVBoxLayout, QWidget)
+    QSpacerItem, QVBoxLayout, QWidget, QMainWindow, QGraphicsDropShadowEffect)
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -234,21 +234,21 @@ class Ui_Form(object):
 "border:2px solid  rgb(255, 255, 255);\n"
 "border-radius:5px;\n"
 "}")
-        self.valorTotal = QLineEdit(self.frame)
-        self.valorTotal.setObjectName(u"valorTotal")
-        self.valorTotal.setGeometry(QRect(20, 140, 290, 36))
-        self.valorTotal.setMinimumSize(QSize(290, 36))
-        self.valorTotal.setMaximumSize(QSize(290, 36))
-        self.valorTotal.setFont(font1)
-        self.valorTotal.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.valor = QLineEdit(self.frame)
+        self.valor.setObjectName(u"valor")
+        self.valor.setGeometry(QRect(20, 140, 290, 36))
+        self.valor.setMinimumSize(QSize(290, 36))
+        self.valor.setMaximumSize(QSize(290, 36))
+        self.valor.setFont(font1)
+        self.valor.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
 "border-radius:5px;\n"
 "color: rgb(255, 255, 255);\n"
 "padding-left:5px;")
-        self.label_2 = QLabel(self.frame)
-        self.label_2.setObjectName(u"label_2")
-        self.label_2.setGeometry(QRect(20, 250, 170, 27))
-        self.label_2.setFont(font)
-        self.label_2.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.totalPagar = QLabel(self.frame)
+        self.totalPagar.setObjectName(u"totalPagar")
+        self.totalPagar.setGeometry(QRect(20, 250, 170, 27))
+        self.totalPagar.setFont(font)
+        self.totalPagar.setStyleSheet(u"color: rgb(170, 85, 255);")
 
         self.verticalLayout_2.addWidget(self.frame)
 
@@ -280,7 +280,63 @@ class Ui_Form(object):
 
         self.cliente.setCurrentText("")
         self.cliente.setPlaceholderText(QCoreApplication.translate("Form", u"Selecione o cliente", None))
-        self.valorTotal.setPlaceholderText(QCoreApplication.translate("Form", u"Valor", None))
-        self.label_2.setText(QCoreApplication.translate("Form", u"Total a Pagar: Kz 0", None))
+        self.valor.setPlaceholderText(QCoreApplication.translate("Form", u"Valor", None))
+        self.totalPagar.setText(QCoreApplication.translate("Form", u"Total a Pagar: Kz 0", None))
     # retranslateUi
 
+
+class ReceberPagamento(QMainWindow):
+    def __init__(self):
+        QMainWindow.__init__(self)
+        self.rp = Ui_Form()
+        self.rp.setupUi(self)
+
+        self.rp.CentralFrame.setGeometry(9, 9, 325, 338)
+
+        self.setWindowFlags(Qt.FramelessWindowHint)
+        self.setAttribute(Qt.WA_TranslucentBackground)
+
+        self.shadow = QGraphicsDropShadowEffect(self)
+        self.shadow.setBlurRadius(15)
+        self.shadow.setXOffset(0)
+        self.shadow.setYOffset(0)
+        self.shadow.setColor(QColor(255, 255, 255, 120))
+        self.rp.CentralFrame.setGraphicsEffect(self.shadow)
+
+        self.rp.fechar.clicked.connect(lambda: self.closefrom())
+        self.rp.minimizar.clicked.connect(lambda: self.showMinimized())
+        self.rp.categoria.currentTextChanged.connect(self.selectCategoria)
+        self.rp.cliente.currentTextChanged.connect(self.selectCliente)
+
+        self.cliente = ''
+        self.categoria = ''
+
+        def moveWindow(event):
+            if event.buttons() == Qt.LeftButton:
+                self.move(self.pos() + event.globalPos() - self.dragPos)
+                self.dragPos = event.globalPos()
+                event.accept()
+
+        self.rp.barraTitulo.mouseMoveEvent = moveWindow
+
+
+    def mousePressEvent(self, event):
+        self.dragPos = event.globalPos()
+
+    def selectCategoria(self, txt):
+        self.categoria = txt
+
+    def selectCliente(self, txt):
+        self.cliente = txt
+
+    def closefrom(self):
+        self.rp.valor.setText("")
+        self.close()
+
+
+if __name__ == "__main__":
+    import sys
+
+    app = QApplication(sys.argv)
+    window = ReceberPagamento()
+    sys.exit(app.exec())

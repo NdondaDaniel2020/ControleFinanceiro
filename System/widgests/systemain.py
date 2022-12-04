@@ -16,7 +16,8 @@ from ui_Movimentação import Movimentacao
 from ui_barraMovimentação import BarraMovimentacao
 from ui_HistoricoEntradaSaida import HistoricoEntradaSaida
 from ui_contasAreceber import ContasAreceber
-
+from ui_ReceberPagamento import ReceberPagamento
+from ui_barraReceberConta import BarraReceberConta
 
 from time import sleep
 from datetime import date
@@ -1069,6 +1070,7 @@ class MainwindowSC(QMainWindow):
 
         self.novaMovimentacao = Movimentacao()
         self.contaReceber = ContasAreceber()
+        self.pagarConta = ReceberPagamento()
         self.dataAtual = self.pegarData()
 
         self.eventoConnect()
@@ -1101,8 +1103,10 @@ class MainwindowSC(QMainWindow):
 
         self.novaMovimentacao.mov.movimentar.clicked.connect(self.ValorNomvaMovimentacao)
         self.ui.novaMovimentacao.clicked.connect(self.showMovimentacao)
-        self.ui.contaReceber.clicked.connect(self.adicionarContasAReceber)
-        
+        self.contaReceber.ca.adicionarConta.clicked.connect(self.adicionarContasAReceber)
+        self.ui.contaReceber.clicked.connect(self.showContasAReceber)
+        self.ui.pagarConta.clicked.connect(self.showPaqgarConta)
+        self.pagarConta.rp.adicionarConta.clicked.connect(self.metodpagarConta)
         # ler texto
 
         self.left = CustomGrip(self, Qt.LeftEdge, True)
@@ -1474,7 +1478,6 @@ class MainwindowSC(QMainWindow):
             self.simpficaLond(self.ui.page_Extras, 0, "https://www.thesource.ca/en-ca")  ##############################
         elif name_btn == 'perfil_btn':
             self.simpficaLond(self.ui.page_perfil)
-            self.fontAnimation(0)
         elif name_btn == 'setting_btn':
             self.simpficaLond(self.ui.page_ControlFinace, 0)
         elif name_btn == 'coins_btn':
@@ -1613,14 +1616,29 @@ class MainwindowSC(QMainWindow):
             historicoEntradaSaida.setSaida(nome, self.dataAtual, "Kz "+valor)
             self.ui.verticalLayout_zonaSaida.addWidget(historicoEntradaSaida.hes.pequenoHistoricoSaida)
 
-    def adicionarContasAReceber(self):
+    def showContasAReceber(self):
         self.contaReceber.show()
 
+    def adicionarContasAReceber(self):
         valorTotal = self.contaReceber.ca.valorTotal.text()
 
         if valorTotal != "":
-            print(valorTotal)
-            self.novaMovimentacao.close()
+            # print(valorTotal)
+            self.contaReceber.close()
+
+    def showPaqgarConta(self):
+        self.pagarConta.show()
+
+    def metodpagarConta(self):
+        self.barraReceberConta = BarraReceberConta()
+        valor = self.pagarConta.rp.valor.text()
+        categoria = self.pagarConta.categoria
+        cliente = self.pagarConta.cliente
+
+        if valor != "" and categoria != "" and cliente != "":
+            self.barraReceberConta.setValues(10, self.dataAtual, categoria, cliente, self.dataAtual, "250000", valor)
+            self.ui.verticalLayout_ZonaPagarConta.addWidget(self.barraReceberConta.brc.pequenoHistoricoEntrada_10)
+            self.pagarConta.close()
 
 
 if __name__ == "__main__":

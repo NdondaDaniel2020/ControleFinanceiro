@@ -1279,7 +1279,7 @@ border-top-left-radius:10px;
 border-bottom-left-radius:10px;</string>
                         </property>
                         <property name="currentIndex">
-                         <number>0</number>
+                         <number>2</number>
                         </property>
                         <widget class="QWidget" name="page_Home">
                          <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -3916,45 +3916,36 @@ border-radius: 10px</string>
                                            <property name="frameShadow">
                                             <enum>QFrame::Raised</enum>
                                            </property>
-                                           <layout class="QHBoxLayout" name="horizontalLayout_62">
-                                            <property name="spacing">
-                                             <number>0</number>
+                                           <widget class="QPushButton" name="pagarConta">
+                                            <property name="geometry">
+                                             <rect>
+                                              <x>0</x>
+                                              <y>50</y>
+                                              <width>170</width>
+                                              <height>33</height>
+                                             </rect>
                                             </property>
-                                            <property name="leftMargin">
-                                             <number>0</number>
+                                            <property name="minimumSize">
+                                             <size>
+                                              <width>150</width>
+                                              <height>33</height>
+                                             </size>
                                             </property>
-                                            <property name="topMargin">
-                                             <number>0</number>
+                                            <property name="maximumSize">
+                                             <size>
+                                              <width>12345</width>
+                                              <height>33</height>
+                                             </size>
                                             </property>
-                                            <property name="rightMargin">
-                                             <number>0</number>
+                                            <property name="font">
+                                             <font>
+                                              <family>Segoe UI Semibold</family>
+                                              <pointsize>10</pointsize>
+                                              <bold>false</bold>
+                                             </font>
                                             </property>
-                                            <property name="bottomMargin">
-                                             <number>0</number>
-                                            </property>
-                                            <item alignment="Qt::AlignTop">
-                                             <widget class="QPushButton" name="contaReceber">
-                                              <property name="minimumSize">
-                                               <size>
-                                                <width>150</width>
-                                                <height>33</height>
-                                               </size>
-                                              </property>
-                                              <property name="maximumSize">
-                                               <size>
-                                                <width>12345</width>
-                                                <height>33</height>
-                                               </size>
-                                              </property>
-                                              <property name="font">
-                                               <font>
-                                                <family>Segoe UI Semibold</family>
-                                                <pointsize>10</pointsize>
-                                                <bold>false</bold>
-                                               </font>
-                                              </property>
-                                              <property name="styleSheet">
-                                               <string notr="true">QPushButton{
+                                            <property name="styleSheet">
+                                             <string notr="true">QPushButton{
 background-color: rgb(170, 85, 255);
 border-radius: 5px;
 color: rgb(255, 255, 255);
@@ -3971,13 +3962,62 @@ background-color: rgb(170, 85, 255);
 border-radius: 5px;
 color: rgb(255, 255, 255);
 }</string>
-                                              </property>
-                                              <property name="text">
-                                               <string>Adicionar contas a receber</string>
-                                              </property>
-                                             </widget>
-                                            </item>
-                                           </layout>
+                                            </property>
+                                            <property name="text">
+                                             <string>Pagar Conta</string>
+                                            </property>
+                                           </widget>
+                                           <widget class="QPushButton" name="contaReceber">
+                                            <property name="geometry">
+                                             <rect>
+                                              <x>0</x>
+                                              <y>10</y>
+                                              <width>170</width>
+                                              <height>33</height>
+                                             </rect>
+                                            </property>
+                                            <property name="minimumSize">
+                                             <size>
+                                              <width>150</width>
+                                              <height>33</height>
+                                             </size>
+                                            </property>
+                                            <property name="maximumSize">
+                                             <size>
+                                              <width>12345</width>
+                                              <height>33</height>
+                                             </size>
+                                            </property>
+                                            <property name="font">
+                                             <font>
+                                              <family>Segoe UI Semibold</family>
+                                              <pointsize>10</pointsize>
+                                              <bold>false</bold>
+                                             </font>
+                                            </property>
+                                            <property name="styleSheet">
+                                             <string notr="true">QPushButton{
+background-color: rgb(170, 85, 255);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:hover{
+background-color: rgb(165, 82, 247);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}
+
+QPushButton:pressed{
+background-color: rgb(170, 85, 255);
+border-radius: 5px;
+color: rgb(255, 255, 255);
+}</string>
+                                            </property>
+                                            <property name="text">
+                                             <string>Adicionar conta a receber</string>
+                                            </property>
+                                           </widget>
                                           </widget>
                                          </item>
                                         </layout>
@@ -5166,497 +5206,52 @@ QDateEdit:hover{
                                          </property>
                                          <layout class="QVBoxLayout" name="verticalLayout_199">
                                           <property name="spacing">
-                                           <number>3</number>
+                                           <number>0</number>
+                                          </property>
+                                          <property name="leftMargin">
+                                           <number>0</number>
                                           </property>
                                           <property name="topMargin">
                                            <number>0</number>
                                           </property>
+                                          <property name="bottomMargin">
+                                           <number>0</number>
+                                          </property>
                                           <item>
-                                           <widget class="QFrame" name="pequenoHistoricoEntrada_8">
-                                            <property name="minimumSize">
-                                             <size>
-                                              <width>0</width>
-                                              <height>40</height>
-                                             </size>
-                                            </property>
-                                            <property name="styleSheet">
-                                             <string notr="true">background-color: rgb(255, 255, 255);
-border-radius:4px;</string>
-                                            </property>
+                                           <widget class="QFrame" name="frame_10">
                                             <property name="frameShape">
                                              <enum>QFrame::StyledPanel</enum>
                                             </property>
                                             <property name="frameShadow">
                                              <enum>QFrame::Raised</enum>
                                             </property>
-                                            <layout class="QHBoxLayout" name="horizontalLayout_135">
+                                            <layout class="QVBoxLayout" name="verticalLayout_ZonaPagarConta">
                                              <property name="spacing">
-                                              <number>0</number>
+                                              <number>3</number>
                                              </property>
                                              <property name="leftMargin">
-                                              <number>15</number>
+                                              <number>3</number>
                                              </property>
                                              <property name="topMargin">
-                                              <number>0</number>
+                                              <number>5</number>
                                              </property>
                                              <property name="rightMargin">
-                                              <number>0</number>
+                                              <number>3</number>
                                              </property>
                                              <property name="bottomMargin">
-                                              <number>0</number>
+                                              <number>5</number>
                                              </property>
                                              <item>
-                                              <widget class="QFrame" name="frame_270">
-                                               <property name="minimumSize">
-                                                <size>
-                                                 <width>110</width>
-                                                 <height>0</height>
-                                                </size>
-                                               </property>
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>110</width>
-                                                 <height>16777215</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QVBoxLayout" name="verticalLayout_200">
-                                                <property name="spacing">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item>
-                                                 <widget class="QLabel" name="label_236">
-                                                  <property name="maximumSize">
-                                                   <size>
-                                                    <width>150</width>
-                                                    <height>16777215</height>
-                                                   </size>
-                                                  </property>
-                                                  <property name="font">
-                                                   <font>
-                                                    <family>Segoe UI Semibold</family>
-                                                    <pointsize>11</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">color: rgb(170, 85, 255);</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>1</string>
-                                                  </property>
-                                                  <property name="alignment">
-                                                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_271">
-                                               <property name="minimumSize">
-                                                <size>
-                                                 <width>110</width>
-                                                 <height>0</height>
-                                                </size>
-                                               </property>
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>110</width>
-                                                 <height>16777215</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QVBoxLayout" name="verticalLayout_201">
-                                                <property name="spacing">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item>
-                                                 <widget class="QLabel" name="label_237">
-                                                  <property name="maximumSize">
-                                                   <size>
-                                                    <width>16777215</width>
-                                                    <height>38</height>
-                                                   </size>
-                                                  </property>
-                                                  <property name="font">
-                                                   <font>
-                                                    <family>Segoe UI Semibold</family>
-                                                    <pointsize>11</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">color: rgb(170, 85, 255);</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>12/04/2022</string>
-                                                  </property>
-                                                  <property name="alignment">
-                                                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_272">
-                                               <property name="minimumSize">
-                                                <size>
-                                                 <width>190</width>
-                                                 <height>0</height>
-                                                </size>
-                                               </property>
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>190</width>
-                                                 <height>16777215</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QVBoxLayout" name="verticalLayout_202">
-                                                <property name="spacing">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>1</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item>
-                                                 <widget class="QLabel" name="label_238">
-                                                  <property name="font">
-                                                   <font>
-                                                    <family>Segoe UI Semibold</family>
-                                                    <pointsize>11</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">color: rgb(170, 85, 255);</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>2-prestação de serviço</string>
-                                                  </property>
-                                                  <property name="alignment">
-                                                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_287">
-                                               <property name="minimumSize">
-                                                <size>
-                                                 <width>125</width>
-                                                 <height>0</height>
-                                                </size>
-                                               </property>
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>125</width>
-                                                 <height>16777215</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QVBoxLayout" name="verticalLayout_214">
-                                                <property name="spacing">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>3</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item>
-                                                 <widget class="QLabel" name="label_251">
-                                                  <property name="maximumSize">
-                                                   <size>
-                                                    <width>16777215</width>
-                                                    <height>38</height>
-                                                   </size>
-                                                  </property>
-                                                  <property name="font">
-                                                   <font>
-                                                    <family>Segoe UI Semibold</family>
-                                                    <pointsize>11</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">color: rgb(170, 85, 255);</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>2-Beltrano</string>
-                                                  </property>
-                                                  <property name="alignment">
-                                                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_286">
-                                               <property name="minimumSize">
-                                                <size>
-                                                 <width>117</width>
-                                                 <height>0</height>
-                                                </size>
-                                               </property>
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>119</width>
-                                                 <height>16777215</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QVBoxLayout" name="verticalLayout_213">
-                                                <property name="spacing">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>10</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item>
-                                                 <widget class="QLabel" name="label_250">
-                                                  <property name="maximumSize">
-                                                   <size>
-                                                    <width>16777215</width>
-                                                    <height>38</height>
-                                                   </size>
-                                                  </property>
-                                                  <property name="font">
-                                                   <font>
-                                                    <family>Segoe UI Semibold</family>
-                                                    <pointsize>11</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">color: rgb(170, 85, 255);</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>12/04/2022</string>
-                                                  </property>
-                                                  <property name="alignment">
-                                                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_273">
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>12345678</width>
-                                                 <height>16777215</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QHBoxLayout" name="horizontalLayout_136">
-                                                <property name="spacing">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>2</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item>
-                                                 <widget class="QLabel" name="label_239">
-                                                  <property name="font">
-                                                   <font>
-                                                    <family>Segoe UI Semibold</family>
-                                                    <pointsize>11</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">color: rgb(170, 85, 255);</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>20.000</string>
-                                                  </property>
-                                                  <property name="alignment">
-                                                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_275">
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QVBoxLayout" name="verticalLayout_203">
-                                                <property name="leftMargin">
-                                                 <number>7</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item>
-                                                 <widget class="QLabel" name="label_240">
-                                                  <property name="minimumSize">
-                                                   <size>
-                                                    <width>96</width>
-                                                    <height>0</height>
-                                                   </size>
-                                                  </property>
-                                                  <property name="font">
-                                                   <font>
-                                                    <family>Segoe UI Semibold</family>
-                                                    <pointsize>11</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">color:rgb(170, 85, 255)</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>100,00</string>
-                                                  </property>
-                                                  <property name="alignment">
-                                                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_288">
+                                              <widget class="QFrame" name="pequenoHistoricoEntrada_10">
                                                <property name="minimumSize">
                                                 <size>
                                                  <width>0</width>
-                                                 <height>25</height>
-                                                </size>
-                                               </property>
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>79</width>
-                                                 <height>35</height>
+                                                 <height>40</height>
                                                 </size>
                                                </property>
                                                <property name="styleSheet">
-                                                <string notr="true"/>
+                                                <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:4px;</string>
                                                </property>
                                                <property name="frameShape">
                                                 <enum>QFrame::StyledPanel</enum>
@@ -5664,12 +5259,12 @@ border-radius:4px;</string>
                                                <property name="frameShadow">
                                                 <enum>QFrame::Raised</enum>
                                                </property>
-                                               <layout class="QVBoxLayout" name="verticalLayout_215">
+                                               <layout class="QHBoxLayout" name="horizontalLayout_137">
                                                 <property name="spacing">
                                                  <number>0</number>
                                                 </property>
                                                 <property name="leftMargin">
-                                                 <number>0</number>
+                                                 <number>15</number>
                                                 </property>
                                                 <property name="topMargin">
                                                  <number>0</number>
@@ -5680,579 +5275,1057 @@ border-radius:4px;</string>
                                                 <property name="bottomMargin">
                                                  <number>0</number>
                                                 </property>
-                                                <item alignment="Qt::AlignLeft">
-                                                 <widget class="QPushButton" name="pushButton_21">
+                                                <item>
+                                                 <widget class="QFrame" name="frame_274">
                                                   <property name="minimumSize">
                                                    <size>
-                                                    <width>35</width>
-                                                    <height>31</height>
+                                                    <width>110</width>
+                                                    <height>0</height>
                                                    </size>
                                                   </property>
                                                   <property name="maximumSize">
                                                    <size>
-                                                    <width>35</width>
+                                                    <width>110</width>
                                                     <height>16777215</height>
                                                    </size>
                                                   </property>
-                                                  <property name="font">
-                                                   <font>
-                                                    <pointsize>8</pointsize>
-                                                    <bold>false</bold>
-                                                   </font>
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QVBoxLayout" name="verticalLayout_210">
+                                                   <property name="spacing">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QLabel" name="label_247">
+                                                     <property name="maximumSize">
+                                                      <size>
+                                                       <width>150</width>
+                                                       <height>16777215</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="font">
+                                                      <font>
+                                                       <family>Segoe UI Semibold</family>
+                                                       <pointsize>11</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">color: rgb(170, 85, 255);</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>1</string>
+                                                     </property>
+                                                     <property name="alignment">
+                                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_289">
+                                                  <property name="minimumSize">
+                                                   <size>
+                                                    <width>110</width>
+                                                    <height>0</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="maximumSize">
+                                                   <size>
+                                                    <width>110</width>
+                                                    <height>16777215</height>
+                                                   </size>
                                                   </property>
                                                   <property name="styleSheet">
-                                                   <string notr="true">background-color: rgb(170, 85, 255);
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QVBoxLayout" name="verticalLayout_216">
+                                                   <property name="spacing">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QLabel" name="label_252">
+                                                     <property name="maximumSize">
+                                                      <size>
+                                                       <width>16777215</width>
+                                                       <height>38</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="font">
+                                                      <font>
+                                                       <family>Segoe UI Semibold</family>
+                                                       <pointsize>11</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">color: rgb(170, 85, 255);</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>12/04/2022</string>
+                                                     </property>
+                                                     <property name="alignment">
+                                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_290">
+                                                  <property name="minimumSize">
+                                                   <size>
+                                                    <width>190</width>
+                                                    <height>0</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="maximumSize">
+                                                   <size>
+                                                    <width>190</width>
+                                                    <height>16777215</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QVBoxLayout" name="verticalLayout_217">
+                                                   <property name="spacing">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>1</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QLabel" name="label_253">
+                                                     <property name="font">
+                                                      <font>
+                                                       <family>Segoe UI Semibold</family>
+                                                       <pointsize>11</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">color: rgb(170, 85, 255);</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>2-prestação de serviço</string>
+                                                     </property>
+                                                     <property name="alignment">
+                                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_291">
+                                                  <property name="minimumSize">
+                                                   <size>
+                                                    <width>125</width>
+                                                    <height>0</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="maximumSize">
+                                                   <size>
+                                                    <width>125</width>
+                                                    <height>16777215</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QVBoxLayout" name="verticalLayout_218">
+                                                   <property name="spacing">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>3</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QLabel" name="label_254">
+                                                     <property name="maximumSize">
+                                                      <size>
+                                                       <width>16777215</width>
+                                                       <height>38</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="font">
+                                                      <font>
+                                                       <family>Segoe UI Semibold</family>
+                                                       <pointsize>11</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">color: rgb(170, 85, 255);</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>2-Beltrano</string>
+                                                     </property>
+                                                     <property name="alignment">
+                                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_292">
+                                                  <property name="minimumSize">
+                                                   <size>
+                                                    <width>117</width>
+                                                    <height>0</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="maximumSize">
+                                                   <size>
+                                                    <width>119</width>
+                                                    <height>16777215</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QVBoxLayout" name="verticalLayout_219">
+                                                   <property name="spacing">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>10</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QLabel" name="label_255">
+                                                     <property name="maximumSize">
+                                                      <size>
+                                                       <width>16777215</width>
+                                                       <height>38</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="font">
+                                                      <font>
+                                                       <family>Segoe UI Semibold</family>
+                                                       <pointsize>11</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">color: rgb(170, 85, 255);</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>12/04/2022</string>
+                                                     </property>
+                                                     <property name="alignment">
+                                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_293">
+                                                  <property name="maximumSize">
+                                                   <size>
+                                                    <width>12345678</width>
+                                                    <height>16777215</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QHBoxLayout" name="horizontalLayout_141">
+                                                   <property name="spacing">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>2</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QLabel" name="label_256">
+                                                     <property name="font">
+                                                      <font>
+                                                       <family>Segoe UI Semibold</family>
+                                                       <pointsize>11</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">color: rgb(170, 85, 255);</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>20.000</string>
+                                                     </property>
+                                                     <property name="alignment">
+                                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_294">
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QVBoxLayout" name="verticalLayout_220">
+                                                   <property name="leftMargin">
+                                                    <number>7</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QLabel" name="label_257">
+                                                     <property name="minimumSize">
+                                                      <size>
+                                                       <width>96</width>
+                                                       <height>0</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="font">
+                                                      <font>
+                                                       <family>Segoe UI Semibold</family>
+                                                       <pointsize>11</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">color:rgb(170, 85, 255)</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>100,00</string>
+                                                     </property>
+                                                     <property name="alignment">
+                                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_295">
+                                                  <property name="minimumSize">
+                                                   <size>
+                                                    <width>0</width>
+                                                    <height>25</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="maximumSize">
+                                                   <size>
+                                                    <width>79</width>
+                                                    <height>35</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QVBoxLayout" name="verticalLayout_221">
+                                                   <property name="spacing">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item alignment="Qt::AlignLeft">
+                                                    <widget class="QPushButton" name="pushButton_22">
+                                                     <property name="minimumSize">
+                                                      <size>
+                                                       <width>62</width>
+                                                       <height>31</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="maximumSize">
+                                                      <size>
+                                                       <width>57</width>
+                                                       <height>16777215</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="font">
+                                                      <font>
+                                                       <pointsize>9</pointsize>
+                                                       <bold>true</bold>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">background-color: rgb(170, 85, 255);
+border-radius:5px;
+color: rgb(255, 0, 0);</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>Abertio</string>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                               </layout>
+                                              </widget>
+                                             </item>
+                                             <item>
+                                              <widget class="QFrame" name="pequenoHistoricoEntrada_8">
+                                               <property name="minimumSize">
+                                                <size>
+                                                 <width>0</width>
+                                                 <height>40</height>
+                                                </size>
+                                               </property>
+                                               <property name="styleSheet">
+                                                <string notr="true">background-color: rgb(255, 255, 255);
+border-radius:4px;</string>
+                                               </property>
+                                               <property name="frameShape">
+                                                <enum>QFrame::StyledPanel</enum>
+                                               </property>
+                                               <property name="frameShadow">
+                                                <enum>QFrame::Raised</enum>
+                                               </property>
+                                               <layout class="QHBoxLayout" name="horizontalLayout_135">
+                                                <property name="spacing">
+                                                 <number>0</number>
+                                                </property>
+                                                <property name="leftMargin">
+                                                 <number>15</number>
+                                                </property>
+                                                <property name="topMargin">
+                                                 <number>0</number>
+                                                </property>
+                                                <property name="rightMargin">
+                                                 <number>0</number>
+                                                </property>
+                                                <property name="bottomMargin">
+                                                 <number>0</number>
+                                                </property>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_270">
+                                                  <property name="minimumSize">
+                                                   <size>
+                                                    <width>110</width>
+                                                    <height>0</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="maximumSize">
+                                                   <size>
+                                                    <width>110</width>
+                                                    <height>16777215</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QVBoxLayout" name="verticalLayout_200">
+                                                   <property name="spacing">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QLabel" name="label_236">
+                                                     <property name="maximumSize">
+                                                      <size>
+                                                       <width>150</width>
+                                                       <height>16777215</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="font">
+                                                      <font>
+                                                       <family>Segoe UI Semibold</family>
+                                                       <pointsize>11</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">color: rgb(170, 85, 255);</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>1</string>
+                                                     </property>
+                                                     <property name="alignment">
+                                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_271">
+                                                  <property name="minimumSize">
+                                                   <size>
+                                                    <width>110</width>
+                                                    <height>0</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="maximumSize">
+                                                   <size>
+                                                    <width>110</width>
+                                                    <height>16777215</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QVBoxLayout" name="verticalLayout_201">
+                                                   <property name="spacing">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QLabel" name="label_237">
+                                                     <property name="maximumSize">
+                                                      <size>
+                                                       <width>16777215</width>
+                                                       <height>38</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="font">
+                                                      <font>
+                                                       <family>Segoe UI Semibold</family>
+                                                       <pointsize>11</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">color: rgb(170, 85, 255);</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>12/04/2022</string>
+                                                     </property>
+                                                     <property name="alignment">
+                                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_272">
+                                                  <property name="minimumSize">
+                                                   <size>
+                                                    <width>190</width>
+                                                    <height>0</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="maximumSize">
+                                                   <size>
+                                                    <width>190</width>
+                                                    <height>16777215</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QVBoxLayout" name="verticalLayout_202">
+                                                   <property name="spacing">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>1</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QLabel" name="label_238">
+                                                     <property name="font">
+                                                      <font>
+                                                       <family>Segoe UI Semibold</family>
+                                                       <pointsize>11</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">color: rgb(170, 85, 255);</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>2-prestação de serviço</string>
+                                                     </property>
+                                                     <property name="alignment">
+                                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_287">
+                                                  <property name="minimumSize">
+                                                   <size>
+                                                    <width>125</width>
+                                                    <height>0</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="maximumSize">
+                                                   <size>
+                                                    <width>125</width>
+                                                    <height>16777215</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QVBoxLayout" name="verticalLayout_214">
+                                                   <property name="spacing">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>3</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QLabel" name="label_251">
+                                                     <property name="maximumSize">
+                                                      <size>
+                                                       <width>16777215</width>
+                                                       <height>38</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="font">
+                                                      <font>
+                                                       <family>Segoe UI Semibold</family>
+                                                       <pointsize>11</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">color: rgb(170, 85, 255);</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>2-Beltrano</string>
+                                                     </property>
+                                                     <property name="alignment">
+                                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_286">
+                                                  <property name="minimumSize">
+                                                   <size>
+                                                    <width>117</width>
+                                                    <height>0</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="maximumSize">
+                                                   <size>
+                                                    <width>119</width>
+                                                    <height>16777215</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QVBoxLayout" name="verticalLayout_213">
+                                                   <property name="spacing">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>10</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QLabel" name="label_250">
+                                                     <property name="maximumSize">
+                                                      <size>
+                                                       <width>16777215</width>
+                                                       <height>38</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="font">
+                                                      <font>
+                                                       <family>Segoe UI Semibold</family>
+                                                       <pointsize>11</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">color: rgb(170, 85, 255);</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>12/04/2022</string>
+                                                     </property>
+                                                     <property name="alignment">
+                                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_273">
+                                                  <property name="maximumSize">
+                                                   <size>
+                                                    <width>12345678</width>
+                                                    <height>16777215</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QHBoxLayout" name="horizontalLayout_136">
+                                                   <property name="spacing">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>2</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QLabel" name="label_239">
+                                                     <property name="font">
+                                                      <font>
+                                                       <family>Segoe UI Semibold</family>
+                                                       <pointsize>11</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">color: rgb(170, 85, 255);</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>20.000</string>
+                                                     </property>
+                                                     <property name="alignment">
+                                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_275">
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QVBoxLayout" name="verticalLayout_203">
+                                                   <property name="leftMargin">
+                                                    <number>7</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item>
+                                                    <widget class="QLabel" name="label_240">
+                                                     <property name="minimumSize">
+                                                      <size>
+                                                       <width>96</width>
+                                                       <height>0</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="font">
+                                                      <font>
+                                                       <family>Segoe UI Semibold</family>
+                                                       <pointsize>11</pointsize>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">color:rgb(170, 85, 255)</string>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>100,00</string>
+                                                     </property>
+                                                     <property name="alignment">
+                                                      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
+                                                 </widget>
+                                                </item>
+                                                <item>
+                                                 <widget class="QFrame" name="frame_288">
+                                                  <property name="minimumSize">
+                                                   <size>
+                                                    <width>0</width>
+                                                    <height>25</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="maximumSize">
+                                                   <size>
+                                                    <width>79</width>
+                                                    <height>35</height>
+                                                   </size>
+                                                  </property>
+                                                  <property name="styleSheet">
+                                                   <string notr="true"/>
+                                                  </property>
+                                                  <property name="frameShape">
+                                                   <enum>QFrame::StyledPanel</enum>
+                                                  </property>
+                                                  <property name="frameShadow">
+                                                   <enum>QFrame::Raised</enum>
+                                                  </property>
+                                                  <layout class="QVBoxLayout" name="verticalLayout_215">
+                                                   <property name="spacing">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="leftMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="topMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="rightMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <property name="bottomMargin">
+                                                    <number>0</number>
+                                                   </property>
+                                                   <item alignment="Qt::AlignLeft">
+                                                    <widget class="QPushButton" name="pushButton_21">
+                                                     <property name="minimumSize">
+                                                      <size>
+                                                       <width>35</width>
+                                                       <height>31</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="maximumSize">
+                                                      <size>
+                                                       <width>35</width>
+                                                       <height>16777215</height>
+                                                      </size>
+                                                     </property>
+                                                     <property name="font">
+                                                      <font>
+                                                       <pointsize>9</pointsize>
+                                                       <bold>true</bold>
+                                                      </font>
+                                                     </property>
+                                                     <property name="styleSheet">
+                                                      <string notr="true">background-color: rgb(170, 85, 255);
 border-radius:5px;
 color: rgb(255, 255, 255);</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>Pago</string>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                            </layout>
-                                           </widget>
-                                          </item>
-                                          <item>
-                                           <widget class="QFrame" name="pequenoHistoricoEntrada_10">
-                                            <property name="minimumSize">
-                                             <size>
-                                              <width>0</width>
-                                              <height>40</height>
-                                             </size>
-                                            </property>
-                                            <property name="styleSheet">
-                                             <string notr="true">background-color: rgb(255, 255, 255);
-border-radius:4px;</string>
-                                            </property>
-                                            <property name="frameShape">
-                                             <enum>QFrame::StyledPanel</enum>
-                                            </property>
-                                            <property name="frameShadow">
-                                             <enum>QFrame::Raised</enum>
-                                            </property>
-                                            <layout class="QHBoxLayout" name="horizontalLayout_137">
-                                             <property name="spacing">
-                                              <number>0</number>
-                                             </property>
-                                             <property name="leftMargin">
-                                              <number>15</number>
-                                             </property>
-                                             <property name="topMargin">
-                                              <number>0</number>
-                                             </property>
-                                             <property name="rightMargin">
-                                              <number>0</number>
-                                             </property>
-                                             <property name="bottomMargin">
-                                              <number>0</number>
-                                             </property>
-                                             <item>
-                                              <widget class="QFrame" name="frame_274">
-                                               <property name="minimumSize">
-                                                <size>
-                                                 <width>110</width>
-                                                 <height>0</height>
-                                                </size>
-                                               </property>
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>110</width>
-                                                 <height>16777215</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QVBoxLayout" name="verticalLayout_210">
-                                                <property name="spacing">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item>
-                                                 <widget class="QLabel" name="label_247">
-                                                  <property name="maximumSize">
-                                                   <size>
-                                                    <width>150</width>
-                                                    <height>16777215</height>
-                                                   </size>
-                                                  </property>
-                                                  <property name="font">
-                                                   <font>
-                                                    <family>Segoe UI Semibold</family>
-                                                    <pointsize>11</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">color: rgb(170, 85, 255);</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>1</string>
-                                                  </property>
-                                                  <property name="alignment">
-                                                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_289">
-                                               <property name="minimumSize">
-                                                <size>
-                                                 <width>110</width>
-                                                 <height>0</height>
-                                                </size>
-                                               </property>
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>110</width>
-                                                 <height>16777215</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QVBoxLayout" name="verticalLayout_216">
-                                                <property name="spacing">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item>
-                                                 <widget class="QLabel" name="label_252">
-                                                  <property name="maximumSize">
-                                                   <size>
-                                                    <width>16777215</width>
-                                                    <height>38</height>
-                                                   </size>
-                                                  </property>
-                                                  <property name="font">
-                                                   <font>
-                                                    <family>Segoe UI Semibold</family>
-                                                    <pointsize>11</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">color: rgb(170, 85, 255);</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>12/04/2022</string>
-                                                  </property>
-                                                  <property name="alignment">
-                                                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_290">
-                                               <property name="minimumSize">
-                                                <size>
-                                                 <width>190</width>
-                                                 <height>0</height>
-                                                </size>
-                                               </property>
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>190</width>
-                                                 <height>16777215</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QVBoxLayout" name="verticalLayout_217">
-                                                <property name="spacing">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>1</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item>
-                                                 <widget class="QLabel" name="label_253">
-                                                  <property name="font">
-                                                   <font>
-                                                    <family>Segoe UI Semibold</family>
-                                                    <pointsize>11</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">color: rgb(170, 85, 255);</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>2-prestação de serviço</string>
-                                                  </property>
-                                                  <property name="alignment">
-                                                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_291">
-                                               <property name="minimumSize">
-                                                <size>
-                                                 <width>125</width>
-                                                 <height>0</height>
-                                                </size>
-                                               </property>
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>125</width>
-                                                 <height>16777215</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QVBoxLayout" name="verticalLayout_218">
-                                                <property name="spacing">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>3</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item>
-                                                 <widget class="QLabel" name="label_254">
-                                                  <property name="maximumSize">
-                                                   <size>
-                                                    <width>16777215</width>
-                                                    <height>38</height>
-                                                   </size>
-                                                  </property>
-                                                  <property name="font">
-                                                   <font>
-                                                    <family>Segoe UI Semibold</family>
-                                                    <pointsize>11</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">color: rgb(170, 85, 255);</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>2-Beltrano</string>
-                                                  </property>
-                                                  <property name="alignment">
-                                                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_292">
-                                               <property name="minimumSize">
-                                                <size>
-                                                 <width>117</width>
-                                                 <height>0</height>
-                                                </size>
-                                               </property>
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>119</width>
-                                                 <height>16777215</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QVBoxLayout" name="verticalLayout_219">
-                                                <property name="spacing">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>10</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item>
-                                                 <widget class="QLabel" name="label_255">
-                                                  <property name="maximumSize">
-                                                   <size>
-                                                    <width>16777215</width>
-                                                    <height>38</height>
-                                                   </size>
-                                                  </property>
-                                                  <property name="font">
-                                                   <font>
-                                                    <family>Segoe UI Semibold</family>
-                                                    <pointsize>11</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">color: rgb(170, 85, 255);</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>12/04/2022</string>
-                                                  </property>
-                                                  <property name="alignment">
-                                                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_293">
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>12345678</width>
-                                                 <height>16777215</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QHBoxLayout" name="horizontalLayout_141">
-                                                <property name="spacing">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>2</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item>
-                                                 <widget class="QLabel" name="label_256">
-                                                  <property name="font">
-                                                   <font>
-                                                    <family>Segoe UI Semibold</family>
-                                                    <pointsize>11</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">color: rgb(170, 85, 255);</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>20.000</string>
-                                                  </property>
-                                                  <property name="alignment">
-                                                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_294">
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QVBoxLayout" name="verticalLayout_220">
-                                                <property name="leftMargin">
-                                                 <number>7</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item>
-                                                 <widget class="QLabel" name="label_257">
-                                                  <property name="minimumSize">
-                                                   <size>
-                                                    <width>96</width>
-                                                    <height>0</height>
-                                                   </size>
-                                                  </property>
-                                                  <property name="font">
-                                                   <font>
-                                                    <family>Segoe UI Semibold</family>
-                                                    <pointsize>11</pointsize>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">color:rgb(170, 85, 255)</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>100,00</string>
-                                                  </property>
-                                                  <property name="alignment">
-                                                   <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
-                                                  </property>
-                                                 </widget>
-                                                </item>
-                                               </layout>
-                                              </widget>
-                                             </item>
-                                             <item>
-                                              <widget class="QFrame" name="frame_295">
-                                               <property name="minimumSize">
-                                                <size>
-                                                 <width>0</width>
-                                                 <height>25</height>
-                                                </size>
-                                               </property>
-                                               <property name="maximumSize">
-                                                <size>
-                                                 <width>79</width>
-                                                 <height>35</height>
-                                                </size>
-                                               </property>
-                                               <property name="styleSheet">
-                                                <string notr="true"/>
-                                               </property>
-                                               <property name="frameShape">
-                                                <enum>QFrame::StyledPanel</enum>
-                                               </property>
-                                               <property name="frameShadow">
-                                                <enum>QFrame::Raised</enum>
-                                               </property>
-                                               <layout class="QVBoxLayout" name="verticalLayout_221">
-                                                <property name="spacing">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="leftMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="topMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="rightMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <property name="bottomMargin">
-                                                 <number>0</number>
-                                                </property>
-                                                <item alignment="Qt::AlignLeft">
-                                                 <widget class="QPushButton" name="pushButton_22">
-                                                  <property name="minimumSize">
-                                                   <size>
-                                                    <width>62</width>
-                                                    <height>31</height>
-                                                   </size>
-                                                  </property>
-                                                  <property name="maximumSize">
-                                                   <size>
-                                                    <width>57</width>
-                                                    <height>16777215</height>
-                                                   </size>
-                                                  </property>
-                                                  <property name="font">
-                                                   <font>
-                                                    <pointsize>8</pointsize>
-                                                    <bold>false</bold>
-                                                   </font>
-                                                  </property>
-                                                  <property name="styleSheet">
-                                                   <string notr="true">background-color: rgb(85, 255, 127);
-border-radius:5px;
-color: rgb(170, 85, 255);</string>
-                                                  </property>
-                                                  <property name="text">
-                                                   <string>Apagar</string>
-                                                  </property>
+                                                     </property>
+                                                     <property name="text">
+                                                      <string>Pago</string>
+                                                     </property>
+                                                    </widget>
+                                                   </item>
+                                                  </layout>
                                                  </widget>
                                                 </item>
                                                </layout>
