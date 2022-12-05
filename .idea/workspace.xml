@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="32879bff-b1fa-4e85-82a0-4fe749987451" name="Changes" comment="" />
+    <list default="true" id="32879bff-b1fa-4e85-82a0-4fe749987451" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/fileUI/SystemMW.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/SystemMW.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/fileUI/barraReceberConta.ui" beforeDir="false" afterPath="$PROJECT_DIR$/System/fileUI/barraReceberConta.ui" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/ControloFinaceiro.db" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ControloFinaceiro.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/System/widgests/ui_SystemMW.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_SystemMW.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test z/rascunho.py" beforeDir="false" afterPath="$PROJECT_DIR$/test z/rascunho.py" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -50,7 +58,7 @@
       <recent name="C:\Users\Família Matondo\PycharmProjects\ControleFinanceiro\System\widgests\packeg" />
     </key>
   </component>
-  <component name="RunManager" selected="Python.systemain">
+  <component name="RunManager" selected="Python.database">
     <configuration name="database" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="ControleFinanceiro" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -158,11 +166,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.database" />
         <item itemvalue="Python.systemain" />
         <item itemvalue="Python.ui_contasAreceber" />
         <item itemvalue="Python.ui_ReceberPagamento" />
         <item itemvalue="Python.ui_Movimentação" />
-        <item itemvalue="Python.database" />
       </list>
     </recent_temporary>
   </component>

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'SystemMWuVPJgx.ui'
+## Form generated from reading UI file 'SystemMWfvfwyv.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -457,8 +457,8 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_141.setContentsMargins(0, 0, 0, 0)
         self.frame_zoneQR = QFrame(self.left_menu)
         self.frame_zoneQR.setObjectName(u"frame_zoneQR")
-        self.frame_zoneQR.setMinimumSize(QSize(0, 260))
-        self.frame_zoneQR.setMaximumSize(QSize(0, 257))
+        self.frame_zoneQR.setMinimumSize(QSize(0, 175))
+        self.frame_zoneQR.setMaximumSize(QSize(0, 175))
         self.frame_zoneQR.setFrameShape(QFrame.StyledPanel)
         self.frame_zoneQR.setFrameShadow(QFrame.Raised)
         self.verticalLayout_142 = QVBoxLayout(self.frame_zoneQR)
@@ -857,7 +857,7 @@ class Ui_MainWindowMW(object):
         self.frame_user_list_3.setFrameShadow(QFrame.Raised)
         self.frame_user_list_btn_3 = QPushButton(self.frame_user_list_3)
         self.frame_user_list_btn_3.setObjectName(u"frame_user_list_btn_3")
-        self.frame_user_list_btn_3.setGeometry(QRect(6, 6, 93, 90))
+        self.frame_user_list_btn_3.setGeometry(QRect(6, 6, 90, 92))
         self.frame_user_list_btn_3.setStyleSheet(u"QPushButton{\n"
 "border: 0px;\n"
 "padding:0px;\n"
@@ -889,7 +889,8 @@ class Ui_MainWindowMW(object):
 
         self.frame_211 = QFrame(self.frameContasApagarEmaberto)
         self.frame_211.setObjectName(u"frame_211")
-        self.frame_211.setMinimumSize(QSize(0, 39))
+        self.frame_211.setMinimumSize(QSize(0, 35))
+        self.frame_211.setMaximumSize(QSize(16777215, 35))
         self.frame_211.setFrameShape(QFrame.StyledPanel)
         self.frame_211.setFrameShadow(QFrame.Raised)
         self.verticalLayout_181 = QVBoxLayout(self.frame_211)
@@ -927,7 +928,7 @@ class Ui_MainWindowMW(object):
         self.frame_210.setFrameShadow(QFrame.Raised)
         self.password_faceId_btn_3 = QPushButton(self.frame_210)
         self.password_faceId_btn_3.setObjectName(u"password_faceId_btn_3")
-        self.password_faceId_btn_3.setGeometry(QRect(6, 6, 91, 94))
+        self.password_faceId_btn_3.setGeometry(QRect(6, 6, 90, 92))
         self.password_faceId_btn_3.setStyleSheet(u"QPushButton{\n"
 "border: 0px;\n"
 "padding:0px;\n"
@@ -960,8 +961,8 @@ class Ui_MainWindowMW(object):
 
         self.frame_212 = QFrame(self.frameContasApagarEmatraso)
         self.frame_212.setObjectName(u"frame_212")
-        self.frame_212.setMinimumSize(QSize(0, 39))
-        self.frame_212.setMaximumSize(QSize(16777215, 39))
+        self.frame_212.setMinimumSize(QSize(0, 35))
+        self.frame_212.setMaximumSize(QSize(16777215, 35))
         self.frame_212.setFrameShape(QFrame.StyledPanel)
         self.frame_212.setFrameShadow(QFrame.Raised)
         self.verticalLayout_183 = QVBoxLayout(self.frame_212)
@@ -6081,8 +6082,8 @@ class Ui_MainWindowMW(object):
 
         self.retranslateUi(MainWindowMW)
 
-        self.stackedWidget.setCurrentIndex(2)
-        self.stackedWidget_2.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget_2.setCurrentIndex(1)
 
 
         QMetaObject.connectSlotsByName(MainWindowMW)

@@ -837,13 +837,13 @@ QPushButton:pressed{
                            <property name="minimumSize">
                             <size>
                              <width>0</width>
-                             <height>260</height>
+                             <height>175</height>
                             </size>
                            </property>
                            <property name="maximumSize">
                             <size>
                              <width>0</width>
-                             <height>257</height>
+                             <height>175</height>
                             </size>
                            </property>
                            <property name="frameShape">
@@ -1279,7 +1279,7 @@ border-top-left-radius:10px;
 border-bottom-left-radius:10px;</string>
                         </property>
                         <property name="currentIndex">
-                         <number>2</number>
+                         <number>0</number>
                         </property>
                         <widget class="QWidget" name="page_Home">
                          <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -1878,8 +1878,8 @@ background-color: transparent</string>
                                               <rect>
                                                <x>6</x>
                                                <y>6</y>
-                                               <width>93</width>
-                                               <height>90</height>
+                                               <width>90</width>
+                                               <height>92</height>
                                               </rect>
                                              </property>
                                              <property name="whatsThis">
@@ -1964,7 +1964,13 @@ padding:0px;
                                             <property name="minimumSize">
                                              <size>
                                               <width>0</width>
-                                              <height>39</height>
+                                              <height>35</height>
+                                             </size>
+                                            </property>
+                                            <property name="maximumSize">
+                                             <size>
+                                              <width>16777215</width>
+                                              <height>35</height>
                                              </size>
                                             </property>
                                             <property name="frameShape">
@@ -2066,8 +2072,8 @@ padding:0px;
                                               <rect>
                                                <x>6</x>
                                                <y>6</y>
-                                               <width>91</width>
-                                               <height>94</height>
+                                               <width>90</width>
+                                               <height>92</height>
                                               </rect>
                                              </property>
                                              <property name="whatsThis">
@@ -2153,13 +2159,13 @@ padding-bottom:3px</string>
                                             <property name="minimumSize">
                                              <size>
                                               <width>0</width>
-                                              <height>39</height>
+                                              <height>35</height>
                                              </size>
                                             </property>
                                             <property name="maximumSize">
                                              <size>
                                               <width>16777215</width>
-                                              <height>39</height>
+                                              <height>35</height>
                                              </size>
                                             </property>
                                             <property name="frameShape">
@@ -10392,7 +10398,7 @@ QRadioButton::indicator:checked {
                                       <string notr="true">background-color: rgb(255, 255, 255);</string>
                                      </property>
                                      <property name="currentIndex">
-                                      <number>0</number>
+                                      <number>1</number>
                                      </property>
                                      <widget class="QWidget" name="page_perfilUsuario">
                                       <layout class="QVBoxLayout" name="verticalLayout_149">

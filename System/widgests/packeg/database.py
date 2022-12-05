@@ -101,4 +101,17 @@ class database():
     def __str__(self):
         return 'Class para criares o teu banco de dados'
 
-
+database = database("../ControloFinaceiro.db")
+database.connect_database()
+database.executarComand("""
+CREATE TABLE IF NOT EXISTS MovimentacaoFinaceiro(
+id integer PRIMARY KEY AUTOINCREMENT,
+Data dete NOT NULL,
+categoria integer,
+nome varchar(30) NOT NULL,
+valor integer,
+tranzacao,
+FOREIGN KEY (categoria) REFERENCES Categoria (id)
+)"""
+)
+database.close_connection_database()
