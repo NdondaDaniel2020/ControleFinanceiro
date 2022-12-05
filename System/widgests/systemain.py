@@ -1581,6 +1581,7 @@ class MainwindowSC(QMainWindow):
     # dados em forma de tabelas na interface na zona de movimentação finaceira
     def enviarDadosEmMovimentacaoFinaceira(self, codigo=0, titulo='', valor='', tranzacao='', categoria=''):
         self.barraMovimentacao = BarraMovimentacao()
+
         if codigo == 0:
             codigo = self.contarMovimentação()
 
@@ -1589,6 +1590,12 @@ class MainwindowSC(QMainWindow):
             self.ui.verticalLayout_ScrolNovaTranzacao.addWidget(self.barraMovimentacao.bm.pequenoHistoricoEntrada)
             self.novaMovimentacao.close()
             self.historicoMovimentacao(titulo, valor, tranzacao)
+            ncategoria = self.encontraIndeceCategoria(categoria)
+            self.database.connect_database()
+            self.database.executarComand(f"""
+            INSERT INTO MovimentacaoFinanceira (data, categoria, nome, valor, tranzacao)
+            values ('{self.dataAtual}', '{ncategoria}', '{titulo}', '{valor}', '{tranzacao}')""")
+            self.database.close_connection_database()
             self.novaMovimentacao.mov.Titulo.setText("")
             self.novaMovimentacao.mov.valor.setText("")
 
