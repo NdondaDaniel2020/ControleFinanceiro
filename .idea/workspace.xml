@@ -6,13 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="32879bff-b1fa-4e85-82a0-4fe749987451" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/ControleFinanceiro.db" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ControleFinanceiro.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/packeg/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/packeg/database.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/System/widgests/systemain.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/systemain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/ui_Movimentação.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_Movimentação.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/ui_ReceberPagamento.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_ReceberPagamento.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/System/widgests/ui_contasAreceber.py" beforeDir="false" afterPath="$PROJECT_DIR$/System/widgests/ui_contasAreceber.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test z/rascunho.py" beforeDir="false" afterPath="$PROJECT_DIR$/test z/rascunho.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,17 +185,12 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1512</line>
+          <line>1507</line>
           <option name="timeStamp" value="2" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1592</line>
-          <option name="timeStamp" value="4" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1601</line>
+          <line>1605</line>
           <option name="timeStamp" value="5" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
@@ -211,32 +200,32 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1063</line>
+          <line>1064</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1064</line>
+          <line>1065</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1066</line>
+          <line>1067</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1614</line>
+          <line>1618</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1611</line>
+          <line>1615</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/System/widgests/systemain.py</url>
-          <line>1624</line>
+          <line>1628</line>
           <option name="timeStamp" value="14" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
