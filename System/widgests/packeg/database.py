@@ -103,7 +103,7 @@ class database():
 
 database = database("../ControleFinanceiro.db")
 database.connect_database()
-dadosMovimentacoesFinceiras =database.executarFetchall("SELECT * FROM Categoria")
+dadosMovimentacoesFinceiras =database.executarFetchall("SELECT * FROM MovimentacaoFinanceira")
 database.close_connection_database()
 print(dadosMovimentacoesFinceiras)
 for dados in dadosMovimentacoesFinceiras:

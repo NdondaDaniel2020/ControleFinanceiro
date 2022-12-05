@@ -1608,7 +1608,8 @@ class MainwindowSC(QMainWindow):
         self.database.close_connection_database()
         print(dadosMovimentacoesFinceiras)
         for dados in dadosMovimentacoesFinceiras:
-            self.enviarDadosEmMovimentacaoFinaceira(dados[0], dados[0], dados[0], dados[0], dados[0])
+            categoria = self.encontraIndeceCategoria(dados[1])
+            self.enviarDadosEmMovimentacaoFinaceira(dados[0], categoria, dados[2], dados[3], dados[4])
 
     # este metodo pega o indece e pega a categoria correspondente ao indice
     def encontraIndeceCategoria(self, busca):
@@ -1624,10 +1625,11 @@ class MainwindowSC(QMainWindow):
             for itens in lista:
                 if itens[1] == busca:
                     saida = itens[0]
-                    
+
         return saida
 
         # add o widget do historico de movimentação
+
     def historicoMovimentacao(self, nome, valor, tranzacao):
         historicoEntradaSaida = HistoricoEntradaSaida()
 
