@@ -1061,7 +1061,7 @@ class MainwindowSC(QMainWindow):
         self.setMinimumSize(1195, 760)
         self.toobtn = True
 
-        self.database = database()
+        self.database = database("ControleFinanceiro")
         self.novaMovimentacao = Movimentacao()
         self.contaReceber = ContasAreceber()
         self.pagarConta = ReceberPagamento()
@@ -1566,12 +1566,22 @@ class MainwindowSC(QMainWindow):
         novadata = f"{dia}/{mes}/{ano}"
         return novadata
 
+    # este e um tetodo tesponsavel por contar as Movimentações financeiras
+    def contarMovimentação(self):
+        self.database.connect_database()
+        dados = self.database.executarFetchall("SELECT * FROM MovimentacaoFinanceira")
+        self.database.close_connection_database()
+
+        conta = len(dados)
+        return conta+1
+
+
     # este metodo e responsavel por enviar do
     # dados em forma de tabelas na interface na zona de movimentação finaceira
-    def enviarDadosEmMovimentacaoFinaceira(self, codigo=0, titulo, valor, tranzacao, categoria, tranzacao):
+    def enviarDadosEmMovimentacaoFinaceira(self, codigo=0, titulo='', valor='', tranzacao='', categoria=''):
 
         if not codigo == 0:
-            pass
+            codigo = self.contarMovimentação()
 
         if titulo != "" and valor != "" and tranzacao != "" and categoria != "":
             self.barraMovimentacao = BarraMovimentacao()
@@ -1588,21 +1598,36 @@ class MainwindowSC(QMainWindow):
         valor = self.novaMovimentacao.mov.valor.text()
         tranzacao = self.novaMovimentacao.movimentarNome
         categoria = self.novaMovimentacao.categoria
+        self.analizarUltimasTrancoes()
         self.enviarDadosEmMovimentacaoFinaceira(0, titulo, valor, tranzacao, categoria)
-
 
 
     def analizarUltimasTrancoes(self):
         self.database.connect_database()
         dadosMovimentacoesFinceiras = self.database.executarFetchall("SELECT * FROM MovimentacaoFinanceira")
         self.database.close_connection_database()
-
+        print(dadosMovimentacoesFinceiras)
         for dados in dadosMovimentacoesFinceiras:
+            self.enviarDadosEmMovimentacaoFinaceira(dados[0], dados[0], dados[0], dados[0], dados[0])
 
+    # este metodo pega o indece e pega a categoria correspondente ao indice
+    def encontraIndeceCategoria(self, busca):
+        database.connect_database()
+        lista =  database.executarFetchall("SELECT * FROM Categoria")
+        database.close_connection_database()
+        saida = ''
+        if type(busca) == int:
+            for itens in lista:
+                if itens[0] == busca:
+                    saida = itens[1]
+        else:
+            for itens in lista:
+                if itens[1] == busca:
+                    saida = itens[0]
+                    
+        return saida
 
-    
-
-    # add o widget do historico de movimentação 
+        # add o widget do historico de movimentação
     def historicoMovimentacao(self, nome, valor, tranzacao):
         historicoEntradaSaida = HistoricoEntradaSaida()
 

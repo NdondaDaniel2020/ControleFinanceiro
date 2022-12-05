@@ -1,10 +1,14 @@
+busca = "Venda de produtos"
+lista = [(1, 'Prestação de serviço'), (2, 'Compra de produto'), (3, 'Alimentação'), (4, 'Venda de produtos')]
+saida = ''
 
-database = database("../ControloFinaceiro.db")
-database.connect_database()
-database.executarComand("""
-INSERT INTO  MovimentacaoFinanceira (Data, categoria, nome, valor, tranzacao)
-values
-('2022-04-12', '3', 'Pó de cafe', '100', 'entrada')
-)"""
-)
-database.close_connection_database()
+if type(busca) == int:
+    for itens in lista:
+        if itens[0] == busca:
+            saida = itens[1]
+else:
+    for itens in lista:
+        if itens[1] == busca:
+            saida = itens[0]
+
+print(saida)
