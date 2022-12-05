@@ -1062,10 +1062,12 @@ class MainwindowSC(QMainWindow):
         self.toobtn = True
 
         self.database = database("ControleFinanceiro")
+        self.dataAtual = self.pegarData()
+        self.analizarUltimasTrancoes()
         self.novaMovimentacao = Movimentacao()
         self.contaReceber = ContasAreceber()
         self.pagarConta = ReceberPagamento()
-        self.dataAtual = self.pegarData()
+
 
         self.eventoConnect()
 
@@ -1573,22 +1575,20 @@ class MainwindowSC(QMainWindow):
         self.database.close_connection_database()
 
         conta = len(dados)
-        return conta+1
-
+        return conta + 1
 
     # este metodo e responsavel por enviar do
     # dados em forma de tabelas na interface na zona de movimentação finaceira
     def enviarDadosEmMovimentacaoFinaceira(self, codigo=0, titulo='', valor='', tranzacao='', categoria=''):
-
-        if not codigo == 0:
+        self.barraMovimentacao = BarraMovimentacao()
+        if codigo == 0:
             codigo = self.contarMovimentação()
 
         if titulo != "" and valor != "" and tranzacao != "" and categoria != "":
-            self.barraMovimentacao = BarraMovimentacao()
             self.barraMovimentacao.setValues(codigo, self.dataAtual, categoria, titulo, valor, tranzacao)
             self.ui.verticalLayout_ScrolNovaTranzacao.addWidget(self.barraMovimentacao.bm.pequenoHistoricoEntrada)
             self.novaMovimentacao.close()
-            self.historicoMovimentaca(titulo, valor, tranzacao)
+            self.historicoMovimentacao(titulo, valor, tranzacao)
             self.novaMovimentacao.mov.Titulo.setText("")
             self.novaMovimentacao.mov.valor.setText("")
 
@@ -1598,24 +1598,26 @@ class MainwindowSC(QMainWindow):
         valor = self.novaMovimentacao.mov.valor.text()
         tranzacao = self.novaMovimentacao.movimentarNome
         categoria = self.novaMovimentacao.categoria
-        self.analizarUltimasTrancoes()
         self.enviarDadosEmMovimentacaoFinaceira(0, titulo, valor, tranzacao, categoria)
 
-
+    ##################################################################################
     def analizarUltimasTrancoes(self):
         self.database.connect_database()
         dadosMovimentacoesFinceiras = self.database.executarFetchall("SELECT * FROM MovimentacaoFinanceira")
         self.database.close_connection_database()
-        print(dadosMovimentacoesFinceiras)
+
         for dados in dadosMovimentacoesFinceiras:
-            categoria = self.encontraIndeceCategoria(dados[1])
-            self.enviarDadosEmMovimentacaoFinaceira(dados[0], categoria, dados[2], dados[3], dados[4])
+            self.barraMovimentacao = BarraMovimentacao()
+            categoria = self.encontraIndeceCategoria(dados[2])
+            self.barraMovimentacao.setValues(dados[0], dados[1], categoria, dados[3], str(dados[4])+",00", dados[5])
+            self.ui.verticalLayout_ScrolNovaTranzacao.addWidget(self.barraMovimentacao.bm.pequenoHistoricoEntrada)
+            self.historicoMovimentacao(dados[3], dados[4], dados[5])
 
     # este metodo pega o indece e pega a categoria correspondente ao indice
     def encontraIndeceCategoria(self, busca):
-        database.connect_database()
-        lista =  database.executarFetchall("SELECT * FROM Categoria")
-        database.close_connection_database()
+        self.database.connect_database()
+        lista = self.database.executarFetchall("SELECT * FROM Categoria")
+        self.database.close_connection_database()
         saida = ''
         if type(busca) == int:
             for itens in lista:
@@ -1634,10 +1636,10 @@ class MainwindowSC(QMainWindow):
         historicoEntradaSaida = HistoricoEntradaSaida()
 
         if tranzacao == "entrada":
-            historicoEntradaSaida.setEntrada(nome, self.dataAtual, "Kz "+valor+",00")
+            historicoEntradaSaida.setEntrada(nome, self.dataAtual, "Kz "+str(valor)+",00")
             self.ui.verticalLayout_ZonaEntrada.addWidget(historicoEntradaSaida.hes.pequenoHistoricoEntrada)
         else:
-            historicoEntradaSaida.setSaida(nome, self.dataAtual, "Kz "+valor+",00")
+            historicoEntradaSaida.setSaida(nome, self.dataAtual, "Kz "+str(valor)+",00")
             self.ui.verticalLayout_zonaSaida.addWidget(historicoEntradaSaida.hes.pequenoHistoricoSaida)
 
     def showContasAReceber(self):

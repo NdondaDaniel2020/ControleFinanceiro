@@ -101,10 +101,3 @@ class database():
     def __str__(self):
         return 'Class para criares o teu banco de dados'
 
-database = database("../ControleFinanceiro.db")
-database.connect_database()
-dadosMovimentacoesFinceiras =database.executarFetchall("SELECT * FROM MovimentacaoFinanceira")
-database.close_connection_database()
-print(dadosMovimentacoesFinceiras)
-for dados in dadosMovimentacoesFinceiras:
-    print(dados)

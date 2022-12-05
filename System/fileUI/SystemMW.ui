@@ -1279,7 +1279,7 @@ border-top-left-radius:10px;
 border-bottom-left-radius:10px;</string>
                         </property>
                         <property name="currentIndex">
-                         <number>0</number>
+                         <number>5</number>
                         </property>
                         <widget class="QWidget" name="page_Home">
                          <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -13547,7 +13547,7 @@ Movimentação</string>
                                       <property name="minimumSize">
                                        <size>
                                         <width>0</width>
-                                        <height>83</height>
+                                        <height>45</height>
                                        </size>
                                       </property>
                                       <property name="frameShape">
