@@ -1061,13 +1061,16 @@ class MainwindowSC(QMainWindow):
         self.setMinimumSize(1195, 760)
         self.toobtn = True
 
+        self.buscar()
+
         self.database = database("ControleFinanceiro")
         self.dataAtual = self.pegarData()
-        self.analizarUltimasTrancoes()
+        # self.analizarUltimasTranzacoes()
         self.novaMovimentacao = Movimentacao()
         self.contaReceber = ContasAreceber()
         self.pagarConta = ReceberPagamento()
         self.analizeEntradaSaidaValores()
+        self.adicionaCtegoriaPlanoContasBusca()
 
 
         self.eventoConnect()
@@ -1104,7 +1107,7 @@ class MainwindowSC(QMainWindow):
         self.ui.contaReceber.clicked.connect(self.showContasAReceber)
         self.ui.pagarConta.clicked.connect(self.showPaqgarConta)
         self.pagarConta.rp.adicionarConta.clicked.connect(self.metodpagarConta)
-        # ler texto
+        self.ui.buscar.clicked.connect(self.buscar)
 
         self.left = CustomGrip(self, Qt.LeftEdge, True)
         self.right = CustomGrip(self, Qt.RightEdge, True)
@@ -1554,6 +1557,19 @@ class MainwindowSC(QMainWindow):
         self.ui.verticalLayout_graficoMain.addWidget(chart_view)
 
 
+    # este metodo e responsavel por por a categoia no planoContasBusca
+    def adicionaCtegoriaPlanoContasBusca(self):
+        self.ui.planoContasBusca.setPlaceholderText("Planos de contas")
+        self.database = database("ControleFinanceiro")
+        self.database.connect_database()
+        dados = self.database.executarFetchall("SELECT * FROM Categoria")
+        self.database.disconnect_database()
+
+        for dado in dados:
+            self.ui.planoContasBusca.addItem("")
+            self.ui.planoContasBusca.setItemText(dado[0] - 1, QCoreApplication.translate("Form", dado[1], None))
+
+
     # este metodo é reponsavelo pela movimentação
     def showMovimentacao(self):
         self.novaMovimentacao.show()
@@ -1600,7 +1616,8 @@ class MainwindowSC(QMainWindow):
             codigo = self.contarMovimentação()
 
         if titulo != "" and valor != "" and tranzacao != "" and categoria != "":
-            self.barraMovimentacao.setValues(codigo, self.dataAtual, categoria, titulo, valor, tranzacao)
+            valor2 = self.porPontoValor(valor)
+            self.barraMovimentacao.setValues(codigo, self.dataAtual, categoria, titulo, valor2, tranzacao)
             self.ui.verticalLayout_ScrolNovaTranzacao.addWidget(self.barraMovimentacao.bm.pequenoHistoricoEntrada)
             self.novaMovimentacao.close()
             self.historicoMovimentacao(titulo, valor, tranzacao)
@@ -1625,7 +1642,7 @@ class MainwindowSC(QMainWindow):
 
 
     # este metodo analiza todas as tranzções e insere os dados  nas tabelas antes de mostrar a janela
-    def analizarUltimasTrancoes(self):
+    def analizarUltimasTranzacoes(self):
         self.database.connect_database()
         dadosMovimentacoesFinceiras = self.database.executarFetchall("SELECT * FROM MovimentacaoFinanceira")
         self.database.disconnect_database()
@@ -1633,7 +1650,8 @@ class MainwindowSC(QMainWindow):
         for dados in dadosMovimentacoesFinceiras:
             self.barraMovimentacao = BarraMovimentacao()
             categoria = self.encontraIndeceCategoria(dados[2])
-            self.barraMovimentacao.setValues(dados[0], dados[1], categoria, dados[3], str(dados[4])+",00", dados[5])
+            valor = self.porPontoValor(dados[4])
+            self.barraMovimentacao.setValues(dados[0], dados[1], categoria, dados[3], str(valor)+",00", dados[5])
             self.ui.verticalLayout_ScrolNovaTranzacao.addWidget(self.barraMovimentacao.bm.pequenoHistoricoEntrada)
             self.historicoMovimentacao(dados[3], dados[4], dados[5])
 
@@ -1650,8 +1668,12 @@ class MainwindowSC(QMainWindow):
 
         valorTotal = int(totalEntradas[0][0]) - int(totalSaidas[0][0])
 
-        totalEntradas = "Kz "+str(totalEntradas[0][0])+",00"
-        totalSaidas = "Kz "+str(totalSaidas[0][0])+",00"
+        totalEntradas = self.porPontoValor(totalEntradas[0][0])
+        totalSaidas = self.porPontoValor(totalSaidas[0][0])
+        valorTotal = self.porPontoValor(valorTotal)
+
+        totalEntradas = "Kz "+str(totalEntradas)+",00"
+        totalSaidas = "Kz "+str(totalSaidas)+",00"
         valorTotal = "Kz "+str(valorTotal)+",00"
 
         self.ui.totalEntrada.setText(totalEntradas)
@@ -1677,16 +1699,131 @@ class MainwindowSC(QMainWindow):
 
         # add o widget do historico de movimentação
 
+    # este metodo põe ponto nos valores para ter uma facil leitura dos dados
+    def porPontoValor(self, conversao):
+        conversaoAx = ''
+        conversao = str(conversao)
+        conversao = conversao.replace('.', ',')
+        conversao = list(conversao)
+        if len(conversao) >= 4 and len(conversao) <= 6:
+            conversao.insert(-3, ".")
+        elif len(conversao) >= 7 and len(conversao) <= 9:
+            conversao.insert(-3, ".")
+            conversao.insert(-7, ".")
+        elif len(conversao) >= 10 and len(conversao) <= 12:
+            conversao.insert(-3, ".")
+            conversao.insert(-7, ".")
+            conversao.insert(-11, ".")
+        elif len(conversao) >= 13 and len(conversao) <= 15:
+            conversao.insert(-3, ".")
+            conversao.insert(-7, ".")
+            conversao.insert(-11, ".")
+            conversao.insert(-15, ".")
+        elif len(conversao) >= 16 and len(conversao) <= 18:
+            conversao.insert(-3, ".")
+            conversao.insert(-7, ".")
+            conversao.insert(-11, ".")
+            conversao.insert(-15, ".")
+            conversao.insert(-19, ".")
+        elif len(conversao) >= 19 and len(conversao) <= 21:
+            conversao.insert(-3, ".")
+            conversao.insert(-7, ".")
+            conversao.insert(-11, ".")
+            conversao.insert(-15, ".")
+            conversao.insert(-19, ".")
+            conversao.insert(-23, ".")
+        elif len(conversao) >= 22 and len(conversao) <= 24:
+            conversao.insert(-3, ".")
+            conversao.insert(-7, ".")
+            conversao.insert(-11, ".")
+            conversao.insert(-15, ".")
+            conversao.insert(-19, ".")
+            conversao.insert(-23, ".")
+            conversao.insert(-27, ".")
+        elif len(conversao) >= 25 and len(conversao) <= 27:
+            conversao.insert(-3, ".")
+            conversao.insert(-7, ".")
+            conversao.insert(-11, ".")
+            conversao.insert(-15, ".")
+            conversao.insert(-19, ".")
+            conversao.insert(-23, ".")
+            conversao.insert(-27, ".")
+            conversao.insert(-31, ".")
+        elif len(conversao) >= 27 and len(conversao) <= 30:
+            conversao.insert(-3, ".")
+            conversao.insert(-7, ".")
+            conversao.insert(-11, ".")
+            conversao.insert(-15, ".")
+            conversao.insert(-19, ".")
+            conversao.insert(-23, ".")
+            conversao.insert(-27, ".")
+            conversao.insert(-31, ".")
+            conversao.insert(-35, ".")
+        elif len(conversao) >= 31 and len(conversao) <= 33:
+            conversao.insert(-3, ".")
+            conversao.insert(-7, ".")
+            conversao.insert(-11, ".")
+            conversao.insert(-15, ".")
+            conversao.insert(-19, ".")
+            conversao.insert(-23, ".")
+            conversao.insert(-27, ".")
+            conversao.insert(-31, ".")
+            conversao.insert(-35, ".")
+            conversao.insert(-39, ".")
+        elif len(conversao) >= 34 and len(conversao) <= 36:
+            conversao.insert(-3, ".")
+            conversao.insert(-7, ".")
+            conversao.insert(-11, ".")
+            conversao.insert(-15, ".")
+            conversao.insert(-19, ".")
+            conversao.insert(-23, ".")
+            conversao.insert(-27, ".")
+            conversao.insert(-31, ".")
+            conversao.insert(-35, ".")
+            conversao.insert(-39, ".")
+            conversao.insert(-43, ".")
+        elif len(conversao) >= 37 and len(conversao) <= 40:
+            conversao.insert(-3, ".")
+            conversao.insert(-7, ".")
+            conversao.insert(-11, ".")
+            conversao.insert(-15, ".")
+            conversao.insert(-19, ".")
+            conversao.insert(-23, ".")
+            conversao.insert(-27, ".")
+            conversao.insert(-31, ".")
+            conversao.insert(-35, ".")
+            conversao.insert(-39, ".")
+            conversao.insert(-43, ".")
+            conversao.insert(-47, ".")
+
+        for c in conversao:
+            conversaoAx += c
+
+        return conversaoAx
+
 
     def historicoMovimentacao(self, nome, valor, tranzacao):
         historicoEntradaSaida = HistoricoEntradaSaida()
 
+        valor = self.porPontoValor(valor)
         if tranzacao == "entrada":
             historicoEntradaSaida.setEntrada(nome, self.dataAtual, "Kz "+str(valor)+",00")
             self.ui.verticalLayout_ZonaEntrada.addWidget(historicoEntradaSaida.hes.pequenoHistoricoEntrada)
         else:
             historicoEntradaSaida.setSaida(nome, self.dataAtual, "Kz "+str(valor)+",00")
             self.ui.verticalLayout_zonaSaida.addWidget(historicoEntradaSaida.hes.pequenoHistoricoSaida)
+
+
+    def buscar(self):
+        print("Procurar")
+        help(findChildren)
+        for itens in self.ui.verticalLayout_ScrolNovaTranzacao.findChildren(QFrame):
+            itens.setStyleSheet("background-color: rgb(255, 0, 0);")
+
+
+
+
+
 
 
     def showContasAReceber(self):
