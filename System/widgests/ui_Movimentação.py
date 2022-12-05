@@ -288,7 +288,7 @@ class Ui_Form(object):
         self.database = database("ControleFinanceiro")
         self.database.connect_database()
         dados = self.database.executarFetchall("SELECT * FROM Categoria")
-        self.database.close_connection_database()
+        self.database.disconnect_database()
 
         for dado in dados:
             self.categoria.addItem("")

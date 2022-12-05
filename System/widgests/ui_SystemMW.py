@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'SystemMWEJSUDF.ui'
+## Form generated from reading UI file 'SystemMWVSxyTy.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -4691,14 +4691,14 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_159.setSpacing(0)
         self.verticalLayout_159.setObjectName(u"verticalLayout_159")
         self.verticalLayout_159.setContentsMargins(0, 0, 7, 7)
-        self.entradaValor = QLabel(self.frame_188)
-        self.entradaValor.setObjectName(u"entradaValor")
-        self.entradaValor.setMaximumSize(QSize(16777215, 35))
-        self.entradaValor.setFont(font7)
-        self.entradaValor.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.entradaValor.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.totalEntrada = QLabel(self.frame_188)
+        self.totalEntrada.setObjectName(u"totalEntrada")
+        self.totalEntrada.setMaximumSize(QSize(16777215, 35))
+        self.totalEntrada.setFont(font7)
+        self.totalEntrada.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.totalEntrada.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
-        self.verticalLayout_159.addWidget(self.entradaValor)
+        self.verticalLayout_159.addWidget(self.totalEntrada)
 
 
         self.verticalLayout_154.addWidget(self.frame_188)
@@ -4745,13 +4745,13 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_161.setSpacing(0)
         self.verticalLayout_161.setObjectName(u"verticalLayout_161")
         self.verticalLayout_161.setContentsMargins(0, 0, 11, 7)
-        self.saidaValor = QLabel(self.frame_190)
-        self.saidaValor.setObjectName(u"saidaValor")
-        self.saidaValor.setFont(font8)
-        self.saidaValor.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.saidaValor.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.totalSaida = QLabel(self.frame_190)
+        self.totalSaida.setObjectName(u"totalSaida")
+        self.totalSaida.setFont(font8)
+        self.totalSaida.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.totalSaida.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
-        self.verticalLayout_161.addWidget(self.saidaValor)
+        self.verticalLayout_161.addWidget(self.totalSaida)
 
 
         self.verticalLayout_160.addWidget(self.frame_190)
@@ -4798,14 +4798,14 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_176.setSpacing(0)
         self.verticalLayout_176.setObjectName(u"verticalLayout_176")
         self.verticalLayout_176.setContentsMargins(0, 0, 11, 7)
-        self.totalValor = QLabel(self.frame_204)
-        self.totalValor.setObjectName(u"totalValor")
-        self.totalValor.setMaximumSize(QSize(16777215, 35))
-        self.totalValor.setFont(font8)
-        self.totalValor.setStyleSheet(u"color: rgb(255, 255, 255);")
-        self.totalValor.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
+        self.valorTotal = QLabel(self.frame_204)
+        self.valorTotal.setObjectName(u"valorTotal")
+        self.valorTotal.setMaximumSize(QSize(16777215, 35))
+        self.valorTotal.setFont(font8)
+        self.valorTotal.setStyleSheet(u"color: rgb(255, 255, 255);")
+        self.valorTotal.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
-        self.verticalLayout_176.addWidget(self.totalValor)
+        self.verticalLayout_176.addWidget(self.valorTotal)
 
 
         self.verticalLayout_162.addWidget(self.frame_204)
@@ -5554,7 +5554,7 @@ class Ui_MainWindowMW(object):
 
         self.retranslateUi(MainWindowMW)
 
-        self.stackedWidget.setCurrentIndex(0)
+        self.stackedWidget.setCurrentIndex(5)
         self.stackedWidget_2.setCurrentIndex(1)
 
 
@@ -5801,13 +5801,13 @@ class Ui_MainWindowMW(object):
         self.label_19.setText(QCoreApplication.translate("MainWindowMW", u"07/09/2022", None))
         self.pushButton_7.setText("")
         self.label_121.setText(QCoreApplication.translate("MainWindowMW", u"Entrada", None))
-        self.entradaValor.setText(QCoreApplication.translate("MainWindowMW", u"Kz 0", None))
+        self.totalEntrada.setText(QCoreApplication.translate("MainWindowMW", u"Kz 0,00", None))
         self.label_111.setText(QCoreApplication.translate("MainWindowMW", u"Saida", None))
         self.pushButton_6.setText("")
-        self.saidaValor.setText(QCoreApplication.translate("MainWindowMW", u"Kz 0", None))
+        self.totalSaida.setText(QCoreApplication.translate("MainWindowMW", u"Kz 0,00", None))
         self.label_113.setText(QCoreApplication.translate("MainWindowMW", u"Total", None))
         self.pushButton_3.setText("")
-        self.totalValor.setText(QCoreApplication.translate("MainWindowMW", u"Kz 600.900,00", None))
+        self.valorTotal.setText(QCoreApplication.translate("MainWindowMW", u"Kz 0,00", None))
         self.novaMovimentacao.setText(QCoreApplication.translate("MainWindowMW", u"Nova Movimenta\u00e7\u00e3o", None))
         self.label_61.setText(QCoreApplication.translate("MainWindowMW", u"Data de Movimenta\u00e7\u00e3o", None))
         self.pushButton_2.setText(QCoreApplication.translate("MainWindowMW", u"Buscar", None))

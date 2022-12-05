@@ -264,7 +264,7 @@ class Ui_Form(object):
         self.categoria.setPlaceholderText("Selecione a categoria")
         self.database.connect_database()
         dados = self.database.executarFetchall("SELECT * FROM Categoria")
-        self.database.close_connection_database()
+        self.database.disconnect_database()
         for dado in dados:
             self.categoria.addItem("")
             self.categoria.setItemText(dado[0]-1, QCoreApplication.translate("Form", dado[1], None))
@@ -273,7 +273,7 @@ class Ui_Form(object):
         self.cliente.setPlaceholderText("Selecione o cliente")
         self.database.connect_database()
         dados = self.database.executarFetchall("SELECT * FROM Cliente")
-        self.database.close_connection_database()
+        self.database.disconnect_database()
         for dado in dados:
             self.cliente.addItem("")
             self.cliente.setItemText(dado[0]-1, QCoreApplication.translate("Form", dado[1], None))

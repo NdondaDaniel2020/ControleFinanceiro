@@ -10,7 +10,7 @@ class database():
     def connect_database(self):
         self.connection = sqlite3.connect(self.name)
 
-    def close_connection_database(self):
+    def disconnect_database(self):
         try:
             self.connection.commit() ## commit salva os dados no banco
             self.connection.close()

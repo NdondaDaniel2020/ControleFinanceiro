@@ -757,7 +757,7 @@ class SplashCreen(QMainWindow):
                     self.database.executarComand(f"""
                     INSERT INTO Usuario (nome, password, admin) values ('{self.sc.email_singup.text()}','{senha}', 'F')
                                                     """)
-                    self.database.close_connection_database()
+                    self.database.disconnect_database()
 
                     self.inserirUltimoUserInBD(self.contarRegistrosTabelaUser())
                     UsuiarioGlobal = self.sc.email_singup.text()
@@ -958,7 +958,7 @@ class SplashCreen(QMainWindow):
     def ListaUsuarioInBD(self):
         self.database.connect_database()
         registroDados = self.database.executarFetchall(f"SELECT * FROM Usuario")
-        self.database.close_connection_database()
+        self.database.disconnect_database()
 
         for tupla in registroDados:
             for n, dado in enumerate(tupla):
@@ -981,7 +981,7 @@ class SplashCreen(QMainWindow):
         dados = self.database.executarFetchall("""
         SELECT UltimoUsuario.idUltimo, Usuario.nome, Usuario.password FROM UltimoUsuario JOIN Usuario  ON UltimoUsuario.UltimoUsuario = Usuario.id
         """)
-        self.database.close_connection_database()
+        self.database.disconnect_database()
         for dado in dados:
             for n, d in enumerate(dado):
                 if n == 1:
@@ -998,14 +998,14 @@ class SplashCreen(QMainWindow):
         dataHoje = date.today()
         self.database.connect_database()
         self.database.executarComand(f"INSERT INTO UltimoUsuario (Data, UltimoUsuario)values('{dataHoje}','{id}')")
-        self.database.close_connection_database()
+        self.database.disconnect_database()
 
     # este metodo e responsavel pro contar o numero de registro (tuplas na base de dados)
     def contarRegistrosTabelaUser(self):
 
         self.database.connect_database()
         registro = self.database.executarFetchall("SELECT * FROM Usuario")
-        self.database.close_connection_database()
+        self.database.disconnect_database()
 
         return str(len(registro) + 1)
 
@@ -1013,7 +1013,7 @@ class SplashCreen(QMainWindow):
     def identificarUltimoUsuario(self, nome):
         self.database.connect_database()
         listDados = self.database.executarFetchall(f"SELECT * FROM Usuario")
-        self.database.close_connection_database()
+        self.database.disconnect_database()
 
         id = 0
         for dados in listDados:
@@ -1067,6 +1067,7 @@ class MainwindowSC(QMainWindow):
         self.novaMovimentacao = Movimentacao()
         self.contaReceber = ContasAreceber()
         self.pagarConta = ReceberPagamento()
+        self.analizeEntradaSaidaValores()
 
 
         self.eventoConnect()
@@ -1114,13 +1115,13 @@ class MainwindowSC(QMainWindow):
 
         self.show()  # mostrar janela
 
-        self.listaURL = []
 
     # pega a posicao global
     def mousePressEvent(self, event):
         self.dragPos = event.globalPos()
         self.dragPosScroll = self.ui.scrollArea.horizontalScrollBar().value()
         self.dragPosScroll2 = self.ui.scrollArea_6.horizontalScrollBar().value()
+
 
     # eventos e coneccoes
     def eventoConnect(self):
@@ -1289,6 +1290,7 @@ class MainwindowSC(QMainWindow):
         self.ui.frame_password_faceId.mouseMoveEvent = moveScroll2
         self.ui.frame_password_faceId.mouseReleaseEvent = releasecroll2
 
+
     # metodo responsavel por maximizar e minimizar
     def MaxMin(self):
         global MNW
@@ -1331,9 +1333,11 @@ class MainwindowSC(QMainWindow):
             icon.addFile(u"../img/24x24/cil-media-stop.png", QSize(), QIcon.Normal, QIcon.Off)
             self.ui.NormalMax.setIcon(icon)
 
+
     # ativa o ajust da janela
     def resizeEvent(self, event):
         self.resizeGrips()
+
 
     # metodo responsavel pelo ajuste da janela
     def resizeGrips(self):
@@ -1341,6 +1345,7 @@ class MainwindowSC(QMainWindow):
         self.right.setGeometry(self.width() - 10, 10, 10, self.height())
         self.top.setGeometry(0, 0, self.width(), 10)
         self.bottom.setGeometry(0, self.height() - 10, self.width(), 10)
+
 
     # metodo que anima o menu lateral
     def leftmenu(self):
@@ -1398,6 +1403,7 @@ class MainwindowSC(QMainWindow):
         self.grounpLeft.addAnimation(self.criadoAnimation)
         self.grounpLeft.start()
 
+
     # a metodo que anima o tec zone
     def scrollAreaAnimat(self):
         #########################################################################################
@@ -1436,6 +1442,7 @@ class MainwindowSC(QMainWindow):
         self.scrollframeAreaAnimaton.setDuration(400)
         self.scrollframeAreaAnimaton.setEasingCurve(QEasingCurve.InOutCirc)
         self.scrollframeAreaAnimaton.start()
+
 
     # e o metodo responsavelo elas funcoes dos clicke
     def areaClick(self):
@@ -1490,12 +1497,14 @@ class MainwindowSC(QMainWindow):
                 icon15.addFile(u"../img/24x24/cil-volume-high.png", QSize(), QIcon.Normal, QIcon.Off)
                 self.ui.toolButton.setIcon(icon15)
 
+
     #  lond e o metodo que carrega o segundo webBroeser navegagor
     def loand(self, inputURL):
         url = QUrl.fromUserInput(inputURL)
 
         if url.isValid():
             self.ui.webEngineView_2.load(url)
+
 
     # este metodo simplifica o processamento web e a troca de pagina
     def simpficaLond(self, page=None, n=0, url=''):
@@ -1505,6 +1514,7 @@ class MainwindowSC(QMainWindow):
             self.ui.stackedWidget.setCurrentWidget(page)
         else:
             self.ui.stackedWidget.setCurrentWidget(page)
+
 
     # metodo que abri , salva, e cria um arquivo de texto para as suas escritas
     def editArq(self):
@@ -1543,9 +1553,11 @@ class MainwindowSC(QMainWindow):
 
         self.ui.verticalLayout_graficoMain.addWidget(chart_view)
 
+
     # este metodo é reponsavelo pela movimentação
     def showMovimentacao(self):
         self.novaMovimentacao.show()
+
 
     # est6e metodo e responsavel por pegar data
     def pegarData(self):
@@ -1568,14 +1580,16 @@ class MainwindowSC(QMainWindow):
         novadata = f"{dia}/{mes}/{ano}"
         return novadata
 
+
     # este e um tetodo tesponsavel por contar as Movimentações financeiras
     def contarMovimentação(self):
         self.database.connect_database()
         dados = self.database.executarFetchall("SELECT * FROM MovimentacaoFinanceira")
-        self.database.close_connection_database()
+        self.database.disconnect_database()
 
         conta = len(dados)
         return conta + 1
+
 
     # este metodo e responsavel por enviar do
     # dados em forma de tabelas na interface na zona de movimentação finaceira
@@ -1595,9 +1609,11 @@ class MainwindowSC(QMainWindow):
             self.database.executarComand(f"""
             INSERT INTO MovimentacaoFinanceira (data, categoria, nome, valor, tranzacao)
             values ('{self.dataAtual}', '{ncategoria}', '{titulo}', '{valor}', '{tranzacao}')""")
-            self.database.close_connection_database()
+            self.database.disconnect_database()
+            self.analizeEntradaSaidaValores()
             self.novaMovimentacao.mov.Titulo.setText("")
             self.novaMovimentacao.mov.valor.setText("")
+
 
     # este metodo mostra ajanela de movimentação
     def ValorNomvaMovimentacao(self):
@@ -1607,11 +1623,12 @@ class MainwindowSC(QMainWindow):
         categoria = self.novaMovimentacao.categoria
         self.enviarDadosEmMovimentacaoFinaceira(0, titulo, valor, tranzacao, categoria)
 
-    ##################################################################################
+
+    # este metodo analiza todas as tranzções e insere os dados  nas tabelas antes de mostrar a janela
     def analizarUltimasTrancoes(self):
         self.database.connect_database()
         dadosMovimentacoesFinceiras = self.database.executarFetchall("SELECT * FROM MovimentacaoFinanceira")
-        self.database.close_connection_database()
+        self.database.disconnect_database()
 
         for dados in dadosMovimentacoesFinceiras:
             self.barraMovimentacao = BarraMovimentacao()
@@ -1620,11 +1637,32 @@ class MainwindowSC(QMainWindow):
             self.ui.verticalLayout_ScrolNovaTranzacao.addWidget(self.barraMovimentacao.bm.pequenoHistoricoEntrada)
             self.historicoMovimentacao(dados[3], dados[4], dados[5])
 
+
+    # este metodo soma dodas as entradas e saidas para por no quandro de total de entradas e saida
+    def analizeEntradaSaidaValores(self):
+        self.database.connect_database()
+        totalEntradas = self.database.executarFetchall("""
+        SELECT SUM(valor) FROM MovimentacaoFinanceira where tranzacao=='entrada';""")
+        totalSaidas = self.database.executarFetchall("""
+        SELECT SUM(valor) FROM MovimentacaoFinanceira where tranzacao=='saida';
+        """)
+        self.database.disconnect_database()
+
+        valorTotal = int(totalEntradas[0][0]) - int(totalSaidas[0][0])
+
+        totalEntradas = "Kz "+str(totalEntradas[0][0])+",00"
+        totalSaidas = "Kz "+str(totalSaidas[0][0])+",00"
+        valorTotal = "Kz "+str(valorTotal)+",00"
+
+        self.ui.totalEntrada.setText(totalEntradas)
+        self.ui.totalSaida.setText(totalSaidas)
+        self.ui.valorTotal.setText(valorTotal)
+        
     # este metodo pega o indece e pega a categoria correspondente ao indice
     def encontraIndeceCategoria(self, busca):
         self.database.connect_database()
         lista = self.database.executarFetchall("SELECT * FROM Categoria")
-        self.database.close_connection_database()
+        self.database.disconnect_database()
         saida = ''
         if type(busca) == int:
             for itens in lista:
@@ -1639,6 +1677,7 @@ class MainwindowSC(QMainWindow):
 
         # add o widget do historico de movimentação
 
+
     def historicoMovimentacao(self, nome, valor, tranzacao):
         historicoEntradaSaida = HistoricoEntradaSaida()
 
@@ -1649,8 +1688,10 @@ class MainwindowSC(QMainWindow):
             historicoEntradaSaida.setSaida(nome, self.dataAtual, "Kz "+str(valor)+",00")
             self.ui.verticalLayout_zonaSaida.addWidget(historicoEntradaSaida.hes.pequenoHistoricoSaida)
 
+
     def showContasAReceber(self):
         self.contaReceber.show()
+
 
     def adicionarContasAReceber(self):
         valorTotal = self.contaReceber.ca.valorTotal.text()
@@ -1659,8 +1700,10 @@ class MainwindowSC(QMainWindow):
             # print(valorTotal)
             self.contaReceber.close()
 
+
     def showPaqgarConta(self):
         self.pagarConta.show()
+
 
     def metodpagarConta(self):
         self.barraReceberConta = BarraReceberConta()

@@ -1279,7 +1279,7 @@ border-top-left-radius:10px;
 border-bottom-left-radius:10px;</string>
                         </property>
                         <property name="currentIndex">
-                         <number>0</number>
+                         <number>5</number>
                         </property>
                         <widget class="QWidget" name="page_Home">
                          <layout class="QVBoxLayout" name="verticalLayout_12">
@@ -11884,7 +11884,7 @@ border-radius: 10px</string>
                                                    <number>7</number>
                                                   </property>
                                                   <item>
-                                                   <widget class="QLabel" name="entradaValor">
+                                                   <widget class="QLabel" name="totalEntrada">
                                                     <property name="maximumSize">
                                                      <size>
                                                       <width>16777215</width>
@@ -11902,7 +11902,7 @@ border-radius: 10px</string>
                                                      <string notr="true">color: rgb(255, 255, 255);</string>
                                                     </property>
                                                     <property name="text">
-                                                     <string>Kz 0</string>
+                                                     <string>Kz 0,00</string>
                                                     </property>
                                                     <property name="alignment">
                                                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -12040,7 +12040,7 @@ border-radius: 10px</string>
                                                    <number>7</number>
                                                   </property>
                                                   <item>
-                                                   <widget class="QLabel" name="saidaValor">
+                                                   <widget class="QLabel" name="totalSaida">
                                                     <property name="font">
                                                      <font>
                                                       <family>Segoe UI Semibold</family>
@@ -12051,7 +12051,7 @@ border-radius: 10px</string>
                                                      <string notr="true">color: rgb(255, 255, 255);</string>
                                                     </property>
                                                     <property name="text">
-                                                     <string>Kz 0</string>
+                                                     <string>Kz 0,00</string>
                                                     </property>
                                                     <property name="alignment">
                                                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
@@ -12189,7 +12189,7 @@ border-radius: 10px</string>
                                                    <number>7</number>
                                                   </property>
                                                   <item>
-                                                   <widget class="QLabel" name="totalValor">
+                                                   <widget class="QLabel" name="valorTotal">
                                                     <property name="maximumSize">
                                                      <size>
                                                       <width>16777215</width>
@@ -12206,7 +12206,7 @@ border-radius: 10px</string>
                                                      <string notr="true">color: rgb(255, 255, 255);</string>
                                                     </property>
                                                     <property name="text">
-                                                     <string>Kz 600.900,00</string>
+                                                     <string>Kz 0,00</string>
                                                     </property>
                                                     <property name="alignment">
                                                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>

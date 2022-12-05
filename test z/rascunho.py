@@ -7,4 +7,4 @@ values
 ('2022-04-12', '3', 'Pó de cafe', '100', 'entrada')
 )"""
 )
-database.close_connection_database()
+database.disconnect_database()
