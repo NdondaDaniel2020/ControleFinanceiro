@@ -285,7 +285,7 @@ class Ui_Form(object):
 
 
         self.categoria.setPlaceholderText("Selecione a categoria")
-        self.database = database("ControloFinaceiro")
+        self.database = database("ControleFinanceiro")
         self.database.connect_database()
         dados = self.database.executarFetchall("SELECT * FROM Categoria")
         self.database.close_connection_database()

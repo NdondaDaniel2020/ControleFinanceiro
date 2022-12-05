@@ -96,22 +96,17 @@ class database():
         # ('Luciano Luzembo', '923442065', 'lucianoluzembo@gmail.com', 'Lunada', '1')
         # """)
         # database.close_connection_database()
+        # database = database("../ControleFinanceiro.db")
+        # database.connect_database()
+        # database.executarComand("""
+        # INSERT INTO  MovimentacaoFinanceira (Data, categoria, nome, valor, tranzacao)
+        # values
+        # ('2022-04-12', '4', 'Iphone 13', '700.000', 'entrada')
+        # """
+        # )
+        # database.close_connection_database()
         pass
 
     def __str__(self):
         return 'Class para criares o teu banco de dados'
 
-database = database("../ControloFinaceiro.db")
-database.connect_database()
-database.executarComand("""
-CREATE TABLE IF NOT EXISTS MovimentacaoFinaceiro(
-id integer PRIMARY KEY AUTOINCREMENT,
-Data dete NOT NULL,
-categoria integer,
-nome varchar(30) NOT NULL,
-valor integer,
-tranzacao,
-FOREIGN KEY (categoria) REFERENCES Categoria (id)
-)"""
-)
-database.close_connection_database()

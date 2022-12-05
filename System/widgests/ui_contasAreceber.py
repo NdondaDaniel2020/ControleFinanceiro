@@ -277,7 +277,7 @@ class Ui_Form(object):
         self.minimizar.setText("")
         self.fechar.setText("")
 
-        self.database = database("ControloFinaceiro")
+        self.database = database("ControleFinanceiro")
 
         self.categoria.setPlaceholderText("Selecione a categoria")
         self.database.connect_database()

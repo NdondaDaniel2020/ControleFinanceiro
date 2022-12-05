@@ -61,7 +61,7 @@ class SplashCreen(QMainWindow):
 
         # chamando a class que controla a base de dados
 
-        self.database = database("ControloFinaceiro.db")
+        self.database = database("ControleFinanceiro.db")
         self.senhaUltimoUser = ''
         self.nomeDoUsuario = ''  ## ele será Usado para o main window
         self.VerificarUltimoUser()
