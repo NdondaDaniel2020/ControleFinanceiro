@@ -434,7 +434,7 @@ border-radius:5px;
           </property>
          </item>
         </widget>
-        <widget class="QLineEdit" name="valorTotal">
+        <widget class="QLineEdit" name="valor">
          <property name="geometry">
           <rect>
            <x>20</x>
@@ -471,7 +471,7 @@ padding-left:5px;</string>
           <string>Valor</string>
          </property>
         </widget>
-        <widget class="QLabel" name="label_2">
+        <widget class="QLabel" name="totalPagar">
          <property name="geometry">
           <rect>
            <x>20</x>
