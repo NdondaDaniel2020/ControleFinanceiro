@@ -1061,17 +1061,16 @@ class MainwindowSC(QMainWindow):
         self.setMinimumSize(1195, 760)
         self.toobtn = True
 
-        self.buscar()
+
 
         self.database = database("ControleFinanceiro")
         self.dataAtual = self.pegarData()
-        # self.analizarUltimasTranzacoes()
+        self.analizarUltimasTranzacoes()
         self.novaMovimentacao = Movimentacao()
         self.contaReceber = ContasAreceber()
         self.pagarConta = ReceberPagamento()
         self.analizeEntradaSaidaValores()
-        self.adicionaCtegoriaPlanoContasBusca()
-
+        self.adicionaCategoriaPlanoContasBusca()
 
         self.eventoConnect()
 
@@ -1108,6 +1107,8 @@ class MainwindowSC(QMainWindow):
         self.ui.pagarConta.clicked.connect(self.showPaqgarConta)
         self.pagarConta.rp.adicionarConta.clicked.connect(self.metodpagarConta)
         self.ui.buscar.clicked.connect(self.buscar)
+        self.ui.planoContasBusca.currentTextChanged.connect(self.selectCategoriaBuscador)
+        self.buscarCategoria = 0
 
         self.left = CustomGrip(self, Qt.LeftEdge, True)
         self.right = CustomGrip(self, Qt.RightEdge, True)
@@ -1558,16 +1559,19 @@ class MainwindowSC(QMainWindow):
 
 
     # este metodo e responsavel por por a categoia no planoContasBusca
-    def adicionaCtegoriaPlanoContasBusca(self):
+    def adicionaCategoriaPlanoContasBusca(self):
         self.ui.planoContasBusca.setPlaceholderText("Planos de contas")
         self.database = database("ControleFinanceiro")
         self.database.connect_database()
         dados = self.database.executarFetchall("SELECT * FROM Categoria")
         self.database.disconnect_database()
 
+        self.ui.planoContasBusca.addItem("")
+        self.ui.planoContasBusca.setItemText(0, QCoreApplication.translate("Form", " ", None))
+
         for dado in dados:
             self.ui.planoContasBusca.addItem("")
-            self.ui.planoContasBusca.setItemText(dado[0] - 1, QCoreApplication.translate("Form", dado[1], None))
+            self.ui.planoContasBusca.setItemText(dado[0], QCoreApplication.translate("Form", dado[1], None))
 
 
     # este metodo é reponsavelo pela movimentação
@@ -1580,21 +1584,7 @@ class MainwindowSC(QMainWindow):
 
         dataAgoara = date.today()
 
-        dataAgoara = str(dataAgoara)
-
-        ano = ""
-        mes = ""
-        dia = ""
-        for n, c in enumerate(dataAgoara):
-            if n < 4:
-                ano += c
-            if n > 4 and n < 7:
-                mes += c
-            if n > 7:
-                dia += c
-
-        novadata = f"{dia}/{mes}/{ano}"
-        return novadata
+        return str(dataAgoara)
 
 
     # este e um tetodo tesponsavel por contar as Movimentações financeiras
@@ -1679,7 +1669,8 @@ class MainwindowSC(QMainWindow):
         self.ui.totalEntrada.setText(totalEntradas)
         self.ui.totalSaida.setText(totalSaidas)
         self.ui.valorTotal.setText(valorTotal)
-        
+
+
     # este metodo pega o indece e pega a categoria correspondente ao indice
     def encontraIndeceCategoria(self, busca):
         self.database.connect_database()
@@ -1698,6 +1689,7 @@ class MainwindowSC(QMainWindow):
         return saida
 
         # add o widget do historico de movimentação
+
 
     # este metodo põe ponto nos valores para ter uma facil leitura dos dados
     def porPontoValor(self, conversao):
@@ -1802,6 +1794,7 @@ class MainwindowSC(QMainWindow):
         return conversaoAx
 
 
+    # este metodo e reponsavel por adicionar o historico de tranzação
     def historicoMovimentacao(self, nome, valor, tranzacao):
         historicoEntradaSaida = HistoricoEntradaSaida()
 
@@ -1814,11 +1807,65 @@ class MainwindowSC(QMainWindow):
             self.ui.verticalLayout_zonaSaida.addWidget(historicoEntradaSaida.hes.pequenoHistoricoSaida)
 
 
+    # estemetodo  seleciona a categoria e converte no seu indece
+    def selectCategoriaBuscador(self,categoria):
+        categoria = self.encontraIndeceCategoria(categoria)
+        self.buscarCategoria = categoria
+
+
+    # este metodo converte o modelo de data
+    def converterModeloData(self, data):
+        dia = data[0:2]
+        mes = data[3:5]
+        ano = data[6:10]
+        data = ano + "-" + mes + "-" + dia
+        return data
+
     def buscar(self):
-        print("Procurar")
-        help(findChildren)
-        for itens in self.ui.verticalLayout_ScrolNovaTranzacao.findChildren(QFrame):
-            itens.setStyleSheet("background-color: rgb(255, 0, 0);")
+        select = 'SELECT * FROM MovimentacaoFinanceira '
+
+        if self.buscarCategoria != 0:
+            select += f"WHERE categoria = '{str(self.buscarCategoria)}'"
+            print(self.buscarCategoria)
+
+        if self.ui.dataMovimentacaoInicio.text() == self.ui.dataMovimentacaofim.text() != '01/01/2010':
+            if self.buscarCategoria == 0:
+                data = self.converterModeloData(self.ui.dataMovimentacaoInicio.text())
+                select += f" WHERE data = '{data}'"
+            else:
+                data = self.converterModeloData(self.ui.dataMovimentacaoInicio.text())
+                select += f" AND data = '{data}'"
+        else:
+            if self.buscarCategoria == 0:
+                data1 = self.converterModeloData(self.ui.dataMovimentacaoInicio.text())
+                data2 = self.converterModeloData(self.ui.dataMovimentacaofim.text())
+                select += f" WHERE data BETWEEN '{data1}' AND '{data2}'"
+            else:
+                data1 = self.converterModeloData(self.ui.dataMovimentacaoInicio.text())
+                data2 = self.converterModeloData(self.ui.dataMovimentacaofim.text())
+                select += f" AND data BETWEEN '{data1}' AND '{data2}'"
+
+
+        if not self.ui.codigoBusca.text() == "":
+            select = f"SELECT * from MovimentacaoFinanceira where id = '{self.ui.codigoBusca.text()}';"
+
+        self.database.connect_database()
+        dados = self.database.executarFetchall(select)
+        self.database.disconnect_database()
+
+
+        for objeto in self.ui.frameNovaTranzacao.findChildren(QFrame):
+            # print(objeto.objectName())
+            objeto.close()
+            pass
+
+        for dado in dados:
+            self.barraMovimentacao = BarraMovimentacao()
+            categoria = self.encontraIndeceCategoria(dado[2])
+            valor = self.porPontoValor(dado[4])
+            self.barraMovimentacao.setValues(dado[0], dado[1], categoria, dado[3], str(valor) + ",00", dado[5])
+            self.ui.verticalLayout_ScrolNovaTranzacao.addWidget(self.barraMovimentacao.bm.pequenoHistoricoEntrada)
+
 
 
 

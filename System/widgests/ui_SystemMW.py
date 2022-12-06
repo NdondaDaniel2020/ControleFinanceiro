@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'SystemMWFEEoPO.ui'
+## Form generated from reading UI file 'SystemMWMqZcbL.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
@@ -5158,271 +5158,17 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_71.setSpacing(3)
         self.verticalLayout_71.setObjectName(u"verticalLayout_71")
         self.verticalLayout_71.setContentsMargins(-1, 0, -1, -1)
-        self.frame_7 = QFrame(self.scrollAreaWidgetContents_3)
-        self.frame_7.setObjectName(u"frame_7")
-        self.frame_7.setMinimumSize(QSize(0, 45))
-        self.frame_7.setFrameShape(QFrame.StyledPanel)
-        self.frame_7.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_ScrolNovaTranzacao = QVBoxLayout(self.frame_7)
+        self.frameNovaTranzacao = QFrame(self.scrollAreaWidgetContents_3)
+        self.frameNovaTranzacao.setObjectName(u"frameNovaTranzacao")
+        self.frameNovaTranzacao.setMinimumSize(QSize(0, 45))
+        self.frameNovaTranzacao.setFrameShape(QFrame.StyledPanel)
+        self.frameNovaTranzacao.setFrameShadow(QFrame.Raised)
+        self.verticalLayout_ScrolNovaTranzacao = QVBoxLayout(self.frameNovaTranzacao)
         self.verticalLayout_ScrolNovaTranzacao.setSpacing(4)
         self.verticalLayout_ScrolNovaTranzacao.setObjectName(u"verticalLayout_ScrolNovaTranzacao")
-        self.verticalLayout_ScrolNovaTranzacao.setContentsMargins(0, 0, 0, 0)
-        self.pequenoHistoricoEntrada = QFrame(self.frame_7)
-        self.pequenoHistoricoEntrada.setObjectName(u"pequenoHistoricoEntrada")
-        self.pequenoHistoricoEntrada.setMinimumSize(QSize(0, 40))
-        self.pequenoHistoricoEntrada.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
-"border-radius:4px;")
-        self.pequenoHistoricoEntrada.setFrameShape(QFrame.StyledPanel)
-        self.pequenoHistoricoEntrada.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_126 = QHBoxLayout(self.pequenoHistoricoEntrada)
-        self.horizontalLayout_126.setSpacing(0)
-        self.horizontalLayout_126.setObjectName(u"horizontalLayout_126")
-        self.horizontalLayout_126.setContentsMargins(20, 0, 0, 0)
-        self.frame_196 = QFrame(self.pequenoHistoricoEntrada)
-        self.frame_196.setObjectName(u"frame_196")
-        self.frame_196.setMaximumSize(QSize(152, 16777215))
-        self.frame_196.setStyleSheet(u"")
-        self.frame_196.setFrameShape(QFrame.StyledPanel)
-        self.frame_196.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_167 = QVBoxLayout(self.frame_196)
-        self.verticalLayout_167.setSpacing(0)
-        self.verticalLayout_167.setObjectName(u"verticalLayout_167")
-        self.verticalLayout_167.setContentsMargins(0, 0, 0, 0)
-        self.codigo = QLabel(self.frame_196)
-        self.codigo.setObjectName(u"codigo")
-        self.codigo.setMaximumSize(QSize(150, 16777215))
-        self.codigo.setFont(font13)
-        self.codigo.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.codigo.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.verticalLayout_ScrolNovaTranzacao.setContentsMargins(0, 0, 0, 4)
 
-        self.verticalLayout_167.addWidget(self.codigo)
-
-
-        self.horizontalLayout_126.addWidget(self.frame_196)
-
-        self.frame_197 = QFrame(self.pequenoHistoricoEntrada)
-        self.frame_197.setObjectName(u"frame_197")
-        self.frame_197.setStyleSheet(u"")
-        self.frame_197.setFrameShape(QFrame.StyledPanel)
-        self.frame_197.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_169 = QVBoxLayout(self.frame_197)
-        self.verticalLayout_169.setSpacing(0)
-        self.verticalLayout_169.setObjectName(u"verticalLayout_169")
-        self.verticalLayout_169.setContentsMargins(0, 0, 0, 0)
-        self.data_2 = QLabel(self.frame_197)
-        self.data_2.setObjectName(u"data_2")
-        self.data_2.setMaximumSize(QSize(16777215, 38))
-        self.data_2.setFont(font13)
-        self.data_2.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.data_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.verticalLayout_169.addWidget(self.data_2)
-
-
-        self.horizontalLayout_126.addWidget(self.frame_197)
-
-        self.frame_198 = QFrame(self.pequenoHistoricoEntrada)
-        self.frame_198.setObjectName(u"frame_198")
-        self.frame_198.setStyleSheet(u"")
-        self.frame_198.setFrameShape(QFrame.StyledPanel)
-        self.frame_198.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_170 = QVBoxLayout(self.frame_198)
-        self.verticalLayout_170.setSpacing(0)
-        self.verticalLayout_170.setObjectName(u"verticalLayout_170")
-        self.verticalLayout_170.setContentsMargins(0, 0, 0, 0)
-        self.categoria_2 = QLabel(self.frame_198)
-        self.categoria_2.setObjectName(u"categoria_2")
-        self.categoria_2.setFont(font13)
-        self.categoria_2.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.categoria_2.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_170.addWidget(self.categoria_2)
-
-
-        self.horizontalLayout_126.addWidget(self.frame_198)
-
-        self.frame_250 = QFrame(self.pequenoHistoricoEntrada)
-        self.frame_250.setObjectName(u"frame_250")
-        self.frame_250.setStyleSheet(u"")
-        self.frame_250.setFrameShape(QFrame.StyledPanel)
-        self.frame_250.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_127 = QHBoxLayout(self.frame_250)
-        self.horizontalLayout_127.setSpacing(0)
-        self.horizontalLayout_127.setObjectName(u"horizontalLayout_127")
-        self.horizontalLayout_127.setContentsMargins(0, 0, 0, 0)
-        self.frame_251 = QFrame(self.frame_250)
-        self.frame_251.setObjectName(u"frame_251")
-        self.frame_251.setStyleSheet(u"")
-        self.frame_251.setFrameShape(QFrame.StyledPanel)
-        self.frame_251.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_128 = QHBoxLayout(self.frame_251)
-        self.horizontalLayout_128.setObjectName(u"horizontalLayout_128")
-        self.horizontalLayout_128.setContentsMargins(0, 0, 0, 0)
-        self.complemento = QLabel(self.frame_251)
-        self.complemento.setObjectName(u"complemento")
-        self.complemento.setFont(font13)
-        self.complemento.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.complemento.setAlignment(Qt.AlignCenter)
-
-        self.horizontalLayout_128.addWidget(self.complemento)
-
-
-        self.horizontalLayout_127.addWidget(self.frame_251)
-
-
-        self.horizontalLayout_126.addWidget(self.frame_250)
-
-        self.frame_199 = QFrame(self.pequenoHistoricoEntrada)
-        self.frame_199.setObjectName(u"frame_199")
-        self.frame_199.setStyleSheet(u"")
-        self.frame_199.setFrameShape(QFrame.StyledPanel)
-        self.frame_199.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_171 = QVBoxLayout(self.frame_199)
-        self.verticalLayout_171.setObjectName(u"verticalLayout_171")
-        self.verticalLayout_171.setContentsMargins(0, 0, 0, 0)
-        self.valor = QLabel(self.frame_199)
-        self.valor.setObjectName(u"valor")
-        self.valor.setFont(font13)
-        self.valor.setStyleSheet(u"color: rgb(255, 0, 0)")
-        self.valor.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_171.addWidget(self.valor)
-
-
-        self.horizontalLayout_126.addWidget(self.frame_199)
-
-
-        self.verticalLayout_ScrolNovaTranzacao.addWidget(self.pequenoHistoricoEntrada)
-
-
-        self.verticalLayout_71.addWidget(self.frame_7)
-
-        self.pequenoHistoricoEntrada_2 = QFrame(self.scrollAreaWidgetContents_3)
-        self.pequenoHistoricoEntrada_2.setObjectName(u"pequenoHistoricoEntrada_2")
-        self.pequenoHistoricoEntrada_2.setMinimumSize(QSize(0, 40))
-        self.pequenoHistoricoEntrada_2.setStyleSheet(u"background-color: rgb(255, 255, 255);\n"
-"border-radius:4px;")
-        self.pequenoHistoricoEntrada_2.setFrameShape(QFrame.StyledPanel)
-        self.pequenoHistoricoEntrada_2.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_129 = QHBoxLayout(self.pequenoHistoricoEntrada_2)
-        self.horizontalLayout_129.setSpacing(0)
-        self.horizontalLayout_129.setObjectName(u"horizontalLayout_129")
-        self.horizontalLayout_129.setContentsMargins(20, 0, 0, 0)
-        self.frame_200 = QFrame(self.pequenoHistoricoEntrada_2)
-        self.frame_200.setObjectName(u"frame_200")
-        self.frame_200.setMaximumSize(QSize(152, 16777215))
-        self.frame_200.setStyleSheet(u"")
-        self.frame_200.setFrameShape(QFrame.StyledPanel)
-        self.frame_200.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_172 = QVBoxLayout(self.frame_200)
-        self.verticalLayout_172.setSpacing(0)
-        self.verticalLayout_172.setObjectName(u"verticalLayout_172")
-        self.verticalLayout_172.setContentsMargins(0, 0, 0, 0)
-        self.codigo_2 = QLabel(self.frame_200)
-        self.codigo_2.setObjectName(u"codigo_2")
-        self.codigo_2.setMaximumSize(QSize(150, 16777215))
-        self.codigo_2.setFont(font13)
-        self.codigo_2.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.codigo_2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.verticalLayout_172.addWidget(self.codigo_2)
-
-
-        self.horizontalLayout_129.addWidget(self.frame_200)
-
-        self.frame_201 = QFrame(self.pequenoHistoricoEntrada_2)
-        self.frame_201.setObjectName(u"frame_201")
-        self.frame_201.setStyleSheet(u"")
-        self.frame_201.setFrameShape(QFrame.StyledPanel)
-        self.frame_201.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_173 = QVBoxLayout(self.frame_201)
-        self.verticalLayout_173.setSpacing(0)
-        self.verticalLayout_173.setObjectName(u"verticalLayout_173")
-        self.verticalLayout_173.setContentsMargins(0, 0, 0, 0)
-        self.data_3 = QLabel(self.frame_201)
-        self.data_3.setObjectName(u"data_3")
-        self.data_3.setMaximumSize(QSize(16777215, 38))
-        self.data_3.setFont(font13)
-        self.data_3.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.data_3.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
-
-        self.verticalLayout_173.addWidget(self.data_3)
-
-
-        self.horizontalLayout_129.addWidget(self.frame_201)
-
-        self.frame_202 = QFrame(self.pequenoHistoricoEntrada_2)
-        self.frame_202.setObjectName(u"frame_202")
-        self.frame_202.setStyleSheet(u"")
-        self.frame_202.setFrameShape(QFrame.StyledPanel)
-        self.frame_202.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_174 = QVBoxLayout(self.frame_202)
-        self.verticalLayout_174.setSpacing(0)
-        self.verticalLayout_174.setObjectName(u"verticalLayout_174")
-        self.verticalLayout_174.setContentsMargins(0, 0, 0, 0)
-        self.categoria_3 = QLabel(self.frame_202)
-        self.categoria_3.setObjectName(u"categoria_3")
-        self.categoria_3.setFont(font13)
-        self.categoria_3.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.categoria_3.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_174.addWidget(self.categoria_3)
-
-
-        self.horizontalLayout_129.addWidget(self.frame_202)
-
-        self.frame_253 = QFrame(self.pequenoHistoricoEntrada_2)
-        self.frame_253.setObjectName(u"frame_253")
-        self.frame_253.setStyleSheet(u"")
-        self.frame_253.setFrameShape(QFrame.StyledPanel)
-        self.frame_253.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_130 = QHBoxLayout(self.frame_253)
-        self.horizontalLayout_130.setSpacing(0)
-        self.horizontalLayout_130.setObjectName(u"horizontalLayout_130")
-        self.horizontalLayout_130.setContentsMargins(0, 0, 0, 0)
-        self.frame_254 = QFrame(self.frame_253)
-        self.frame_254.setObjectName(u"frame_254")
-        self.frame_254.setStyleSheet(u"")
-        self.frame_254.setFrameShape(QFrame.StyledPanel)
-        self.frame_254.setFrameShadow(QFrame.Raised)
-        self.horizontalLayout_131 = QHBoxLayout(self.frame_254)
-        self.horizontalLayout_131.setObjectName(u"horizontalLayout_131")
-        self.horizontalLayout_131.setContentsMargins(0, 0, 0, 0)
-        self.complemento_2 = QLabel(self.frame_254)
-        self.complemento_2.setObjectName(u"complemento_2")
-        self.complemento_2.setFont(font13)
-        self.complemento_2.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.complemento_2.setAlignment(Qt.AlignCenter)
-
-        self.horizontalLayout_131.addWidget(self.complemento_2)
-
-
-        self.horizontalLayout_130.addWidget(self.frame_254)
-
-
-        self.horizontalLayout_129.addWidget(self.frame_253)
-
-        self.frame_203 = QFrame(self.pequenoHistoricoEntrada_2)
-        self.frame_203.setObjectName(u"frame_203")
-        self.frame_203.setStyleSheet(u"")
-        self.frame_203.setFrameShape(QFrame.StyledPanel)
-        self.frame_203.setFrameShadow(QFrame.Raised)
-        self.verticalLayout_175 = QVBoxLayout(self.frame_203)
-        self.verticalLayout_175.setObjectName(u"verticalLayout_175")
-        self.verticalLayout_175.setContentsMargins(0, 0, 0, 0)
-        self.valor_2 = QLabel(self.frame_203)
-        self.valor_2.setObjectName(u"valor_2")
-        self.valor_2.setFont(font13)
-        self.valor_2.setStyleSheet(u"color: rgb(255, 0, 0)")
-        self.valor_2.setAlignment(Qt.AlignCenter)
-
-        self.verticalLayout_175.addWidget(self.valor_2)
-
-
-        self.horizontalLayout_129.addWidget(self.frame_203)
-
-
-        self.verticalLayout_71.addWidget(self.pequenoHistoricoEntrada_2)
+        self.verticalLayout_71.addWidget(self.frameNovaTranzacao)
 
         self.verticalSpacer_10 = QSpacerItem(20, 40, QSizePolicy.Minimum, QSizePolicy.Expanding)
 
@@ -6106,16 +5852,6 @@ class Ui_MainWindowMW(object):
         self.categoria.setText(QCoreApplication.translate("MainWindowMW", u"Planos de Contas", None))
         self.label_217.setText(QCoreApplication.translate("MainWindowMW", u"Complemento", None))
         self.label_22.setText(QCoreApplication.translate("MainWindowMW", u"Valor", None))
-        self.codigo.setText(QCoreApplication.translate("MainWindowMW", u"1", None))
-        self.data_2.setText(QCoreApplication.translate("MainWindowMW", u"12/04/2022", None))
-        self.categoria_2.setText(QCoreApplication.translate("MainWindowMW", u"Alimenta\u00e7\u00e3o", None))
-        self.complemento.setText(QCoreApplication.translate("MainWindowMW", u"P\u00f3 de cafe", None))
-        self.valor.setText(QCoreApplication.translate("MainWindowMW", u"100,00", None))
-        self.codigo_2.setText(QCoreApplication.translate("MainWindowMW", u"1", None))
-        self.data_3.setText(QCoreApplication.translate("MainWindowMW", u"12/04/2022", None))
-        self.categoria_3.setText(QCoreApplication.translate("MainWindowMW", u"Alimenta\u00e7\u00e3o", None))
-        self.complemento_2.setText(QCoreApplication.translate("MainWindowMW", u"P\u00f3 de cafe", None))
-        self.valor_2.setText(QCoreApplication.translate("MainWindowMW", u"100,00", None))
         self.pushButton_29.setText(QCoreApplication.translate("MainWindowMW", u"Buscar", None))
         self.pushButton_30.setText(QCoreApplication.translate("MainWindowMW", u"Exportar PDF", None))
         ___qtablewidgetitem = self.tableWidget.horizontalHeaderItem(0)
