@@ -14,6 +14,7 @@ from ui_Movimentação import Movimentacao
 from ui_barraMovimentação import BarraMovimentacao
 from ui_HistoricoEntradaSaida import HistoricoEntradaSaida
 from ui_contasAreceber import ContasAreceber
+
 from ui_ReceberPagamento import ReceberPagamento
 from ui_barraReceberConta import BarraReceberConta
 
@@ -1821,29 +1822,31 @@ class MainwindowSC(QMainWindow):
         data = ano + "-" + mes + "-" + dia
         return data
 
+
+    # este metodo e responsavel por fazer a busca dos dados de movimenção
     def buscar(self):
         select = 'SELECT * FROM MovimentacaoFinanceira '
 
-        if self.buscarCategoria != 0:
+        if "" != self.buscarCategoria != 0 :
             select += f"WHERE categoria = '{str(self.buscarCategoria)}'"
-            print(self.buscarCategoria)
 
-        if self.ui.dataMovimentacaoInicio.text() == self.ui.dataMovimentacaofim.text() != '01/01/2010':
-            if self.buscarCategoria == 0:
-                data = self.converterModeloData(self.ui.dataMovimentacaoInicio.text())
-                select += f" WHERE data = '{data}'"
+        if self.ui.dataMovimentacaofim.text() != '01/01/2010':
+            if self.ui.dataMovimentacaoInicio.text() == self.ui.dataMovimentacaofim.text():
+                if self.buscarCategoria == 0:
+                    data = self.converterModeloData(self.ui.dataMovimentacaoInicio.text())
+                    select += f" WHERE data = '{data}'"
+                else:
+                    data = self.converterModeloData(self.ui.dataMovimentacaoInicio.text())
+                    select += f" AND data = '{data}'"
             else:
-                data = self.converterModeloData(self.ui.dataMovimentacaoInicio.text())
-                select += f" AND data = '{data}'"
-        else:
-            if self.buscarCategoria == 0:
-                data1 = self.converterModeloData(self.ui.dataMovimentacaoInicio.text())
-                data2 = self.converterModeloData(self.ui.dataMovimentacaofim.text())
-                select += f" WHERE data BETWEEN '{data1}' AND '{data2}'"
-            else:
-                data1 = self.converterModeloData(self.ui.dataMovimentacaoInicio.text())
-                data2 = self.converterModeloData(self.ui.dataMovimentacaofim.text())
-                select += f" AND data BETWEEN '{data1}' AND '{data2}'"
+                if self.buscarCategoria == 0:
+                    data1 = self.converterModeloData(self.ui.dataMovimentacaoInicio.text())
+                    data2 = self.converterModeloData(self.ui.dataMovimentacaofim.text())
+                    select += f" WHERE data BETWEEN '{data1}' AND '{data2}'"
+                else:
+                    data1 = self.converterModeloData(self.ui.dataMovimentacaoInicio.text())
+                    data2 = self.converterModeloData(self.ui.dataMovimentacaofim.text())
+                    select += f" AND data BETWEEN '{data1}' AND '{data2}'"
 
 
         if not self.ui.codigoBusca.text() == "":
@@ -1855,9 +1858,7 @@ class MainwindowSC(QMainWindow):
 
 
         for objeto in self.ui.frameNovaTranzacao.findChildren(QFrame):
-            # print(objeto.objectName())
             objeto.close()
-            pass
 
         for dado in dados:
             self.barraMovimentacao = BarraMovimentacao()

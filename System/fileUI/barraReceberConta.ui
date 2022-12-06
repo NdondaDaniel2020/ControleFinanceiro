@@ -94,7 +94,7 @@ border-radius:4px;</string>
         <number>0</number>
        </property>
        <item>
-        <widget class="QLabel" name="codigo">
+        <widget class="QLabel" name="numero">
          <property name="maximumSize">
           <size>
            <width>150</width>
@@ -239,7 +239,7 @@ border-radius:4px;</string>
           <string notr="true">color: rgb(170, 85, 255);</string>
          </property>
          <property name="text">
-          <string>2-prestação de serviço</string>
+          <string>prestação de serviço</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>
@@ -306,7 +306,7 @@ border-radius:4px;</string>
           <string notr="true">color: rgb(170, 85, 255);</string>
          </property>
          <property name="text">
-          <string>2-Beltrano</string>
+          <string>Beltrano</string>
          </property>
          <property name="alignment">
           <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignVCenter</set>

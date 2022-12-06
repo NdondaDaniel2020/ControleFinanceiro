@@ -1,17 +1,22 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'barraReceberContaeoySJX.ui'
+## Form generated from reading UI file 'barraReceberContaYDSzwL.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QMetaObject, QRect,QSize, Qt)
-from PySide6.QtGui import (QColor,QFont)
-from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel, QPushButton,
-                               QVBoxLayout, QWidget, QMainWindow)
+from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
+                            QMetaObject, QObject, QPoint, QRect,
+                            QSize, QTime, QUrl, Qt, QCborMap)
+from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
+    QFont, QFontDatabase, QGradient, QIcon,
+    QImage, QKeySequence, QLinearGradient, QPainter,
+    QPalette, QPixmap, QRadialGradient, QTransform)
+from PySide6.QtWidgets import (QApplication, QFrame, QHBoxLayout, QLabel,
+    QPushButton, QSizePolicy, QVBoxLayout, QWidget, QMainWindow)
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -41,17 +46,17 @@ class Ui_Form(object):
         self.verticalLayout_210.setSpacing(0)
         self.verticalLayout_210.setObjectName(u"verticalLayout_210")
         self.verticalLayout_210.setContentsMargins(0, 0, 0, 0)
-        self.codigo = QLabel(self.frame_274)
-        self.codigo.setObjectName(u"codigo")
-        self.codigo.setMaximumSize(QSize(150, 16777215))
+        self.numero = QLabel(self.frame_274)
+        self.numero.setObjectName(u"numero")
+        self.numero.setMaximumSize(QSize(150, 16777215))
         font = QFont()
         font.setFamilies([u"Segoe UI Semibold"])
         font.setPointSize(11)
-        self.codigo.setFont(font)
-        self.codigo.setStyleSheet(u"color: rgb(170, 85, 255);")
-        self.codigo.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
+        self.numero.setFont(font)
+        self.numero.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.numero.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
-        self.verticalLayout_210.addWidget(self.codigo)
+        self.verticalLayout_210.addWidget(self.numero)
 
 
         self.horizontalLayout_137.addWidget(self.frame_274)
@@ -224,10 +229,10 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.codigo.setText(QCoreApplication.translate("Form", u"1", None))
+        self.numero.setText(QCoreApplication.translate("Form", u"1", None))
         self.emissao.setText(QCoreApplication.translate("Form", u"12/04/2022", None))
-        self.categoria.setText(QCoreApplication.translate("Form", u"2-presta\u00e7\u00e3o de servi\u00e7o", None))
-        self.cliente.setText(QCoreApplication.translate("Form", u"2-Beltrano", None))
+        self.categoria.setText(QCoreApplication.translate("Form", u"presta\u00e7\u00e3o de servi\u00e7o", None))
+        self.cliente.setText(QCoreApplication.translate("Form", u"Beltrano", None))
         self.vencimento.setText(QCoreApplication.translate("Form", u"12/04/2022", None))
         self.valorTotal.setText(QCoreApplication.translate("Form", u"20.000", None))
         self.valorPago.setText(QCoreApplication.translate("Form", u"100,00", None))
@@ -242,8 +247,8 @@ class BarraReceberConta(QMainWindow):
         self.brc = Ui_Form()
         self.brc.setupUi(self)
 
-    def setValues(self, codigo, emissao, categoria, cliente, vencimento, valorTotal, valorPago):
-        self.brc.codigo.setText(str(codigo))
+    def setValues(self, numero, emissao, categoria, cliente, vencimento, valorTotal, valorPago):
+        self.brc.numero.setText(numero)
         self.brc.emissao.setText(emissao)
         self.brc.categoria.setText(categoria)
         self.brc.cliente.setText(cliente)
