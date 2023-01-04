@@ -241,7 +241,7 @@ class Ui_Form(object):
 
 
 
-class BarraReceberConta(QMainWindow):
+class BarraContaReceber(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
         self.brc = Ui_Form()

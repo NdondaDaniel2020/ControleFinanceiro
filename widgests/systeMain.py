@@ -1,7 +1,7 @@
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
-from PySide6.QtCharts import QChart, QChartView
+from PySide6.QtCharts import QChart, QChartView, QBarCategoryAxis, QBarSeries, QBarSet, QValueAxis
 
 from packeg.custom_grips import CustomGrip
 from packeg.circular_progress import CircularProgress
@@ -11,12 +11,9 @@ from packeg.database import database
 from ui_SystemSC import Ui_SplashCreen
 from ui_SystemMW import Ui_MainWindowMW
 from ui_Movimentação import Movimentacao
+from ui_barraCategoria import BarraCategoria
 from ui_barraMovimentação import BarraMovimentacao
 from ui_HistoricoEntradaSaida import HistoricoEntradaSaida
-from ui_contasAreceber import ContasAreceber
-
-from ui_ReceberPagamento import ReceberPagamento
-from ui_barraReceberConta import BarraReceberConta
 
 from time import sleep
 from datetime import date
@@ -121,7 +118,7 @@ class SplashCreen(QMainWindow):
         self.sc.senhaIncorreta_3.close()
         self.atraso = False
 
-        # variaveis de obj
+        # atributos de obj
         self.senha_login_name = 0
         self.passwor2Cont = 0
         self.passwor1Cont = 0
@@ -210,8 +207,8 @@ class SplashCreen(QMainWindow):
 
         QTimer.singleShot(10, lambda: self.progressCircleTimer.start())  # inicialisaçãa do Timer com um controlador de
         # tempo
-        QTimer.singleShot(6000, lambda: self.AnimatioOpacity())
-        QTimer.singleShot(6100, lambda: self.OpenResize())  # funcão com documentação. está com controlador de tempo
+        QTimer.singleShot(5000, lambda: self.AnimatioOpacity())
+        QTimer.singleShot(5500, lambda: self.OpenResize())  # funcão com documentação. está com controlador de tempo
         # esta é uma das formas de corrigir o erro de aimagem mudar de posição só
         # QTimer.singleShot(2500, lambda: self.opacityLabel())
         QTimer.singleShot(7500, lambda: self.TestWebCam())
@@ -1051,28 +1048,30 @@ class SplashCreen(QMainWindow):
 
 class MainwindowSC(QMainWindow):
     def __init__(self):
+        global NOMEUSER
         QMainWindow.__init__(self)
         self.ui = Ui_MainWindowMW()
         self.ui.setupUi(self)
 
-        self.move(100, 4)
+        self.move(126, 35)
 
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
-        self.setMinimumSize(1195, 760)
+        self.setMinimumSize(1095, 695)
+        self.setGeometry(126, 35, 1095, 695)
         self.toobtn = True
 
-
+        self.historicoEntradaCont = 0
+        self.hitoricoSaidaCont = 0
 
         self.database = database("ControleFinanceiro")
         self.dataAtual = self.pegarData()
         self.analizarUltimasTranzacoes()
         self.novaMovimentacao = Movimentacao()
-        self.contaReceber = ContasAreceber()
-        self.pagarConta = ReceberPagamento()
         self.analizeEntradaSaidaValores()
         self.adicionaCategoriaPlanoContasBusca()
-
+        self.adicionarCategoriaAutomatic()
+        self.informacoesUser()
         self.eventoConnect()
 
         self.ui.minimisar.clicked.connect(lambda: self.showMinimized())
@@ -1080,53 +1079,58 @@ class MainwindowSC(QMainWindow):
         self.ui.fechar.clicked.connect(lambda: quit())
 
         self.ui.settings.clicked.connect(self.leftmenu)
-        self.ui.double_up.clicked.connect(self.scrollAreaAnimat)  ##
-        self.ui.web_btn.clicked.connect(self.areaClick)
-        self.ui.help_btn.clicked.connect(self.areaClick)
-        self.ui.setting_btn.clicked.connect(self.areaClick)
-        self.ui.coins_btn.clicked.connect(self.areaClick)
-        self.ui.setting_user_btn.clicked.connect(self.areaClick)
-        self.ui.editTest.clicked.connect(self.areaClick)
+        self.ui.movimentacao_btn3.clicked.connect(self.areaClick)
+        self.ui.fluxodecaixa.clicked.connect(self.areaClick)
         self.ui.perfil_btn.clicked.connect(self.areaClick)
-        self.ui.web_btn_2.clicked.connect(self.areaClick)
+        self.ui.movimentacao_btn.clicked.connect(self.areaClick)
+        self.ui.movimentacao_btn2.clicked.connect(self.areaClick)
         self.ui.Home.clicked.connect(self.areaClick)
-        self.ui.GoogleFinance_btl.clicked.connect(self.areaClick)
-        self.ui.YahooFinance_btn.clicked.connect(self.areaClick)
-
-        self.ui.Investing_btn.clicked.connect(self.areaClick)
-        self.ui.BLHL_btn.clicked.connect(self.areaClick)
-        self.ui.Infomaney_btn.clicked.connect(self.areaClick)
-        self.ui.Dinherama_btn.clicked.connect(self.areaClick)
-        self.ui.CMEgroup_btn.clicked.connect(self.areaClick)
-        self.ui.Economia_btn.clicked.connect(self.areaClick)
-        self.ui.help_btnF_2.clicked.connect(self.areaClick)
+        self.ui.frame_user_list_btn.clicked.connect(self.areaClick)
+        self.ui.categoria_btn.clicked.connect(self.areaClick)
 
         self.novaMovimentacao.mov.movimentar.clicked.connect(self.ValorNomvaMovimentacao)
         self.ui.novaMovimentacao.clicked.connect(self.showMovimentacao)
-        self.contaReceber.ca.adicionarConta.clicked.connect(self.adicionarContasAReceber)
-        self.ui.contaReceber.clicked.connect(self.showContasAReceber)
-        self.ui.pagarConta.clicked.connect(self.showPaqgarConta)
-        self.pagarConta.rp.adicionarConta.clicked.connect(self.metodpagarConta)
         self.ui.buscar.clicked.connect(self.buscar)
         self.ui.planoContasBusca.currentTextChanged.connect(self.selectCategoriaBuscador)
         self.buscarCategoria = 0
+        self.ui.planoContasBuscaFluxo.currentTextChanged.connect(self.PegarValorTotCategoria)
+
+        self.ui.salvarAlteracao.clicked.connect(self.alterarNomeSenha)
+        self.ui.salvarAlteracao_2.clicked.connect(self.AdicionarCategoriaNaUI)
+        self.ui.editFotho.clicked.connect(self.editArq)
+        self.ui.exit.clicked.connect(self.exit)
+
+        self.analizeValorConst = 0
+        self.analizeValorTime = QTimer()
+        self.analizeValorTime.timeout.connect(lambda: self.analizeValor(len(self.novaMovimentacao.mov.valor.text())))
+
+        self.analizeNomeConst = 0
+        self.analizeNomeTime = QTimer()
+        self.analizeNomeTime.timeout.connect(lambda: self.analizeNome(len(self.novaMovimentacao.mov.nome.text())))
+
+        self.analizeTranzecaoConst = 0
+        self.analizeTranzecaoTime = QTimer()
+        self.analizeTranzecaoTime.timeout.connect(
+            lambda: self.analizeTranzacao(len(self.novaMovimentacao.movimentarNome)))
+
+
 
         self.left = CustomGrip(self, Qt.LeftEdge, True)
         self.right = CustomGrip(self, Qt.RightEdge, True)
         self.top = CustomGrip(self, Qt.TopEdge, True)
         self.bottom = CustomGrip(self, Qt.BottomEdge, True)
 
-        # self.adicionandoGrafico()
+        self.adicionandoGraficoDinamico()
+        self.graficodeDados()
+        self.graficoCategoria()
 
         self.show()  # mostrar janela
-
 
     # pega a posicao global
     def mousePressEvent(self, event):
         self.dragPos = event.globalPos()
-        self.dragPosScroll = self.ui.scrollArea.horizontalScrollBar().value()
+        self.dragPosScrollHome = self.ui.scrollArea_Home.horizontalScrollBar().value()
         self.dragPosScroll2 = self.ui.scrollArea_6.horizontalScrollBar().value()
-
 
     # eventos e coneccoes
     def eventoConnect(self):
@@ -1149,118 +1153,27 @@ class MainwindowSC(QMainWindow):
         self.ui.barraTitulo.mouseMoveEvent = moveWindow  # MOVER JANELA
         self.ui.barraTitulo.mouseDoubleClickEvent = mouseDoubleClickEvent  # MAXIMIZA E MINIMIZAR A JANELA
 
-        #############################################################################
-        # TOSD OS EVENTOS A BAIXO SAO EVENTOS DE CLICK DO FRAMES DE TECNOLOGIA
-
-        def GoogleFinanceMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.google.com/finance/?hl=pt")
-
-        def YahooFinanceMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://finance.yahoo.com/")
-
-        def InvestingMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, """https://www.investing.com/""")
-
-        def BLHLMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0,
-                                  "https://www.nutsaboutmoney.com/investing/hargreaves-lansdown-alternatives")
-
-        def InfomaneyMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.infomoney.com.br/")
-
-        def DinheramaMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://dinheirama.com/")
-
-        def CMEgroupMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.cmegroup.com/")
-
-        def EconomiaMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://economia.uol.com.br/cotacoes/")
-
-        def AndroidMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://www.android.com/")
-
-        def HelpMousePressEvent(event: QMouseEvent):
-            if event.button() == Qt.LeftButton:
-                self.simpficaLond(self.ui.page_Extras, 0, "https://dinheirama.com/")
-
-        self.ui.frame_GoogleFinance.mousePressEvent = GoogleFinanceMousePressEvent
-        self.ui.frame_YahooFinance.mousePressEvent = YahooFinanceMousePressEvent
-        self.ui.frame_Investing.mousePressEvent = InvestingMousePressEvent
-        self.ui.frame_BLHL.mousePressEvent = BLHLMousePressEvent
-        self.ui.frame_Infomaney.mousePressEvent = InfomaneyMousePressEvent
-        self.ui.frame_Dinherama.mousePressEvent = DinheramaMousePressEvent
-        self.ui.frame_CMEgroup.mousePressEvent = CMEgroupMousePressEvent
-        self.ui.frame_Economia.mousePressEvent = EconomiaMousePressEvent
-        self.ui.frame_Helpe.mousePressEvent = HelpMousePressEvent
-        self.ui.help_lbl.mousePressEvent = HelpMousePressEvent
-
-        #######################################################################
-        # evento responsavel por mover o scroll pelos frmames
-
-        self.scrollPrimary = 0
-        self.cursorPrimary = 0
-        self.logCursor = True
-        self.dragPosScroll = self.ui.scrollArea.horizontalScrollBar().value()
-
-        def moveScroll(event: QMouseEvent):
+        def mousePressEventUserPerfil(event):
             if event.buttons() == Qt.LeftButton:
-                if self.cursorPrimary == 0 and self.logCursor == True:
-                    self.cursorPrimary = self.cursor().pos().x()
-                    self.logCursor = False
+                self.ui.stackedWidget.setCurrentWidget(self.ui.page_perfil)
+                self.ui.stackedWidget_2.setCurrentWidget(self.ui.page_perfilUsuario)
 
-                valor = (self.cursor().pos().x() - (self.cursorPrimary + self.scrollPrimary))
-                self.ui.scrollArea.horizontalScrollBar().setValue(self.dragPosScroll - valor)
-                event.accept()
+        self.ui.frame_user_perfil.mousePressEvent = mousePressEventUserPerfil
 
-        def releasecroll(event: QMouseEvent):
-            if event.type() == QEvent.MouseButtonRelease:
-                self.cursorPrimary = 0
-                self.logCursor = True
-                self.scrollPrimary = self.ui.scrollArea.horizontalScrollBar().value()
-                event.accept()
+        def mousePressEventCategoriaBtn(event):
+            if event.buttons() == Qt.LeftButton:
+                self.ui.stackedWidget.setCurrentWidget(self.ui.page_perfil)
+                self.ui.stackedWidget_2.setCurrentWidget(self.ui.page_Categoria)
 
-        # conectcoes responsavel por mover o scroll pelos frmames
-        self.ui.frame_GoogleFinance.mouseMoveEvent = moveScroll
-        self.ui.frame_GoogleFinance.mouseReleaseEvent = releasecroll
+        self.ui.frame_CategoriaBtn.mousePressEvent = mousePressEventCategoriaBtn
 
-        self.ui.frame_CMEgroup.mouseMoveEvent = moveScroll
-        self.ui.frame_CMEgroup.mouseReleaseEvent = releasecroll
+        def mousePressEvent(event):
+            if event.buttons() == Qt.LeftButton:
+                self.ui.stackedWidget.setCurrentWidget(self.ui.page_ControleFinanceiro)
 
-        self.ui.frame_YahooFinance.mousePressEvent = moveScroll
-        self.ui.frame_YahooFinance.mouseReleaseEvent = releasecroll
+        self.ui.frame_movimentacao.mousePressEvent = mousePressEvent
 
-        self.ui.frame_Helpe.mousePressEvent = moveScroll
-        self.ui.frame_Helpe.mouseReleaseEvent = releasecroll
-
-        self.ui.frame_Economia.mouseMoveEvent = moveScroll
-        self.ui.frame_Economia.mouseReleaseEvent = releasecroll
-
-        self.ui.frame_Dinherama.mouseMoveEvent = moveScroll
-        self.ui.frame_Dinherama.mouseReleaseEvent = releasecroll
-
-        self.ui.frame_Infomaney.mouseMoveEvent = moveScroll
-        self.ui.frame_Infomaney.mouseReleaseEvent = releasecroll
-
-        self.ui.frame_BLHL.mouseMoveEvent = moveScroll
-        self.ui.frame_BLHL.mouseReleaseEvent = releasecroll
-
-        self.ui.frame_Investing.mouseMoveEvent = moveScroll
-        self.ui.frame_Investing.mouseReleaseEvent = releasecroll
-
-        ########################################################
-        ##### scroll das configuaracoes #######################
-
-        #### evento responsavel por mover o scroll pelos frmames
+        #### evento responsavel por mover o scroll pelos frmames ####
 
         self.scrollPrimary2 = 0
         self.cursorPrimary2 = 0
@@ -1283,17 +1196,55 @@ class MainwindowSC(QMainWindow):
                 self.scrollPrimary2 = self.ui.scrollArea_6.horizontalScrollBar().value()
                 event.accept()
 
-        self.ui.frame_Browsin_history.mouseMoveEvent = moveScroll2
-        self.ui.frame_Browsin_history.mouseReleaseEvent = releasecroll2
-
         self.ui.frame_opening_history.mouseMoveEvent = moveScroll2
         self.ui.frame_opening_history.mouseReleaseEvent = releasecroll2
 
-        self.ui.frame_user_list.mouseMoveEvent = moveScroll2
-        self.ui.frame_user_list.mouseReleaseEvent = releasecroll2
+        self.ui.frame_CategoriaBtn.mouseMoveEvent = moveScroll2
+        self.ui.frame_CategoriaBtn.mouseReleaseEvent = releasecroll2
+
+        self.ui.frame_user_perfil.mouseMoveEvent = moveScroll2
+        self.ui.frame_user_perfil.mouseReleaseEvent = releasecroll2
 
         self.ui.frame_password_faceId.mouseMoveEvent = moveScroll2
         self.ui.frame_password_faceId.mouseReleaseEvent = releasecroll2
+
+        ####################################################################################
+
+
+        #### evento responsavel por mover o scroll pelos frmames ####
+
+        self.scrollPrimary = 0
+        self.cursorPrimary = 0
+        self.logCursor = True
+        self.dragPosScrollHome = self.ui.scrollArea_Home.horizontalScrollBar().value()
+
+        def moveScrollAreaHome(event: QMouseEvent):
+            if event.buttons() == Qt.LeftButton:
+                if self.cursorPrimary == 0 and self.logCursor == True:
+                    self.cursorPrimary = self.cursor().pos().x()
+                    self.logCursor = False
+                valor = (self.cursor().pos().x() - (self.cursorPrimary))
+                self.ui.scrollArea_Home.horizontalScrollBar().setValue(self.dragPosScrollHome - valor)
+                event.accept()
+
+        def releaseScrollAreaHome(event: QMouseEvent):
+            if event.type() == QEvent.MouseButtonRelease:
+                self.cursorPrimary = 0
+                self.logCursor = True
+                self.scrollPrimary = self.ui.scrollArea_Home.horizontalScrollBar().value()
+                event.accept()
+
+        self.ui.frame_movimentacao.mouseMoveEvent = moveScrollAreaHome
+        self.ui.frame_movimentacao.mouseReleaseEvent = releaseScrollAreaHome
+
+        self.ui.frame_207.mouseMoveEvent = moveScrollAreaHome
+        self.ui.frame_207.mouseReleaseEvent = releaseScrollAreaHome
+
+        self.ui.frame_user_list_3.mouseMoveEvent = moveScrollAreaHome
+        self.ui.frame_user_list_3.mouseReleaseEvent = releaseScrollAreaHome
+
+        self.ui.frame_210.mouseMoveEvent = moveScrollAreaHome
+        self.ui.frame_210.mouseReleaseEvent = releaseScrollAreaHome
 
 
     # metodo responsavel por maximizar e minimizar
@@ -1312,15 +1263,10 @@ class MainwindowSC(QMainWindow):
             icon = QIcon()
             icon.addFile(u"../img/24x24/cil-window-restore.png", QSize(), QIcon.Normal, QIcon.Off)
             self.ui.NormalMax.setIcon(icon)
-            self.ui.scrollArea.setStyleSheet("QscrolAir{background-color: rgb(85, 255, 255);}"
-                                             "QFrame{border-radius:15px;}")
             self.top.hide()
             self.bottom.hide()
             self.left.hide()
             self.right.hide()
-
-
-
         else:
             self.ui.linha.setStyleSheet("background-color: rgb(255, 255, 255);border-radius:15px;")
             self.ui.primeiro_container.setStyleSheet("""background-color: rgb(170, 85, 255);border-radius:15px;""")
@@ -1338,11 +1284,9 @@ class MainwindowSC(QMainWindow):
             icon.addFile(u"../img/24x24/cil-media-stop.png", QSize(), QIcon.Normal, QIcon.Off)
             self.ui.NormalMax.setIcon(icon)
 
-
     # ativa o ajust da janela
     def resizeEvent(self, event):
         self.resizeGrips()
-
 
     # metodo responsavel pelo ajuste da janela
     def resizeGrips(self):
@@ -1350,7 +1294,6 @@ class MainwindowSC(QMainWindow):
         self.right.setGeometry(self.width() - 10, 10, 10, self.height())
         self.top.setGeometry(0, 0, self.width(), 10)
         self.bottom.setGeometry(0, self.height() - 10, self.width(), 10)
-
 
     # metodo que anima o menu lateral
     def leftmenu(self):
@@ -1408,100 +1351,22 @@ class MainwindowSC(QMainWindow):
         self.grounpLeft.addAnimation(self.criadoAnimation)
         self.grounpLeft.start()
 
-
-    # a metodo que anima o tec zone
-    def scrollAreaAnimat(self):
-        #########################################################################################
-        tamanho_atual = self.ui.frame_MarcaTech.height()  # self.ui.scrollArea.height()
-
-        if tamanho_atual == 0:
-            ai = 0
-            af = 120
-            i = 0
-            f = 120
-            icon = QIcon()
-            icon.addFile(u"../img/24x24/cil-chevron-double-down-alt.png", QSize(), QIcon.Normal, QIcon.Off)
-            self.ui.double_up.setIcon(icon)
-            self.ui.double_up.setIconSize(QSize(50, 40))
-
-        else:
-            i = 120
-            f = 0
-            ai = 120
-            af = 0
-            icon = QIcon()
-            icon.addFile(u"../img/24x24/cil-chevron-double-up-alt.png", QSize(), QIcon.Normal, QIcon.Off)
-            self.ui.double_up.setIcon(icon)
-            self.ui.double_up.setIconSize(QSize(25, 25))
-
-        self.scrollAreaAnimaton = QPropertyAnimation(self.ui.scrollArea, b'minimumHeight')
-        self.scrollAreaAnimaton.setStartValue(i)
-        self.scrollAreaAnimaton.setEndValue(f)
-        self.scrollAreaAnimaton.setDuration(400)
-        self.scrollAreaAnimaton.setEasingCurve(QEasingCurve.InOutCirc)
-        self.scrollAreaAnimaton.start()
-
-        self.scrollframeAreaAnimaton = QPropertyAnimation(self.ui.frame_MarcaTech, b'minimumHeight')
-        self.scrollframeAreaAnimaton.setStartValue(ai)
-        self.scrollframeAreaAnimaton.setEndValue(af)
-        self.scrollframeAreaAnimaton.setDuration(400)
-        self.scrollframeAreaAnimaton.setEasingCurve(QEasingCurve.InOutCirc)
-        self.scrollframeAreaAnimaton.start()
-
-
     # e o metodo responsavelo elas funcoes dos clicke
     def areaClick(self):
         name_btn = self.sender().objectName()
 
-        if name_btn == 'web_btn' or name_btn == 'web_btn_2':
-            self.simpficaLond(self.ui.page_ControleDeContaAReceber, 0)
-        elif name_btn == 'help_btn':
-            self.simpficaLond(self.ui.page_Extras, 0)
-        elif name_btn == 'GoogleFinance_btl':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.google.com/finance/?hl=pt")
-        elif name_btn == 'YahooFinance_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://finance.yahoo.com/")
-        elif name_btn == 'Investing_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, """https://www.investing.com/""")
-        elif name_btn == 'BLHL_btn':
-            self.simpficaLond(self.ui.page_Extras, 0,
-                              "https://www.nutsaboutmoney.com/investing/hargreaves-lansdown-alternatives")
-        elif name_btn == 'Infomaney_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.infomoney.com.br/")
-        elif name_btn == 'Dinherama_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://dinheirama.com/")
-        elif name_btn == 'CMEgroup_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.cmegroup.com/")
-        elif name_btn == 'Economia_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://economia.uol.com.br/cotacoes/")
-        elif name_btn == 'raspberry_btn':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.raspberrypi.org/")
-        elif name_btn == 'help_btnF_2':
-            self.simpficaLond(self.ui.page_Extras, 0, "https://www.thesource.ca/en-ca")  ##############################
-        elif name_btn == 'perfil_btn':
-            self.simpficaLond(self.ui.page_perfil)
-        elif name_btn == 'setting_btn':
-            self.simpficaLond(self.ui.page_ControlFinace, 0)
-        elif name_btn == 'coins_btn':
-            self.simpficaLond(self.ui.page_CoinsQuote, 0)
-        elif name_btn == 'setting_user_btn':
-            self.simpficaLond(self.ui.page_perfil, 0)
-        elif name_btn == 'editTest':
-            self.simpficaLond(self.ui.page_edit, 1)
+        if name_btn == 'movimentacao_btn' or name_btn == 'movimentacao_btn2' or name_btn == 'movimentacao_btn3':
+            self.ui.stackedWidget.setCurrentWidget(self.ui.page_ControleFinanceiro)
+        elif name_btn == 'perfil_btn' or name_btn == 'frame_user_list_btn':
+            self.ui.stackedWidget.setCurrentWidget(self.ui.page_perfil)
+            self.ui.stackedWidget_2.setCurrentWidget(self.ui.page_perfilUsuario)
+        elif name_btn == 'categoria_btn':
+            self.ui.stackedWidget.setCurrentWidget(self.ui.page_perfil)
+            self.ui.stackedWidget_2.setCurrentWidget(self.ui.page_Categoria)
+        elif name_btn == 'fluxodecaixa':
+            self.ui.stackedWidget.setCurrentWidget(self.ui.page_FluxodeCaixa)
         elif name_btn == 'Home':
-            self.simpficaLond(self.ui.page_Home, 0)
-        elif name_btn == 'toolButton':
-
-            # este codigo mida o icon do leitor
-            if self.toobtn:
-                icon15 = QIcon()
-                icon15.addFile(u"../img/24x24/cil-volume-off.png", QSize(), QIcon.Normal, QIcon.Off)
-                self.ui.toolButton.setIcon(icon15)
-            else:
-                icon15 = QIcon()
-                icon15.addFile(u"../img/24x24/cil-volume-high.png", QSize(), QIcon.Normal, QIcon.Off)
-                self.ui.toolButton.setIcon(icon15)
-
+            self.ui.stackedWidget.setCurrentWidget(self.ui.page_Home)
 
     #  lond e o metodo que carrega o segundo webBroeser navegagor
     def loand(self, inputURL):
@@ -1510,45 +1375,8 @@ class MainwindowSC(QMainWindow):
         if url.isValid():
             self.ui.webEngineView_2.load(url)
 
-
-    # este metodo simplifica o processamento web e a troca de pagina
-    def simpficaLond(self, page=None, n=0, url=''):
-
-        if url != "":
-            self.loand(url)
-            self.ui.stackedWidget.setCurrentWidget(page)
-        else:
-            self.ui.stackedWidget.setCurrentWidget(page)
-
-
-    # metodo que abri , salva, e cria um arquivo de texto para as suas escritas
-    def editArq(self):
-        global PEGARaRQUIVO
-        name_button = self.sender().objectName()
-
-        if not PEGARaRQUIVO:
-            if name_button == "save":
-                if self.ui.save.text() == "New":
-                    # criar u arquivo
-                    arquivNew = QFileDialog.getOpenFileUrls(self, self.tr("Creat File"), self.tr("Text (*.txt)"))
-                else:
-                    saveArq = QFileDialog.getSaveFileName(self, self.tr("Save File"), "", self.tr("Text (*.txt)"))
-                    # se nao ter um aberto , criar um
-                    if not saveArq[0] == "":
-                        with open(saveArq[0], 'w') as file:
-                            file.write(self.ui.plainTextEdit.toPlainText())
-
-            else:
-                openArq = QFileDialog.getOpenFileNames(parent=self, caption=self.tr('Open File'),
-                                                       filter=self.tr('Text fole (*.txt)'))
-
-                if not openArq[0] == "":
-                    with open(openArq[0][0], 'r') as file:
-                        self.ui.plainTextEdit.setPlainText(file.read())
-
     # este metodo e responsavel por add  o grafico na interface na HOME page
-    def adicionandoGrafico(self):
-
+    def adicionandoGraficoDinamico(self):
         chart = Chart()
         # chart.setTitle("Dados de todas entradas saidas")
         chart.legend().hide()
@@ -1558,6 +1386,60 @@ class MainwindowSC(QMainWindow):
 
         self.ui.verticalLayout_graficoMain.addWidget(chart_view)
 
+    # grafico FluxoDe caixa
+    def graficodeDados(self):
+        self.database.connect_database()
+        valorMaximo = self.database.executarFetchone("select max(valor) FROM MovimentacaoFinanceira")
+        listaDados = self.database.executarFetchall("""select valor, tranzacao from  MovimentacaoFinanceira;""")
+
+        self.database.disconnect_database()
+
+        entrada = []
+        saida = []
+
+        for dados in listaDados:
+
+            if dados[1] == 'entrada':
+                entrada.append(dados[0])
+            else:
+                saida.append(dados[0])
+
+        self.set_0 = QBarSet("Entrada")
+        self.set = QBarSet("Sida")
+
+        self.set_0.append(entrada)
+        self.set.append(saida)
+
+        self.set_0.setColor(QColor(85, 255, 127))
+        self.set.setColor(QColor(255, 0, 0))
+
+        self.series = QBarSeries()
+        self.series.append(self.set_0)
+        self.series.append(self.set)
+
+        self.chart = QChart()
+        self.chart.addSeries(self.series)
+        self.chart.setTitle("Simple barchart example")
+        self.chart.setAnimationOptions(QChart.SeriesAnimations)
+
+        self.categories = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"]
+        self.axis_x = QBarCategoryAxis()
+        self.axis_x.append(self.categories)
+        self.chart.addAxis(self.axis_x, Qt.AlignBottom)
+        self.series.attachAxis(self.axis_x)
+
+        self.axis_y = QValueAxis()
+        self.axis_y.setRange(0, valorMaximo[0])
+        self.chart.addAxis(self.axis_y, Qt.AlignLeft)
+        self.series.attachAxis(self.axis_y)
+
+        self.chart.legend().setVisible(True)
+        self.chart.legend().setAlignment(Qt.AlignBottom)
+
+        self._chart_view = QChartView(self.chart)
+        self._chart_view.setRenderHint(QPainter.Antialiasing)
+
+        self.ui.verticalLayout_GraficoDados.addWidget(self._chart_view)
 
     # este metodo e responsavel por por a categoia no planoContasBusca
     def adicionaCategoriaPlanoContasBusca(self):
@@ -1569,16 +1451,18 @@ class MainwindowSC(QMainWindow):
 
         self.ui.planoContasBusca.addItem("")
         self.ui.planoContasBusca.setItemText(0, QCoreApplication.translate("Form", " ", None))
+        self.ui.planoContasBuscaFluxo.addItem("")
+        self.ui.planoContasBuscaFluxo.setItemText(0, QCoreApplication.translate("Form", " ", None))
 
         for dado in dados:
             self.ui.planoContasBusca.addItem("")
             self.ui.planoContasBusca.setItemText(dado[0], QCoreApplication.translate("Form", dado[1], None))
-
+            self.ui.planoContasBuscaFluxo.addItem("")
+            self.ui.planoContasBuscaFluxo.setItemText(dado[0], QCoreApplication.translate("Form", dado[1], None))
 
     # este metodo é reponsavelo pela movimentação
     def showMovimentacao(self):
         self.novaMovimentacao.show()
-
 
     # est6e metodo e responsavel por pegar data
     def pegarData(self):
@@ -1587,9 +1471,8 @@ class MainwindowSC(QMainWindow):
 
         return str(dataAgoara)
 
-
     # este e um tetodo tesponsavel por contar as Movimentações financeiras
-    def contarMovimentação(self):
+    def contarMovimentacao(self):
         self.database.connect_database()
         dados = self.database.executarFetchall("SELECT * FROM MovimentacaoFinanceira")
         self.database.disconnect_database()
@@ -1597,19 +1480,20 @@ class MainwindowSC(QMainWindow):
         conta = len(dados)
         return conta + 1
 
-
     # este metodo e responsavel por enviar do
     # dados em forma de tabelas na interface na zona de movimentação finaceira
     def enviarDadosEmMovimentacaoFinaceira(self, codigo=0, titulo='', valor='', tranzacao='', categoria=''):
         self.barraMovimentacao = BarraMovimentacao()
-
+        self.barraMovimentacao2 = BarraMovimentacao()
         if codigo == 0:
-            codigo = self.contarMovimentação()
+            codigo = self.contarMovimentacao()
 
         if titulo != "" and valor != "" and tranzacao != "" and categoria != "":
             valor2 = self.porPontoValor(valor)
             self.barraMovimentacao.setValues(codigo, self.dataAtual, categoria, titulo, valor2, tranzacao)
-            self.ui.verticalLayout_ScrolNovaTranzacao.addWidget(self.barraMovimentacao.bm.pequenoHistoricoEntrada)
+            self.ui.verticalLayout_ScrolNovaTranzacao.insertWidget(codigo - 1,
+                                                                   self.barraMovimentacao.bm.pequenoHistoricoEntrada)
+            self.ui.verticalLayout_fluxo.insertWidget(codigo - 1, self.barraMovimentacao2.bm.pequenoHistoricoEntrada)
             self.novaMovimentacao.close()
             self.historicoMovimentacao(titulo, valor, tranzacao)
             ncategoria = self.encontraIndeceCategoria(categoria)
@@ -1619,18 +1503,108 @@ class MainwindowSC(QMainWindow):
             values ('{self.dataAtual}', '{ncategoria}', '{titulo}', '{valor}', '{tranzacao}')""")
             self.database.disconnect_database()
             self.analizeEntradaSaidaValores()
-            self.novaMovimentacao.mov.Titulo.setText("")
+            self.novaMovimentacao.mov.nome.setText("")
             self.novaMovimentacao.mov.valor.setText("")
-
 
     # este metodo mostra ajanela de movimentação
     def ValorNomvaMovimentacao(self):
-        titulo = self.novaMovimentacao.mov.Titulo.text()
+        nome = self.novaMovimentacao.mov.nome.text()
         valor = self.novaMovimentacao.mov.valor.text()
         tranzacao = self.novaMovimentacao.movimentarNome
         categoria = self.novaMovimentacao.categoria
-        self.enviarDadosEmMovimentacaoFinaceira(0, titulo, valor, tranzacao, categoria)
 
+        passNome = False
+        passValor = False
+        passTarnzacao = False
+        passCategoria = False
+
+        if nome == "" or nome == " ":
+            self.novaMovimentacao.mov.nome.setStyleSheet("""background-color: rgb(170, 85, 255);
+                                                                                         border-radius:5px;
+                                                                                         color: rgb(255, 0, 0);
+                                                                                         padding-left:5px;""")
+            self.analizeNomeConst = len(str(valor))
+            self.analizeNomeTime.start()
+        else:
+            passNome = True
+
+        if valor.isnumeric():
+            passValor = True
+        else:
+            self.novaMovimentacao.mov.valor.setStyleSheet("""background-color: rgb(170, 85, 255);
+                                                             border-radius:5px;
+                                                             color: rgb(255, 0, 0);
+                                                             padding-left:5px;""")
+            self.analizeValorConst = len(str(valor))
+            self.analizeValorTime.start()
+
+        if tranzacao == "":
+            self.novaMovimentacao.alerta(True)
+        else:
+            passTarnzacao = True
+
+        if categoria == "":
+            self.novaMovimentacao.alertaCategoria()
+        else:
+            passCategoria = True
+
+        if passCategoria == passTarnzacao == passValor == passNome:
+            self.enviarDadosEmMovimentacaoFinaceira(0, nome, valor, tranzacao, categoria)
+
+    ##### estes tres metodos abaixo são verificadores  do tamanho de STR ####
+    def analizeValor(self, n):
+        if n != self.analizeValorConst:
+            self.novaMovimentacao.mov.valor.setStyleSheet("""
+            background-color: rgb(170, 85, 255);
+            border-radius: 5px;
+            color: rgb(255, 255, 255);
+            padding-left: 5px;""")
+            self.analizeValorTime.stop()
+
+    def analizeNome(self, n):
+        if n != self.analizeNomeConst:
+            self.novaMovimentacao.mov.nome.setStyleSheet("""
+              background-color: rgb(170, 85, 255);
+              border-radius: 5px;
+              color: rgb(255, 255, 255);
+              padding-left: 5px;""")
+            self.analizeNomeTime.stop()
+
+    def analizeTranzacao(self, n):
+        if n != self.analizeTranzecaoConst:
+            self.novaMovimentacao.mov.entrada.setStyleSheet("""
+              QPushButton{
+background-color: rgb(170, 85, 255);
+border-radius: 5px;
+color: rgb(85, 255, 127);
+}
+
+QPushButton:hover{
+background-color: rgb(165, 82, 247);
+border-radius: 5px;
+}
+
+QPushButton:pressed{
+background-color: rgb(170, 85, 255);
+border-radius: 5px;
+}""")
+            self.novaMovimentacao.mov.saida.setStyleSheet("""
+                         QPushButton{
+background-color: rgb(170, 85, 255);
+border-radius: 5px;
+	color: rgb(255, 0, 0);
+}
+
+QPushButton:hover{
+background-color: rgb(165, 82, 247);
+border-radius: 5px;
+}
+
+QPushButton:pressed{
+background-color: rgb(170, 85, 255);
+border-radius: 5px;
+};""")
+            self.analizeNomeTime.stop()
 
     # este metodo analiza todas as tranzções e insere os dados  nas tabelas antes de mostrar a janela
     def analizarUltimasTranzacoes(self):
@@ -1638,16 +1612,19 @@ class MainwindowSC(QMainWindow):
         dadosMovimentacoesFinceiras = self.database.executarFetchall("SELECT * FROM MovimentacaoFinanceira")
         self.database.disconnect_database()
 
-        for dados in dadosMovimentacoesFinceiras:
+        for n, dados in enumerate(dadosMovimentacoesFinceiras):
             self.barraMovimentacao = BarraMovimentacao()
+            self.barraMovimentacao2 = BarraMovimentacao()
             categoria = self.encontraIndeceCategoria(dados[2])
             valor = self.porPontoValor(dados[4])
-            self.barraMovimentacao.setValues(dados[0], dados[1], categoria, dados[3], str(valor)+",00", dados[5])
-            self.ui.verticalLayout_ScrolNovaTranzacao.addWidget(self.barraMovimentacao.bm.pequenoHistoricoEntrada)
+            self.barraMovimentacao.setValues(dados[0], dados[1], categoria, dados[3], str(valor) + ",00", dados[5])
+            self.barraMovimentacao2.setValues(dados[0], dados[1], categoria, dados[3], str(valor) + ",00", dados[5])
+            self.ui.verticalLayout_ScrolNovaTranzacao.insertWidget(n, self.barraMovimentacao.bm.pequenoHistoricoEntrada)
+            self.ui.verticalLayout_fluxo.insertWidget(n, self.barraMovimentacao2.bm.pequenoHistoricoEntrada)
             self.historicoMovimentacao(dados[3], dados[4], dados[5])
 
-
-    # este metodo soma dodas as entradas e saidas para por no quandro de total de entradas e saida
+    # este metodo soma dodas as entradas e saidas para por no
+    # quandro de total de entradas e saida nas movimentações e Home
     def analizeEntradaSaidaValores(self):
         self.database.connect_database()
         totalEntradas = self.database.executarFetchall("""
@@ -1659,18 +1636,36 @@ class MainwindowSC(QMainWindow):
 
         valorTotal = int(totalEntradas[0][0]) - int(totalSaidas[0][0])
 
+        totalPercentual = int(totalEntradas[0][0]) + int(totalSaidas[0][0])
+
+        percentualEntrada = round((int(totalEntradas[0][0]) * 100) / totalPercentual, 2)
+        percentualEntrada = str(percentualEntrada) + "%"
+
+        percentualSaida = round((int(totalSaidas[0][0]) * 100) / totalPercentual, 2)
+        percentualSaida = str(percentualSaida) + "%"
+
         totalEntradas = self.porPontoValor(totalEntradas[0][0])
         totalSaidas = self.porPontoValor(totalSaidas[0][0])
         valorTotal = self.porPontoValor(valorTotal)
 
-        totalEntradas = "Kz "+str(totalEntradas)+",00"
-        totalSaidas = "Kz "+str(totalSaidas)+",00"
-        valorTotal = "Kz "+str(valorTotal)+",00"
+        totalEntradas = "Kz " + str(totalEntradas) + ",00"
+        totalSaidas = "Kz " + str(totalSaidas) + ",00"
+        valorTotal = "Kz " + str(valorTotal) + ",00"
+
+        self.ui.percentualEntrada.setText(percentualEntrada)
+        self.ui.percentualSaida.setText(percentualSaida)
 
         self.ui.totalEntrada.setText(totalEntradas)
         self.ui.totalSaida.setText(totalSaidas)
         self.ui.valorTotal.setText(valorTotal)
 
+        self.ui.homeTotalEntrada.setText(totalEntradas)
+        self.ui.homeTotalSaidas.setText(totalSaidas)
+        self.ui.homeValorTotal.setText(valorTotal)
+
+        self.ui.totalEntradaFluxo.setText(totalEntradas)
+        self.ui.totalSaidaFluxo.setText(totalSaidas)
+        self.ui.valorTotalFluxo.setText(valorTotal)
 
     # este metodo pega o indece e pega a categoria correspondente ao indice
     def encontraIndeceCategoria(self, busca):
@@ -1690,7 +1685,6 @@ class MainwindowSC(QMainWindow):
         return saida
 
         # add o widget do historico de movimentação
-
 
     # este metodo põe ponto nos valores para ter uma facil leitura dos dados
     def porPontoValor(self, conversao):
@@ -1794,25 +1788,42 @@ class MainwindowSC(QMainWindow):
 
         return conversaoAx
 
-
     # este metodo e reponsavel por adicionar o historico de tranzação
     def historicoMovimentacao(self, nome, valor, tranzacao):
         historicoEntradaSaida = HistoricoEntradaSaida()
 
         valor = self.porPontoValor(valor)
         if tranzacao == "entrada":
-            historicoEntradaSaida.setEntrada(nome, self.dataAtual, "Kz "+str(valor)+",00")
-            self.ui.verticalLayout_ZonaEntrada.addWidget(historicoEntradaSaida.hes.pequenoHistoricoEntrada)
+            historicoEntradaSaida.setEntrada(nome, self.dataAtual, "Kz " + str(valor) + ",00")
+            self.ui.verticalLayout_ZonaEntrada.insertWidget(self.historicoEntradaCont,
+                                                            historicoEntradaSaida.hes.pequenoHistoricoEntrada)
+            self.historicoEntradaCont += 1
         else:
-            historicoEntradaSaida.setSaida(nome, self.dataAtual, "Kz "+str(valor)+",00")
-            self.ui.verticalLayout_zonaSaida.addWidget(historicoEntradaSaida.hes.pequenoHistoricoSaida)
-
+            historicoEntradaSaida.setSaida(nome, self.dataAtual, "Kz " + str(valor) + ",00")
+            self.ui.verticalLayout_zonaSaida.insertWidget(self.hitoricoSaidaCont,
+                                                          historicoEntradaSaida.hes.pequenoHistoricoSaida)
+            self.hitoricoSaidaCont += 1
 
     # estemetodo  seleciona a categoria e converte no seu indece
-    def selectCategoriaBuscador(self,categoria):
+    def selectCategoriaBuscador(self, categoria):
         categoria = self.encontraIndeceCategoria(categoria)
         self.buscarCategoria = categoria
 
+    # pegava o valor total por categoria
+    def PegarValorTotCategoria(self, categoria):
+        self.database.connect_database()
+        listaDados = self.database.executarFetchall("""select categoria,nome, sum(valor), tranzacao from
+          MovimentacaoFinanceira GROUP by categoria order by categoria""")
+        self.database.disconnect_database()
+
+        categoria = self.encontraIndeceCategoria(categoria)
+
+        valor = 0
+        for dados in listaDados:
+            if dados[0] == categoria:
+                valor = dados[2]
+
+        self.ui.totalCategoria.setText("Kz " + str(valor) + ",00")
 
     # este metodo converte o modelo de data
     def converterModeloData(self, data):
@@ -1822,12 +1833,11 @@ class MainwindowSC(QMainWindow):
         data = ano + "-" + mes + "-" + dia
         return data
 
-
     # este metodo e responsavel por fazer a busca dos dados de movimenção
     def buscar(self):
         select = 'SELECT * FROM MovimentacaoFinanceira '
 
-        if "" != self.buscarCategoria != 0 :
+        if "" != self.buscarCategoria != 0:
             select += f"WHERE categoria = '{str(self.buscarCategoria)}'"
 
         if self.ui.dataMovimentacaofim.text() != '01/01/2010':
@@ -1848,7 +1858,6 @@ class MainwindowSC(QMainWindow):
                     data2 = self.converterModeloData(self.ui.dataMovimentacaofim.text())
                     select += f" AND data BETWEEN '{data1}' AND '{data2}'"
 
-
         if not self.ui.codigoBusca.text() == "":
             select = f"SELECT * from MovimentacaoFinanceira where id = '{self.ui.codigoBusca.text()}';"
 
@@ -1856,53 +1865,196 @@ class MainwindowSC(QMainWindow):
         dados = self.database.executarFetchall(select)
         self.database.disconnect_database()
 
-
-        for objeto in self.ui.frameNovaTranzacao.findChildren(QFrame):
+        for objeto in self.ui.scrollAreaWidgetContents_3.findChildren(QFrame):
             objeto.close()
 
-        for dado in dados:
+        for n, dado in enumerate(dados):
             self.barraMovimentacao = BarraMovimentacao()
             categoria = self.encontraIndeceCategoria(dado[2])
             valor = self.porPontoValor(dado[4])
             self.barraMovimentacao.setValues(dado[0], dado[1], categoria, dado[3], str(valor) + ",00", dado[5])
-            self.ui.verticalLayout_ScrolNovaTranzacao.addWidget(self.barraMovimentacao.bm.pequenoHistoricoEntrada)
+            self.ui.verticalLayout_ScrolNovaTranzacao.insertWidget(n, self.barraMovimentacao.bm.pequenoHistoricoEntrada)
 
+    def alterarNomeSenha(self):
+        nome = self.ui.mudaNome.text()
+        senha = self.ui.mudaSenha.text()
+        self.database.connect_database()
+        id = self.database.executarFetchall("SELECT UltimoUsuario from UltimoUsuario;")
+        id = id[-1][0]
+        senha = criptografar(senha)
+        descricao = self.database.executarFetchone(f"select descricao from Usuario where id = '{id}';")
+        descricao = descricao[0]
+        self.ui.descricao.setText(descricao)
+        self.database.executarComand(f"UPDATE Usuario set nome = '{nome}' and password = '{senha}' where id = '{id}';")
+        self.database.disconnect_database()
 
+    # metodo que abri, salva, e cria um arquivo de texto para as suas escritas
+    def editArq(self):
 
+        openArq = QFileDialog.getOpenFileNames(parent=self, caption=self.tr('Guard'),
+                                               filter=self.tr('img file (*.png *.jpeg *.jpg *.PNG *.JPG) '))
 
+        url = str(openArq[0][0])
+        icon21 = QIcon()
+        icon21.addFile(url, QSize(), QIcon.Normal, QIcon.Off)
+        self.ui.perfifEdit.setIcon(icon21)
+        self.ui.perfifEdit.setIconSize(QSize(144, 154))
 
+        icon20 = QIcon()
+        icon20.addFile(url, QSize(), QIcon.Normal, QIcon.Off)
+        self.ui.fotoPerfil.setIcon(icon20)
+        self.ui.fotoPerfil.setIconSize(QSize(107, 118))
 
+        self.database.connect_database()
+        id = self.database.executarFetchall("SELECT UltimoUsuario from UltimoUsuario;")
+        id = id[-1][0]
+        self.database.executarComand(f"update Usuario set LinkFoto = '{url}' where id = '{id}';")
+        self.database.disconnect_database()
 
+    # adiconar categoria no BD e na interface
+    def AdicionarCategoriaNaUI(self):
+        barraCategoria = BarraCategoria()
+        if self.ui.mudaNome_2.text() != '':
+            if not self.ui.mudaNome_2.text().isnumeric():
+                self.database.connect_database()
+                n = self.database.executarFetchone("SELECT count(*) from categoria")
+                n = n[0]
+                self.database.executarComand(f"INSERT INTO categoria (nome) VALUES ('{self.ui.mudaNome_2.text()}')")
+                self.database.disconnect_database()
+                barraCategoria.setValores(self.ui.mudaNome_2.text())
+                self.categoria.append(self.ui.mudaNome_2.text())
+                self.axis_x.append(self.categoria)
+                self.ui.verticalLayout_22.insertWidget(n, barraCategoria.bc.pequenoHistoricoEntrada)
+                self.ui.mudaNome_2.setText("")
 
-    def showContasAReceber(self):
-        self.contaReceber.show()
+                self.ui.planoContasBuscaFluxo.clear()
+                self.adicionaCategoriaPlanoContasBusca()
+                self.novaMovimentacao.clearCategoria()
+                self.novaMovimentacao.getAgenCategoria()
 
+    # Volatar na tela de Login
+    def exit(self):
+        self.hide()
+        self.hitoricoSaidaCont = SplashCreen()
+        self.close()
 
-    def adicionarContasAReceber(self):
-        valorTotal = self.contaReceber.ca.valorTotal.text()
+    # este metodo inseri as informacões do usuario no perfil
+    def informacoesUser(self):
+        global NOMEUSER
+        self.ui.userName.setText(NOMEUSER)
 
-        if valorTotal != "":
-            # print(valorTotal)
-            self.contaReceber.close()
+        self.database.connect_database()
+        nUser = self.database.executarFetchone("SELECT count(*) from Usuario;")
+        nUser = nUser[0]
+        id = self.database.executarFetchall("SELECT UltimoUsuario from UltimoUsuario;")
+        id = id[-1][0]
+        descricao, linkFoto = self.database.executarFetchone("""
+        select descricao, LinkFoto from Usuario WHERE id='1'
+        """)
+        self.database.disconnect_database()
 
+        self.ui.descricao.setText(descricao)
+        self.ui.TotalUser.setText(str(nUser))
 
-    def showPaqgarConta(self):
-        self.pagarConta.show()
+        self.ui.dataPerfil.setText(self.pegarData())
+        self.ui.data.setText(f'''<html><head/><body><p><span style=" color:#dcbbff;">date: 
+        </span><span style=" color:#ffffff;">{self.pegarData()}</span></p></body></html>''')
 
+        icon20 = QIcon()
+        icon20.addFile(linkFoto, QSize(), QIcon.Normal, QIcon.Off)
+        self.ui.fotoPerfil.setIcon(icon20)
+        self.ui.fotoPerfil.setIconSize(QSize(107, 118))
 
-    def metodpagarConta(self):
-        self.barraReceberConta = BarraReceberConta()
-        valor = self.pagarConta.rp.valor.text()
-        categoria = self.pagarConta.categoria
-        cliente = self.pagarConta.cliente
+        icon21 = QIcon()
+        icon21.addFile(linkFoto, QSize(), QIcon.Normal, QIcon.Off)
+        self.ui.perfifEdit.setIcon(icon21)
+        self.ui.perfifEdit.setIconSize(QSize(144, 154))
 
-        if valor != "" and categoria != "" and cliente != "":
-            self.barraReceberConta.setValues(10, self.dataAtual, categoria, cliente, self.dataAtual, "250000", valor)
-            self.ui.verticalLayout_ZonaPagarConta.addWidget(self.barraReceberConta.brc.pequenoHistoricoEntrada_10)
-            self.pagarConta.close()
+    # decubrir valor maximo
+    def valorMaximo(self, valor):
+        maximo = 0
+        for n, v in enumerate(valor):
+            if n == 0:
+                maximo = v
+            else:
+                if v > maximo:
+                    maximo = 0
+        return maximo
+
+    # grafico de categoria
+    def graficoCategoria(self):
+
+        self.database.connect_database()
+        listaValores = self.database.executarFetchall("""select categoria, sum(valor) from  MovimentacaoFinanceira group by categoria""")
+        listaCategoria = self.database.executarFetchall("""select nome from  categoria""")
+        self.database.disconnect_database()
+
+        self.categoria = []
+        listaValor = []
+        auxiliar = []
+
+        for dado in listaValores:
+            listaValor.append(dado[1])
+            self.categoria.append(self.encontraIndeceCategoria(dado[0]))
+
+        for lA in listaCategoria:
+            auxiliar.append(lA[0])
+
+        for valor in auxiliar:
+            if self.categoria.count(valor) == 0:
+                self.categoria.append(valor)
+
+        self.set = QBarSet("")
+
+        valorMaximo = self.valorMaximo(listaValores[1])
+
+        self.set.append(listaValor)
+        self.set.setColor(QColor(170, 85, 255))
+
+        self.series = QBarSeries()
+        self.series.append(self.set)
+
+        self.chart = QChart()
+        self.chart.addSeries(self.series)
+        self.chart.setAnimationOptions(QChart.SeriesAnimations)
+
+        self.axis_x = QBarCategoryAxis()
+        self.axis_x.append(self.categoria)
+
+        self.axis_x.setLabelsColor(QColor(170, 85, 255))
+
+        self.chart.addAxis(self.axis_x, Qt.AlignBottom)
+        self.series.attachAxis(self.axis_x)
+
+        self.axis_y = QValueAxis()
+        self.axis_y.setLabelsColor(QColor(170, 85, 255))
+        self.axis_y.setRange(0, valorMaximo)
+
+        self.chart.addAxis(self.axis_y, Qt.AlignLeft)
+        self.series.attachAxis(self.axis_y)
+
+        self.chart.legend().setVisible(False)
+        self.chart.legend().setAlignment(Qt.AlignBottom)
+
+        self._chart_view = QChartView(self.chart)
+        self._chart_view.setRenderHint(QPainter.Antialiasing)
+
+        self.ui.verticalLayout_GraficoCategoria.addWidget(self._chart_view)
+
+    # adiciona barra de categoria automaticamente
+    def adicionarCategoriaAutomatic(self):
+        self.database.connect_database()
+        listaCetgoria = self.database.executarFetchall("SELECT * FROM Categoria")
+        self.database.disconnect_database()
+
+        for categoria in listaCetgoria:
+            barraCategoria = BarraCategoria()
+            barraCategoria.setValores(categoria[1])
+            self.ui.verticalLayout_22.insertWidget(categoria[0]-1, barraCategoria.bc.pequenoHistoricoEntrada)
+
 
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)
-    window = MainwindowSC()
+    window = SplashCreen()
     sys.exit(app.exec())

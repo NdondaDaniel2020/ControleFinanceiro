@@ -31,11 +31,20 @@ class database():
         cursor = self.connection.cursor()
         cursor.execute(comand)
 
+    # retorna todos
     def executarFetchall(self, fetchall):
         cursor = self.connection.cursor()
         cursor.execute(fetchall)
         dados = cursor.fetchall()
         return dados
+
+    # retorna 1
+    def executarFetchone(self, fetchall):
+        cursor = self.connection.cursor()
+        cursor.execute(fetchall)
+        dados = cursor.fetchone()
+        return dados
+
 
     def insert_into(self, nametable, name, passw, user=False):
         if user:
@@ -59,7 +68,7 @@ class database():
         except:
             print('error select')
 
-    def sdfghj(self):
+    def NotaComandSQL(self):
 
         #data.executarComand("""
         #CREATE TABLE IF NOT EXISTS Usuario(
@@ -82,7 +91,7 @@ class database():
         # INSERT INTO UltimoUsuario (Data, UltimoUsuario)values('2022-10-22','6')
         # INSERT INTO Categoria (nome) values ('Compra')
         #
-        # database = database("../ControloFinaceiro")
+        # database = database("../ControleFinanceiro")
         # database.connect_database()
         # database.executarComand("""
         # INSERT INTO Categoria (nome) values ('Compra')
@@ -96,8 +105,37 @@ class database():
         # ('Luciano Luzembo', '923442065', 'lucianoluzembo@gmail.com', 'Lunada', '1')
         # """)
         # database.close_connection_database()
+
+        #  select * from relacionamento_de_compra rc
+        #  join cliente cl on rc.id_relacionamento_cliente = cl.id_cliente
+        #  join curso cu on  rc.id_relacionamento_livro = cu.id_curso
+        #  join equipamento eq on rc.id_relacionamento_equipamento = eq.id_equipamento
+        #  join servico sv on rc.id_relacionamento_servico = sv.id_servico
+        #  join ebook eb on rc.id_relacionamento_livro = eb.id_livro;
+
+        # UPDATE ReceberConta SET valorPago = '0' WHERE id ='2';
+        #
+        #
+        # /* ReceberConta.id, ReceberConta.dataEmissao, categoria.nome, Cliente.nome, ReceberConta.dataVencimento, ReceberConta.valorPago, Status.nome*/
+        #
+        # /*SELECT ReceberConta.id FROM ReceberConta rc  JOIN Categoria c ON rc.categoria = c.id JOIN cliente cl ON rc.cliente = cl.id JOIN status st ON rc.status = st.id;
+        #  rc.id, rc.dataEmissao, c.nome, cl.nome, rc.dataVencimento, rc.valorPago, st.nome
+        #  */
+        #
+        # SELECT rc.id, rc.dataEmissao, c.nome, rc.dataVencimento, rc.valorPago, st.nome
+        # FROM ReceberConta rc
+        # JOIN Categoria c ON rc.categoria = c.id
+        # JOIN cliente cl ON rc.cliente = cl.id
+        # JOIN Status st ON rc.status = st.id;
+        #
+        #
+        #
+        #
+        # SELECT * FROM ReceberConta rc  JOIN Categoria c ON rc.categoria = c.id JOIN cliente cl ON rc.cliente = cl.id JOIN status st ON rc.status = st.id;
+        #
+        # select data, sum(valor), tranzacao from MovimentacaoFinanceira WHERE tranzacao = 'saida' GROUP by data;
+
         pass
 
     def __str__(self):
         return 'Class para criares o teu banco de dados'
-

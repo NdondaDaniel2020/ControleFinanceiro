@@ -122,16 +122,16 @@ class Ui_Form(object):
         self.frame.setObjectName(u"frame")
         self.frame.setFrameShape(QFrame.StyledPanel)
         self.frame.setFrameShadow(QFrame.Raised)
-        self.Titulo = QLineEdit(self.frame)
-        self.Titulo.setObjectName(u"Titulo")
-        self.Titulo.setGeometry(QRect(20, 20, 290, 36))
-        self.Titulo.setMinimumSize(QSize(290, 36))
-        self.Titulo.setMaximumSize(QSize(290, 36))
+        self.nome = QLineEdit(self.frame)
+        self.nome.setObjectName(u"Titulo")
+        self.nome.setGeometry(QRect(20, 20, 290, 36))
+        self.nome.setMinimumSize(QSize(290, 36))
+        self.nome.setMaximumSize(QSize(290, 36))
         font1 = QFont()
         font1.setFamilies([u"Segoe UI Semibold"])
         font1.setPointSize(11)
-        self.Titulo.setFont(font1)
-        self.Titulo.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.nome.setFont(font1)
+        self.nome.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
 "border-radius:5px;\n"
 "color: rgb(255, 255, 255);\n"
 "padding-left:5px;")
@@ -262,6 +262,12 @@ class Ui_Form(object):
 "}")
         self.movimentar.setIconSize(QSize(20, 20))
 
+        self.alerta = QLabel(self.frame)
+        self.alerta.setObjectName(u"movimentar")
+        self.alerta.setGeometry(QRect(157, 151, 16, 16))
+        self.alerta.setMinimumSize(QSize(16, 16))
+        self.alerta.setMaximumSize(QSize(16, 16))
+
         self.verticalLayout_2.addWidget(self.frame)
 
 
@@ -278,7 +284,7 @@ class Ui_Form(object):
         self.label.setText(QCoreApplication.translate("Form", u"Nova Movimenta\u00e7\u00e3o", None))
         self.minimizar.setText("")
         self.fechar.setText("")
-        self.Titulo.setPlaceholderText(QCoreApplication.translate("Form", u"Titulo", None))
+        self.nome.setPlaceholderText(QCoreApplication.translate("Form", u"Titulo", None))
         self.valor.setPlaceholderText(QCoreApplication.translate("Form", u"Valor", None))
         self.entrada.setText(QCoreApplication.translate("Form", u"Entrada", None))
         self.saida.setText(QCoreApplication.translate("Form", u"Saida", None))
@@ -314,6 +320,7 @@ class Movimentacao(QMainWindow):
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
 
+
         self.shadow = QGraphicsDropShadowEffect(self)
         self.shadow.setBlurRadius(15)
         self.shadow.setXOffset(0)
@@ -341,6 +348,39 @@ class Movimentacao(QMainWindow):
 
     def selectCategoria(self, txt):
         self.categoria = txt
+        self.mov.categoria.setStyleSheet("""
+        
+QComboBox{
+background-color:rgb(170, 85, 255);
+border-radius:5px;
+border: 2px solid rgb(170, 85, 255);
+padding: 5px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+}
+
+QComboBox:hover{
+ border: 2px solid rgb(170, 85, 255);
+}
+QComboBox::drop-down {
+subcontrol-origin: padding;
+subcontrol-position: top right;
+width: 25px; 
+border-left-width: 3px;
+border-left-color: rgb(255, 255, 255);
+border-left-style: solid;
+border-top-right-radius: 3px;
+border-bottom-right-radius: 3px;
+}
+QComboBox QAbstractItemView {
+color: rgb(255, 255, 255);	
+background-color:rgb(170, 85, 255);
+padding: 10px;
+selection-background-color: rgb(195, 155, 255);
+border:2px solid  rgb(255, 255, 255);
+border-radius:5px;
+}
+        """)
 
     def entradaSanida(self):
         object = self.sender().objectName()
@@ -350,12 +390,65 @@ class Movimentacao(QMainWindow):
         elif object == "saida":
             self.movimentarNome = "saida"
 
+        self.alerta(False)
+
     def closefrom(self):
-        self.mov.Titulo.setText("")
+        self.mov.nome.setText("")
         self.mov.valor.setText("")
         self.close()
 
+    def alerta(self, v):
+        if v:
+            self.mov.alerta.setStyleSheet("background-color: rgb(255, 0, 0);")
+        else:
+            self.mov.alerta.setStyleSheet("background-color: rgb(255, 255, 255);")
 
+    def alertaCategoria(self):
+        self.mov.categoria.setStyleSheet("""
+QComboBox{
+background-color:rgb(255, 0, 0);
+border-radius:5px;
+border: 2px solid rgb(170, 85, 255);
+padding: 5px;
+padding-left: 10px;
+color: rgb(255, 255, 255);
+}
+
+QComboBox:hover{
+ border: 2px solid rgb(170, 85, 255);
+}
+QComboBox::drop-down {
+subcontrol-origin: padding;
+subcontrol-position: top right;
+width: 25px; 
+border-left-width: 3px;
+border-left-color: rgb(255, 255, 255);
+border-left-style: solid;
+border-top-right-radius: 3px;
+border-bottom-right-radius: 3px;
+}
+QComboBox QAbstractItemView {
+color: rgb(255, 255, 255);	
+background-color:rgb(255, 0, 0);
+padding: 10px;
+selection-background-color: rgb(195, 155, 255);
+border:2px solid  rgb(255, 255, 255);
+border-radius:5px;
+}""")
+
+    def clearCategoria(self):
+        self.mov.categoria.clear()
+
+    def getAgenCategoria(self):
+        # self.categoria.setPlaceholderText("Selecione a categoria")
+        self.database = database("ControleFinanceiro")
+        self.database.connect_database()
+        dados = self.database.executarFetchall("SELECT * FROM Categoria")
+        self.database.disconnect_database()
+
+        for dado in dados:
+            self.mov.categoria.addItem("")
+            self.mov.categoria.setItemText(dado[0] - 1, QCoreApplication.translate("Form", dado[1], None))
 
 
 if __name__ == "__main__":

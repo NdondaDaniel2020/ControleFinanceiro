@@ -19,6 +19,7 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QFrame,
     QHBoxLayout, QLabel, QLineEdit, QPushButton,
     QSizePolicy, QSpacerItem, QVBoxLayout, QWidget, QMainWindow, QGraphicsDropShadowEffect)
 from packeg.database import database
+from datetime import date
 
 class Ui_Form(object):
     def setupUi(self, Form):
@@ -258,10 +259,7 @@ class Ui_Form(object):
 " border: 2px solid rgb(170, 85, 255);\n"
 "}\n"
 "")
-        self.dataVenciamento.setDate(QDate(2022, 12, 4))
-
         self.verticalLayout_2.addWidget(self.frame)
-
 
         self.verticalLayout.addWidget(self.CentralFrame)
 
@@ -276,6 +274,8 @@ class Ui_Form(object):
         self.label.setText(QCoreApplication.translate("Form", u"Adicionar conta a receber", None))
         self.minimizar.setText("")
         self.fechar.setText("")
+        self.dataVenciamento.setDate(date.today())
+        self.adicionarConta.setText("Adicionar conta a pagar")
 
         self.database = database("ControleFinanceiro")
 
