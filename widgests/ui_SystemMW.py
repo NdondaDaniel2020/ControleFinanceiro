@@ -551,7 +551,7 @@ class Ui_MainWindowMW(object):
         self.perfil_btn.setMaximumSize(QSize(16777215, 34))
         self.perfil_btn.setStyleSheet(u"padding-left:22px;")
         icon7 = QIcon()
-        icon7.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-user.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon7.addFile(u"../img/24x24/cil-user.png", QSize(), QIcon.Normal, QIcon.Off)
         self.perfil_btn.setIcon(icon7)
         self.perfil_btn.setIconSize(QSize(20, 20))
 
@@ -586,7 +586,7 @@ class Ui_MainWindowMW(object):
         self.exit.setMaximumSize(QSize(16777215, 34))
         self.exit.setStyleSheet(u"padding-left:23px;")
         icon10 = QIcon()
-        icon10.addFile(u"../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-exit-to-app.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon10.addFile(u"../img/24x24/cil-exit-to-app.png", QSize(), QIcon.Normal, QIcon.Off)
         self.exit.setIcon(icon10)
         self.exit.setIconSize(QSize(19, 22))
 
