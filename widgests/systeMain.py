@@ -23,8 +23,8 @@ import cv2
 # variavel global
 UsuiarioGlobal = ''
 CONT = 0
-HAARCASCADES = '../../haarcascades/haarcascade_frontalface_default.xml'
-CLASSIFICADORLBPH = '../../classificador/classificadorLBPH.0.1.yml'
+HAARCASCADES = '../haarcascades/haarcascade_frontalface_default.xml'
+CLASSIFICADORLBPH = '../classificador/classificadorLBPH.0.1.yml'
 NOMEUSER = ''
 MNW = 0
 PEGARaRQUIVO = False
