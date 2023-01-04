@@ -5,10 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="32879bff-b1fa-4e85-82a0-4fe749987451" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/fileUI/ui_SystemMW2.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/widgests/systemain.py" beforeDir="false" afterPath="$PROJECT_DIR$/widgests/systeMain.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/widgests/voz.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/widgests/ControleFinanceiro.db" beforeDir="false" afterPath="$PROJECT_DIR$/widgests/ControleFinanceiro.db" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widgests/packeg/database.py" beforeDir="false" afterPath="$PROJECT_DIR$/widgests/packeg/database.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widgests/systeMain.py" beforeDir="false" afterPath="$PROJECT_DIR$/widgests/systeMain.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widgests/ui_Movimentação.py" beforeDir="false" afterPath="$PROJECT_DIR$/widgests/ui_Movimentação.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widgests/ui_SystemMW.py" beforeDir="false" afterPath="$PROJECT_DIR$/widgests/ui_SystemMW.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widgests/ui_barraReceberConta.py" beforeDir="false" afterPath="$PROJECT_DIR$/widgests/ui_barraReceberConta.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/widgests/ui_contasAreceber.py" beforeDir="false" afterPath="$PROJECT_DIR$/widgests/ui_contasAreceber.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
