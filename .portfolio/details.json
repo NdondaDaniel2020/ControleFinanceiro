@@ -1,0 +1,99 @@
+{
+  "id": "controle-financeiro",
+  "name": "Controle Financeiro",
+  "tagline": {
+    "pt": "Aplicação Desktop de Gestão Financeira com Gráficos Analíticos, Controlo de Fluxo de Caixa e Interface Moderna",
+    "en": "Desktop Financial Management Application with Analytical Charts, Cash Flow Control, and Modern Interface"
+  },
+  "category": "desktop",
+  "featured": false,
+  "architecture_type": "Desktop Application (Python, PySide6/Qt6, MVC)",
+  "about": {
+    "pt": "O Controle Financeiro é uma aplicação desktop desenvolvida em Python e PySide6 para facilitar a gestão financeira de forma intuitiva e visual. Conta com um Dashboard principal que apresenta resumos financeiros e gráficos de linha dinâmicos. A aplicação possui um sistema robusto de 'Movimentação' para rastrear entradas e saídas detalhadas por categoria, com suporte a filtros e busca. Destaca-se também o módulo de 'Fluxo de Caixa', que inclui gráficos de barras agrupados e donut charts para análise visual clara e categorizada das finanças ao longo dos meses. A interface é responsiva, adaptando-se suavemente entre o layout da barra lateral expandida e colapsada.",
+    "en": "Controle Financeiro is a desktop application developed in Python and PySide6 to facilitate intuitive and visual financial management. It features a main Dashboard presenting financial summaries and dynamic line charts. The application has a robust 'Movements' system to track income and expenses detailed by category, supporting filters and search. Also notable is the 'Cash Flow' module, including grouped bar charts and donut charts for clear, categorized visual analysis of finances over the months. The interface is responsive, smoothly adapting between expanded and collapsed sidebar layouts."
+  },
+  "highlights": [
+    "Dashboard completo com indicadores-chave de desempenho (Resumo de Saldos, Entradas e Saídas)",
+    "Interface de utilizador (UI) moderna e responsiva desenvolvida com PySide6",
+    "Gestão detalhada de movimentações financeiras com identificação visual (cores) para créditos e débitos",
+    "Gráficos de fluxo de caixa (barras agrupadas) e distribuição por categoria (donut chart) para análise avançada",
+    "Filtros robustos por código, intervalo de datas e categoria",
+    "Navegação lateral dinâmica (Sidebar) expansível e colapsável"
+  ],
+  "technologies": [
+    "Python",
+    "PySide6 / Qt6",
+    "QtCharts",
+    "OpenCV"
+  ],
+  "links": {
+    "repository": "https://github.com/NdondaDaniel2020/ControleFinanceiro"
+  },
+  "media": {
+    "cover": "cover.webp",
+    "gallery": [
+      {
+        "type": "video",
+        "src": "gallery/01-demo-main.mp4",
+        "caption": "Demonstração Principal: Navegação pelo Dashboard, Fluxo de Caixa e Relatórios"
+      },
+      {
+        "type": "video",
+        "src": "gallery/02-demo-movements.mp4",
+        "caption": "Demonstração: Interação com a Lista de Movimentações e Filtros"
+      },
+      {
+        "type": "image",
+        "src": "gallery/01-home-dashboard.webp",
+        "caption": "Home / Dashboard com Cards de Resumo e Gráfico de Linha Mensal"
+      },
+      {
+        "type": "image",
+        "src": "gallery/02-movements.webp",
+        "caption": "Página de Movimentações (Expandida) listando Entradas e Saídas Detalhadas"
+      },
+      {
+        "type": "image",
+        "src": "gallery/03-cash-flow-expanded.webp",
+        "caption": "Análise de Fluxo de Caixa com Gráfico de Barras Comparativo e Tabela Resumo"
+      },
+      {
+        "type": "image",
+        "src": "gallery/04-cash-flow-collapsed.webp",
+        "caption": "Fluxo de Caixa em Layout Expandido Horizontalmente (Sidebar Colapsada)"
+      },
+      {
+        "type": "image",
+        "src": "gallery/05-movements-expanded-alt.webp",
+        "caption": "Gestão de Transações mostrando os Filtros e Funcionalidade de Pesquisa"
+      },
+      {
+        "type": "image",
+        "src": "gallery/06-movements-collapsed.webp",
+        "caption": "Lista de Movimentações com Espaço Maximizado para visualização de Dados"
+      }
+    ],
+    "videos": [
+      {
+        "id": "demo-main",
+        "file": "01-demo-main.mp4",
+        "title": "Demonstração Principal (Dashboard e Fluxo de Caixa)",
+        "description": "Showcase visual das principais áreas do sistema: o resumo financeiro (Dashboard) e o módulo de análise analítica (Fluxo de Caixa).",
+        "category": "desktop",
+        "duration": "29s",
+        "size_mb": 11.32,
+        "src": "videos/01-demo-main.mp4"
+      },
+      {
+        "id": "demo-movements",
+        "file": "02-demo-movements.mp4",
+        "title": "Demonstração de Gestão de Movimentações",
+        "description": "Visão geral sobre o ecrã de registo de entradas e saídas com filtro avançado por códigos, categorias e datas.",
+        "category": "desktop",
+        "duration": "27s",
+        "size_mb": 10.92,
+        "src": "videos/02-demo-movements.mp4"
+      }
+    ]
+  }
+}

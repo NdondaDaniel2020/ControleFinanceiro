@@ -10,3 +10,10 @@ __pycache__/
 .venv/
 venv/
 ENV/
+
+# Portfolio
+.portfolio/raw-captures/
+
+# Agents
+.agents/
+
