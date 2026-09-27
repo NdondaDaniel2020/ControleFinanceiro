@@ -80,21 +80,21 @@ class SplashCreen(QMainWindow):
         self.sc.TrocaDeUsuario.setStyleSheet("""
                             QPushButton{
                             color:rgba(255, 255, 255, 0);
-                            background-color: rgba(170, 0, 255, 0);
+                            background-color: rgba(20, 184, 166, 0);
                             border-radius:5px;
                             }
                             QPushButton:hover{
                             color:#ffffff;
-                            background-color: rgb(149, 0, 223);
+                            background-color: rgb(51, 65, 85);
                             border-radius:5px;
                             }
                             QPushButton:pressed{
                             color:#ffffff;
-                            background-color: rgb(170, 0, 255);
+                            background-color: rgb(15, 23, 42);
                             border-radius:5px;
                             }
                             QToolTip{
-                            background-color: rgb(170, 85, 255);
+                            background-color: rgb(15, 23, 42);
                             border-radius:3px;
                             border:3px solid rgb(255, 255, 255);
                             }
@@ -235,9 +235,9 @@ class SplashCreen(QMainWindow):
             self.sc.data.setStyleSheet("""
                        <html><head/><body><p><span style=" color: rgba(220, 187, 255, 0);">data:  </span><span style=
                        " color:#c297ff;"/><span style=" color: rgba(255, 255, 255, 0);">28/06/2022</span></p></body></html>""")
-            self.sc.camera.setStyleSheet(f"""background-color: rgba(170, 0, 255, 0);border-radius:10px;""")
+            self.sc.camera.setStyleSheet(f"""background-color: rgba(20, 184, 166, 0);border-radius:10px;""")
             self.sc.versao.setStyleSheet(f"color: rgba(255, 255, 255, 0)")
-            self.sc.fechar_1.setStyleSheet(f""" background-color: rgba(170, 0, 255, 0);border-radius:10px;""")
+            self.sc.fechar_1.setStyleSheet(f""" background-color: rgba(20, 184, 166, 0);border-radius:10px;""")
 
             self.sc.versao.show()
             self.sc.fechar_1.show()
@@ -255,10 +255,10 @@ class SplashCreen(QMainWindow):
                                    {str(contc)});">28/06/2022</span></p></body></html>""")
             self.sc.TrocaDeUsuario.setStyleSheet(f"""
                                color:rgba(255, 255, 255, {str(contc)});
-                               background-color: rgba(170, 0, 255, {str(contc)});
+                               background-color: rgba(20, 184, 166, {str(contc)});
                                border-radius:5px;""")
-            self.sc.camera.setStyleSheet(f"""background-color: rgba(170, 85, 255, {str(contc)});border-radius:10px;""")
-            self.sc.fechar_1.setStyleSheet(f"""background-color: rgba(170, 85, 255, {str(contc)});border-radius:10px;""")
+            self.sc.camera.setStyleSheet(f"""background-color: rgba(15, 23, 42, {str(contc)});border-radius:10px;""")
+            self.sc.fechar_1.setStyleSheet(f"""background-color: rgba(15, 23, 42, {str(contc)});border-radius:10px;""")
 
         if CONT >= 110:
             conn = (CONT - 90) + 2
@@ -266,27 +266,27 @@ class SplashCreen(QMainWindow):
 
         if CONT == 120:
             self.progressCircleTimer.stop()
-            self.sc.camera.setStyleSheet("""QToolButton:hover{background-color: rgb(150, 76, 228);border-radius:10px;}
-            QToolButton:pressed{background-color: rgb(170, 85, 255);border-radius:10px;}""")
-            self.sc.fechar_1.setStyleSheet("""QToolButton:hover{background-color: rgb(150, 76, 228);border-radius:10px;}
-            QToolButton:pressed{background-color: rgb(170, 85, 255);border-radius:10px;}""")
+            self.sc.camera.setStyleSheet("""QToolButton:hover{background-color: rgb(30, 41, 59);border-radius:10px;}
+            QToolButton:pressed{background-color: rgb(15, 23, 42);border-radius:10px;}""")
+            self.sc.fechar_1.setStyleSheet("""QToolButton:hover{background-color: rgb(30, 41, 59);border-radius:10px;}
+            QToolButton:pressed{background-color: rgb(15, 23, 42);border-radius:10px;}""")
             self.sc.TrocaDeUsuario.setStyleSheet("""QPushButton{
                                                                 color:#ffffff;
-                                                                background-color: rgb(150, 76, 228);
+                                                                background-color: rgb(30, 41, 59);
                                                                 border-radius:5px;
                                                                 }
                                                                 QPushButton:hover{
                                                                 color:#ffffff;
-                                                                background-color: rgb(141, 72, 215);
+                                                                background-color: rgb(51, 65, 85);
                                                                 border-radius:5px;
                                                                 }
                                                                 QPushButton:pressed{
                                                                 color:#ffffff;
-                                                                background-color: rgb(150, 76, 228);
+                                                                background-color: rgb(30, 41, 59);
                                                                 border-radius:5px;
                                                                 }
                                                                 QToolTip{
-                                                                background-color: rgb(170, 85, 255);
+                                                                background-color: rgb(15, 23, 42);
                                                                 border-radius:3px;
                                                                 border:3px solid rgb(255, 255, 255);
                                                                 }}""")
@@ -382,31 +382,31 @@ class SplashCreen(QMainWindow):
             self.sc.troca.setText('Usar Password')
             self.sc.senha.setText('')
             self.sc.senha.setStyleSheet("""
-                QLineEdit{background-color: rgb(160, 80, 240);
-                border:1px solid rgb(230, 187, 255);border-radius:5px;
+                QLineEdit{background-color: rgb(71, 85, 105);
+                border:1px solid rgb(204, 251, 241);border-radius:5px;
                 color: rgb(208, 208, 208)}
-                QLineEdit:hover{background-color: rgb(170, 0, 255);
-                border:2px solid rgb(230, 187, 255);border-radius:5px;}
-                QLineEdit:focus{background-color: rgb(130, 0, 195);
-                border:2px solid rgb(230, 187, 255);border-radius:5px;
-                color: rgb(230, 187, 255);}""")
+                QLineEdit:hover{background-color: rgb(15, 23, 42);
+                border:2px solid rgb(204, 251, 241);border-radius:5px;}
+                QLineEdit:focus{background-color: rgb(30, 41, 59);
+                border:2px solid rgb(204, 251, 241);border-radius:5px;
+                color: rgb(204, 251, 241);}""")
             self.sc.senhaIncorreta.close()
         else:
             self.sc.senha.setStyleSheet("""
                                             QLineEdit{
-                                            background-color: rgb(150, 76, 228);
-                                            border:1px solid rgb(230, 187, 255);
+                                            background-color: rgb(30, 41, 59);
+                                            border:1px solid rgb(204, 251, 241);
                                             border-radius:5px;
                                             color: rgb(208, 208, 208)}
                                             QLineEdit:hover{
-                                            background-color: rgb(141, 72, 215);
-                                            border:2px solid rgb(230, 187, 255);
+                                            background-color: rgb(51, 65, 85);
+                                            border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;}
                                             QLineEdit:focus{
-                                            background-color: rgb(134, 69, 208);
-                                            border:2px solid rgb(230, 187, 255);
+                                            background-color: rgb(71, 85, 105);
+                                            border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;
-                                            color: rgb(230, 187, 255);}""")
+                                            color: rgb(204, 251, 241);}""")
             self.sc.senhaIncorreta.close()
             self.sc.senha.setText('')
             po2 = QPoint(210, 30)
@@ -456,7 +456,7 @@ class SplashCreen(QMainWindow):
         senha_ultimo_user = criptografar(self.sc.senha.text())
         if senha_ultimo_user == self.senhaUltimoUser:
             self.sc.senha.setStyleSheet("""
-            background-color: rgb(150, 76, 228);
+            background-color: rgb(30, 41, 59);
             color: rgb(208, 208, 208);
             border:2px solid rgb(85, 255, 127);
             border-radius:5px;""")
@@ -471,7 +471,7 @@ class SplashCreen(QMainWindow):
             self.sc.senhaIncorreta.show()
             self.senha_atual = len(self.sc.senha.text())
             self.sc.senha.setStyleSheet("""
-                       background-color: rgb(150, 76, 228);
+                       background-color: rgb(30, 41, 59);
                        border:2px solid rgb(255, 0, 0);
                        color: rgb(208, 208, 208);
                        border-radius:5px;""")
@@ -489,19 +489,19 @@ class SplashCreen(QMainWindow):
 
         if n != self.senha_atual:
             self.sc.senha.setStyleSheet("""QLineEdit{
-                                            background-color: rgb(150, 76, 228);
-                                            border:1px solid rgb(230, 187, 255);
+                                            background-color: rgb(30, 41, 59);
+                                            border:1px solid rgb(204, 251, 241);
                                             border-radius:5px;
                                             color: rgb(208, 208, 208)}
                                             QLineEdit:hover{
-                                            background-color: rgb(141, 72, 215);
-                                            border:2px solid rgb(230, 187, 255);
+                                            background-color: rgb(51, 65, 85);
+                                            border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;}
                                             QLineEdit:focus{
-                                            background-color: rgb(134, 69, 208);
-                                            border:2px solid rgb(230, 187, 255);
+                                            background-color: rgb(71, 85, 105);
+                                            border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;
-                                            color: rgb(230, 187, 255);};}""")
+                                            color: rgb(204, 251, 241);};}""")
             self.senha_anaiticTimer.stop()
             self.sc.senhaIncorreta.close()
 
@@ -539,7 +539,7 @@ class SplashCreen(QMainWindow):
                 break
             else:
                 if n == len(self.listaUsuarios) - 1:
-                    self.sc.email_login.setStyleSheet("""background-color:rgb(134, 69, 208);
+                    self.sc.email_login.setStyleSheet("""background-color:rgb(71, 85, 105);
                                                   border:2px solid rgb(255, 0, 0);
                                                   color: rgb(208, 208, 208);
                                                   border-radius:5px;
@@ -567,7 +567,7 @@ class SplashCreen(QMainWindow):
                 QTimer.singleShot(500, lambda: self.close())
             else:
                 self.passwordConst = len(self.sc.password.text())
-                self.sc.password.setStyleSheet("""background-color:rgb(134, 69, 208);
+                self.sc.password.setStyleSheet("""background-color:rgb(71, 85, 105);
                                                   border:2px solid rgb(255, 0, 0);
                                                   color: rgb(208, 208, 208);
                                                   border-radius:5px;
@@ -580,20 +580,20 @@ class SplashCreen(QMainWindow):
 
         if n != self.tamanhoNomeat:
             self.sc.email_login.setStyleSheet("""QLineEdit{
-                                                    background-color: rgb(150, 76, 228);
-                                                    border:1px solid rgb(230, 187, 255);
+                                                    background-color: rgb(30, 41, 59);
+                                                    border:1px solid rgb(204, 251, 241);
                                                     border-radius:5px;
                                                     color: rgb(208, 208, 208);
                                                     padding-left:3px;}
                                                     QLineEdit:hover{
-                                                    background-color: rgb(141, 72, 215);
-                                                    border:2px solid rgb(230, 187, 255);
+                                                    background-color: rgb(51, 65, 85);
+                                                    border:2px solid rgb(204, 251, 241);
                                                     border-radius:5px;}
                                                     QLineEdit:focus{
-                                                    background-color: rgb(134, 69, 208);
-                                                    border:2px solid rgb(230, 187, 255);
+                                                    background-color: rgb(71, 85, 105);
+                                                    border:2px solid rgb(204, 251, 241);
                                                     border-radius:5px;
-                                                    color: rgb(230, 187, 255);}""")
+                                                    color: rgb(204, 251, 241);}""")
             self.nomeloginTimer.stop()
 
     # este metodo e responsavel pala cor voltar ao normal Quando erra a senha
@@ -601,20 +601,20 @@ class SplashCreen(QMainWindow):
 
         if n != self.passwordConst:
             self.sc.password.setStyleSheet("""QLineEdit{
-                                            background-color: rgb(150, 76, 228);
-                                            border:1px solid rgb(230, 187, 255);
+                                            background-color: rgb(30, 41, 59);
+                                            border:1px solid rgb(204, 251, 241);
                                             border-radius:5px;
                                             color: rgb(208, 208, 208);
                                             padding-left:3px;}
                                             QLineEdit:hover{
-                                            background-color: rgb(141, 72, 215);
-                                            border:2px solid rgb(230, 187, 255);
+                                            background-color: rgb(51, 65, 85);
+                                            border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;}
                                             QLineEdit:focus{
-                                            background-color: rgb(134, 69, 208);
-                                            border:2px solid rgb(230, 187, 255);
+                                            background-color: rgb(71, 85, 105);
+                                            border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;
-                                            color: rgb(230, 187, 255);}""")
+                                            color: rgb(204, 251, 241);}""")
             self.passwordTimer.stop()
             self.sc.senhaIncorreta_2.close()
 
@@ -635,67 +635,67 @@ class SplashCreen(QMainWindow):
             sf = 241
             self.sc.email_singup.setStyleSheet("""
                                                 QLineEdit{
-                                                background-color: rgb(150, 76, 228);
-                                                border:1px solid rgb(230, 187, 255);
+                                                background-color: rgb(30, 41, 59);
+                                                border:1px solid rgb(204, 251, 241);
                                                 border-radius:5px;
                                                 color: rgb(208, 208, 208);
                                                 padding-left:3px;}
                                                 QLineEdit:hover{
-                                                background-color: rgb(141, 72, 215);
-                                                border:2px solid rgb(230, 187, 255);
+                                                background-color: rgb(51, 65, 85);
+                                                border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;}
                                                 QLineEdit:focus{
-                                                background-color: rgb(134, 69, 208);
-                                                border:2px solid rgb(230, 187, 255);
+                                                background-color: rgb(71, 85, 105);
+                                                border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;
-                                                color: rgb(230, 187, 255);}""")
+                                                color: rgb(204, 251, 241);}""")
             self.sc.email_login.setStyleSheet("""QLineEdit{
-                                                background-color: rgb(150, 76, 228);
-                                                border:1px solid rgb(230, 187, 255);
+                                                background-color: rgb(30, 41, 59);
+                                                border:1px solid rgb(204, 251, 241);
                                                 border-radius:5px;
                                                 color: rgb(208, 208, 208);
                                                 padding-left:3px;}
                                                 QLineEdit:hover{
-                                                background-color: rgb(141, 72, 215);
-                                                border:2px solid rgb(230, 187, 255);
+                                                background-color: rgb(51, 65, 85);
+                                                border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;}
                                                 QLineEdit:focus{
-                                                background-color: rgb(134, 69, 208);
-                                                border:2px solid rgb(230, 187, 255);
+                                                background-color: rgb(71, 85, 105);
+                                                border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;
-                                                color: rgb(230, 187, 255);}""")
+                                                color: rgb(204, 251, 241);}""")
             # self.sc.poucosCaracter.close()
         elif btn == 'login_btn_singup':
             self.sc.email_singup.setStyleSheet("""QLineEdit{
-                background-color: rgb(150, 76, 228);
-                border:1px solid rgb(230, 187, 255);
+                background-color: rgb(30, 41, 59);
+                border:1px solid rgb(204, 251, 241);
                 border-radius:5px;
                 color: rgb(208, 208, 208);
                 padding-left:3px;}
                 QLineEdit:hover{
-                background-color: rgb(141, 72, 215);
-                border:2px solid rgb(230, 187, 255);
+                background-color: rgb(51, 65, 85);
+                border:2px solid rgb(204, 251, 241);
                 border-radius:5px;}
                 QLineEdit:focus{
-                background-color: rgb(134, 69, 208);
-                border:2px solid rgb(230, 187, 255);
+                background-color: rgb(71, 85, 105);
+                border:2px solid rgb(204, 251, 241);
                 border-radius:5px;
-                color: rgb(230, 187, 255);}""")
+                color: rgb(204, 251, 241);}""")
             self.sc.email_login.setStyleSheet("""QLineEdit{
-                                            background-color: rgb(150, 76, 228);
-                                            border:1px solid rgb(230, 187, 255);
+                                            background-color: rgb(30, 41, 59);
+                                            border:1px solid rgb(204, 251, 241);
                                             border-radius:5px;
                                             color: rgb(208, 208, 208);
                                             padding-left:3px;}
                                             QLineEdit:hover{
-                                            background-color: rgb(141, 72, 215);
-                                            border:2px solid rgb(230, 187, 255);
+                                            background-color: rgb(51, 65, 85);
+                                            border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;}
                                             QLineEdit:focus{
-                                            background-color: rgb(134, 69, 208);
-                                            border:2px solid rgb(230, 187, 255);
+                                            background-color: rgb(71, 85, 105);
+                                            border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;
-                                            color: rgb(230, 187, 255);}""")
+                                            color: rgb(204, 251, 241);}""")
             # self.sc.poucosCaracter.close()
             li = 0
             lf = 241
@@ -724,7 +724,7 @@ class SplashCreen(QMainWindow):
         global UsuiarioGlobal
 
         if len(self.sc.email_singup.text()) < 3:
-            self.sc.email_singup.setStyleSheet("""background-color: rgb(150, 76, 228);
+            self.sc.email_singup.setStyleSheet("""background-color: rgb(30, 41, 59);
                                                 border:2px solid rgb(227, 0, 58);
                                                 border-radius:5px;
                                                 color: rgb(208, 208, 208);
@@ -736,7 +736,7 @@ class SplashCreen(QMainWindow):
 
         if newUser:
             if self.sc.password1.text() == '':
-                self.sc.password1.setStyleSheet("""background-color: rgb(150, 76, 228);
+                self.sc.password1.setStyleSheet("""background-color: rgb(30, 41, 59);
                                                                 border:2px solid rgb(227, 0, 58);
                                                                 border-radius:5px;
                                                                 color: rgb(208, 208, 208);
@@ -745,7 +745,7 @@ class SplashCreen(QMainWindow):
                 QTimer.singleShot(300, lambda: self.password1Timer.start())
             else:
                 if self.sc.password1.text() != self.sc.password2.text():
-                    self.sc.password2.setStyleSheet("""background-color: rgb(150, 76, 228);
+                    self.sc.password2.setStyleSheet("""background-color: rgb(30, 41, 59);
                                                         border:2px solid rgb(227, 0, 58);
                                                         border-radius:5px;
                                                         color: rgb(208, 208, 208);
@@ -783,7 +783,7 @@ class SplashCreen(QMainWindow):
                     self.mainWindowMethod()
                     self.close()
         else:
-            self.sc.email_singup.setStyleSheet("""background-color: rgb(150, 76, 228);
+            self.sc.email_singup.setStyleSheet("""background-color: rgb(30, 41, 59);
                                                             border:2px solid rgb(227, 0, 58);
                                                             border-radius:5px;
                                                             color: rgb(208, 208, 208);
@@ -796,20 +796,20 @@ class SplashCreen(QMainWindow):
 
         if n != self.emailsingupCont:
             self.sc.email_singup.setStyleSheet("""QLineEdit{
-                                                background-color: rgb(150, 76, 228);
-                                                border:1px solid rgb(230, 187, 255);
+                                                background-color: rgb(30, 41, 59);
+                                                border:1px solid rgb(204, 251, 241);
                                                 border-radius:5px;
                                                 color: rgb(208, 208, 208);
                                                 padding-left:3px;}
                                                 QLineEdit:hover{
-                                                background-color: rgb(141, 72, 215);
-                                                border:2px solid rgb(230, 187, 255);
+                                                background-color: rgb(51, 65, 85);
+                                                border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;}
                                                 QLineEdit:focus{
-                                                background-color: rgb(134, 69, 208);
-                                                border:2px solid rgb(230, 187, 255);
+                                                background-color: rgb(71, 85, 105);
+                                                border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;
-                                                color: rgb(230, 187, 255);}""")
+                                                color: rgb(204, 251, 241);}""")
             self.emailsingupTimer.stop()
 
     # este metodo e responsavel pala cor voltar ao normal Quando erra a senha
@@ -817,20 +817,20 @@ class SplashCreen(QMainWindow):
 
         if n != self.passwor1Cont:
             self.sc.password1.setStyleSheet("""QLineEdit{
-                                                background-color: rgb(150, 76, 228);
-                                                border:1px solid rgb(230, 187, 255);
+                                                background-color: rgb(30, 41, 59);
+                                                border:1px solid rgb(204, 251, 241);
                                                 border-radius:5px;
                                                 color: rgb(208, 208, 208);
                                                 padding-left:3px;}
                                                 QLineEdit:hover{
-                                                background-color: rgb(141, 72, 215);
-                                                border:2px solid rgb(230, 187, 255);
+                                                background-color: rgb(51, 65, 85);
+                                                border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;}
                                                 QLineEdit:focus{
-                                                background-color: rgb(134, 69, 208);
-                                                border:2px solid rgb(230, 187, 255);
+                                                background-color: rgb(71, 85, 105);
+                                                border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;
-                                                color: rgb(230, 187, 255);}""")
+                                                color: rgb(204, 251, 241);}""")
             self.password1Timer.stop()
 
     # este metodo e responsavel pala cor voltar ao normal Quando erra a senha
@@ -838,20 +838,20 @@ class SplashCreen(QMainWindow):
 
         if n != self.passwor2Cont:
             self.sc.password2.setStyleSheet("""QLineEdit{
-                                                background-color: rgb(150, 76, 228);
-                                                border:1px solid rgb(230, 187, 255);
+                                                background-color: rgb(30, 41, 59);
+                                                border:1px solid rgb(204, 251, 241);
                                                 border-radius:5px;
                                                 color: rgb(208, 208, 208);
                                                 padding-left:3px;}
                                                 QLineEdit:hover{
-                                                background-color: rgb(141, 72, 215);
-                                                border:2px solid rgb(230, 187, 255);
+                                                background-color: rgb(51, 65, 85);
+                                                border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;}
                                                 QLineEdit:focus{
-                                                background-color: rgb(134, 69, 208);
-                                                border:2px solid rgb(230, 187, 255);
+                                                background-color: rgb(71, 85, 105);
+                                                border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;
-                                                color: rgb(230, 187, 255);}""")
+                                                color: rgb(204, 251, 241);}""")
             self.password2Timer.stop()
             self.sc.senhaIncorreta_3.close()
 
@@ -1257,9 +1257,9 @@ class MainwindowSC(QMainWindow):
 
         if MNW == 0:
 
-            self.ui.primeiro_container.setStyleSheet("""background-color: rgb(170, 85, 255);border-radius:0px;""")
+            self.ui.primeiro_container.setStyleSheet("""background-color: rgb(15, 23, 42);border-radius:0px;""")
             self.ui.linha.setStyleSheet("background-color: rgb(255, 255, 255);border-radius:0px;")
-            self.ui.frame_central.setStyleSheet("background-color: rgb(170, 85, 255);border-radius:0px;")
+            self.ui.frame_central.setStyleSheet("background-color: rgb(15, 23, 42);border-radius:0px;")
 
             self.showMaximized()
             MNW = 1
@@ -1273,8 +1273,8 @@ class MainwindowSC(QMainWindow):
             self.right.hide()
         else:
             self.ui.linha.setStyleSheet("background-color: rgb(255, 255, 255);border-radius:15px;")
-            self.ui.primeiro_container.setStyleSheet("""background-color: rgb(170, 85, 255);border-radius:15px;""")
-            self.ui.frame_central.setStyleSheet("background-color: rgb(170, 85, 255);border-radius:15px;")
+            self.ui.primeiro_container.setStyleSheet("""background-color: rgb(15, 23, 42);border-radius:15px;""")
+            self.ui.frame_central.setStyleSheet("background-color: rgb(15, 23, 42);border-radius:15px;")
 
             self.showNormal()
             MNW = 0
@@ -1523,7 +1523,7 @@ class MainwindowSC(QMainWindow):
         passCategoria = False
 
         if nome == "" or nome == " ":
-            self.novaMovimentacao.mov.nome.setStyleSheet("""background-color: rgb(170, 85, 255);
+            self.novaMovimentacao.mov.nome.setStyleSheet("""background-color: rgb(15, 23, 42);
                                                                                          border-radius:5px;
                                                                                          color: rgb(255, 0, 0);
                                                                                          padding-left:5px;""")
@@ -1535,7 +1535,7 @@ class MainwindowSC(QMainWindow):
         if valor.isnumeric():
             passValor = True
         else:
-            self.novaMovimentacao.mov.valor.setStyleSheet("""background-color: rgb(170, 85, 255);
+            self.novaMovimentacao.mov.valor.setStyleSheet("""background-color: rgb(15, 23, 42);
                                                              border-radius:5px;
                                                              color: rgb(255, 0, 0);
                                                              padding-left:5px;""")
@@ -1559,7 +1559,7 @@ class MainwindowSC(QMainWindow):
     def analizeValor(self, n):
         if n != self.analizeValorConst:
             self.novaMovimentacao.mov.valor.setStyleSheet("""
-            background-color: rgb(170, 85, 255);
+            background-color: rgb(15, 23, 42);
             border-radius: 5px;
             color: rgb(255, 255, 255);
             padding-left: 5px;""")
@@ -1568,7 +1568,7 @@ class MainwindowSC(QMainWindow):
     def analizeNome(self, n):
         if n != self.analizeNomeConst:
             self.novaMovimentacao.mov.nome.setStyleSheet("""
-              background-color: rgb(170, 85, 255);
+              background-color: rgb(15, 23, 42);
               border-radius: 5px;
               color: rgb(255, 255, 255);
               padding-left: 5px;""")
@@ -1578,34 +1578,34 @@ class MainwindowSC(QMainWindow):
         if n != self.analizeTranzecaoConst:
             self.novaMovimentacao.mov.entrada.setStyleSheet("""
               QPushButton{
-background-color: rgb(170, 85, 255);
+background-color: rgb(15, 23, 42);
 border-radius: 5px;
 color: rgb(85, 255, 127);
 }
 
 QPushButton:hover{
-background-color: rgb(165, 82, 247);
+background-color: rgb(51, 65, 85);
 border-radius: 5px;
 }
 
 QPushButton:pressed{
-background-color: rgb(170, 85, 255);
+background-color: rgb(15, 23, 42);
 border-radius: 5px;
 }""")
             self.novaMovimentacao.mov.saida.setStyleSheet("""
                          QPushButton{
-background-color: rgb(170, 85, 255);
+background-color: rgb(15, 23, 42);
 border-radius: 5px;
 	color: rgb(255, 0, 0);
 }
 
 QPushButton:hover{
-background-color: rgb(165, 82, 247);
+background-color: rgb(51, 65, 85);
 border-radius: 5px;
 }
 
 QPushButton:pressed{
-background-color: rgb(170, 85, 255);
+background-color: rgb(15, 23, 42);
 border-radius: 5px;
 };""")
             self.analizeNomeTime.stop()

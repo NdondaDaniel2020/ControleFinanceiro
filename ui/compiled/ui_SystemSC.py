@@ -38,7 +38,7 @@ class Ui_SplashCreen(object):
         font.setPointSize(7)
         self.CentralFrame.setFont(font)
         self.CentralFrame.setStyleSheet(u"QToolTip{\n"
-"	background-color: rgb(170, 85, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	color: rgb(255, 255, 255);\n"
 "	border-left: 3px solid rgb(255, 255, 255);\n"
 "	padding-left: 8px;\n"
@@ -53,7 +53,7 @@ class Ui_SplashCreen(object):
         self.frame_SC.setObjectName(u"frame_SC")
         self.frame_SC.setMinimumSize(QSize(400, 240))
         self.frame_SC.setMaximumSize(QSize(400, 240))
-        self.frame_SC.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.frame_SC.setStyleSheet(u"background-color: rgb(15, 23, 42);\n"
 "border-radius: 15px; ")
         self.frame_SC.setFrameShape(QFrame.StyledPanel)
         self.frame_SC.setFrameShadow(QFrame.Raised)
@@ -77,7 +77,7 @@ class Ui_SplashCreen(object):
         self.stackedWidget_4.setObjectName(u"stackedWidget_4")
         self.stackedWidget_4.setMinimumSize(QSize(396, 236))
         self.stackedWidget_4.setMaximumSize(QSize(396, 236))
-        self.stackedWidget_4.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.stackedWidget_4.setStyleSheet(u"background-color: rgb(15, 23, 42);\n"
 "border-radius: 15px; ")
         self.page_login = QWidget()
         self.page_login.setObjectName(u"page_login")
@@ -95,11 +95,11 @@ class Ui_SplashCreen(object):
         self.fechar_3.setObjectName(u"fechar_3")
         self.fechar_3.setGeometry(QRect(370, 7, 21, 21))
         self.fechar_3.setStyleSheet(u"QToolButton:hover{\n"
-"	background-color: rgb(170, 0, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	border-radius:10px;\n"
 "}\n"
 "QToolButton:pressed{\n"
-"	background-color: rgb(170, 85, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	border-radius:10px;\n"
 "}")
         icon = QIcon()
@@ -119,11 +119,11 @@ class Ui_SplashCreen(object):
         self.camera_2.setObjectName(u"camera_2")
         self.camera_2.setGeometry(QRect(330, 7, 31, 31))
         self.camera_2.setStyleSheet(u"QToolButton:hover{\n"
-"	background-color: rgb(150, 76, 228);\n"
+"	background-color: rgb(30, 41, 59);\n"
 "	border-radius:10px;\n"
 "}\n"
 "QToolButton:pressed{\n"
-"	background-color: rgb(170, 85, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	border-radius:10px;\n"
 "}")
         icon1 = QIcon()
@@ -152,20 +152,20 @@ class Ui_SplashCreen(object):
         self.email_login.setObjectName(u"email_login")
         self.email_login.setGeometry(QRect(30, 20, 201, 25))
         self.email_login.setStyleSheet(u"QLineEdit{\n"
-"background-color: rgb(150, 76, 228);\n"
-"border:1px solid rgb(230, 187, 255);\n"
+"background-color: rgb(30, 41, 59);\n"
+"border:1px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
 "color: rgb(208, 208, 208);\n"
 "padding-left:3px;}\n"
 "QLineEdit:hover{\n"
-"background-color: rgb(141, 72, 215);\n"
-"border:2px solid rgb(230, 187, 255);\n"
+"background-color: rgb(51, 65, 85);\n"
+"border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;}\n"
 "QLineEdit:focus{\n"
-"background-color: rgb(134, 69, 208);\n"
-"border:2px solid rgb(230, 187, 255);\n"
+"background-color: rgb(71, 85, 105);\n"
+"border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
-"color: rgb(230, 187, 255);}")
+"color: rgb(204, 251, 241);}")
         self.email_login.setEchoMode(QLineEdit.Normal)
         self.email_login.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.sengup = QPushButton(self.login)
@@ -176,22 +176,22 @@ class Ui_SplashCreen(object):
         font1.setPointSize(8)
         self.sengup.setFont(font1)
         self.sengup.setStyleSheet(u"QPushButton{\n"
-"color: rgb(150, 76, 228);\n"
+"color: rgb(30, 41, 59);\n"
 "background-color: rgb(255, 255, 255);\n"
 "border-radius:5px;\n"
-"border: 1.3px solid rgb(150, 76, 228);\n"
+"border: 1.3px solid rgb(30, 41, 59);\n"
 "}\n"
 "QPushButton:hover{\n"
 "color:rgb(255, 255, 255);\n"
-"background-color:rgb(132, 68, 205);\n"
+"background-color:rgb(71, 85, 105);\n"
 "border-radius:5px;\n"
-"border: 2px solid rgb(170, 0, 255)\n"
+"border: 2px solid rgb(15, 23, 42)\n"
 "}\n"
 "QPushButton:pressed{\n"
-"color: rgb(170, 0, 255);\n"
+"color: rgb(15, 23, 42);\n"
 "background-color: rgb(255, 255, 255);\n"
 "border-radius:5px;\n"
-"border: 1.3px solid rgb(150, 76, 228);\n"
+"border: 1.3px solid rgb(30, 41, 59);\n"
 "}\n"
 "")
         self.login_btn = QPushButton(self.login)
@@ -200,7 +200,7 @@ class Ui_SplashCreen(object):
         self.login_btn.setFont(font1)
         self.login_btn.setStyleSheet(u"QPushButton{\n"
 "color:#ffffff;\n"
-"background-color: rgb(141, 72, 215);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius:5px;\n"
 "border: 1.3px solid rgb(255, 255, 255);\n"
 "}\n"
@@ -212,7 +212,7 @@ class Ui_SplashCreen(object):
 "}\n"
 "QPushButton:pressed{\n"
 "color:#ffffff;\n"
-"background-color: rgb(141, 72, 215);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius:5px;\n"
 "}\n"
 "")
@@ -220,22 +220,22 @@ class Ui_SplashCreen(object):
         self.password.setObjectName(u"password")
         self.password.setGeometry(QRect(30, 70, 201, 25))
         self.password.setStyleSheet(u"QLineEdit{\n"
-"background-color: rgb(150, 76, 228);\n"
-"border:1px solid rgb(230, 187, 255);\n"
+"background-color: rgb(30, 41, 59);\n"
+"border:1px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
 "color: rgb(208, 208, 208);\n"
 "padding-left:3px;\n"
 "}\n"
 "QLineEdit:hover{\n"
-"background-color: rgb(141, 72, 215);\n"
-"border:2px solid rgb(230, 187, 255);\n"
+"background-color: rgb(51, 65, 85);\n"
+"border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;}\n"
 "\n"
 "QLineEdit:focus{\n"
-"background-color: rgb(134, 69, 208);\n"
-"border:2px solid rgb(230, 187, 255);\n"
+"background-color: rgb(71, 85, 105);\n"
+"border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
-"color: rgb(230, 187, 255);}")
+"color: rgb(204, 251, 241);}")
         self.password.setEchoMode(QLineEdit.Password)
         self.password.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.senhaIncorreta_2 = QLabel(self.login)
@@ -270,21 +270,21 @@ class Ui_SplashCreen(object):
         self.faceid_login.setFont(font3)
         self.faceid_login.setStyleSheet(u"QPushButton{\n"
 "color:#ffffff;\n"
-"background-color: rgb(141, 72, 215);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius:5px;\n"
 "}\n"
 "QPushButton:hover{\n"
 "color:#ffffff;\n"
-"background-color:rgb(132, 68, 205);\n"
+"background-color:rgb(71, 85, 105);\n"
 "border-radius:5px;\n"
 "}\n"
 "QPushButton:pressed{\n"
 "color:#ffffff;\n"
-"background-color: rgb(141, 72, 215);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius:5px;\n"
 "}\n"
 "QToolTip{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius:3px;\n"
 "border:3px solid rgb(255, 255, 255);\n"
 "}")
@@ -303,7 +303,7 @@ class Ui_SplashCreen(object):
         self.login_btn_singup.setFont(font1)
         self.login_btn_singup.setStyleSheet(u"QPushButton{\n"
 "color:#ffffff;\n"
-"background-color: rgb(141, 72, 215);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius:5px;\n"
 "border: 1.3px solid rgb(255, 255, 255);\n"
 "}\n"
@@ -315,7 +315,7 @@ class Ui_SplashCreen(object):
 "}\n"
 "QPushButton:pressed{\n"
 "color:#ffffff;\n"
-"background-color: rgb(141, 72, 215);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius:5px;\n"
 "}\n"
 "")
@@ -323,22 +323,22 @@ class Ui_SplashCreen(object):
         self.email_singup.setObjectName(u"email_singup")
         self.email_singup.setGeometry(QRect(20, 10, 201, 25))
         self.email_singup.setStyleSheet(u"QLineEdit{\n"
-"background-color: rgb(150, 76, 228);\n"
-"border:1px solid rgb(230, 187, 255);\n"
+"background-color: rgb(30, 41, 59);\n"
+"border:1px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
 "color: rgb(208, 208, 208);\n"
 "padding-left:3px;\n"
 "}\n"
 "QLineEdit:hover{\n"
-"background-color: rgb(141, 72, 215);\n"
-"border:2px solid rgb(230, 187, 255);\n"
+"background-color: rgb(51, 65, 85);\n"
+"border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;}\n"
 "\n"
 "QLineEdit:focus{\n"
-"background-color: rgb(134, 69, 208);\n"
-"border:2px solid rgb(230, 187, 255);\n"
+"background-color: rgb(71, 85, 105);\n"
+"border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
-"color: rgb(230, 187, 255);}")
+"color: rgb(204, 251, 241);}")
         self.email_singup.setEchoMode(QLineEdit.Normal)
         self.email_singup.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.singup_singup = QPushButton(self.singup)
@@ -346,66 +346,66 @@ class Ui_SplashCreen(object):
         self.singup_singup.setGeometry(QRect(130, 130, 90, 27))
         self.singup_singup.setFont(font1)
         self.singup_singup.setStyleSheet(u"QPushButton{\n"
-"color: rgb(150, 76, 228);\n"
+"color: rgb(30, 41, 59);\n"
 "background-color: rgb(255, 255, 255);\n"
 "border-radius:5px;\n"
-"border: 1.3px solid rgb(170, 0, 255);\n"
+"border: 1.3px solid rgb(15, 23, 42);\n"
 "}\n"
 "QPushButton:hover{\n"
 "color:rgb(255, 255, 255);\n"
-"background-color:rgb(132, 68, 205);\n"
+"background-color:rgb(71, 85, 105);\n"
 "border-radius:5px;\n"
-"border: 2px solid rgb(170, 0, 255)\n"
+"border: 2px solid rgb(15, 23, 42)\n"
 "}\n"
 "QPushButton:pressed{\n"
-"color: rgb(170, 0, 255);\n"
+"color: rgb(15, 23, 42);\n"
 "background-color: rgb(255, 255, 255);\n"
 "border-radius:5px;\n"
-"border: 1.3px solid rgb(170, 0, 255);\n"
+"border: 1.3px solid rgb(15, 23, 42);\n"
 "}\n"
 "")
         self.password1 = QLineEdit(self.singup)
         self.password1.setObjectName(u"password1")
         self.password1.setGeometry(QRect(20, 50, 201, 25))
         self.password1.setStyleSheet(u"QLineEdit{\n"
-"background-color: rgb(150, 76, 228);\n"
-"border:1px solid rgb(230, 187, 255);\n"
+"background-color: rgb(30, 41, 59);\n"
+"border:1px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
 "color: rgb(208, 208, 208);\n"
 "padding-left:3px;\n"
 "}\n"
 "QLineEdit:hover{\n"
-"background-color: rgb(141, 72, 215);\n"
-"border:2px solid rgb(230, 187, 255);\n"
+"background-color: rgb(51, 65, 85);\n"
+"border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;}\n"
 "\n"
 "QLineEdit:focus{\n"
-"background-color: rgb(134, 69, 208);\n"
-"border:2px solid rgb(230, 187, 255);\n"
+"background-color: rgb(71, 85, 105);\n"
+"border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
-"color: rgb(230, 187, 255);}")
+"color: rgb(204, 251, 241);}")
         self.password1.setEchoMode(QLineEdit.Password)
         self.password1.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.password2 = QLineEdit(self.singup)
         self.password2.setObjectName(u"password2")
         self.password2.setGeometry(QRect(20, 90, 201, 25))
         self.password2.setStyleSheet(u"QLineEdit{\n"
-"background-color: rgb(150, 76, 228);\n"
-"border:1px solid rgb(230, 187, 255);\n"
+"background-color: rgb(30, 41, 59);\n"
+"border:1px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
 "color: rgb(208, 208, 208);\n"
 "padding-left:3px;\n"
 "}\n"
 "QLineEdit:hover{\n"
-"background-color: rgb(141, 72, 215);\n"
-"border:2px solid rgb(230, 187, 255);\n"
+"background-color: rgb(51, 65, 85);\n"
+"border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;}\n"
 "\n"
 "QLineEdit:focus{\n"
-"background-color: rgb(134, 69, 208);\n"
-"border:2px solid rgb(230, 187, 255);\n"
+"background-color: rgb(71, 85, 105);\n"
+"border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
-"color: rgb(230, 187, 255);}")
+"color: rgb(204, 251, 241);}")
         self.password2.setEchoMode(QLineEdit.Password)
         self.password2.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.senhaIncorreta_3 = QLabel(self.singup)
@@ -423,7 +423,7 @@ class Ui_SplashCreen(object):
         self.page_central = QWidget()
         self.page_central.setObjectName(u"page_central")
         self.page_central.setStyleSheet(u"QToolTip{\n"
-"	background-color: rgb(170, 85, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	color: rgb(255, 255, 255);\n"
 "	border-left: 3px solid rgb(255, 255, 255);\n"
 "	padding-left: 8px;\n"
@@ -459,21 +459,21 @@ class Ui_SplashCreen(object):
         self.TrocaDeUsuario.setFont(font5)
         self.TrocaDeUsuario.setStyleSheet(u"QPushButton{\n"
 "color:#ffffff;\n"
-"background-color: rgb(150, 76, 228);\n"
+"background-color: rgb(30, 41, 59);\n"
 "border-radius:5px;\n"
 "}\n"
 "QPushButton:hover{\n"
 "color:#ffffff;\n"
-"background-color: rgb(141, 72, 215);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius:5px;\n"
 "}\n"
 "QPushButton:pressed{\n"
 "color:#ffffff;\n"
-"background-color: rgb(150, 76, 228);\n"
+"background-color: rgb(30, 41, 59);\n"
 "border-radius:5px;\n"
 "}\n"
 "QToolTip{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius:3px;\n"
 "border:3px solid rgb(255, 255, 255);\n"
 "}")
@@ -481,11 +481,11 @@ class Ui_SplashCreen(object):
         self.camera.setObjectName(u"camera")
         self.camera.setGeometry(QRect(330, 7, 31, 31))
         self.camera.setStyleSheet(u"QToolButton:hover{\n"
-"	background-color: rgb(150, 76, 228);\n"
+"	background-color: rgb(30, 41, 59);\n"
 "	border-radius:10px;\n"
 "}\n"
 "QToolButton:pressed{\n"
-"	background-color: rgb(170, 85, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	border-radius:10px;\n"
 "}")
         self.camera.setIcon(icon1)
@@ -503,11 +503,11 @@ class Ui_SplashCreen(object):
         self.fechar_1.setObjectName(u"fechar_1")
         self.fechar_1.setGeometry(QRect(370, 7, 21, 21))
         self.fechar_1.setStyleSheet(u"QToolButton:hover{\n"
-"	background-color: rgb(150, 76, 228);\n"
+"	background-color: rgb(30, 41, 59);\n"
 "	border-radius:10px;\n"
 "}\n"
 "QToolButton:pressed{\n"
-"	background-color: rgb(170, 85, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	border-radius:10px;\n"
 "}")
         self.fechar_1.setIcon(icon)
@@ -565,21 +565,21 @@ class Ui_SplashCreen(object):
         self.faceid_login_2.setFont(font3)
         self.faceid_login_2.setStyleSheet(u"QPushButton{\n"
 "color:#ffffff;\n"
-"background-color: rgb(150, 76, 228);\n"
+"background-color: rgb(30, 41, 59);\n"
 "border-radius:5px;\n"
 "}\n"
 "QPushButton:hover{\n"
 "color:#ffffff;\n"
-"background-color: rgb(141, 72, 215);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius:5px;\n"
 "}\n"
 "QPushButton:pressed{\n"
 "color:#ffffff;\n"
-"background-color: rgb(150, 76, 228);\n"
+"background-color: rgb(30, 41, 59);\n"
 "border-radius:5px;\n"
 "}\n"
 "QToolTip{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius:3px;\n"
 "border:3px solid rgb(255, 255, 255);\n"
 "}")
@@ -595,11 +595,11 @@ class Ui_SplashCreen(object):
         self.fechar_2.setObjectName(u"fechar_2")
         self.fechar_2.setGeometry(QRect(30, 7, 21, 21))
         self.fechar_2.setStyleSheet(u"QToolButton:hover{\n"
-"	background-color: rgb(170, 0, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	border-radius:10px;\n"
 "}\n"
 "QToolButton:pressed{\n"
-"	background-color: rgb(170, 85, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	border-radius:10px;\n"
 "}")
         self.fechar_2.setIcon(icon)
@@ -621,7 +621,7 @@ class Ui_SplashCreen(object):
         self.frame_log.setObjectName(u"frame_log")
         self.frame_log.setMinimumSize(QSize(350, 0))
         self.frame_log.setMaximumSize(QSize(350, 300))
-        self.frame_log.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.frame_log.setStyleSheet(u"background-color: rgb(15, 23, 42);\n"
 "border-bottom-right-radius: 15px;\n"
 "border-bottom-left-radius: 15px;")
         self.frame_log.setFrameShape(QFrame.StyledPanel)
@@ -647,7 +647,7 @@ class Ui_SplashCreen(object):
         self.linhaBranca_8.setObjectName(u"linhaBranca_8")
         self.linhaBranca_8.setMinimumSize(QSize(346, 0))
         self.linhaBranca_8.setMaximumSize(QSize(346, 227))
-        self.linhaBranca_8.setStyleSheet(u"background-color: rgb(160, 80, 240);\n"
+        self.linhaBranca_8.setStyleSheet(u"background-color: rgb(71, 85, 105);\n"
 "border-bottom-right-radius: 15px;\n"
 "border-bottom-left-radius: 15px;")
         self.linhaBranca_8.setFrameShape(QFrame.StyledPanel)
@@ -658,28 +658,28 @@ class Ui_SplashCreen(object):
         self.troca.setFont(font3)
         self.troca.setStyleSheet(u"QPushButton{\n"
 "color:#ffffff;\n"
-"background-color: rgb(141, 72, 215);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius:5px;\n"
 "}\n"
 "QPushButton:hover{\n"
 "color:#ffffff;\n"
-"background-color:rgb(132, 68, 205);\n"
+"background-color:rgb(71, 85, 105);\n"
 "border-radius:5px;\n"
 "}\n"
 "QPushButton:pressed{\n"
 "color:#ffffff;\n"
-"background-color: rgb(141, 72, 215);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius:5px;\n"
 "}\n"
 "QToolTip{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius:3px;\n"
 "border:3px solid rgb(255, 255, 255);\n"
 "}")
         self.desbloquear = QLabel(self.linhaBranca_8)
         self.desbloquear.setObjectName(u"desbloquear")
         self.desbloquear.setGeometry(QRect(17, 30, 110, 16))
-        self.desbloquear.setStyleSheet(u"color: rgb(230, 187, 255);\n"
+        self.desbloquear.setStyleSheet(u"color: rgb(204, 251, 241);\n"
 "")
         self.desbloquear.setAlignment(Qt.AlignCenter)
         self.NameEmp = QLabel(self.linhaBranca_8)
@@ -690,7 +690,7 @@ class Ui_SplashCreen(object):
         font9.setPointSize(13)
         font9.setBold(False)
         self.NameEmp.setFont(font9)
-        self.NameEmp.setStyleSheet(u"color: rgb(230, 187, 255);\n"
+        self.NameEmp.setStyleSheet(u"color: rgb(204, 251, 241);\n"
 "")
         self.NameEmp.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
         self.senha = QLineEdit(self.linhaBranca_8)
@@ -701,21 +701,21 @@ class Ui_SplashCreen(object):
         font10.setBold(False)
         self.senha.setFont(font10)
         self.senha.setStyleSheet(u"QLineEdit{\n"
-"background-color: rgb(150, 76, 228);\n"
-"border:1px solid rgb(230, 187, 255);\n"
+"background-color: rgb(30, 41, 59);\n"
+"border:1px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
 "color: rgb(208, 208, 208)\n"
 "}\n"
 "QLineEdit:hover{\n"
-"background-color: rgb(141, 72, 215);\n"
-"border:2px solid rgb(230, 187, 255);\n"
+"background-color: rgb(51, 65, 85);\n"
+"border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;}\n"
 "\n"
 "QLineEdit:focus{\n"
-"background-color: rgb(134, 69, 208);\n"
-"border:2px solid rgb(230, 187, 255);\n"
+"background-color: rgb(71, 85, 105);\n"
+"border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
-"color: rgb(230, 187, 255);}")
+"color: rgb(204, 251, 241);}")
         self.senha.setEchoMode(QLineEdit.Password)
         self.senha.setAlignment(Qt.AlignCenter)
         self.logoCamera = QLabel(self.linhaBranca_8)

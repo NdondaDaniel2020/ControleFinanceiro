@@ -30,19 +30,19 @@ class Ui_MainWindowMW(object):
         self.centralwidget_styleSheet.setObjectName(u"centralwidget_styleSheet")
         self.centralwidget_styleSheet.setStyleSheet(u"QScrollBar:horizontal {\n"
 "    border: none;\n"
-"    background:rgb(170, 50, 255);\n"
+"    background:rgb(20, 184, 166);\n"
 "    height: 5px;\n"
 "    margin: 0px 21px 0 21px;\n"
 "	border-radius: 0px;\n"
 "}\n"
 "QScrollBar::handle:horizontal {\n"
-"    background: rgb(189, 147, 249);\n"
+"    background: rgb(20, 184, 166);\n"
 "    min-width: 25px;\n"
 "	border-radius: 4px\n"
 "}\n"
 "QScrollBar::add-line:horizontal {\n"
 "    border: none;\n"
-"    background: rgb(170, 50, 255);\n"
+"    background: rgb(20, 184, 166);\n"
 "    width: 20px;\n"
 "	border-top-right-radius: 4px;\n"
 "    border-bottom-right-radius: 4px;\n"
@@ -51,7 +51,7 @@ class Ui_MainWindowMW(object):
 "}\n"
 "QScrollBar::sub-line:horizontal {\n"
 "    border: none;\n"
-"    background: rgb(170, 50, 255);\n"
+"    background: rgb(20, 184, 166);\n"
 "    width: 20px;\n"
 "	border-top-left-radius: 4px;\n"
 "    border-bottom-left-radius: 4px;\n"
@@ -69,19 +69,19 @@ class Ui_MainWindowMW(object):
 "}\n"
 " QScrollBar:vertical {\n"
 "	border: none;\n"
-"    background: rgb(170, 50, 255);\n"
+"    background: rgb(20, 184, 166);\n"
 "    width: 8px;\n"
 "    margin: 21px 0 21px 0;\n"
 "	border-radius: 0px;\n"
 " }\n"
 " QScrollBar::handle:vertical {	\n"
-"	background: rgb(189, 147, 249);\n"
+"	background: rgb(20, 184, 166);\n"
 "    min-height: 25px;\n"
 "	border-radius: 4px\n"
 " }\n"
 " QScrollBar::add-line:vertical {\n"
 "     border: none;\n"
-"    background: rgb(170, 50, 255);\n"
+"    background: rgb(20, 184, 166);\n"
 "     height: 20px;\n"
 "	border-bottom-left-radius: 4px;\n"
 "    border-bottom-right-radius: 4px;\n"
@@ -90,7 +90,7 @@ class Ui_MainWindowMW(object):
 " }\n"
 " QScrollBar::sub-line:vertical {\n"
 "	border: none;\n"
-"    background: rgb(170, 50, 255);\n"
+"    background: rgb(20, 184, 166);\n"
 "     height: 20px;\n"
 "	border-top-left-radius: 4px;\n"
 "    border-top-right-radius: 4px;\n"
@@ -118,13 +118,13 @@ class Ui_MainWindowMW(object):
 "    border-radius: 5px;\n"
 "    height: 10px;\n"
 "	margin: 0px;\n"
-"	background-color:rgb(165, 83, 248);\n"
+"	background-color:rgb(51, 65, 85);\n"
 "}\n"
 "QSlider::groove:horizontal:hover {\n"
-"	background-color: rgb(170, 97, 253);\n"
+"	background-color: rgb(51, 65, 85);\n"
 "}\n"
 "QSlider::handle:horizontal {\n"
-"    background-color: rgb(189, 147, 249);\n"
+"    background-color: rgb(20, 184, 166);\n"
 "    border: none;\n"
 "    height: 10px;\n"
 "    width: 10px;\n"
@@ -132,14 +132,14 @@ class Ui_MainWindowMW(object):
 "	border-radius: 5px;\n"
 "}\n"
 "QSlider::handle:horizontal:hover {\n"
-"    background-color: rgb(195, 155, 255);\n"
+"    background-color: rgb(71, 85, 105);\n"
 "}\n"
 "QSlider::handle:horizontal:pressed {\n"
 "    background-color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QCheckBox::indicator {\n"
-"    border: 3px solid rgb(170, 85, 255);\n"
+"    border: 3px solid rgb(15, 23, 42);\n"
 "	width: 23px;\n"
 "	height: 23px;\n"
 "	border-radius: 9px;\n"
@@ -153,7 +153,7 @@ class Ui_MainWindowMW(object):
 "border-radius: 9px;\n"
 "}\n"
 "QCheckBox::indicator:checked {\n"
-"    background: 3px solid rgb(159, 80, 239);\n"
+"    background: 3px solid rgb(30, 41, 59);\n"
 "	border: 3px solid rgb(58, 66, 81);\n"
 "	width: 20px;\n"
 "	height: 20px;\n"
@@ -166,7 +166,7 @@ class Ui_MainWindowMW(object):
         self.verticalLayout.setContentsMargins(1, 1, 1, 1)
         self.primeiro_container = QFrame(self.centralwidget_styleSheet)
         self.primeiro_container.setObjectName(u"primeiro_container")
-        self.primeiro_container.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.primeiro_container.setStyleSheet(u"background-color: rgb(15, 23, 42);\n"
 "border-radius:15px;")
         self.primeiro_container.setFrameShape(QFrame.StyledPanel)
         self.primeiro_container.setFrameShadow(QFrame.Raised)
@@ -186,7 +186,7 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_3.setContentsMargins(1, 1, 1, 1)
         self.frame_central = QFrame(self.linha)
         self.frame_central.setObjectName(u"frame_central")
-        self.frame_central.setStyleSheet(u"background-color: rgb(159, 80, 239);\n"
+        self.frame_central.setStyleSheet(u"background-color: rgb(30, 41, 59);\n"
 "border-radius:15px;\n"
 "")
         self.frame_central.setFrameShape(QFrame.StyledPanel)
@@ -197,7 +197,7 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_5.setContentsMargins(0, 0, 0, 8)
         self.frame_centaralCentral = QFrame(self.frame_central)
         self.frame_centaralCentral.setObjectName(u"frame_centaralCentral")
-        self.frame_centaralCentral.setStyleSheet(u"background-color: rgb(159, 80, 239);")
+        self.frame_centaralCentral.setStyleSheet(u"background-color: rgb(30, 41, 59);")
         self.frame_centaralCentral.setFrameShape(QFrame.StyledPanel)
         self.frame_centaralCentral.setFrameShadow(QFrame.Raised)
         self.verticalLayout_6 = QVBoxLayout(self.frame_centaralCentral)
@@ -206,7 +206,7 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_6.setContentsMargins(0, 0, 0, 0)
         self.central_frame = QFrame(self.frame_centaralCentral)
         self.central_frame.setObjectName(u"central_frame")
-        self.central_frame.setStyleSheet(u"background-color: rgb(159, 80, 239);\n"
+        self.central_frame.setStyleSheet(u"background-color: rgb(30, 41, 59);\n"
 "border-bottom-left-radius:0px;\n"
 "border-bottom-right-radius:0px;")
         self.central_frame.setFrameShape(QFrame.StyledPanel)
@@ -229,7 +229,7 @@ class Ui_MainWindowMW(object):
         self.barraTitulo.setMinimumSize(QSize(0, 38))
         self.barraTitulo.setMaximumSize(QSize(16777215, 38))
         self.barraTitulo.setStyleSheet(u"QFrame{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius:13px;\n"
 "}")
         self.barraTitulo.setFrameShape(QFrame.StyledPanel)
@@ -244,20 +244,20 @@ class Ui_MainWindowMW(object):
         font.setPointSize(2)
         self.pushButton_5.setFont(font)
         self.pushButton_5.setStyleSheet(u"QPushButton{\n"
-"border-color: rgb(170, 85, 255);\n"
-"background-color: rgb(170, 85, 255);\n"
+"border-color: rgb(15, 23, 42);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius:0px;\n"
 "border-radius:15px}\n"
 "\n"
 "QPushButton:hover{\n"
-"border-color: rgb(170, 85, 255);\n"
-"background-color: rgb(170, 85, 255);\n"
+"border-color: rgb(15, 23, 42);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius:0px;\n"
 "border-radius:15px}\n"
 "\n"
 "QPushButton:pressed{\n"
-"border-color: rgb(170, 85, 255);\n"
-"background-color: rgb(170, 85, 255);\n"
+"border-color: rgb(15, 23, 42);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius:0px;\n"
 "border-radius:15px}\n"
 "")
@@ -275,7 +275,7 @@ class Ui_MainWindowMW(object):
         font1.setPointSize(14)
         font1.setBold(True)
         self.NameEmp.setFont(font1)
-        self.NameEmp.setStyleSheet(u"color: rgb(230, 187, 255);\n"
+        self.NameEmp.setStyleSheet(u"color: rgb(204, 251, 241);\n"
 "padding-bottom:2px;\n"
 "")
         self.NameEmp.setAlignment(Qt.AlignCenter)
@@ -293,18 +293,18 @@ class Ui_MainWindowMW(object):
         self.frame_btn_zone_3.setStyleSheet(u"\n"
 "QToolButton{\n"
 "	color: rgb(255, 255, 255);\n"
-"	background-color: rgb(170, 85, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	border-radius:3px;\n"
 "\n"
 "}\n"
 "QToolButton:hover{\n"
-"	background-color: rgb(153, 71, 234);\n"
+"	background-color: rgb(51, 65, 85);\n"
 "	border-radius:3px;\n"
 "	color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QToolButton:pressed{\n"
-"	background-color: rgb(170, 85, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	border-radius:3px;\n"
 "	color: rgb(255, 255, 255);\n"
 "}\n"
@@ -366,14 +366,14 @@ class Ui_MainWindowMW(object):
         self.xone_btn_left.setMinimumSize(QSize(45, 0))
         self.xone_btn_left.setMaximumSize(QSize(45, 16777215))
         self.xone_btn_left.setStyleSheet(u"QPushButton{\n"
-"	background-color: rgb(170, 85, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	border-radius:17px;\n"
 "	color: rgb(255, 255, 255);\n"
 "	padding-left:6px;\n"
 "    text-align: left;	\n"
 "}\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(163, 83, 248);\n"
+"	background-color: rgb(51, 65, 85);\n"
 "	border-radius:17px;\n"
 "	color: rgb(255, 255, 255);\n"
 "	padding-left:6px;\n"
@@ -381,7 +381,7 @@ class Ui_MainWindowMW(object):
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"	background-color: rgb(170, 85, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	border-radius:17px;\n"
 "	color: rgb(255, 255, 255);\n"
 "	padding-left:6px;\n"
@@ -409,20 +409,20 @@ class Ui_MainWindowMW(object):
         self.movimentacao_btn.setMinimumSize(QSize(35, 35))
         self.movimentacao_btn.setMaximumSize(QSize(35, 35))
         self.movimentacao_btn.setStyleSheet(u"QPushButton{\n"
-"	background-color: rgb(170, 85, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	border-radius:17px;\n"
 "	color: rgb(255, 255, 255);\n"
 "    text-align: left;	\n"
 "}\n"
 "QPushButton:hover{\n"
-"	background-color: rgb(163, 83, 248);\n"
+"	background-color: rgb(51, 65, 85);\n"
 "	border-radius:17px;\n"
 "	color: rgb(255, 255, 255);\n"
 "   text-align: justify;	\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"	background-color: rgb(170, 85, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "	border-radius:17px;\n"
 "	color: rgb(255, 255, 255);\n"
 "    text-align: justify;	\n"
@@ -521,7 +521,7 @@ class Ui_MainWindowMW(object):
 "	border-radius:4px;\n"
 "}\n"
 "QFrame{\n"
-"	background-color: rgb(159, 80, 239);\n"
+"	background-color: rgb(30, 41, 59);\n"
 "}\n"
 "QPushButton:hover{\n"
 "	color: rgb(255, 255, 255);\n"
@@ -529,7 +529,7 @@ class Ui_MainWindowMW(object):
 "    text-align: left;\n"
 "	padding-left: 18px;\n"
 "	border-radius:4px;\n"
-"	background-color: rgb(170, 85, 255);\n"
+"	background-color: rgb(15, 23, 42);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
@@ -537,7 +537,7 @@ class Ui_MainWindowMW(object):
 "    text-align: left;\n"
 "	padding-left: 18px;\n"
 "	border-radius:4px;\n"
-"	background-color: rgb(159, 80, 239);\n"
+"	background-color: rgb(30, 41, 59);\n"
 "}")
         self.frame_zone_btn.setFrameShape(QFrame.StyledPanel)
         self.frame_zone_btn.setFrameShadow(QFrame.Raised)
@@ -624,7 +624,7 @@ class Ui_MainWindowMW(object):
         self.frame_222.setObjectName(u"frame_222")
         self.frame_222.setMinimumSize(QSize(400, 0))
         self.frame_222.setStyleSheet(u";\n"
-"background-color: rgb(170, 85, 255);")
+"background-color: rgb(15, 23, 42);")
         self.frame_222.setFrameShape(QFrame.StyledPanel)
         self.frame_222.setFrameShadow(QFrame.Raised)
         self.verticalLayout_253 = QVBoxLayout(self.frame_222)
@@ -654,7 +654,7 @@ class Ui_MainWindowMW(object):
         self.scrollAreaWidgetContents_5 = QWidget()
         self.scrollAreaWidgetContents_5.setObjectName(u"scrollAreaWidgetContents_5")
         self.scrollAreaWidgetContents_5.setGeometry(QRect(0, 0, 1034, 172))
-        self.scrollAreaWidgetContents_5.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.scrollAreaWidgetContents_5.setStyleSheet(u"background-color: rgb(15, 23, 42);\n"
 "border-radius:15px;\n"
 "")
         self.horizontalLayout_109 = QHBoxLayout(self.scrollAreaWidgetContents_5)
@@ -676,12 +676,12 @@ class Ui_MainWindowMW(object):
         font2.setFamilies([u"Segoe UI Semibold"])
         font2.setPointSize(12)
         self.label_186.setFont(font2)
-        self.label_186.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_186.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.label_31 = QLabel(self.frame_movimentacao)
         self.label_31.setObjectName(u"label_31")
         self.label_31.setGeometry(QRect(132, 30, 80, 21))
         self.label_31.setFont(font2)
-        self.label_31.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_31.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.movimentacao_btn2 = QPushButton(self.frame_movimentacao)
         self.movimentacao_btn2.setObjectName(u"movimentacao_btn2")
         self.movimentacao_btn2.setGeometry(QRect(7, 10, 115, 115))
@@ -705,7 +705,7 @@ class Ui_MainWindowMW(object):
         self.label_199.setObjectName(u"label_199")
         self.label_199.setGeometry(QRect(130, 74, 80, 20))
         self.label_199.setFont(font2)
-        self.label_199.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_199.setStyleSheet(u"color: rgb(15, 23, 42);")
 
         self.horizontalLayout_109.addWidget(self.frame_movimentacao)
 
@@ -749,17 +749,17 @@ class Ui_MainWindowMW(object):
         self.label_195.setObjectName(u"label_195")
         self.label_195.setGeometry(QRect(100, 15, 157, 20))
         self.label_195.setFont(font2)
-        self.label_195.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_195.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.label_194 = QLabel(self.frame_207)
         self.label_194.setObjectName(u"label_194")
         self.label_194.setGeometry(QRect(100, 34, 117, 20))
         self.label_194.setFont(font2)
-        self.label_194.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_194.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.label_196 = QLabel(self.frame_207)
         self.label_196.setObjectName(u"label_196")
         self.label_196.setGeometry(QRect(96, 55, 80, 20))
         self.label_196.setFont(font2)
-        self.label_196.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_196.setStyleSheet(u"color: rgb(15, 23, 42);")
 
         self.verticalLayout_178.addWidget(self.frame_207)
 
@@ -777,7 +777,7 @@ class Ui_MainWindowMW(object):
         font3.setFamilies([u"Segoe UI Semibold"])
         font3.setPointSize(21)
         self.homeValorTotal.setFont(font3)
-        self.homeValorTotal.setStyleSheet(u"color: rgb(170, 85, 255);\n"
+        self.homeValorTotal.setStyleSheet(u"color: rgb(15, 23, 42);\n"
 "background-color: transparent")
         self.homeValorTotal.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
@@ -830,17 +830,17 @@ class Ui_MainWindowMW(object):
         self.label_203.setObjectName(u"label_203")
         self.label_203.setGeometry(QRect(103, 15, 130, 20))
         self.label_203.setFont(font2)
-        self.label_203.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_203.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.label_204 = QLabel(self.frame_user_list_3)
         self.label_204.setObjectName(u"label_204")
         self.label_204.setGeometry(QRect(105, 34, 130, 20))
         self.label_204.setFont(font2)
-        self.label_204.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_204.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.label_197 = QLabel(self.frame_user_list_3)
         self.label_197.setObjectName(u"label_197")
         self.label_197.setGeometry(QRect(102, 55, 80, 20))
         self.label_197.setFont(font2)
-        self.label_197.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_197.setStyleSheet(u"color: rgb(15, 23, 42);")
 
         self.verticalLayout_180.addWidget(self.frame_user_list_3)
 
@@ -857,7 +857,7 @@ class Ui_MainWindowMW(object):
         self.homeTotalEntrada = QLabel(self.frame_211)
         self.homeTotalEntrada.setObjectName(u"homeTotalEntrada")
         self.homeTotalEntrada.setFont(font3)
-        self.homeTotalEntrada.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.homeTotalEntrada.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.homeTotalEntrada.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.verticalLayout_181.addWidget(self.homeTotalEntrada)
@@ -906,17 +906,17 @@ class Ui_MainWindowMW(object):
         self.label_206.setObjectName(u"label_206")
         self.label_206.setGeometry(QRect(105, 34, 130, 20))
         self.label_206.setFont(font2)
-        self.label_206.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_206.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.label_207 = QLabel(self.frame_210)
         self.label_207.setObjectName(u"label_207")
         self.label_207.setGeometry(QRect(103, 15, 130, 20))
         self.label_207.setFont(font2)
-        self.label_207.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_207.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.label_198 = QLabel(self.frame_210)
         self.label_198.setObjectName(u"label_198")
         self.label_198.setGeometry(QRect(102, 55, 80, 20))
         self.label_198.setFont(font2)
-        self.label_198.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_198.setStyleSheet(u"color: rgb(15, 23, 42);")
 
         self.verticalLayout_182.addWidget(self.frame_210)
 
@@ -933,7 +933,7 @@ class Ui_MainWindowMW(object):
         self.homeTotalSaidas = QLabel(self.frame_212)
         self.homeTotalSaidas.setObjectName(u"homeTotalSaidas")
         self.homeTotalSaidas.setFont(font3)
-        self.homeTotalSaidas.setStyleSheet(u"color: rgb(170, 85, 255);\n"
+        self.homeTotalSaidas.setStyleSheet(u"color: rgb(15, 23, 42);\n"
 "background-color: transparent")
         self.homeTotalSaidas.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
@@ -1103,7 +1103,7 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_12.setContentsMargins(0, 0, 0, 0)
         self.frame_perfil = QFrame(self.page_perfil)
         self.frame_perfil.setObjectName(u"frame_perfil")
-        self.frame_perfil.setStyleSheet(u"background-color: rgb(170, 85, 255);")
+        self.frame_perfil.setStyleSheet(u"background-color: rgb(15, 23, 42);")
         self.frame_perfil.setFrameShape(QFrame.StyledPanel)
         self.frame_perfil.setFrameShadow(QFrame.Raised)
         self.horizontalLayout_3 = QHBoxLayout(self.frame_perfil)
@@ -1114,7 +1114,7 @@ class Ui_MainWindowMW(object):
         self.frame_101.setObjectName(u"frame_101")
         self.frame_101.setMinimumSize(QSize(400, 0))
         self.frame_101.setStyleSheet(u";\n"
-"background-color: rgb(170, 85, 255);")
+"background-color: rgb(15, 23, 42);")
         self.frame_101.setFrameShape(QFrame.StyledPanel)
         self.frame_101.setFrameShadow(QFrame.Raised)
         self.verticalLayout_252 = QVBoxLayout(self.frame_101)
@@ -1144,7 +1144,7 @@ class Ui_MainWindowMW(object):
         self.scrollAreaWidgetContents_4 = QWidget()
         self.scrollAreaWidgetContents_4.setObjectName(u"scrollAreaWidgetContents_4")
         self.scrollAreaWidgetContents_4.setGeometry(QRect(0, 0, 1037, 145))
-        self.scrollAreaWidgetContents_4.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.scrollAreaWidgetContents_4.setStyleSheet(u"background-color: rgb(15, 23, 42);\n"
 "border-radius:15px;\n"
 "")
         self.horizontalLayout_108 = QHBoxLayout(self.scrollAreaWidgetContents_4)
@@ -1245,9 +1245,9 @@ class Ui_MainWindowMW(object):
         font7.setPointSize(15)
         self.lineEdit_2.setFont(font7)
         self.lineEdit_2.setStyleSheet(u"border-radius:7px;\n"
-"color:rgb(170, 85, 255);\n"
+"color:rgb(15, 23, 42);\n"
 "background-color: rgb(255, 255, 255);\n"
-"border:3px solid rgb(170, 85, 255)")
+"border:3px solid rgb(15, 23, 42)")
         self.lineEdit_2.setEchoMode(QLineEdit.Password)
         self.lineEdit_2.setAlignment(Qt.AlignBottom|Qt.AlignHCenter)
         self.password_faceId_lbl_6 = QLabel(self.frame_password_faceId)
@@ -1286,7 +1286,7 @@ class Ui_MainWindowMW(object):
 "}\n"
 "\n"
 "QRadioButton::indicator {\n"
-"    border: 3px solid rgb(170, 85, 255);\n"
+"    border: 3px solid rgb(15, 23, 42);\n"
 "	width: 18px;\n"
 "	height: 18px;\n"
 "	border-radius: 12px;\n"
@@ -1294,10 +1294,10 @@ class Ui_MainWindowMW(object):
 "	color: rgb(255, 255, 255);\n"
 "}\n"
 "QRadioButton::indicator:hover {\n"
-"    border: 3px solid rgb(165, 83, 248);\n"
+"    border: 3px solid rgb(51, 65, 85);\n"
 "}\n"
 "QRadioButton::indicator:checked {\n"
-"    background: 3px solid rgb(170, 85, 255);\n"
+"    background: 3px solid rgb(15, 23, 42);\n"
 "	border: 3px solid rgb(41, 42, 65)\n"
 "}\n"
 "")
@@ -1367,19 +1367,19 @@ class Ui_MainWindowMW(object):
         self.editFotho.setGeometry(QRect(60, 200, 110, 35))
         self.editFotho.setFont(font6)
         self.editFotho.setStyleSheet(u"QPushButton{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: rgb(165, 82, 247);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}")
@@ -1387,7 +1387,7 @@ class Ui_MainWindowMW(object):
         self.frame_223.setObjectName(u"frame_223")
         self.frame_223.setGeometry(QRect(40, 10, 161, 171))
         self.frame_223.setStyleSheet(u"QFrame{\n"
-"border: 1px solid rgb(170, 85, 255);\n"
+"border: 1px solid rgb(15, 23, 42);\n"
 "border-radius: 20px;\n"
 "}")
         self.frame_223.setFrameShape(QFrame.StyledPanel)
@@ -1458,7 +1458,7 @@ class Ui_MainWindowMW(object):
         font9.setFamilies([u"Segoe UI Semibold"])
         font9.setPointSize(11)
         self.label_189.setFont(font9)
-        self.label_189.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_189.setStyleSheet(u"color: rgb(15, 23, 42);")
 
         self.horizontalLayout_104.addWidget(self.label_189)
 
@@ -1467,7 +1467,7 @@ class Ui_MainWindowMW(object):
         self.label_201.setMinimumSize(QSize(0, 30))
         self.label_201.setMaximumSize(QSize(16777215, 30))
         self.label_201.setFont(font9)
-        self.label_201.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_201.setStyleSheet(u"color: rgb(15, 23, 42);")
 
         self.horizontalLayout_104.addWidget(self.label_201)
 
@@ -1483,20 +1483,20 @@ class Ui_MainWindowMW(object):
         self.mudaNome.setMaximumSize(QSize(16777215, 40))
         self.mudaNome.setFont(font6)
         self.mudaNome.setStyleSheet(u"QLineEdit{\n"
-"color: rgb(170, 85, 255);\n"
+"color: rgb(15, 23, 42);\n"
 "background-color: rgb(250, 250, 250);\n"
-"border: 1px solid rgb(170, 85, 255);		\n"
+"border: 1px solid rgb(15, 23, 42);		\n"
 "border-radius:9px;\n"
 "padding-left:5px}\n"
 "\n"
 "QLineEdit:hover{\n"
 "background-color:rgb(247, 248, 248);\n"
-"border: 2px solid rgb(170, 85, 255);		\n"
+"border: 2px solid rgb(15, 23, 42);		\n"
 "border-radius:8px}\n"
 "\n"
 "QLineEdit:focus{\n"
 "background-color:rgb(247, 248, 248);\n"
-"border: 2px solid rgb(170, 85, 255);		\n"
+"border: 2px solid rgb(15, 23, 42);		\n"
 "border-radius:8px}")
 
         self.horizontalLayout_103.addWidget(self.mudaNome)
@@ -1507,20 +1507,20 @@ class Ui_MainWindowMW(object):
         self.mudaSenha.setMaximumSize(QSize(16777215, 40))
         self.mudaSenha.setFont(font6)
         self.mudaSenha.setStyleSheet(u"QLineEdit{\n"
-"color: rgb(170, 85, 255);\n"
+"color: rgb(15, 23, 42);\n"
 "background-color: rgb(250, 250, 250);\n"
-"border: 1px solid rgb(170, 85, 255);		\n"
+"border: 1px solid rgb(15, 23, 42);		\n"
 "border-radius:8px;\n"
 "padding-left:5px}\n"
 "\n"
 "QLineEdit:hover{\n"
 "background-color:rgb(247, 248, 248);\n"
-"border: 2px solid rgb(170, 85, 255);		\n"
+"border: 2px solid rgb(15, 23, 42);		\n"
 "border-radius:8px}\n"
 "\n"
 "QLineEdit:focus{\n"
 "background-color:rgb(247, 248, 248);\n"
-"border: 2px solid rgb(170, 85, 255);		\n"
+"border: 2px solid rgb(15, 23, 42);		\n"
 "border-radius:8px}")
 
         self.horizontalLayout_103.addWidget(self.mudaSenha)
@@ -1533,7 +1533,7 @@ class Ui_MainWindowMW(object):
         self.label_200.setMinimumSize(QSize(0, 30))
         self.label_200.setMaximumSize(QSize(16777215, 30))
         self.label_200.setFont(font9)
-        self.label_200.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_200.setStyleSheet(u"color: rgb(15, 23, 42);")
 
         self.verticalLayout_151.addWidget(self.label_200)
 
@@ -1543,20 +1543,20 @@ class Ui_MainWindowMW(object):
         self.lineEdit_4.setMaximumSize(QSize(16777215, 40))
         self.lineEdit_4.setFont(font6)
         self.lineEdit_4.setStyleSheet(u"QLineEdit{\n"
-"color: rgb(170, 85, 255);\n"
+"color: rgb(15, 23, 42);\n"
 "background-color: rgb(250, 250, 250);\n"
-"border: 1px solid rgb(170, 85, 255);		\n"
+"border: 1px solid rgb(15, 23, 42);		\n"
 "border-radius:5px;\n"
 "padding-left:5px}\n"
 "\n"
 "QLineEdit:hover{\n"
 "background-color:rgb(247, 248, 248);\n"
-"border: 2px solid rgb(170, 85, 255);		\n"
+"border: 2px solid rgb(15, 23, 42);		\n"
 "border-radius:5px}\n"
 "\n"
 "QLineEdit:focus{\n"
 "background-color:rgb(247, 248, 248);\n"
-"border: 2px solid rgb(170, 85, 255);		\n"
+"border: 2px solid rgb(15, 23, 42);		\n"
 "border-radius:5px}")
 
         self.verticalLayout_151.addWidget(self.lineEdit_4)
@@ -1600,19 +1600,19 @@ class Ui_MainWindowMW(object):
         self.salvarAlteracao.setMaximumSize(QSize(110, 16777215))
         self.salvarAlteracao.setFont(font6)
         self.salvarAlteracao.setStyleSheet(u"QPushButton{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: rgb(165, 82, 247);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}")
@@ -1672,19 +1672,19 @@ class Ui_MainWindowMW(object):
         self.pushButton_20.setMaximumSize(QSize(110, 16777215))
         self.pushButton_20.setFont(font6)
         self.pushButton_20.setStyleSheet(u"QPushButton{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: rgb(165, 82, 247);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}")
@@ -1697,19 +1697,19 @@ class Ui_MainWindowMW(object):
         self.pushButton_19.setMaximumSize(QSize(110, 16777215))
         self.pushButton_19.setFont(font6)
         self.pushButton_19.setStyleSheet(u"QPushButton{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: rgb(165, 82, 247);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}")
@@ -1754,7 +1754,7 @@ class Ui_MainWindowMW(object):
         font10.setPointSize(27)
         font10.setBold(False)
         self.label_2.setFont(font10)
-        self.label_2.setStyleSheet(u"color: rgb(170, 85, 255);\n"
+        self.label_2.setStyleSheet(u"color: rgb(15, 23, 42);\n"
 "padding-left:3px")
 
         self.verticalLayout_25.addWidget(self.label_2)
@@ -1828,20 +1828,20 @@ class Ui_MainWindowMW(object):
         self.mudaNome_2.setMaximumSize(QSize(123456, 35))
         self.mudaNome_2.setFont(font6)
         self.mudaNome_2.setStyleSheet(u"QLineEdit{\n"
-"color: rgb(170, 85, 255);\n"
+"color: rgb(15, 23, 42);\n"
 "background-color: rgb(250, 250, 250);\n"
-"border: 1px solid rgb(170, 85, 255);		\n"
+"border: 1px solid rgb(15, 23, 42);		\n"
 "border-radius:4px;\n"
 "padding-left:5px}\n"
 "\n"
 "QLineEdit:hover{\n"
 "background-color:rgb(247, 248, 248);\n"
-"border: 2px solid rgb(170, 85, 255);		\n"
+"border: 2px solid rgb(15, 23, 42);		\n"
 "border-radius:4px}\n"
 "\n"
 "QLineEdit:focus{\n"
 "background-color:rgb(247, 248, 248);\n"
-"border: 2px solid rgb(170, 85, 255);		\n"
+"border: 2px solid rgb(15, 23, 42);		\n"
 "border-radius:4px}")
 
         self.horizontalLayout_6.addWidget(self.mudaNome_2)
@@ -1852,19 +1852,19 @@ class Ui_MainWindowMW(object):
         self.salvarAlteracao_2.setMaximumSize(QSize(80, 16777215))
         self.salvarAlteracao_2.setFont(font6)
         self.salvarAlteracao_2.setStyleSheet(u"QPushButton{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius: 4px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: rgb(165, 82, 247);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius: 4px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius: 4px;\n"
 "color: rgb(255, 255, 255);\n"
 "}")
@@ -1907,7 +1907,7 @@ class Ui_MainWindowMW(object):
         self.frame_173.setMinimumSize(QSize(220, 0))
         self.frame_173.setMaximumSize(QSize(220, 16777215))
         self.frame_173.setStyleSheet(u"QFrame{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius:0px;\n"
 "}\n"
 "")
@@ -1941,7 +1941,7 @@ class Ui_MainWindowMW(object):
         self.line = QFrame(self.frame_175)
         self.line.setObjectName(u"line")
         self.line.setGeometry(QRect(10, 190, 184, 2))
-        self.line.setStyleSheet(u"background-color: rgb(170, 85, 255);")
+        self.line.setStyleSheet(u"background-color: rgb(15, 23, 42);")
         self.line.setFrameShape(QFrame.HLine)
         self.line.setFrameShadow(QFrame.Sunken)
         self.descricao = QLabel(self.frame_175)
@@ -1950,20 +1950,20 @@ class Ui_MainWindowMW(object):
         font11 = QFont()
         font11.setPointSize(14)
         self.descricao.setFont(font11)
-        self.descricao.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.descricao.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.descricao.setAlignment(Qt.AlignCenter)
         self.userName = QLabel(self.frame_175)
         self.userName.setObjectName(u"userName")
         self.userName.setGeometry(QRect(50, 120, 110, 20))
         self.userName.setFont(font6)
-        self.userName.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.userName.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.userName.setAlignment(Qt.AlignCenter)
         self.frame_176 = QFrame(self.frame_175)
         self.frame_176.setObjectName(u"frame_176")
         self.frame_176.setGeometry(QRect(50, 10, 110, 111))
         self.frame_176.setMinimumSize(QSize(110, 110))
         self.frame_176.setMaximumSize(QSize(107, 154))
-        self.frame_176.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.frame_176.setStyleSheet(u"background-color: rgb(15, 23, 42);\n"
 "border-radius:53px;")
         self.frame_176.setFrameShape(QFrame.StyledPanel)
         self.frame_176.setFrameShadow(QFrame.Raised)
@@ -2005,7 +2005,7 @@ class Ui_MainWindowMW(object):
         self.frame_178.setObjectName(u"frame_178")
         self.frame_178.setMinimumSize(QSize(0, 70))
         self.frame_178.setMaximumSize(QSize(16777215, 70))
-        self.frame_178.setStyleSheet(u"background-color: rgb(170, 85, 255);")
+        self.frame_178.setStyleSheet(u"background-color: rgb(15, 23, 42);")
         self.frame_178.setFrameShape(QFrame.StyledPanel)
         self.frame_178.setFrameShadow(QFrame.Raised)
 
@@ -2035,7 +2035,7 @@ class Ui_MainWindowMW(object):
         self.label_67 = QLabel(self.frame_180)
         self.label_67.setObjectName(u"label_67")
         self.label_67.setFont(font6)
-        self.label_67.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_67.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.label_67.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.horizontalLayout_36.addWidget(self.label_67)
@@ -2058,7 +2058,7 @@ class Ui_MainWindowMW(object):
 
         self.line_7 = QFrame(self.frame_179)
         self.line_7.setObjectName(u"line_7")
-        self.line_7.setStyleSheet(u"background-color: rgb(170, 85, 255);")
+        self.line_7.setStyleSheet(u"background-color: rgb(15, 23, 42);")
         self.line_7.setFrameShape(QFrame.HLine)
         self.line_7.setFrameShadow(QFrame.Sunken)
 
@@ -2075,7 +2075,7 @@ class Ui_MainWindowMW(object):
         self.label_23 = QLabel(self.frame_181)
         self.label_23.setObjectName(u"label_23")
         self.label_23.setFont(font6)
-        self.label_23.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_23.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.label_23.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.horizontalLayout_37.addWidget(self.label_23)
@@ -2101,7 +2101,7 @@ class Ui_MainWindowMW(object):
 
         self.line_5 = QFrame(self.frame_179)
         self.line_5.setObjectName(u"line_5")
-        self.line_5.setStyleSheet(u"background-color: rgb(170, 85, 255);")
+        self.line_5.setStyleSheet(u"background-color: rgb(15, 23, 42);")
         self.line_5.setFrameShape(QFrame.HLine)
         self.line_5.setFrameShadow(QFrame.Sunken)
 
@@ -2120,7 +2120,7 @@ class Ui_MainWindowMW(object):
         self.label_91 = QLabel(self.frame_365)
         self.label_91.setObjectName(u"label_91")
         self.label_91.setFont(font6)
-        self.label_91.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_91.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.label_91.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.horizontalLayout_43.addWidget(self.label_91)
@@ -2143,7 +2143,7 @@ class Ui_MainWindowMW(object):
 
         self.line_2 = QFrame(self.frame_179)
         self.line_2.setObjectName(u"line_2")
-        self.line_2.setStyleSheet(u"background-color: rgb(170, 85, 255);")
+        self.line_2.setStyleSheet(u"background-color: rgb(15, 23, 42);")
         self.line_2.setFrameShape(QFrame.HLine)
         self.line_2.setFrameShadow(QFrame.Sunken)
 
@@ -2162,7 +2162,7 @@ class Ui_MainWindowMW(object):
         self.label_58 = QLabel(self.frame_366)
         self.label_58.setObjectName(u"label_58")
         self.label_58.setFont(font6)
-        self.label_58.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_58.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.label_58.setAlignment(Qt.AlignLeading|Qt.AlignLeft|Qt.AlignVCenter)
 
         self.horizontalLayout_40.addWidget(self.label_58)
@@ -2194,7 +2194,7 @@ class Ui_MainWindowMW(object):
         self.dataPerfil = QLabel(self.frame_177)
         self.dataPerfil.setObjectName(u"dataPerfil")
         self.dataPerfil.setFont(font12)
-        self.dataPerfil.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.dataPerfil.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.dataPerfil.setAlignment(Qt.AlignRight|Qt.AlignTrailing|Qt.AlignVCenter)
 
         self.verticalLayout_65.addWidget(self.dataPerfil)
@@ -2220,7 +2220,7 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_13.setContentsMargins(0, 0, 0, 0)
         self.frame_FluxodeCaixa = QFrame(self.page_FluxodeCaixa)
         self.frame_FluxodeCaixa.setObjectName(u"frame_FluxodeCaixa")
-        self.frame_FluxodeCaixa.setStyleSheet(u"background-color: rgb(170, 85, 255);")
+        self.frame_FluxodeCaixa.setStyleSheet(u"background-color: rgb(15, 23, 42);")
         self.frame_FluxodeCaixa.setFrameShape(QFrame.StyledPanel)
         self.frame_FluxodeCaixa.setFrameShadow(QFrame.Raised)
         self.horizontalLayout = QHBoxLayout(self.frame_FluxodeCaixa)
@@ -2239,7 +2239,7 @@ class Ui_MainWindowMW(object):
         self.frame_ControleFinanceiro_2 = QFrame(self.frame)
         self.frame_ControleFinanceiro_2.setObjectName(u"frame_ControleFinanceiro_2")
         self.frame_ControleFinanceiro_2.setStyleSheet(u"border-radius:10px;\n"
-"background-color: rgb(170, 85, 255);")
+"background-color: rgb(15, 23, 42);")
         self.frame_ControleFinanceiro_2.setFrameShape(QFrame.StyledPanel)
         self.frame_ControleFinanceiro_2.setFrameShadow(QFrame.Raised)
         self.verticalLayout_72 = QVBoxLayout(self.frame_ControleFinanceiro_2)
@@ -2446,7 +2446,7 @@ class Ui_MainWindowMW(object):
         self.frame_182.setMinimumSize(QSize(255, 0))
         self.frame_182.setMaximumSize(QSize(275, 16777215))
         self.frame_182.setStyleSheet(u"QFrame{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius:0px;\n"
 "}\n"
 "")
@@ -2483,7 +2483,7 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_15.setContentsMargins(5, 5, 5, 0)
         self.frame_2 = QFrame(self.frame_197)
         self.frame_2.setObjectName(u"frame_2")
-        self.frame_2.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.frame_2.setStyleSheet(u"background-color: rgb(15, 23, 42);\n"
 "border-radius:5px;")
         self.frame_2.setFrameShape(QFrame.StyledPanel)
         self.frame_2.setFrameShadow(QFrame.Raised)
@@ -2513,7 +2513,7 @@ class Ui_MainWindowMW(object):
 
         self.frame_3 = QFrame(self.frame_197)
         self.frame_3.setObjectName(u"frame_3")
-        self.frame_3.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.frame_3.setStyleSheet(u"background-color: rgb(15, 23, 42);\n"
 "border-radius:5px;")
         self.frame_3.setFrameShape(QFrame.StyledPanel)
         self.frame_3.setFrameShadow(QFrame.Raised)
@@ -2549,13 +2549,13 @@ class Ui_MainWindowMW(object):
         self.frame_200.setObjectName(u"frame_200")
         self.frame_200.setMinimumSize(QSize(0, 123))
         self.frame_200.setMaximumSize(QSize(16777215, 111))
-        self.frame_200.setStyleSheet(u"background-color: rgb(170, 85, 255);")
+        self.frame_200.setStyleSheet(u"background-color: rgb(15, 23, 42);")
         self.frame_200.setFrameShape(QFrame.StyledPanel)
         self.frame_200.setFrameShadow(QFrame.Raised)
         self.frame_4 = QFrame(self.frame_200)
         self.frame_4.setObjectName(u"frame_4")
         self.frame_4.setGeometry(QRect(5, 16, 91, 91))
-        self.frame_4.setStyleSheet(u"background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(170, 0, 255, 255), stop:0.183946 rgba(170, 0, 255, 255), stop:0.187291 rgba(255, 0, 0, 255), stop:0.389632 rgba(255, 0, 0, 255), stop:0.393352 rgba(255, 255, 127, 255), stop:0.568562 rgba(255, 255, 127, 255), stop:0.571906 rgba(85, 255, 255, 255), stop:0.737458 rgba(85, 255, 255, 255), stop:0.740803 rgba(85, 170, 127, 255), stop:0.854515 rgba(85, 170, 127, 255), stop:0.856187 rgba(255, 0, 127, 255), stop:1 rgba(255, 0, 127, 255));\n"
+        self.frame_4.setStyleSheet(u"background-color: qconicalgradient(cx:0.5, cy:0.5, angle:0, stop:0 rgba(20, 184, 166, 255), stop:0.183946 rgba(20, 184, 166, 255), stop:0.187291 rgba(255, 0, 0, 255), stop:0.389632 rgba(255, 0, 0, 255), stop:0.393352 rgba(255, 255, 127, 255), stop:0.568562 rgba(255, 255, 127, 255), stop:0.571906 rgba(85, 255, 255, 255), stop:0.737458 rgba(85, 255, 255, 255), stop:0.740803 rgba(85, 170, 127, 255), stop:0.854515 rgba(85, 170, 127, 255), stop:0.856187 rgba(255, 0, 127, 255), stop:1 rgba(255, 0, 127, 255));\n"
 "border-radius: 45px;")
         self.frame_4.setFrameShape(QFrame.StyledPanel)
         self.frame_4.setFrameShadow(QFrame.Raised)
@@ -2563,7 +2563,7 @@ class Ui_MainWindowMW(object):
         self.verticalLayout_16.setObjectName(u"verticalLayout_16")
         self.frame_5 = QFrame(self.frame_4)
         self.frame_5.setObjectName(u"frame_5")
-        self.frame_5.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.frame_5.setStyleSheet(u"background-color: rgb(15, 23, 42);\n"
 "border-radius: 35px;\n"
 "\n"
 "")
@@ -2585,7 +2585,7 @@ class Ui_MainWindowMW(object):
         self.label_13 = QLabel(self.frame_200)
         self.label_13.setObjectName(u"label_13")
         self.label_13.setGeometry(QRect(113, 68, 10, 10))
-        self.label_13.setStyleSheet(u"background-color: rgb(170, 0, 255);\n"
+        self.label_13.setStyleSheet(u"background-color: rgb(15, 23, 42);\n"
 "border-radius:5px")
         self.label_14 = QLabel(self.frame_200)
         self.label_14.setObjectName(u"label_14")
@@ -2652,7 +2652,7 @@ class Ui_MainWindowMW(object):
         font16 = QFont()
         font16.setPointSize(11)
         self.label_102.setFont(font16)
-        self.label_102.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_102.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.planoContasBuscaFluxo = QComboBox(self.frame_201)
         self.planoContasBuscaFluxo.setObjectName(u"planoContasBuscaFluxo")
         self.planoContasBuscaFluxo.setGeometry(QRect(5, 30, 223, 31))
@@ -2663,16 +2663,16 @@ class Ui_MainWindowMW(object):
 "\n"
 "\n"
 "QComboBox{\n"
-"background-color:rgb(170, 85, 255);\n"
+"background-color:rgb(15, 23, 42);\n"
 "border-radius:5px;\n"
-"border: 2px solid rgb(170, 85, 255);\n"
+"border: 2px solid rgb(15, 23, 42);\n"
 "padding: 5px;\n"
 "padding-left: 10px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QComboBox:hover{\n"
-" border: 2px solid rgb(170, 85, 255);\n"
+" border: 2px solid rgb(15, 23, 42);\n"
 "}\n"
 "QComboBox::drop-down {\n"
 "subcontrol-origin: padding;\n"
@@ -2686,9 +2686,9 @@ class Ui_MainWindowMW(object):
 "}\n"
 "QComboBox QAbstractItemView {\n"
 "color: rgb(255, 255, 255);	\n"
-"background-color:rgb(170, 85, 255);\n"
+"background-color:rgb(15, 23, 42);\n"
 "padding: 10px;\n"
-"selection-background-color: rgb(195, 155, 255);\n"
+"selection-background-color: rgb(71, 85, 105);\n"
 "border:2px solid  rgb(255, 255, 255);\n"
 "border-radius:5px;\n"
 "}")
@@ -2700,12 +2700,12 @@ class Ui_MainWindowMW(object):
         font17.setPointSize(14)
         font17.setBold(False)
         self.totalCategoria_lbl.setFont(font17)
-        self.totalCategoria_lbl.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.totalCategoria_lbl.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.totalCategoria = QLabel(self.frame_201)
         self.totalCategoria.setObjectName(u"totalCategoria")
         self.totalCategoria.setGeometry(QRect(58, 80, 170, 25))
         self.totalCategoria.setFont(font17)
-        self.totalCategoria.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.totalCategoria.setStyleSheet(u"color: rgb(15, 23, 42);")
 
         self.verticalLayout_70.addWidget(self.frame_201)
 
@@ -2742,7 +2742,7 @@ class Ui_MainWindowMW(object):
         self.frame_ControleFinanceiro = QFrame(self.page_ControleFinanceiro)
         self.frame_ControleFinanceiro.setObjectName(u"frame_ControleFinanceiro")
         self.frame_ControleFinanceiro.setStyleSheet(u"border-radius:10px;\n"
-"background-color: rgb(170, 85, 255);")
+"background-color: rgb(15, 23, 42);")
         self.frame_ControleFinanceiro.setFrameShape(QFrame.StyledPanel)
         self.frame_ControleFinanceiro.setFrameShadow(QFrame.Raised)
         self.verticalLayout_68 = QVBoxLayout(self.frame_ControleFinanceiro)
@@ -2799,7 +2799,7 @@ class Ui_MainWindowMW(object):
         self.frame_9.setObjectName(u"frame_9")
         self.frame_9.setMinimumSize(QSize(215, 0))
         self.frame_9.setMaximumSize(QSize(400, 16777215))
-        self.frame_9.setStyleSheet(u"background-color: rgb(170, 85, 255);")
+        self.frame_9.setStyleSheet(u"background-color: rgb(15, 23, 42);")
         self.frame_9.setFrameShape(QFrame.StyledPanel)
         self.frame_9.setFrameShadow(QFrame.Raised)
         self.verticalLayout_154 = QVBoxLayout(self.frame_9)
@@ -2872,7 +2872,7 @@ class Ui_MainWindowMW(object):
         self.frame_45.setObjectName(u"frame_45")
         self.frame_45.setMinimumSize(QSize(215, 0))
         self.frame_45.setMaximumSize(QSize(400, 16777215))
-        self.frame_45.setStyleSheet(u"background-color: rgb(170, 85, 255);")
+        self.frame_45.setStyleSheet(u"background-color: rgb(15, 23, 42);")
         self.frame_45.setFrameShape(QFrame.StyledPanel)
         self.frame_45.setFrameShadow(QFrame.Raised)
         self.verticalLayout_160 = QVBoxLayout(self.frame_45)
@@ -2937,7 +2937,7 @@ class Ui_MainWindowMW(object):
         self.frame_16.setObjectName(u"frame_16")
         self.frame_16.setMinimumSize(QSize(215, 0))
         self.frame_16.setMaximumSize(QSize(400, 16777215))
-        self.frame_16.setStyleSheet(u"background-color: rgb(170, 85, 255);")
+        self.frame_16.setStyleSheet(u"background-color: rgb(15, 23, 42);")
         self.frame_16.setFrameShape(QFrame.StyledPanel)
         self.frame_16.setFrameShadow(QFrame.Raised)
         self.verticalLayout_162 = QVBoxLayout(self.frame_16)
@@ -3022,19 +3022,19 @@ class Ui_MainWindowMW(object):
         font20.setBold(False)
         self.novaMovimentacao.setFont(font20)
         self.novaMovimentacao.setStyleSheet(u"QPushButton{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: rgb(165, 82, 247);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}")
@@ -3057,7 +3057,7 @@ class Ui_MainWindowMW(object):
         self.label_61.setObjectName(u"label_61")
         self.label_61.setGeometry(QRect(190, 0, 171, 25))
         self.label_61.setFont(font16)
-        self.label_61.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_61.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.buscar = QPushButton(self.frame_185)
         self.buscar.setObjectName(u"buscar")
         self.buscar.setGeometry(QRect(609, 29, 81, 32))
@@ -3066,19 +3066,19 @@ class Ui_MainWindowMW(object):
         font21.setBold(False)
         self.buscar.setFont(font21)
         self.buscar.setStyleSheet(u"QPushButton{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:hover{\n"
-"background-color: rgb(165, 82, 247);\n"
+"background-color: rgb(51, 65, 85);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QPushButton:pressed{\n"
-"background-color: rgb(170, 85, 255);\n"
+"background-color: rgb(15, 23, 42);\n"
 "border-radius: 8px;\n"
 "color: rgb(255, 255, 255);\n"
 "}")
@@ -3086,12 +3086,12 @@ class Ui_MainWindowMW(object):
         self.label_8.setObjectName(u"label_8")
         self.label_8.setGeometry(QRect(15, 0, 170, 25))
         self.label_8.setFont(font16)
-        self.label_8.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_8.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.codigoBusca = QLineEdit(self.frame_185)
         self.codigoBusca.setObjectName(u"codigoBusca")
         self.codigoBusca.setGeometry(QRect(15, 30, 170, 30))
         self.codigoBusca.setFont(font12)
-        self.codigoBusca.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.codigoBusca.setStyleSheet(u"background-color: rgb(15, 23, 42);\n"
 "border-radius:5px;\n"
 "color: rgb(255, 255, 255);\n"
 "padding-left:3px;")
@@ -3099,7 +3099,7 @@ class Ui_MainWindowMW(object):
         self.label_101.setObjectName(u"label_101")
         self.label_101.setGeometry(QRect(437, 0, 130, 25))
         self.label_101.setFont(font16)
-        self.label_101.setStyleSheet(u"color: rgb(170, 85, 255);")
+        self.label_101.setStyleSheet(u"color: rgb(15, 23, 42);")
         self.dataMovimentacaoInicio = QDateEdit(self.frame_185)
         self.dataMovimentacaoInicio.setObjectName(u"dataMovimentacaoInicio")
         self.dataMovimentacaoInicio.setGeometry(QRect(190, 30, 127, 30))
@@ -3108,16 +3108,16 @@ class Ui_MainWindowMW(object):
         font22.setBold(False)
         self.dataMovimentacaoInicio.setFont(font22)
         self.dataMovimentacaoInicio.setStyleSheet(u"QDateEdit{\n"
-"background-color:rgb(170, 85, 255);\n"
+"background-color:rgb(15, 23, 42);\n"
 "border-radius:5px;\n"
-"border: 2px solid rgb(170, 85, 255);\n"
+"border: 2px solid rgb(15, 23, 42);\n"
 "padding: 5px;\n"
 "padding-left: 10px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QDateEdit:hover{\n"
-" border: 2px solid rgb(170, 85, 255);\n"
+" border: 2px solid rgb(15, 23, 42);\n"
 "}\n"
 "")
         self.dataMovimentacaoInicio.setDate(QDate(2010, 1, 1))
@@ -3126,16 +3126,16 @@ class Ui_MainWindowMW(object):
         self.dataMovimentacaofim.setGeometry(QRect(305, 30, 127, 30))
         self.dataMovimentacaofim.setFont(font22)
         self.dataMovimentacaofim.setStyleSheet(u"QDateEdit{\n"
-"background-color:rgb(170, 85, 255);\n"
+"background-color:rgb(15, 23, 42);\n"
 "border-radius:5px;\n"
-"border: 2px solid rgb(170, 85, 255);\n"
+"border: 2px solid rgb(15, 23, 42);\n"
 "padding: 5px;\n"
 "padding-left: 10px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QDateEdit:hover{\n"
-" border: 2px solid rgb(170, 85, 255);\n"
+" border: 2px solid rgb(15, 23, 42);\n"
 "}\n"
 "")
         self.dataMovimentacaofim.setReadOnly(False)
@@ -3150,16 +3150,16 @@ class Ui_MainWindowMW(object):
 "\n"
 "\n"
 "QComboBox{\n"
-"background-color:rgb(170, 85, 255);\n"
+"background-color:rgb(15, 23, 42);\n"
 "border-radius:5px;\n"
-"border: 2px solid rgb(170, 85, 255);\n"
+"border: 2px solid rgb(15, 23, 42);\n"
 "padding: 5px;\n"
 "padding-left: 10px;\n"
 "color: rgb(255, 255, 255);\n"
 "}\n"
 "\n"
 "QComboBox:hover{\n"
-" border: 2px solid rgb(170, 85, 255);\n"
+" border: 2px solid rgb(15, 23, 42);\n"
 "}\n"
 "QComboBox::drop-down {\n"
 "subcontrol-origin: padding;\n"
@@ -3173,9 +3173,9 @@ class Ui_MainWindowMW(object):
 "}\n"
 "QComboBox QAbstractItemView {\n"
 "color: rgb(255, 255, 255);	\n"
-"background-color:rgb(170, 85, 255);\n"
+"background-color:rgb(15, 23, 42);\n"
 "padding: 10px;\n"
-"selection-background-color: rgb(195, 155, 255);\n"
+"selection-background-color: rgb(71, 85, 105);\n"
 "border:2px solid  rgb(255, 255, 255);\n"
 "border-radius:5px;\n"
 "}")
