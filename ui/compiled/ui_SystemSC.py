@@ -162,7 +162,7 @@ class Ui_SplashCreen(object):
 "border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;}\n"
 "QLineEdit:focus{\n"
-"background-color: rgb(71, 85, 105);\n"
+"background-color: rgb(30, 41, 59);\n"
 "border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
 "color: rgb(204, 251, 241);}")
@@ -183,7 +183,7 @@ class Ui_SplashCreen(object):
 "}\n"
 "QPushButton:hover{\n"
 "color:rgb(255, 255, 255);\n"
-"background-color:rgb(71, 85, 105);\n"
+"background-color:rgb(30, 41, 59);\n"
 "border-radius:5px;\n"
 "border: 2px solid rgb(15, 23, 42)\n"
 "}\n"
@@ -232,7 +232,7 @@ class Ui_SplashCreen(object):
 "border-radius:5px;}\n"
 "\n"
 "QLineEdit:focus{\n"
-"background-color: rgb(71, 85, 105);\n"
+"background-color: rgb(30, 41, 59);\n"
 "border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
 "color: rgb(204, 251, 241);}")
@@ -275,7 +275,7 @@ class Ui_SplashCreen(object):
 "}\n"
 "QPushButton:hover{\n"
 "color:#ffffff;\n"
-"background-color:rgb(71, 85, 105);\n"
+"background-color:rgb(30, 41, 59);\n"
 "border-radius:5px;\n"
 "}\n"
 "QPushButton:pressed{\n"
@@ -335,7 +335,7 @@ class Ui_SplashCreen(object):
 "border-radius:5px;}\n"
 "\n"
 "QLineEdit:focus{\n"
-"background-color: rgb(71, 85, 105);\n"
+"background-color: rgb(30, 41, 59);\n"
 "border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
 "color: rgb(204, 251, 241);}")
@@ -353,7 +353,7 @@ class Ui_SplashCreen(object):
 "}\n"
 "QPushButton:hover{\n"
 "color:rgb(255, 255, 255);\n"
-"background-color:rgb(71, 85, 105);\n"
+"background-color:rgb(30, 41, 59);\n"
 "border-radius:5px;\n"
 "border: 2px solid rgb(15, 23, 42)\n"
 "}\n"
@@ -380,7 +380,7 @@ class Ui_SplashCreen(object):
 "border-radius:5px;}\n"
 "\n"
 "QLineEdit:focus{\n"
-"background-color: rgb(71, 85, 105);\n"
+"background-color: rgb(30, 41, 59);\n"
 "border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
 "color: rgb(204, 251, 241);}")
@@ -402,7 +402,7 @@ class Ui_SplashCreen(object):
 "border-radius:5px;}\n"
 "\n"
 "QLineEdit:focus{\n"
-"background-color: rgb(71, 85, 105);\n"
+"background-color: rgb(30, 41, 59);\n"
 "border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
 "color: rgb(204, 251, 241);}")
@@ -647,7 +647,7 @@ class Ui_SplashCreen(object):
         self.linhaBranca_8.setObjectName(u"linhaBranca_8")
         self.linhaBranca_8.setMinimumSize(QSize(346, 0))
         self.linhaBranca_8.setMaximumSize(QSize(346, 227))
-        self.linhaBranca_8.setStyleSheet(u"background-color: rgb(71, 85, 105);\n"
+        self.linhaBranca_8.setStyleSheet(u"background-color: rgb(30, 41, 59);\n"
 "border-bottom-right-radius: 15px;\n"
 "border-bottom-left-radius: 15px;")
         self.linhaBranca_8.setFrameShape(QFrame.StyledPanel)
@@ -663,7 +663,7 @@ class Ui_SplashCreen(object):
 "}\n"
 "QPushButton:hover{\n"
 "color:#ffffff;\n"
-"background-color:rgb(71, 85, 105);\n"
+"background-color:rgb(30, 41, 59);\n"
 "border-radius:5px;\n"
 "}\n"
 "QPushButton:pressed{\n"
@@ -712,7 +712,7 @@ class Ui_SplashCreen(object):
 "border-radius:5px;}\n"
 "\n"
 "QLineEdit:focus{\n"
-"background-color: rgb(71, 85, 105);\n"
+"background-color: rgb(30, 41, 59);\n"
 "border:2px solid rgb(204, 251, 241);\n"
 "border-radius:5px;\n"
 "color: rgb(204, 251, 241);}")

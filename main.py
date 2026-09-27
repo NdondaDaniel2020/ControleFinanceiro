@@ -382,7 +382,7 @@ class SplashCreen(QMainWindow):
             self.sc.troca.setText('Usar Password')
             self.sc.senha.setText('')
             self.sc.senha.setStyleSheet("""
-                QLineEdit{background-color: rgb(71, 85, 105);
+                QLineEdit{background-color: rgb(30, 41, 59);
                 border:1px solid rgb(204, 251, 241);border-radius:5px;
                 color: rgb(208, 208, 208)}
                 QLineEdit:hover{background-color: rgb(15, 23, 42);
@@ -403,7 +403,7 @@ class SplashCreen(QMainWindow):
                                             border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;}
                                             QLineEdit:focus{
-                                            background-color: rgb(71, 85, 105);
+                                            background-color: rgb(30, 41, 59);
                                             border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;
                                             color: rgb(204, 251, 241);}""")
@@ -498,7 +498,7 @@ class SplashCreen(QMainWindow):
                                             border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;}
                                             QLineEdit:focus{
-                                            background-color: rgb(71, 85, 105);
+                                            background-color: rgb(30, 41, 59);
                                             border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;
                                             color: rgb(204, 251, 241);};}""")
@@ -539,7 +539,7 @@ class SplashCreen(QMainWindow):
                 break
             else:
                 if n == len(self.listaUsuarios) - 1:
-                    self.sc.email_login.setStyleSheet("""background-color:rgb(71, 85, 105);
+                    self.sc.email_login.setStyleSheet("""background-color:rgb(30, 41, 59);
                                                   border:2px solid rgb(255, 0, 0);
                                                   color: rgb(208, 208, 208);
                                                   border-radius:5px;
@@ -567,7 +567,7 @@ class SplashCreen(QMainWindow):
                 QTimer.singleShot(500, lambda: self.close())
             else:
                 self.passwordConst = len(self.sc.password.text())
-                self.sc.password.setStyleSheet("""background-color:rgb(71, 85, 105);
+                self.sc.password.setStyleSheet("""background-color:rgb(30, 41, 59);
                                                   border:2px solid rgb(255, 0, 0);
                                                   color: rgb(208, 208, 208);
                                                   border-radius:5px;
@@ -590,7 +590,7 @@ class SplashCreen(QMainWindow):
                                                     border:2px solid rgb(204, 251, 241);
                                                     border-radius:5px;}
                                                     QLineEdit:focus{
-                                                    background-color: rgb(71, 85, 105);
+                                                    background-color: rgb(30, 41, 59);
                                                     border:2px solid rgb(204, 251, 241);
                                                     border-radius:5px;
                                                     color: rgb(204, 251, 241);}""")
@@ -611,7 +611,7 @@ class SplashCreen(QMainWindow):
                                             border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;}
                                             QLineEdit:focus{
-                                            background-color: rgb(71, 85, 105);
+                                            background-color: rgb(30, 41, 59);
                                             border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;
                                             color: rgb(204, 251, 241);}""")
@@ -645,7 +645,7 @@ class SplashCreen(QMainWindow):
                                                 border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;}
                                                 QLineEdit:focus{
-                                                background-color: rgb(71, 85, 105);
+                                                background-color: rgb(30, 41, 59);
                                                 border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;
                                                 color: rgb(204, 251, 241);}""")
@@ -660,7 +660,7 @@ class SplashCreen(QMainWindow):
                                                 border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;}
                                                 QLineEdit:focus{
-                                                background-color: rgb(71, 85, 105);
+                                                background-color: rgb(30, 41, 59);
                                                 border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;
                                                 color: rgb(204, 251, 241);}""")
@@ -677,7 +677,7 @@ class SplashCreen(QMainWindow):
                 border:2px solid rgb(204, 251, 241);
                 border-radius:5px;}
                 QLineEdit:focus{
-                background-color: rgb(71, 85, 105);
+                background-color: rgb(30, 41, 59);
                 border:2px solid rgb(204, 251, 241);
                 border-radius:5px;
                 color: rgb(204, 251, 241);}""")
@@ -692,7 +692,7 @@ class SplashCreen(QMainWindow):
                                             border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;}
                                             QLineEdit:focus{
-                                            background-color: rgb(71, 85, 105);
+                                            background-color: rgb(30, 41, 59);
                                             border:2px solid rgb(204, 251, 241);
                                             border-radius:5px;
                                             color: rgb(204, 251, 241);}""")
@@ -806,7 +806,7 @@ class SplashCreen(QMainWindow):
                                                 border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;}
                                                 QLineEdit:focus{
-                                                background-color: rgb(71, 85, 105);
+                                                background-color: rgb(30, 41, 59);
                                                 border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;
                                                 color: rgb(204, 251, 241);}""")
@@ -827,7 +827,7 @@ class SplashCreen(QMainWindow):
                                                 border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;}
                                                 QLineEdit:focus{
-                                                background-color: rgb(71, 85, 105);
+                                                background-color: rgb(30, 41, 59);
                                                 border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;
                                                 color: rgb(204, 251, 241);}""")
@@ -848,7 +848,7 @@ class SplashCreen(QMainWindow):
                                                 border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;}
                                                 QLineEdit:focus{
-                                                background-color: rgb(71, 85, 105);
+                                                background-color: rgb(30, 41, 59);
                                                 border:2px solid rgb(204, 251, 241);
                                                 border-radius:5px;
                                                 color: rgb(204, 251, 241);}""")
