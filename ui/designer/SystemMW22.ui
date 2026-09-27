@@ -222,7 +222,7 @@ border-radius:15px;</string>
             <property name="styleSheet">
              <string notr="true">background-color: rgb(159, 80, 239);
 border-radius:15px;
-overflow:hidden;</string>
+</string>
             </property>
             <property name="frameShape">
              <enum>QFrame::StyledPanel</enum>

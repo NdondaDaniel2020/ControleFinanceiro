@@ -1,11 +1,21 @@
+import os
 import sqlite3
 
 class database():
-    def __init__(self, name='banco'):
-        if '.db' in name:
-            self.name = name
+    def __init__(self, name='ControleFinanceiro'):
+        if not name.endswith('.db'):
+            name = name + '.db'
+        
+        # Se name for apenas o nome do arquivo ou caminho relativo simples, busca dentro da pasta database
+        if not os.path.isabs(name):
+            db_dir = os.path.dirname(os.path.abspath(__file__))
+            possible_path = os.path.join(db_dir, os.path.basename(name))
+            if os.path.exists(possible_path) or not os.path.exists(name):
+                self.name = possible_path
+            else:
+                self.name = name
         else:
-            self.name = name+'.db'
+            self.name = name
 
     def connect_database(self):
         self.connection = sqlite3.connect(self.name)
@@ -53,11 +63,9 @@ class database():
             user = 'F'
         cursor = self.connection.cursor()
         try:
-            cursor.execute(f"""
-        INSERT INTO {nametable}(nome, password, admin) VALUES('{name}', '{passw}', '{user}');
-        """)
-        except:
-            print("nao consegui enviar os dados")
+            cursor.execute(f"INSERT INTO {nametable}(nome, password, admin) VALUES(?, ?, ?)", (name, passw, user))
+        except Exception as e:
+            print(f"nao consegui enviar os dados: {e}")
 
     def select_from(self, nametable):
         try:

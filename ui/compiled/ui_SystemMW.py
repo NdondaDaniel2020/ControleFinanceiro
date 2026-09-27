@@ -188,7 +188,7 @@ class Ui_MainWindowMW(object):
         self.frame_central.setObjectName(u"frame_central")
         self.frame_central.setStyleSheet(u"background-color: rgb(159, 80, 239);\n"
 "border-radius:15px;\n"
-"overflow:hidden;")
+"")
         self.frame_central.setFrameShape(QFrame.StyledPanel)
         self.frame_central.setFrameShadow(QFrame.Raised)
         self.verticalLayout_5 = QVBoxLayout(self.frame_central)

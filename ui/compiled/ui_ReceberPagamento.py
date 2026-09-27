@@ -1,31 +1,26 @@
 # -*- coding: utf-8 -*-
 
 ################################################################################
-## Form generated from reading UI file 'contasAreceberpmcHcZ.ui'
+## Form generated from reading UI file 'ReceberPagamentoWXCKDX.ui'
 ##
 ## Created by: Qt User Interface Compiler version 6.3.2
 ##
 ## WARNING! All changes made in this file will be lost when recompiling UI file!
 ################################################################################
 
-from PySide6.QtCore import (QCoreApplication, QDate, QDateTime, QLocale,
-    QMetaObject, QObject, QPoint, QRect,
-    QSize, QTime, QUrl, Qt)
-from PySide6.QtGui import (QBrush, QColor, QConicalGradient, QCursor,
-    QFont, QFontDatabase, QGradient, QIcon,
-    QImage, QKeySequence, QLinearGradient, QPainter,
-    QPalette, QPixmap, QRadialGradient, QTransform)
-from PySide6.QtWidgets import (QApplication, QComboBox, QDateEdit, QFrame,
-    QHBoxLayout, QLabel, QLineEdit, QPushButton,
-    QSizePolicy, QSpacerItem, QVBoxLayout, QWidget, QMainWindow, QGraphicsDropShadowEffect)
-from packeg.database import database
-from datetime import date
+from PySide6.QtCore import (QCoreApplication, QMetaObject, QRect, QSize, Qt)
+from PySide6.QtGui import (QBrush, QColor, QFont, QIcon)
+from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
+    QLabel, QLineEdit, QPushButton, QSizePolicy,
+    QSpacerItem, QVBoxLayout, QWidget, QMainWindow, QGraphicsDropShadowEffect)
+from database.database import database
+
 
 class Ui_Form(object):
     def setupUi(self, Form):
         if not Form.objectName():
             Form.setObjectName(u"Form")
-        Form.resize(343, 373)
+        Form.resize(343, 356)
         self.verticalLayout = QVBoxLayout(Form)
         self.verticalLayout.setObjectName(u"verticalLayout")
         self.CentralFrame = QFrame(Form)
@@ -46,7 +41,7 @@ class Ui_Form(object):
         self.horizontalLayout = QHBoxLayout(self.barraTitulo)
         self.horizontalLayout.setSpacing(3)
         self.horizontalLayout.setObjectName(u"horizontalLayout")
-        self.horizontalLayout.setContentsMargins(6, 4, 4, -1)
+        self.horizontalLayout.setContentsMargins(10, 4, 4, -1)
         self.label = QLabel(self.barraTitulo)
         self.label.setObjectName(u"label")
         font = QFont()
@@ -126,7 +121,7 @@ class Ui_Form(object):
         self.frame.setFrameShadow(QFrame.Raised)
         self.adicionarConta = QPushButton(self.frame)
         self.adicionarConta.setObjectName(u"adicionarConta")
-        self.adicionarConta.setGeometry(QRect(70, 260, 180, 36))
+        self.adicionarConta.setGeometry(QRect(70, 200, 180, 36))
         self.adicionarConta.setMinimumSize(QSize(180, 36))
         self.adicionarConta.setMaximumSize(QSize(180, 1234567))
         font1 = QFont()
@@ -229,37 +224,24 @@ class Ui_Form(object):
 "border:2px solid  rgb(255, 255, 255);\n"
 "border-radius:5px;\n"
 "}")
-        self.valorTotal = QLineEdit(self.frame)
-        self.valorTotal.setObjectName(u"valorTotal")
-        self.valorTotal.setGeometry(QRect(20, 140, 290, 36))
-        self.valorTotal.setMinimumSize(QSize(290, 36))
-        self.valorTotal.setMaximumSize(QSize(290, 36))
-        self.valorTotal.setFont(font1)
-        self.valorTotal.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
+        self.valor = QLineEdit(self.frame)
+        self.valor.setObjectName(u"valor")
+        self.valor.setGeometry(QRect(20, 140, 290, 36))
+        self.valor.setMinimumSize(QSize(290, 36))
+        self.valor.setMaximumSize(QSize(290, 36))
+        self.valor.setFont(font1)
+        self.valor.setStyleSheet(u"background-color: rgb(170, 85, 255);\n"
 "border-radius:5px;\n"
 "color: rgb(255, 255, 255);\n"
 "padding-left:5px;")
-        self.dataVenciamento = QDateEdit(self.frame)
-        self.dataVenciamento.setObjectName(u"dataVenciamento")
-        self.dataVenciamento.setGeometry(QRect(20, 200, 291, 36))
-        font2 = QFont()
-        font2.setPointSize(12)
-        font2.setBold(False)
-        self.dataVenciamento.setFont(font2)
-        self.dataVenciamento.setStyleSheet(u"QDateEdit{\n"
-"background-color:rgb(170, 85, 255);\n"
-"border-radius:5px;\n"
-"border: 2px solid rgb(170, 85, 255);\n"
-"padding: 5px;\n"
-"padding-left: 10px;\n"
-"color: rgb(255, 255, 255);\n"
-"}\n"
-"\n"
-"QDateEdit:hover{\n"
-" border: 2px solid rgb(170, 85, 255);\n"
-"}\n"
-"")
+        self.totalPagar = QLabel(self.frame)
+        self.totalPagar.setObjectName(u"totalPagar")
+        self.totalPagar.setGeometry(QRect(20, 250, 170, 27))
+        self.totalPagar.setFont(font)
+        self.totalPagar.setStyleSheet(u"color: rgb(170, 85, 255);")
+
         self.verticalLayout_2.addWidget(self.frame)
+
 
         self.verticalLayout.addWidget(self.CentralFrame)
 
@@ -271,11 +253,11 @@ class Ui_Form(object):
 
     def retranslateUi(self, Form):
         Form.setWindowTitle(QCoreApplication.translate("Form", u"Form", None))
-        self.label.setText(QCoreApplication.translate("Form", u"Adicionar conta a receber", None))
+        self.label.setText(QCoreApplication.translate("Form", u"Receber Pagamento", None))
         self.minimizar.setText("")
         self.fechar.setText("")
-        self.dataVenciamento.setDate(date.today())
-        self.adicionarConta.setText("Adicionar conta a pagar")
+        self.adicionarConta.setText(QCoreApplication.translate("Form", u"Adicionar conta", None))
+
 
         self.database = database("ControleFinanceiro")
 
@@ -296,17 +278,19 @@ class Ui_Form(object):
             self.cliente.addItem("")
             self.cliente.setItemText(dado[0]-1, QCoreApplication.translate("Form", dado[1], None))
 
-        self.valorTotal.setPlaceholderText(QCoreApplication.translate("Form", u"Valor Total", None))
+
+        self.valor.setPlaceholderText(QCoreApplication.translate("Form", u"Valor", None))
+        self.totalPagar.setText(QCoreApplication.translate("Form", u"Total a Pagar: Kz 0", None))
     # retranslateUi
 
 
-class ContasAreceber(QMainWindow):
+class ReceberPagamento(QMainWindow):
     def __init__(self):
         QMainWindow.__init__(self)
-        self.ca = Ui_Form()
-        self.ca.setupUi(self)
+        self.rp = Ui_Form()
+        self.rp.setupUi(self)
 
-        self.ca.CentralFrame.setGeometry(9, 9, 325, 355)
+        self.rp.CentralFrame.setGeometry(9, 9, 325, 338)
 
         self.setWindowFlags(Qt.FramelessWindowHint)
         self.setAttribute(Qt.WA_TranslucentBackground)
@@ -316,12 +300,12 @@ class ContasAreceber(QMainWindow):
         self.shadow.setXOffset(0)
         self.shadow.setYOffset(0)
         self.shadow.setColor(QColor(255, 255, 255, 120))
-        self.ca.CentralFrame.setGraphicsEffect(self.shadow)
+        self.rp.CentralFrame.setGraphicsEffect(self.shadow)
 
-        self.ca.fechar.clicked.connect(lambda: self.closefrom())
-        self.ca.minimizar.clicked.connect(lambda: self.showMinimized())
-        self.ca.categoria.currentTextChanged.connect(self.selectCategoria)
-        self.ca.cliente.currentTextChanged.connect(self.selectCliente)
+        self.rp.fechar.clicked.connect(lambda: self.closefrom())
+        self.rp.minimizar.clicked.connect(lambda: self.showMinimized())
+        self.rp.categoria.currentTextChanged.connect(self.selectCategoria)
+        self.rp.cliente.currentTextChanged.connect(self.selectCliente)
 
         self.cliente = ''
         self.categoria = ''
@@ -332,7 +316,7 @@ class ContasAreceber(QMainWindow):
                 self.dragPos = event.globalPos()
                 event.accept()
 
-        self.ca.barraTitulo.mouseMoveEvent = moveWindow
+        self.rp.barraTitulo.mouseMoveEvent = moveWindow
 
 
     def mousePressEvent(self, event):
@@ -345,7 +329,7 @@ class ContasAreceber(QMainWindow):
         self.cliente = txt
 
     def closefrom(self):
-        self.ca.valorTotal.setText("")
+        self.rp.valor.setText("")
         self.close()
 
 
@@ -353,5 +337,5 @@ if __name__ == "__main__":
     import sys
 
     app = QApplication(sys.argv)
-    window = ContasAreceber()
+    window = ReceberPagamento()
     sys.exit(app.exec())

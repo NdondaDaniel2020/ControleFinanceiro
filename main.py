@@ -1,30 +1,34 @@
+import os
+import sys
+from time import sleep
+from datetime import date
+import cv2
+
 from PySide6.QtCore import *
 from PySide6.QtWidgets import *
 from PySide6.QtGui import *
 from PySide6.QtCharts import QChart, QChartView, QBarCategoryAxis, QBarSeries, QBarSet, QValueAxis
 
-from packeg.custom_grips import CustomGrip
-from packeg.circular_progress import CircularProgress
-from packeg.Criptografia import criptografar
-from packeg.chart import Chart
-from packeg.database import database
-from ui_SystemSC import Ui_SplashCreen
-from ui_SystemMW import Ui_MainWindowMW
-from ui_Movimentação import Movimentacao
-from ui_barraCategoria import BarraCategoria
-from ui_barraMovimentação import BarraMovimentacao
-from ui_HistoricoEntradaSaida import HistoricoEntradaSaida
+from modules.custom_grips import CustomGrip
+from modules.circular_progress import CircularProgress
+from modules.Criptografia import criptografar
+from modules.chart import Chart
+from database.database import database
 
-from time import sleep
-from datetime import date
-import sys
-import cv2
+from ui.compiled.ui_SystemSC import Ui_SplashCreen
+from ui.compiled.ui_SystemMW import Ui_MainWindowMW
+from ui.compiled.ui_Movimentação import Movimentacao
+from ui.compiled.ui_barraCategoria import BarraCategoria
+from ui.compiled.ui_barraMovimentação import BarraMovimentacao
+from ui.compiled.ui_HistoricoEntradaSaida import HistoricoEntradaSaida
+
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 
 # variavel global
 UsuiarioGlobal = ''
 CONT = 0
-HAARCASCADES = '../haarcascades/haarcascade_frontalface_default.xml'
-CLASSIFICADORLBPH = '../classificador/classificadorLBPH.0.1.yml'
+HAARCASCADES = os.path.join(BASE_DIR, 'models', 'haarcascades', 'haarcascade_frontalface_default.xml')
+CLASSIFICADORLBPH = os.path.join(BASE_DIR, 'models', 'classificadores', 'classificadorLBPH.0.1.yml')
 NOMEUSER = ''
 MNW = 0
 PEGARaRQUIVO = False
@@ -126,8 +130,8 @@ class SplashCreen(QMainWindow):
         # para mover a SplashScreen
         def moveWindow(event):
             if event.buttons() == Qt.LeftButton:
-                self.move(self.pos() + event.globalPos() - self.dragPos)
-                self.dragPos = event.globalPos()
+                self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
+                self.dragPos = event.globalPosition().toPoint()
                 event.accept()
 
         self.sc.page_central.mouseMoveEvent = moveWindow
@@ -231,7 +235,7 @@ class SplashCreen(QMainWindow):
             self.sc.data.setStyleSheet("""
                        <html><head/><body><p><span style=" color: rgba(220, 187, 255, 0);">data:  </span><span style=
                        " color:#c297ff;"/><span style=" color: rgba(255, 255, 255, 0);">28/06/2022</span></p></body></html>""")
-            self.sc.camera.setStyleSheet(f"""background-color: rgba(170, 0, 255, 0;border-radius:10px;""")
+            self.sc.camera.setStyleSheet(f"""background-color: rgba(170, 0, 255, 0);border-radius:10px;""")
             self.sc.versao.setStyleSheet(f"color: rgba(255, 255, 255, 0)")
             self.sc.fechar_1.setStyleSheet(f""" background-color: rgba(170, 0, 255, 0);border-radius:10px;""")
 
@@ -253,8 +257,8 @@ class SplashCreen(QMainWindow):
                                color:rgba(255, 255, 255, {str(contc)});
                                background-color: rgba(170, 0, 255, {str(contc)});
                                border-radius:5px;""")
-            self.sc.camera.setStyleSheet(f"""background-color: rgb(170, 85, 255,{str(contc)});border-radius:10px;""")
-            self.sc.fechar_1.setStyleSheet(f"""background-color: rgb(170, 85, 255, {str(contc)});border-radius:10px;""")
+            self.sc.camera.setStyleSheet(f"""background-color: rgba(170, 85, 255, {str(contc)});border-radius:10px;""")
+            self.sc.fechar_1.setStyleSheet(f"""background-color: rgba(170, 85, 255, {str(contc)});border-radius:10px;""")
 
         if CONT >= 110:
             conn = (CONT - 90) + 2
@@ -316,7 +320,7 @@ class SplashCreen(QMainWindow):
 
     # evento responsavel por pegar a posição da tela paramover a janela
     def mousePressEvent(self, event):
-        self.dragPos = event.globalPos()
+        self.dragPos = event.globalPosition().toPoint()
 
     # responsavel pela animação que abri o splash Screen
     def OpenResize(self):
@@ -898,7 +902,7 @@ class SplashCreen(QMainWindow):
                 if CONT > 60 and iden == 1:
                     NOMEUSER = name
                     self.fecharWebcamTimer.start()
-                    self.sc.logoCamera.setPixmap(QPixmap(u"../img/Instagram_90_openv_px.png"))
+                    self.sc.logoCamera.setPixmap(QPixmap(u"img/Instagram_90_openv_px.png"))
                     self.inserirUltimoUserInBD(1)
                     fontColor = (85, 255, 127)
                     if not self.sc.CentralFrame.height() == 250 and self.Redimencionar:  #########################
@@ -911,7 +915,7 @@ class SplashCreen(QMainWindow):
 
                 if CONT > 60 and iden == 0:
                     NOMEUSER = name
-                    self.sc.logoCamera.setPixmap(QPixmap(u"../img/Instagram_90_offpx.png"))
+                    self.sc.logoCamera.setPixmap(QPixmap(u"img/Instagram_90_offpx.png"))
                     fontColor = (255, 0, 0)
                     y = self.sc.logoCamera.pos().y()
                     ####### criar uma sequencial group animation
@@ -923,7 +927,7 @@ class SplashCreen(QMainWindow):
                     QTimer.singleShot(300, lambda: self.sc.logoCamera.setGeometry(233, y, 81, 91))
                     QTimer.singleShot(350, lambda: self.sc.logoCamera.setGeometry(230, y, 81, 91))
                     QTimer.singleShot(400, lambda: self.sc.logoCamera.setPixmap(
-                        QPixmap(u"../img/Instagram_90px.png")))
+                        QPixmap(u"img/Instagram_90px.png")))
                     CONT = 0
                     # fontColor = (170, 85, 255)
 
@@ -1128,7 +1132,7 @@ class MainwindowSC(QMainWindow):
 
     # pega a posicao global
     def mousePressEvent(self, event):
-        self.dragPos = event.globalPos()
+        self.dragPos = event.globalPosition().toPoint()
         self.dragPosScrollHome = self.ui.scrollArea_Home.horizontalScrollBar().value()
         self.dragPosScroll2 = self.ui.scrollArea_6.horizontalScrollBar().value()
 
@@ -1138,8 +1142,8 @@ class MainwindowSC(QMainWindow):
         # EVENTO PARA MOVER A JANELA
         def moveWindow(event):
             if event.buttons() == Qt.LeftButton:
-                self.move(self.pos() + event.globalPos() - self.dragPos)
-                self.dragPos = event.globalPos()
+                self.move(self.pos() + event.globalPosition().toPoint() - self.dragPos)
+                self.dragPos = event.globalPosition().toPoint()
 
                 if self.cursor().pos().y() <= 5:
                     self.MaxMin()
@@ -1261,7 +1265,7 @@ class MainwindowSC(QMainWindow):
             MNW = 1
 
             icon = QIcon()
-            icon.addFile(u"../img/24x24/cil-window-restore.png", QSize(), QIcon.Normal, QIcon.Off)
+            icon.addFile(u"img/24x24/cil-window-restore.png", QSize(), QIcon.Normal, QIcon.Off)
             self.ui.NormalMax.setIcon(icon)
             self.top.hide()
             self.bottom.hide()
@@ -1281,7 +1285,7 @@ class MainwindowSC(QMainWindow):
             self.right.show()
 
             icon = QIcon()
-            icon.addFile(u"../img/24x24/cil-media-stop.png", QSize(), QIcon.Normal, QIcon.Off)
+            icon.addFile(u"img/24x24/cil-media-stop.png", QSize(), QIcon.Normal, QIcon.Off)
             self.ui.NormalMax.setIcon(icon)
 
     # ativa o ajust da janela
@@ -1309,7 +1313,7 @@ class MainwindowSC(QMainWindow):
             iqr = 0
             fqr = 192
             icon = QIcon()
-            icon.addFile(u"../img/24x24/cil-x-f.png", QSize(), QIcon.Normal, QIcon.Off)
+            icon.addFile(u"img/24x24/cil-x-f.png", QSize(), QIcon.Normal, QIcon.Off)
             self.ui.settings.setIcon(icon)
         else:
             i = 200
@@ -1317,7 +1321,7 @@ class MainwindowSC(QMainWindow):
             iqr = 192
             fqr = 0
             icon = QIcon()
-            icon.addFile(u"../img/24x24/cil-settings.png", QSize(), QIcon.Normal, QIcon.Off)
+            icon.addFile(u"img/24x24/cil-settings.png", QSize(), QIcon.Normal, QIcon.Off)
             self.ui.settings.setIcon(icon)
 
         self.leftmenuAnimation = QPropertyAnimation(self.ui.left_menu, b'minimumWidth')

@@ -1,0 +1,17 @@
+[project]
+name = "controle-financeiro"
+version = "0.1.0"
+description = "Sistema de Controle Financeiro com Reconhecimento Facial"
+readme = "README.md"
+requires-python = ">=3.10,<3.14"
+dependencies = [
+    "pyside6>=6.5.0",
+    "opencv-contrib-python>=4.8.0",
+]
+
+[tool.hatch.build.targets.wheel]
+packages = ["modules", "database", "ui"]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

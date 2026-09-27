@@ -17,7 +17,7 @@ from PySide6.QtWidgets import (QApplication, QComboBox, QFrame, QHBoxLayout,
                                QLabel, QLineEdit, QPushButton, QSizePolicy,
                                QSpacerItem, QVBoxLayout, QWidget, QMainWindow, QGraphicsDropShadowEffect)
 
-from packeg.database import database
+from database.database import database
 
 class Ui_Form(object):
     def setupUi(self, Form):
