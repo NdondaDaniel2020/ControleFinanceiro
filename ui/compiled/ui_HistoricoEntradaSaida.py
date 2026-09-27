@@ -67,7 +67,7 @@ class Ui_Form(object):
 "\n"
 "")
         icon = QIcon()
-        icon.addFile(u"../img/Money Bag Franc_30px.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u"img/Money Bag Franc_30px.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_16.setIcon(icon)
         self.pushButton_16.setIconSize(QSize(24, 26))
 
@@ -162,7 +162,7 @@ class Ui_Form(object):
 "}\n"
 "")
         icon1 = QIcon()
-        icon1.addFile(u"../img/logoFC.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u"img/logoFC.png", QSize(), QIcon.Normal, QIcon.Off)
         self.iconSis.setIcon(icon1)
         self.iconSis.setIconSize(QSize(24, 26))
 
@@ -218,7 +218,7 @@ class Ui_Form(object):
 "\n"
 "")
         icon2 = QIcon()
-        icon2.addFile(u"../img/Money Bag Pounds_30px.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u"img/Money Bag Pounds_30px.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_15.setIcon(icon2)
         self.pushButton_15.setIconSize(QSize(22, 24))
 

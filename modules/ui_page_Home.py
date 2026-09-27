@@ -48,7 +48,7 @@ class Ui_page_Home(object):
 "padding-bottom:0px;\n"
 "\n"
 "")
-        self.logo_principal_2.setPixmap(QPixmap(u"../../../../3D Objects/ControleFinanceiro/System/img/SystemMW.png"))
+        self.logo_principal_2.setPixmap(QPixmap(u"img/SystemMW.png"))
         self.logo_principal_2.setAlignment(Qt.AlignCenter)
 
         self.verticalLayout_14.addWidget(self.logo_principal_2)

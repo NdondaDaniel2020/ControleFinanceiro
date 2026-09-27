@@ -81,7 +81,7 @@ class Ui_Form(object):
 "color: rgb(255, 255, 255);\n"
 "}")
         icon = QIcon()
-        icon.addFile(u"../img/24x24/cil-minus.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u"img/24x24/cil-minus.png", QSize(), QIcon.Normal, QIcon.Off)
         self.minimizar.setIcon(icon)
         self.minimizar.setIconSize(QSize(20, 20))
 
@@ -109,7 +109,7 @@ class Ui_Form(object):
 "color: rgb(255, 255, 255);\n"
 "}")
         icon1 = QIcon()
-        icon1.addFile(u"../img/24x24/cil-x-f.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u"img/24x24/cil-x-f.png", QSize(), QIcon.Normal, QIcon.Off)
         self.fechar.setIcon(icon1)
         self.fechar.setIconSize(QSize(20, 20))
 
@@ -170,7 +170,7 @@ class Ui_Form(object):
 "border-radius: 5px;\n"
 "}")
         icon2 = QIcon()
-        icon2.addFile(u"../img/cil-vertical-align-top.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u"img/cil-vertical-align-top.png", QSize(), QIcon.Normal, QIcon.Off)
         self.entrada.setIcon(icon2)
         self.entrada.setIconSize(QSize(20, 20))
         self.saida = QPushButton(self.frame)
@@ -195,7 +195,7 @@ class Ui_Form(object):
 "border-radius: 5px;\n"
 "}")
         icon3 = QIcon()
-        icon3.addFile(u"../img/cil-vertical-align-bottom.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon3.addFile(u"img/cil-vertical-align-bottom.png", QSize(), QIcon.Normal, QIcon.Off)
         self.saida.setIcon(icon3)
         self.saida.setIconSize(QSize(20, 20))
         self.categoria = QComboBox(self.frame)

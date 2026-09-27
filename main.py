@@ -209,13 +209,13 @@ class SplashCreen(QMainWindow):
 
         self.show()  # mostrar a app
 
-        QTimer.singleShot(10, lambda: self.progressCircleTimer.start())  # inicialisaçãa do Timer com um controlador de
+        QTimer.singleShot(10, lambda: self.progressCircleTimer.start(5))  # inicialisaçãa do Timer com um controlador de
         # tempo
-        QTimer.singleShot(5000, lambda: self.AnimatioOpacity())
-        QTimer.singleShot(5500, lambda: self.OpenResize())  # funcão com documentação. está com controlador de tempo
+        QTimer.singleShot(800, lambda: self.AnimatioOpacity())
+        QTimer.singleShot(1000, lambda: self.OpenResize())  # funcão com documentação. está com controlador de tempo
         # esta é uma das formas de corrigir o erro de aimagem mudar de posição só
         # QTimer.singleShot(2500, lambda: self.opacityLabel())
-        QTimer.singleShot(7500, lambda: self.TestWebCam())
+        QTimer.singleShot(2000, lambda: self.TestWebCam())
 
     # responsael pela animação do circupal progres Bar e as outras animation
     def circulaProgreValue(self):

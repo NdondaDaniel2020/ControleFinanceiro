@@ -262,7 +262,7 @@ class Ui_MainWindowMW(object):
 "border-radius:15px}\n"
 "")
         icon = QIcon()
-        icon.addFile(u"../img/logoFC.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u"img/logoFC.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_5.setIcon(icon)
         self.pushButton_5.setIconSize(QSize(30, 30))
 
@@ -318,7 +318,7 @@ class Ui_MainWindowMW(object):
         self.minimisar = QToolButton(self.frame_btn_zone_3)
         self.minimisar.setObjectName(u"minimisar")
         icon1 = QIcon()
-        icon1.addFile(u"../img/24x24/cil-minus.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u"img/24x24/cil-minus.png", QSize(), QIcon.Normal, QIcon.Off)
         self.minimisar.setIcon(icon1)
         self.minimisar.setIconSize(QSize(18, 18))
 
@@ -328,7 +328,7 @@ class Ui_MainWindowMW(object):
         self.NormalMax.setObjectName(u"NormalMax")
         self.NormalMax.setMinimumSize(QSize(0, 0))
         icon2 = QIcon()
-        icon2.addFile(u"../img/24x24/cil-media-stop.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon2.addFile(u"img/24x24/cil-media-stop.png", QSize(), QIcon.Normal, QIcon.Off)
         self.NormalMax.setIcon(icon2)
         self.NormalMax.setIconSize(QSize(18, 18))
 
@@ -337,7 +337,7 @@ class Ui_MainWindowMW(object):
         self.fechar = QToolButton(self.frame_btn_zone_3)
         self.fechar.setObjectName(u"fechar")
         icon3 = QIcon()
-        icon3.addFile(u"../img/24x24/cil-x.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon3.addFile(u"img/24x24/cil-x.png", QSize(), QIcon.Normal, QIcon.Off)
         self.fechar.setIcon(icon3)
         self.fechar.setIconSize(QSize(18, 18))
 
@@ -398,7 +398,7 @@ class Ui_MainWindowMW(object):
         self.Home.setMinimumSize(QSize(0, 35))
         self.Home.setMaximumSize(QSize(35, 16777215))
         icon4 = QIcon()
-        icon4.addFile(u"../img/24x24/cil-home.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon4.addFile(u"img/24x24/cil-home.png", QSize(), QIcon.Normal, QIcon.Off)
         self.Home.setIcon(icon4)
         self.Home.setIconSize(QSize(25, 25))
 
@@ -428,7 +428,7 @@ class Ui_MainWindowMW(object):
 "    text-align: justify;	\n"
 "}")
         icon5 = QIcon()
-        icon5.addFile(u"../img/ControleFinanceiro1.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon5.addFile(u"img/ControleFinanceiro1.png", QSize(), QIcon.Normal, QIcon.Off)
         self.movimentacao_btn.setIcon(icon5)
         self.movimentacao_btn.setIconSize(QSize(28, 31))
 
@@ -439,7 +439,7 @@ class Ui_MainWindowMW(object):
         self.settings.setMinimumSize(QSize(0, 35))
         self.settings.setMaximumSize(QSize(35, 16777215))
         icon6 = QIcon()
-        icon6.addFile(u"../img/24x24/cil-settings.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon6.addFile(u"img/24x24/cil-settings.png", QSize(), QIcon.Normal, QIcon.Off)
         self.settings.setIcon(icon6)
         self.settings.setIconSize(QSize(25, 25))
 
@@ -479,7 +479,7 @@ class Ui_MainWindowMW(object):
         self.QRcode = QLabel(self.frame_zoneQR)
         self.QRcode.setObjectName(u"QRcode")
         self.QRcode.setMaximumSize(QSize(16777215, 184))
-        self.QRcode.setPixmap(QPixmap(u"../img/qr_code_120px.png"))
+        self.QRcode.setPixmap(QPixmap(u"img/qr_code_120px.png"))
         self.QRcode.setAlignment(Qt.AlignBottom|Qt.AlignHCenter)
 
         self.verticalLayout_142.addWidget(self.QRcode)
@@ -551,7 +551,7 @@ class Ui_MainWindowMW(object):
         self.perfil_btn.setMaximumSize(QSize(16777215, 34))
         self.perfil_btn.setStyleSheet(u"padding-left:22px;")
         icon7 = QIcon()
-        icon7.addFile(u"../img/24x24/cil-user.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon7.addFile(u"img/24x24/cil-user.png", QSize(), QIcon.Normal, QIcon.Off)
         self.perfil_btn.setIcon(icon7)
         self.perfil_btn.setIconSize(QSize(20, 20))
 
@@ -563,7 +563,7 @@ class Ui_MainWindowMW(object):
         self.movimentacao_btn3.setMaximumSize(QSize(16777215, 34))
         self.movimentacao_btn3.setStyleSheet(u"padding-left:19px;")
         icon8 = QIcon()
-        icon8.addFile(u"../img/ControleFinanceiro.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon8.addFile(u"img/ControleFinanceiro.png", QSize(), QIcon.Normal, QIcon.Off)
         self.movimentacao_btn3.setIcon(icon8)
         self.movimentacao_btn3.setIconSize(QSize(27, 29))
 
@@ -574,7 +574,7 @@ class Ui_MainWindowMW(object):
         self.fluxodecaixa.setMinimumSize(QSize(0, 34))
         self.fluxodecaixa.setMaximumSize(QSize(16777215, 34))
         icon9 = QIcon()
-        icon9.addFile(u"../img/controle de fluxo.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon9.addFile(u"img/controle de fluxo.png", QSize(), QIcon.Normal, QIcon.Off)
         self.fluxodecaixa.setIcon(icon9)
         self.fluxodecaixa.setIconSize(QSize(27, 33))
 
@@ -586,7 +586,7 @@ class Ui_MainWindowMW(object):
         self.exit.setMaximumSize(QSize(16777215, 34))
         self.exit.setStyleSheet(u"padding-left:23px;")
         icon10 = QIcon()
-        icon10.addFile(u"../img/24x24/cil-exit-to-app.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon10.addFile(u"img/24x24/cil-exit-to-app.png", QSize(), QIcon.Normal, QIcon.Off)
         self.exit.setIcon(icon10)
         self.exit.setIconSize(QSize(19, 22))
 
@@ -698,7 +698,7 @@ class Ui_MainWindowMW(object):
 "padding:0px;\n"
 "}")
         icon11 = QIcon()
-        icon11.addFile(u"../img/navamovimentacao.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon11.addFile(u"img/navamovimentacao.png", QSize(), QIcon.Normal, QIcon.Off)
         self.movimentacao_btn2.setIcon(icon11)
         self.movimentacao_btn2.setIconSize(QSize(115, 115))
         self.label_199 = QLabel(self.frame_movimentacao)
@@ -742,7 +742,7 @@ class Ui_MainWindowMW(object):
 "padding:0px;\n"
 "}")
         icon12 = QIcon()
-        icon12.addFile(u"../img/adiantamento-de-dinheiroV2.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon12.addFile(u"img/adiantamento-de-dinheiroV2.png", QSize(), QIcon.Normal, QIcon.Off)
         self.frame_opening_history_btn_2.setIcon(icon12)
         self.frame_opening_history_btn_2.setIconSize(QSize(86, 100))
         self.label_195 = QLabel(self.frame_207)
@@ -823,7 +823,7 @@ class Ui_MainWindowMW(object):
 "padding:0px;\n"
 "}")
         icon13 = QIcon()
-        icon13.addFile(u"../img/adiantamento-de-dinheiroV.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon13.addFile(u"img/adiantamento-de-dinheiroV.png", QSize(), QIcon.Normal, QIcon.Off)
         self.frame_user_list_btn_3.setIcon(icon13)
         self.frame_user_list_btn_3.setIconSize(QSize(100, 130))
         self.label_203 = QLabel(self.frame_user_list_3)
@@ -899,7 +899,7 @@ class Ui_MainWindowMW(object):
 "padding:0px;\n"
 "}")
         icon14 = QIcon()
-        icon14.addFile(u"../img/adiantamento-de-dinheiroV5.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon14.addFile(u"img/adiantamento-de-dinheiroV5.png", QSize(), QIcon.Normal, QIcon.Off)
         self.password_faceId_btn_3.setIcon(icon14)
         self.password_faceId_btn_3.setIconSize(QSize(100, 130))
         self.label_206 = QLabel(self.frame_210)
@@ -1170,7 +1170,7 @@ class Ui_MainWindowMW(object):
         self.categoria_btn.setObjectName(u"categoria_btn")
         self.categoria_btn.setGeometry(QRect(13, 13, 90, 71))
         icon15 = QIcon()
-        icon15.addFile(u"../img/web_100px.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon15.addFile(u"img/web_100px.png", QSize(), QIcon.Normal, QIcon.Off)
         self.categoria_btn.setIcon(icon15)
         self.categoria_btn.setIconSize(QSize(100, 100))
 
@@ -1189,7 +1189,7 @@ class Ui_MainWindowMW(object):
         self.frame_opening_history_btn.setObjectName(u"frame_opening_history_btn")
         self.frame_opening_history_btn.setGeometry(QRect(13, 13, 90, 71))
         icon16 = QIcon()
-        icon16.addFile(u"../img/close_pane_120px.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon16.addFile(u"img/close_pane_120px.png", QSize(), QIcon.Normal, QIcon.Off)
         self.frame_opening_history_btn.setIcon(icon16)
         self.frame_opening_history_btn.setIconSize(QSize(100, 100))
         self.frame_opening_history_lbl = QLabel(self.frame_opening_history)
@@ -1213,7 +1213,7 @@ class Ui_MainWindowMW(object):
         self.frame_user_list_btn.setObjectName(u"frame_user_list_btn")
         self.frame_user_list_btn.setGeometry(QRect(10, 17, 91, 71))
         icon17 = QIcon()
-        icon17.addFile(u"../img/user_menu_female_120px.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon17.addFile(u"img/user_menu_female_120px.png", QSize(), QIcon.Normal, QIcon.Off)
         self.frame_user_list_btn.setIcon(icon17)
         self.frame_user_list_btn.setIconSize(QSize(115, 115))
         self.frame_user_list_lbl = QLabel(self.frame_user_perfil)
@@ -1235,7 +1235,7 @@ class Ui_MainWindowMW(object):
         self.password_faceId_btn_2.setObjectName(u"password_faceId_btn_2")
         self.password_faceId_btn_2.setGeometry(QRect(13, 10, 90, 90))
         icon18 = QIcon()
-        icon18.addFile(u"../img/instagram_logo_120px.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon18.addFile(u"img/instagram_logo_120px.png", QSize(), QIcon.Normal, QIcon.Off)
         self.password_faceId_btn_2.setIcon(icon18)
         self.password_faceId_btn_2.setIconSize(QSize(110, 130))
         self.lineEdit_2 = QLineEdit(self.frame_password_faceId)
@@ -1411,7 +1411,7 @@ class Ui_MainWindowMW(object):
 "padding:0px;\n"
 "}")
         icon19 = QIcon()
-        icon19.addFile(u"../img/daniel.jpg", QSize(), QIcon.Normal, QIcon.Off)
+        icon19.addFile(u"img/daniel.jpg", QSize(), QIcon.Normal, QIcon.Off)
         self.perfifEdit.setIcon(icon19)
         self.perfifEdit.setIconSize(QSize(144, 154))
 
@@ -1986,7 +1986,7 @@ class Ui_MainWindowMW(object):
 "padding:0px;\n"
 "}")
         icon20 = QIcon()
-        icon20.addFile(u"../img/asd.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon20.addFile(u"img/asd.png", QSize(), QIcon.Normal, QIcon.Off)
         self.fotoPerfil.setIcon(icon20)
         self.fotoPerfil.setIconSize(QSize(107, 118))
 
@@ -2826,7 +2826,7 @@ class Ui_MainWindowMW(object):
 "padding:0px;\n"
 "}")
         icon21 = QIcon()
-        icon21.addFile(u"../img/fluxoEntrada.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon21.addFile(u"img/fluxoEntrada.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_7.setIcon(icon21)
         self.pushButton_7.setIconSize(QSize(73, 76))
         self.label_121 = QLabel(self.frame_187)
@@ -2904,7 +2904,7 @@ class Ui_MainWindowMW(object):
 "padding:0px;\n"
 "}")
         icon22 = QIcon()
-        icon22.addFile(u"../img/fluxoSaida.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon22.addFile(u"img/fluxoSaida.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_6.setIcon(icon22)
         self.pushButton_6.setIconSize(QSize(73, 73))
 
@@ -2969,7 +2969,7 @@ class Ui_MainWindowMW(object):
 "padding:0px;\n"
 "}")
         icon23 = QIcon()
-        icon23.addFile(u"../img/fluxoTotal.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon23.addFile(u"img/fluxoTotal.png", QSize(), QIcon.Normal, QIcon.Off)
         self.pushButton_3.setIcon(icon23)
         self.pushButton_3.setIconSize(QSize(73, 73))
 

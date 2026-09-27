@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Aura Capital — Private Treasury &amp; Executive Control</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,300..900;1,300..900&amp;family=JetBrains+Mono:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary": "#ffffff",
+            "surface-variant": "#e3e2e0",
+            "error": "#ba1a1a",
+            "on-primary-container": "#8590a6",
+            "on-error-container": "#93000a",
+            "secondary-container": "#97f5cc",
+            "secondary-fixed-dim": "#7bd8b1",
+            "on-secondary-container": "#007353",
+            "inverse-on-surface": "#f1f1ef",
+            "primary-fixed-dim": "#bcc7de",
+            "on-surface-variant": "#45474c",
+            "tertiary": "#270c00",
+            "surface-dim": "#dadad8",
+            "outline-variant": "#c5c6cd",
+            "surface-bright": "#faf9f7",
+            "on-secondary-fixed-variant": "#00513a",
+            "on-primary-fixed-variant": "#3c475a",
+            "primary-container": "#1e293b",
+            "tertiary-container": "#471c00",
+            "primary": "#091426",
+            "on-tertiary-container": "#de722c",
+            "on-background": "#1a1c1b",
+            "surface-container-high": "#e9e8e6",
+            "error-container": "#ffdad6",
+            "on-surface": "#1a1c1b",
+            "secondary-fixed": "#97f5cc",
+            "on-primary-fixed": "#111c2d",
+            "on-error": "#ffffff",
+            "inverse-surface": "#2f3130",
+            "inverse-primary": "#bcc7de",
+            "surface-tint": "#545f73",
+            "surface-container-highest": "#e3e2e0",
+            "surface-container-lowest": "#ffffff",
+            "surface-container": "#efeeec",
+            "tertiary-fixed": "#ffdbca",
+            "primary-fixed": "#d8e3fb",
+            "on-tertiary-fixed": "#331200",
+            "surface": "#faf9f7",
+            "on-secondary-fixed": "#002115",
+            "on-secondary": "#ffffff",
+            "outline": "#75777d",
+            "on-tertiary-fixed-variant": "#763300",
+            "on-tertiary": "#ffffff",
+            "tertiary-fixed-dim": "#ffb68e",
+            "background": "#faf9f7",
+            "surface-container-low": "#f4f3f1",
+            "secondary": "#006c4e"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "gutter": "1.5rem",
+            "space-lg": "1.5rem",
+            "space-sm": "0.5rem",
+            "space-xs": "0.25rem",
+            "space-md": "1rem",
+            "space-xl": "2.5rem",
+            "margin": "2rem"
+          },
+          "fontFamily": {
+            "body-sm": ["Hanken Grotesk"],
+            "body-lg": ["Hanken Grotesk"],
+            "headline-lg-mobile": ["Hanken Grotesk"],
+            "title-md": ["Hanken Grotesk"],
+            "label-mono": ["JetBrains Mono"],
+            "financial-numeric-lg": ["Hanken Grotesk"],
+            "body-md": ["Hanken Grotesk"],
+            "display-hero-mobile": ["Hanken Grotesk"],
+            "headline-lg": ["Hanken Grotesk"],
+            "financial-numeric-md": ["Hanken Grotesk"],
+            "headline-md": ["Hanken Grotesk"],
+            "display-hero": ["Hanken Grotesk"],
+            "headline-sm": ["Hanken Grotesk"],
+            "label-caps": ["Hanken Grotesk"]
+          },
+          "fontSize": {
+            "body-sm": ["12px", { "lineHeight": "18px", "letterSpacing": "0.01em", "fontWeight": "400" }],
+            "body-lg": ["16px", { "lineHeight": "26px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "headline-lg-mobile": ["26px", { "lineHeight": "34px", "letterSpacing": "-0.015em", "fontWeight": "500" }],
+            "title-md": ["16px", { "lineHeight": "24px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+            "label-mono": ["11px", { "lineHeight": "16px", "letterSpacing": "0.04em", "fontWeight": "500" }],
+            "financial-numeric-lg": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "body-md": ["14px", { "lineHeight": "22px", "letterSpacing": "0em", "fontWeight": "400" }],
+            "display-hero-mobile": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+            "headline-lg": ["32px", { "lineHeight": "40px", "letterSpacing": "-0.02em", "fontWeight": "500" }],
+            "financial-numeric-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+            "headline-md": ["24px", { "lineHeight": "32px", "letterSpacing": "-0.015em", "fontWeight": "500" }],
+            "display-hero": ["44px", { "lineHeight": "52px", "letterSpacing": "-0.03em", "fontWeight": "600" }],
+            "headline-sm": ["20px", { "lineHeight": "28px", "letterSpacing": "-0.01em", "fontWeight": "500" }],
+            "label-caps": ["11px", { "lineHeight": "16px", "letterSpacing": "0.06em", "fontWeight": "600" }]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .material-symbols-outlined {
+      font-family: 'Material Symbols Outlined';
+      font-weight: normal;
+      font-style: normal;
+      font-size: 20px;
+      line-height: 1;
+      letter-spacing: normal;
+      text-transform: none;
+      display: inline-block;
+      white-space: nowrap;
+      word-wrap: normal;
+      direction: ltr;
+      -webkit-font-feature-settings: 'liga';
+      -webkit-font-smoothing: antialiased;
+    }
+    
+    /* Architectural subtle ambient shadows */
+    .shadow-architectural {
+      box-shadow: 0 1px 2px rgba(27, 25, 23, 0.03), 0 8px 24px -4px rgba(27, 25, 23, 0.04);
+    }
+    .shadow-ambient-lift {
+      box-shadow: 0 4px 6px -1px rgba(27, 25, 23, 0.04), 0 20px 40px -8px rgba(27, 25, 23, 0.08);
+    }
+    .shadow-subtle-inset {
+      box-shadow: inset 0 1px 2px rgba(27, 25, 23, 0.04);
+    }
+    
+    /* Custom delicate scrollbar */
+    ::-webkit-scrollbar {
+      width: 5px;
+      height: 5px;
+    }
+    ::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #e3e2e0;
+      border-radius: 4px;
+    }
+    ::-webkit-scrollbar-thumb:hover {
+      background: #c5c6cd;
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body-md antialiased min-h-screen flex selection:bg-surface-container selection:text-primary">
+<!-- ========================================================================= -->
+<!-- SHARED COMPONENT: SideNavBar                                              -->
+<!-- ========================================================================= -->
+<aside class="fixed top-0 left-0 h-screen w-64 flex flex-col justify-between py-6 px-4 z-40 bg-surface dark:bg-surface-container-lowest border-r border-surface-variant dark:border-outline-variant">
+<div class="flex flex-col gap-6">
+<!-- Brand Crest & Header -->
+<div class="flex items-center gap-3 px-2">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary flex items-center justify-center shadow-subtle-inset">
+<!-- Obsidian Crest Motif -->
+<svg class="w-5 h-5 text-on-primary" fill="none" stroke="currentColor" stroke-width="1.8" viewbox="0 0 24 24">
+<path d="M12 2L3 7v10l9 5 9-5V7L12 2z" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M12 22V12" stroke-linecap="round" stroke-linejoin="round"></path>
+<path d="M21 7l-9 5-9-5" stroke-linecap="round" stroke-linejoin="round"></path>
+</svg>
+</div>
+<div class="flex flex-col">
+<span class="text-headline-sm font-headline-sm tracking-tight text-primary dark:text-on-primary-fixed leading-tight">Aura Capital</span>
+<span class="text-label-caps font-label-caps text-on-surface-variant uppercase tracking-wider">Private Treasury</span>
+</div>
+</div>
+<!-- Quick Action CTA -->
+<div class="px-2">
+<button class="w-full flex items-center justify-center gap-2 py-2.5 px-4 rounded-lg bg-primary-container text-on-primary hover:bg-primary text-body-md font-title-md transition-all duration-150 active:scale-[0.99] shadow-architectural">
+<span class="material-symbols-outlined" data-icon="add">add</span>
+<span>New Allocation</span>
+</button>
+</div>
+<!-- Navigation Tabs: Exact JSON labels & icons -->
+<nav class="flex flex-col gap-1">
+<!-- Overview (Active) -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-surface-container-high dark:bg-surface-container text-primary dark:text-on-surface font-title-md text-title-md transition-colors active:scale-[0.99]" href="#overview">
+<span class="material-symbols-outlined text-primary" data-icon="dashboard" data-weight="fill" style="font-variation-settings: 'FILL' 1;">dashboard</span>
+<span>Overview</span>
+</a>
+<!-- Treasury -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant dark:text-outline hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-surface-container font-body-md text-body-md transition-colors active:scale-[0.99]" href="#treasury">
+<span class="material-symbols-outlined" data-icon="account_balance">account_balance</span>
+<span>Treasury</span>
+</a>
+<!-- Ledger -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant dark:text-outline hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-surface-container font-body-md text-body-md transition-colors active:scale-[0.99]" href="#ledger">
+<span class="material-symbols-outlined" data-icon="receipt_long">receipt_long</span>
+<span>Ledger</span>
+</a>
+<!-- Transfers -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant dark:text-outline hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-surface-container font-body-md text-body-md transition-colors active:scale-[0.99]" href="#transfers">
+<span class="material-symbols-outlined" data-icon="swap_horiz">swap_horiz</span>
+<span>Transfers</span>
+</a>
+<!-- Analytics -->
+<a class="flex items-center gap-3 px-3 py-2.5 rounded-lg text-on-surface-variant dark:text-outline hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-surface-container font-body-md text-body-md transition-colors active:scale-[0.99]" href="#analytics">
+<span class="material-symbols-outlined" data-icon="monitoring">monitoring</span>
+<span>Analytics</span>
+</a>
+</nav>
+</div>
+<!-- Footer Utility Tabs -->
+<div class="flex flex-col gap-1 pt-4 border-t border-surface-variant dark:border-outline-variant">
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-outline hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-surface-container font-body-md text-body-md transition-colors" href="#security">
+<span class="material-symbols-outlined text-outline" data-icon="verified_user">verified_user</span>
+<span>Security</span>
+</a>
+<a class="flex items-center gap-3 px-3 py-2 rounded-lg text-on-surface-variant dark:text-outline hover:text-on-surface dark:hover:text-inverse-on-surface hover:bg-surface-container-low dark:hover:bg-surface-container font-body-md text-body-md transition-colors" href="#settings">
+<span class="material-symbols-outlined text-outline" data-icon="settings">settings</span>
+<span>Settings</span>
+</a>
+<!-- Custodial Institutional Status Pill -->
+<div class="mt-4 p-3 rounded-lg bg-surface-container-low border border-surface-variant flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<span class="font-label-mono text-label-mono text-on-surface-variant">4 Custodians Live</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[16px]" data-icon="lock">lock</span>
+</div>
+</div>
+</aside>
+<!-- ========================================================================= -->
+<!-- MAIN WORKSPACE & TOP NAV WRAPPER                                          -->
+<!-- ========================================================================= -->
+<div class="pl-64 flex-1 flex flex-col min-w-0 bg-background">
+<!-- TopNavBar (Shared Component aligned) -->
+<header class="docked full-width top-0 h-16 sticky z-30 bg-surface dark:bg-surface-container-lowest border-b border-surface-variant dark:border-outline-variant">
+<div class="flex justify-between items-center w-full h-full px-8 max-w-7xl mx-auto">
+<!-- Search and Breadcrumbs -->
+<div class="flex items-center gap-6">
+<!-- Search Bar -->
+<div class="relative w-72">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-[18px]" data-icon="search">search</span>
+</div>
+<input class="w-full pl-9 pr-14 py-1.5 bg-surface-container-lowest border border-surface-variant rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/10 transition-all shadow-subtle-inset" placeholder="Search ledger, wires, ISIN..." type="text"/>
+<div class="absolute inset-y-0 right-0 pr-2 flex items-center pointer-events-none">
+<kbd class="font-label-mono text-[10px] px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant border border-surface-variant">⌘K</kbd>
+</div>
+</div>
+<div class="h-4 w-[1px] bg-surface-variant"></div>
+<!-- Breadcrumb Anchor -->
+<nav class="flex items-center gap-2 text-body-sm font-body-sm">
+<span class="text-on-surface-variant hover:text-on-surface cursor-pointer">Treasury</span>
+<span class="text-outline">/</span>
+<span class="text-primary font-title-md">Liquidity &amp; Cash Flow</span>
+</nav>
+</div>
+<!-- Trailing Actions & Executive Profile -->
+<div class="flex items-center gap-3">
+<button class="px-3.5 py-1.5 rounded-lg border border-surface-variant hover:bg-surface-container-low text-body-md font-body-md text-on-surface transition-colors flex items-center gap-1.5 shadow-architectural">
+<span class="material-symbols-outlined text-[18px] text-on-surface-variant" data-icon="file_download">file_download</span>
+<span>Export Audit</span>
+</button>
+<button class="px-3.5 py-1.5 rounded-lg bg-primary-container text-on-primary hover:bg-primary text-body-md font-title-md transition-colors flex items-center gap-1.5 shadow-architectural active:scale-[0.98]">
+<span class="material-symbols-outlined text-[18px]" data-icon="send">send</span>
+<span>Wire Transfer</span>
+</button>
+<div class="h-4 w-[1px] bg-surface-variant mx-1"></div>
+<button aria-label="Notifications" class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors relative">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 rounded-full bg-secondary"></span>
+</button>
+<button aria-label="Help" class="p-2 rounded-lg text-on-surface-variant hover:text-on-surface hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined" data-icon="help_outline">help_outline</span>
+</button>
+<!-- Executive Avatar & Role -->
+<div class="flex items-center gap-3 pl-2 ml-1 border-l border-surface-variant">
+<img class="w-9 h-9 rounded-full object-cover border border-surface-variant shadow-sm" data-alt="An elegant, high-contrast studio photographic portrait of a female executive director in warm ambient daylight, wearing a tailored charcoal minimalist collar, exuding quiet authority, mathematical precision, and serene executive focus in a serene architectural pavilion setting with soft off-white and linen background tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDAHuk94EsXhm_y9Kfj6moXPgzOsEH5XW7aGIv2ai6S4zAYDnLBxodOXkUjOoj09fM9kO5TGObBonG_UcgFoFF5zt4pvLLCvMuDboQ_6KqBvQmzw_n5c5WSG0rz140kYc2anYm5PXxBxUEv_y7rtl8GF5FT39X0TYyKOIM6CqOUmjiRmuCQ1LSBlXf__PC2QQMqgNdPz3L3puAzpBYul9SS4XO_9EXc2J4pcGoQVLOLzaU7KKqDZ2COH0DdFZghRRZ0-F28sBezYsa3"/>
+<div class="hidden lg:flex flex-col text-left">
+<span class="font-title-md text-body-md text-primary leading-tight">Eleanor Vance</span>
+<span class="font-label-mono text-[10px] text-on-surface-variant">Managing Partner</span>
+</div>
+</div>
+</div>
+</div>
+</header>
+<!-- ========================================================================= -->
+<!-- MAIN EXECUTIVE DASHBOARD CANVAS                                           -->
+<!-- ========================================================================= -->
+<main class="flex-1 px-8 py-8 max-w-7xl mx-auto w-full flex flex-col gap-8">
+<!-- SECTION 1: Executive Header & Contextual Filters -->
+<section class="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-2 border-b border-surface-variant/70">
+<div>
+<div class="flex items-center gap-3 mb-1">
+<h1 class="font-headline-lg text-headline-lg tracking-tight text-primary">Global Treasury Overview</h1>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-mono text-label-mono border border-surface-variant">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span>
+              Live Synced
+            </span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant flex items-center gap-2">
+<span>Updated 4 minutes ago</span>
+<span class="inline-block w-1 h-1 rounded-full bg-outline"></span>
+<span>Synchronized across 4 custodial institutions (JPMorgan, BNY Mellon, SVB, State Street)</span>
+</p>
+</div>
+<div class="flex flex-wrap items-center gap-2.5">
+<!-- Timeframe Selector Pills -->
+<div class="flex items-center p-1 rounded-lg bg-surface-container border border-surface-variant text-label-mono text-label-mono">
+<button class="px-3 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors">7D</button>
+<button class="px-3 py-1 rounded bg-surface-container-lowest text-primary shadow-sm font-semibold transition-all">30D</button>
+<button class="px-3 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors">This Quarter</button>
+<button class="px-3 py-1 rounded text-on-surface-variant hover:text-on-surface transition-colors">YTD</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface flex items-center gap-1">
+<span>Custom</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="date_range">date_range</span>
+</button>
+</div>
+<!-- Quick Action Buttons -->
+<div class="flex items-center gap-2">
+<button class="px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface border border-surface-variant text-body-sm font-title-md transition-colors flex items-center gap-1.5 shadow-architectural">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="add_circle">add_circle</span>
+<span>Deposit Funds</span>
+</button>
+<button class="px-3 py-2 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface border border-surface-variant text-body-sm font-title-md transition-colors flex items-center gap-1.5 shadow-architectural">
+<span class="material-symbols-outlined text-[16px] text-on-surface-variant" data-icon="sync">sync</span>
+<span>Run Payroll Sync</span>
+</button>
+</div>
+</div>
+</section>
+<!-- SECTION 2: Balance Overview Card Grid (Bento Metrics) -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+<!-- Metric 1: Net Liquidity (Hero Card, double width on tablet/lg) -->
+<div class="lg:col-span-1 p-6 rounded-lg bg-surface-container-lowest border border-surface-variant shadow-architectural flex flex-col justify-between relative overflow-hidden group">
+<div class="flex items-start justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Total Net Liquidity</span>
+<span class="font-label-mono text-[11px] text-outline mt-0.5">Consolidated Cash &amp; Equivalents</span>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[18px]" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+</div>
+<div class="my-4">
+<div class="font-financial-numeric-lg text-financial-numeric-lg text-primary tracking-tight font-semibold">
+              $4,829,310.42
+            </div>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#ECFDF5] text-secondary border border-[#D1FAE5] font-label-mono text-label-mono font-medium">
+<span class="material-symbols-outlined text-[14px]" data-icon="arrow_upward">arrow_upward</span>
+                +8.4%
+              </span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">+$374,200.00 this month</span>
+</div>
+</div>
+<!-- Secondary Sub-breakdown -->
+<div class="pt-3 border-t border-surface-container flex flex-col gap-1.5 font-label-mono text-[11px]">
+<div class="flex justify-between items-center text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-primary-container"></span>
+                Sweep Yield (5.15% APY)
+              </span>
+<span class="font-semibold text-on-surface">$3,124,500.00</span>
+</div>
+<div class="flex justify-between items-center text-on-surface-variant">
+<span class="flex items-center gap-1.5">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span>
+                Operating Liquidity
+              </span>
+<span class="font-semibold text-on-surface">$1,704,810.42</span>
+</div>
+</div>
+</div>
+<!-- Metric 2: Operating Inflow -->
+<div class="p-6 rounded-lg bg-surface-container-lowest border border-surface-variant shadow-architectural flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Operating Inflow</span>
+<p class="font-label-mono text-[11px] text-outline mt-0.5">30-day Client &amp; Capital Inflows</p>
+</div>
+<div class="w-8 h-8 rounded-lg bg-[#ECFDF5] text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="south_west">south_west</span>
+</div>
+</div>
+<div class="my-4">
+<div class="font-financial-numeric-lg text-financial-numeric-lg text-primary tracking-tight font-semibold">
+              $892,450.00
+            </div>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#ECFDF5] text-secondary border border-[#D1FAE5] font-label-mono text-label-mono font-medium">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_up">trending_up</span>
+                +12.3%
+              </span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">vs. prev 30 days</span>
+</div>
+</div>
+<!-- Micro Sparkline SVG -->
+<div class="h-8 w-full pt-1">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 100 24">
+<path d="M0,18 Q15,16 30,12 T60,8 T80,11 T100,3" fill="none" stroke="#006c4e" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0,18 Q15,16 30,12 T60,8 T80,11 T100,3 L100,24 L0,24 Z" fill="url(#sparkline-grad-green)" opacity="0.15"></path>
+<defs>
+<lineargradient id="sparkline-grad-green" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#006c4e"></stop>
+<stop offset="100%" stop-color="#006c4e" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+</div>
+<!-- Metric 3: Operating Outflow -->
+<div class="p-6 rounded-lg bg-surface-container-lowest border border-surface-variant shadow-architectural flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Operating Outflow</span>
+<p class="font-label-mono text-[11px] text-outline mt-0.5">Payroll, Infrastructure, AP</p>
+</div>
+<div class="w-8 h-8 rounded-lg bg-[#FFFBEB] text-[#B45309] flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="north_east">north_east</span>
+</div>
+</div>
+<div class="my-4">
+<div class="font-financial-numeric-lg text-financial-numeric-lg text-primary tracking-tight font-semibold">
+              $341,200.00
+            </div>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded bg-[#ECFDF5] text-secondary border border-[#D1FAE5] font-label-mono text-label-mono font-medium">
+<span class="material-symbols-outlined text-[14px]" data-icon="trending_down">trending_down</span>
+                -4.1%
+              </span>
+<span class="font-label-mono text-label-mono text-on-surface-variant">Efficiency gain</span>
+</div>
+</div>
+<!-- Micro Sparkline Outflow -->
+<div class="h-8 w-full pt-1">
+<svg class="w-full h-full overflow-visible" preserveaspectratio="none" viewbox="0 0 100 24">
+<path d="M0,8 Q20,10 40,7 T70,16 T100,12" fill="none" stroke="#75777d" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0,8 Q20,10 40,7 T70,16 T100,12 L100,24 L0,24 Z" fill="url(#sparkline-grad-gray)" opacity="0.12"></path>
+<defs>
+<lineargradient id="sparkline-grad-gray" x1="0" x2="0" y1="0" y2="1">
+<stop offset="0%" stop-color="#75777d"></stop>
+<stop offset="100%" stop-color="#75777d" stop-opacity="0"></stop>
+</lineargradient>
+</defs>
+</svg>
+</div>
+</div>
+<!-- Metric 4: Reserve Runway / Burn Buffer -->
+<div class="p-6 rounded-lg bg-surface-container-lowest border border-surface-variant shadow-architectural flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div>
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Reserve Runway</span>
+<p class="font-label-mono text-[11px] text-outline mt-0.5">At current net operational burn</p>
+</div>
+<div class="w-8 h-8 rounded-lg bg-surface-container-low text-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[18px]" data-icon="hourglass_top">hourglass_top</span>
+</div>
+</div>
+<div class="my-4">
+<div class="flex items-baseline gap-2">
+<span class="font-financial-numeric-lg text-financial-numeric-lg text-primary tracking-tight font-semibold">18.4</span>
+<span class="font-title-md text-on-surface-variant">Months</span>
+</div>
+<div class="flex items-center gap-2 mt-2">
+<span class="inline-flex items-center px-2 py-0.5 rounded bg-surface-container text-on-surface font-label-mono text-label-mono">
+                Pristine Capital Tier
+              </span>
+</div>
+</div>
+<!-- Progress Channel Bar -->
+<div class="flex flex-col gap-1.5 pt-1">
+<div class="w-full bg-[#F1EFEA] h-2 rounded-full overflow-hidden shadow-subtle-inset flex">
+<div class="bg-primary h-full rounded-full" style="width: 78%;"></div>
+</div>
+<div class="flex justify-between font-label-mono text-[10px] text-outline">
+<span>Threshold: 12 Mo</span>
+<span class="text-secondary font-medium">Comfort Zone: &gt;16 Mo</span>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Central Analytics Section (2/3 Bar Chart & 1/3 Allocation) -->
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+<!-- Left 2/3: Income vs. Expenses Visual Flow -->
+<div class="lg:col-span-2 p-6 rounded-lg bg-surface-container-lowest border border-surface-variant shadow-architectural flex flex-col justify-between">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 pb-4 border-b border-surface-container">
+<div>
+<div class="flex items-center gap-2">
+<h3 class="font-title-md text-title-md text-primary">Cash Flow Dynamics: Inflow vs. Outflow</h3>
+<span class="font-label-mono text-[11px] px-2 py-0.5 rounded bg-surface-container text-on-surface-variant">H1 Fiscal Trajectory</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant mt-0.5">Net balance retention accrued month-over-month</p>
+</div>
+<!-- Legend and Chart Toggle -->
+<div class="flex items-center gap-4 font-label-mono text-label-mono">
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-primary-container"></span>
+<span class="text-on-surface">Operating Inflow</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="w-3 h-3 rounded bg-[#E2DFD7] border border-outline-variant"></span>
+<span class="text-on-surface-variant">Operating Outflow</span>
+</div>
+<div class="hidden sm:block h-4 w-[1px] bg-surface-variant"></div>
+<div class="text-secondary font-semibold">
+                Net: +$551,250.00
+              </div>
+</div>
+</div>
+<!-- Clean Architectural SVG Chart Canvas -->
+<div class="relative w-full h-64 my-6">
+<!-- Grid Lines and Y-Axis -->
+<div class="absolute inset-0 flex flex-col justify-between pointer-events-none border-b border-surface-variant/80">
+<div class="w-full border-b border-dashed border-surface-variant flex justify-between pr-2 text-outline font-label-mono text-[10px]">
+<span>$1.0M</span>
+</div>
+<div class="w-full border-b border-dashed border-surface-variant flex justify-between pr-2 text-outline font-label-mono text-[10px]">
+<span>$750k</span>
+</div>
+<div class="w-full border-b border-dashed border-surface-variant flex justify-between pr-2 text-outline font-label-mono text-[10px]">
+<span>$500k</span>
+</div>
+<div class="w-full border-b border-dashed border-surface-variant flex justify-between pr-2 text-outline font-label-mono text-[10px]">
+<span>$250k</span>
+</div>
+<div class="w-full flex justify-between pr-2 text-outline font-label-mono text-[10px]">
+<span>$0</span>
+</div>
+</div>
+<!-- SVG Data Bars Grouping -->
+<div class="absolute inset-x-8 inset-y-0 flex justify-between items-end pb-1">
+<!-- Month 1: Sep -->
+<div class="flex flex-col items-center gap-2 group cursor-pointer relative">
+<div class="flex items-end gap-1.5 h-48">
+<div class="w-6 sm:w-7 bg-primary-container rounded-t-sm transition-all group-hover:bg-primary" style="height: 62%;"></div>
+<div class="w-6 sm:w-7 bg-[#E2DFD7] rounded-t-sm transition-all group-hover:bg-[#D5D1C7]" style="height: 38%;"></div>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant">Sep</span>
+</div>
+<!-- Month 2: Oct -->
+<div class="flex flex-col items-center gap-2 group cursor-pointer relative">
+<div class="flex items-end gap-1.5 h-48">
+<div class="w-6 sm:w-7 bg-primary-container rounded-t-sm transition-all group-hover:bg-primary" style="height: 70%;"></div>
+<div class="w-6 sm:w-7 bg-[#E2DFD7] rounded-t-sm transition-all group-hover:bg-[#D5D1C7]" style="height: 35%;"></div>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant">Oct</span>
+</div>
+<!-- Month 3: Nov -->
+<div class="flex flex-col items-center gap-2 group cursor-pointer relative">
+<div class="flex items-end gap-1.5 h-48">
+<div class="w-6 sm:w-7 bg-primary-container rounded-t-sm transition-all group-hover:bg-primary" style="height: 58%;"></div>
+<div class="w-6 sm:w-7 bg-[#E2DFD7] rounded-t-sm transition-all group-hover:bg-[#D5D1C7]" style="height: 42%;"></div>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant">Nov</span>
+</div>
+<!-- Month 4: Dec -->
+<div class="flex flex-col items-center gap-2 group cursor-pointer relative">
+<div class="flex items-end gap-1.5 h-48">
+<div class="w-6 sm:w-7 bg-primary-container rounded-t-sm transition-all group-hover:bg-primary" style="height: 84%;"></div>
+<div class="w-6 sm:w-7 bg-[#E2DFD7] rounded-t-sm transition-all group-hover:bg-[#D5D1C7]" style="height: 46%;"></div>
+</div>
+<span class="font-label-mono text-label-mono text-on-surface-variant">Dec</span>
+</div>
+<!-- Month 5: Jan (Hover Tooltip active) -->
+<div class="flex flex-col items-center gap-2 group cursor-pointer relative">
+<!-- Floating Ambient Tooltip -->
+<div class="absolute -top-12 z-20 flex flex-col items-center bg-primary text-on-primary py-1.5 px-3 rounded-lg shadow-ambient-lift text-center pointer-events-none whitespace-nowrap">
+<span class="font-label-mono text-[10px] text-surface-variant">Jan Flow Delta</span>
+<span class="font-label-mono text-body-sm font-semibold text-secondary-fixed">+$430,000 Net</span>
+<div class="w-2 h-2 bg-primary rotate-45 -mb-2 mt-0.5"></div>
+</div>
+<div class="flex items-end gap-1.5 h-48">
+<div class="w-6 sm:w-7 bg-primary-container rounded-t-sm ring-2 ring-primary/20" style="height: 76%;"></div>
+<div class="w-6 sm:w-7 bg-[#E2DFD7] rounded-t-sm" style="height: 31%;"></div>
+</div>
+<span class="font-label-mono text-label-mono text-primary font-bold">Jan</span>
+</div>
+<!-- Month 6: Feb (Current) -->
+<div class="flex flex-col items-center gap-2 group cursor-pointer relative">
+<div class="flex items-end gap-1.5 h-48">
+<div class="w-6 sm:w-7 bg-primary-container rounded-t-sm transition-all group-hover:bg-primary" style="height: 88%;"></div>
+<div class="w-6 sm:w-7 bg-[#E2DFD7] rounded-t-sm transition-all group-hover:bg-[#D5D1C7]" style="height: 34%;"></div>
+</div>
+<span class="font-label-mono text-label-mono text-primary font-semibold">Feb (MTD)</span>
+</div>
+</div>
+</div>
+<!-- Summary Strip -->
+<div class="p-3 rounded-lg bg-surface-container-low border border-surface-variant flex flex-wrap items-center justify-between gap-2 text-body-sm font-body-sm">
+<span class="text-on-surface-variant">
+              Cumulative quarterly retention stands at <strong class="text-primary font-semibold">61.7%</strong> after structural overhead.
+            </span>
+<a class="text-primary font-title-md hover:underline flex items-center gap-1 text-[13px]" href="#analytics">
+<span>Inspect Capital Model</span>
+<span class="material-symbols-outlined text-[14px]" data-icon="north_east">north_east</span>
+</a>
+</div>
+</div>
+<!-- Right 1/3: Treasury Allocation Breakdown -->
+<div class="p-6 rounded-lg bg-surface-container-lowest border border-surface-variant shadow-architectural flex flex-col justify-between">
+<div>
+<div class="flex items-start justify-between">
+<div>
+<h3 class="font-title-md text-title-md text-primary">Treasury Allocation</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Diversification &amp; Custody Mix</p>
+</div>
+<span class="font-label-mono text-label-mono text-secondary bg-[#ECFDF5] px-2 py-0.5 rounded border border-[#D1FAE5]">
+                Risk: Minimum
+              </span>
+</div>
+<!-- Architectural Segmented Bar Visual -->
+<div class="mt-6">
+<div class="h-3 w-full rounded-full bg-surface-container flex overflow-hidden p-0.5 gap-0.5">
+<div class="bg-primary-container h-full rounded-l-full" style="width: 45%;" title="Short-term Treasuries 45%"></div>
+<div class="bg-[#545F73] h-full" style="width: 25%;" title="Operating Checking 25%"></div>
+<div class="bg-[#75777D] h-full" style="width: 20%;" title="Money Market Sweep 20%"></div>
+<div class="bg-secondary h-full rounded-r-full" style="width: 10%;" title="Strategic Reserves 10%"></div>
+</div>
+<div class="flex justify-between items-center mt-2 text-[10px] font-label-mono text-outline">
+<span>Preservation Focus</span>
+<span>Target: 100% Insured</span>
+</div>
+</div>
+<!-- Segment Legend & Specific Values -->
+<div class="mt-6 flex flex-col gap-3 font-body-sm">
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-3 h-3 rounded bg-primary-container"></span>
+<div class="flex flex-col">
+<span class="font-semibold text-primary">T-Bills &amp; Short Treasuries</span>
+<span class="font-label-mono text-[10px] text-outline">45% • 5.28% Weighted Yield</span>
+</div>
+</div>
+<span class="font-label-mono font-semibold text-on-surface">$2,173,189.69</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-3 h-3 rounded bg-[#545F73]"></span>
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Operating Checking Accounts</span>
+<span class="font-label-mono text-[10px] text-outline">25% • Immediate Working Capital</span>
+</div>
+</div>
+<span class="font-label-mono font-semibold text-on-surface">$1,207,327.60</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-3 h-3 rounded bg-[#75777D]"></span>
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Money Market Sweep</span>
+<span class="font-label-mono text-[10px] text-outline">20% • Automated Overnight Buffer</span>
+</div>
+</div>
+<span class="font-label-mono font-semibold text-on-surface">$965,862.08</span>
+</div>
+<div class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container-low transition-colors">
+<div class="flex items-center gap-2.5">
+<span class="w-3 h-3 rounded bg-secondary"></span>
+<div class="flex flex-col">
+<span class="font-semibold text-primary">Strategic Reserves</span>
+<span class="font-label-mono text-[10px] text-outline">10% • Sovereign Custody Hedge</span>
+</div>
+</div>
+<span class="font-label-mono font-semibold text-on-surface">$482,931.05</span>
+</div>
+</div>
+</div>
+<!-- Yield Accrued Highlight Box -->
+<div class="mt-6 pt-4 border-t border-surface-container flex items-center justify-between">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps uppercase text-on-surface-variant">Yield Accrued QTD</span>
+<span class="font-financial-numeric-md text-financial-numeric-md text-secondary font-semibold">+$42,890.14</span>
+</div>
+<button class="px-2.5 py-1.5 rounded-lg bg-surface-container-low hover:bg-surface-container text-on-surface border border-surface-variant font-label-mono text-label-mono transition-colors">
+              Reinvest
+            </button>
+</div>
+</div>
+</section>
+<!-- SECTION 4: Recent Transactions & Ledger (Bottom Wide Card) -->
+<section class="rounded-lg bg-surface-container-lowest border border-surface-variant shadow-architectural overflow-hidden">
+<!-- Header, Filters & Search -->
+<div class="p-6 border-b border-surface-container flex flex-col md:flex-row md:items-center justify-between gap-4">
+<div>
+<h2 class="font-title-md text-title-md text-primary">Master Treasury Ledger</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Audited journal of institutional settlements, sweeps, and disbursements</p>
+</div>
+<!-- Actions & Segmented Category Filter -->
+<div class="flex flex-wrap items-center gap-3">
+<!-- Filter Pills -->
+<div class="flex items-center p-0.5 rounded-lg bg-surface-container-low border border-surface-variant font-label-mono text-[11px]">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-primary font-semibold shadow-sm">All</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface">Payroll</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface">Vendor AP</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface">Treasury Yield</button>
+<button class="px-2.5 py-1 rounded text-on-surface-variant hover:text-on-surface">Client Retainers</button>
+</div>
+<!-- Download CSV -->
+<button class="px-3 py-1.5 rounded-lg border border-surface-variant hover:bg-surface-container-low text-body-sm font-title-md text-on-surface transition-colors flex items-center gap-1.5 shadow-sm">
+<span class="material-symbols-outlined text-[16px] text-outline" data-icon="download">download</span>
+<span>Download CSV</span>
+</button>
+</div>
+</div>
+<!-- Table View -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50 border-b border-surface-container text-on-surface-variant font-label-caps text-label-caps uppercase tracking-wider">
+<th class="py-3 px-6">Entity / Counterparty</th>
+<th class="py-3 px-4">Category</th>
+<th class="py-3 px-4">Timestamp &amp; Custody Account</th>
+<th class="py-3 px-4">Status</th>
+<th class="py-3 px-6 text-right">Settlement Amount</th>
+<th class="py-3 px-4 text-center w-12">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container font-body-sm text-body-sm">
+<!-- Row 1: Stripe -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-6 flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary font-semibold shadow-subtle-inset">
+<span class="material-symbols-outlined text-[18px]" data-icon="payments">payments</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-primary group-hover:text-primary transition-colors">Stripe Merchant Payout</span>
+<span class="font-label-mono text-[10px] text-outline">TXID-8921-9902 • Recurring Batch</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-mono text-[11px] border border-surface-variant">
+                    Client Retainers
+                  </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col font-label-mono text-[11px]">
+<span class="text-on-surface">Today, 2:15 PM</span>
+<span class="text-outline">Main Operating (JPMorgan ··4802)</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#ECFDF5] text-secondary font-label-mono text-[11px] border border-[#D1FAE5]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Completed
+                  </div>
+</td>
+<td class="py-4 px-6 text-right font-label-mono text-body-md font-semibold text-secondary">
+                  +$124,500.00
+                </td>
+<td class="py-4 px-4 text-center">
+<button aria-label="Transaction Options" class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 2: AWS -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-6 flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary font-semibold shadow-subtle-inset">
+<span class="material-symbols-outlined text-[18px]" data-icon="cloud">cloud</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-primary">AWS Cloud Infrastructure</span>
+<span class="font-label-mono text-[10px] text-outline">INV-2024-90412 • Enterprise SLA</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-mono text-[11px] border border-surface-variant">
+                    Vendor AP
+                  </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col font-label-mono text-[11px]">
+<span class="text-on-surface">Today, 11:30 AM</span>
+<span class="text-outline">Main Operating (JPMorgan ··4802)</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#ECFDF5] text-secondary font-label-mono text-[11px] border border-[#D1FAE5]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Completed
+                  </div>
+</td>
+<td class="py-4 px-6 text-right font-label-mono text-body-md font-semibold text-primary">
+                  -$18,420.50
+                </td>
+<td class="py-4 px-4 text-center">
+<button aria-label="Transaction Options" class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 3: Silicon Valley Bank Sweep Yield -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-6 flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary font-semibold shadow-subtle-inset">
+<span class="material-symbols-outlined text-[18px]" data-icon="savings">savings</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-primary">Silicon Valley Bank Sweep Yield</span>
+<span class="font-label-mono text-[10px] text-outline">Auto-Accrual 5.15% APY Sweep</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-mono text-[11px] border border-surface-variant">
+                    Treasury Yield
+                  </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col font-label-mono text-[11px]">
+<span class="text-on-surface">Yesterday, 11:59 PM</span>
+<span class="text-outline">Custodial MM (SVB ··1190)</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#ECFDF5] text-secondary font-label-mono text-[11px] border border-[#D1FAE5]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Completed
+                  </div>
+</td>
+<td class="py-4 px-6 text-right font-label-mono text-body-md font-semibold text-secondary">
+                  +$13,842.20
+                </td>
+<td class="py-4 px-4 text-center">
+<button aria-label="Transaction Options" class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 4: Gusto Executive Payroll -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-6 flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary font-semibold shadow-subtle-inset">
+<span class="material-symbols-outlined text-[18px]" data-icon="badge">badge</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-primary">Gusto Executive Payroll</span>
+<span class="font-label-mono text-[10px] text-outline">Mid-Month Cycle • Tier 1 Partners</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-mono text-[11px] border border-surface-variant">
+                    Payroll
+                  </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col font-label-mono text-[11px]">
+<span class="text-on-surface">Yesterday, 9:00 AM</span>
+<span class="text-outline">Disbursement Reserve (BNY ··7014)</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#FFFBEB] text-[#B45309] border border-[#FDE68A] font-label-mono text-[11px]">
+<span class="w-1.5 h-1.5 rounded-full bg-[#B45309]"></span>
+                    Settling
+                  </div>
+</td>
+<td class="py-4 px-6 text-right font-label-mono text-body-md font-semibold text-primary">
+                  -$164,800.00
+                </td>
+<td class="py-4 px-4 text-center">
+<button aria-label="Transaction Options" class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 5: Brex Corporate Card Settlement -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-6 flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary font-semibold shadow-subtle-inset">
+<span class="material-symbols-outlined text-[18px]" data-icon="credit_card">credit_card</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-primary">Brex Corporate Card Settlement</span>
+<span class="font-label-mono text-[10px] text-outline">Auto-Pay Statement Balance</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-mono text-[11px] border border-surface-variant">
+                    Vendor AP
+                  </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col font-label-mono text-[11px]">
+<span class="text-on-surface">Feb 14, 4:20 PM</span>
+<span class="text-outline">Main Operating (JPMorgan ··4802)</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#ECFDF5] text-secondary font-label-mono text-[11px] border border-[#D1FAE5]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Completed
+                  </div>
+</td>
+<td class="py-4 px-6 text-right font-label-mono text-body-md font-semibold text-primary">
+                  -$42,110.15
+                </td>
+<td class="py-4 px-4 text-center">
+<button aria-label="Transaction Options" class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+<!-- Row 6: Nordic Capital Advisory LP -->
+<tr class="hover:bg-surface-container-low/40 transition-colors group">
+<td class="py-4 px-6 flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary font-semibold shadow-subtle-inset">
+<span class="material-symbols-outlined text-[18px]" data-icon="account_balance">account_balance</span>
+</div>
+<div class="flex flex-col">
+<span class="font-title-md text-primary">Nordic Capital Advisory LP</span>
+<span class="font-label-mono text-[10px] text-outline">Q1 Retainer &amp; Performance Allocation</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<span class="inline-block px-2.5 py-0.5 rounded-full bg-surface-container text-on-surface-variant font-label-mono text-[11px] border border-surface-variant">
+                    Client Retainers
+                  </span>
+</td>
+<td class="py-4 px-4">
+<div class="flex flex-col font-label-mono text-[11px]">
+<span class="text-on-surface">Feb 12, 10:14 AM</span>
+<span class="text-outline">Main Operating (JPMorgan ··4802)</span>
+</div>
+</td>
+<td class="py-4 px-4">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-[#ECFDF5] text-secondary font-label-mono text-[11px] border border-[#D1FAE5]">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span>
+                    Completed
+                  </div>
+</td>
+<td class="py-4 px-6 text-right font-label-mono text-body-md font-semibold text-secondary">
+                  +$250,000.00
+                </td>
+<td class="py-4 px-4 text-center">
+<button aria-label="Transaction Options" class="p-1 rounded text-outline hover:text-primary hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="more_horiz">more_horiz</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Ledger Footer Pagination & Volume Summary -->
+<div class="p-4 px-6 bg-surface-container-low/40 border-t border-surface-container flex flex-col sm:flex-row sm:items-center justify-between gap-3 text-on-surface-variant font-label-mono text-label-mono">
+<div class="flex items-center gap-2">
+<span>Showing 6 of 148 settled lines</span>
+<span>•</span>
+<span>Cleared Volume: <strong class="text-primary font-semibold">$613,672.85</strong></span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded border border-surface-variant bg-surface-container-lowest text-outline cursor-not-allowed">Previous</button>
+<button class="px-2.5 py-1 rounded border border-surface-variant bg-surface-container-lowest text-primary hover:bg-surface-container font-semibold transition-colors">1</button>
+<button class="px-2.5 py-1 rounded border border-surface-variant bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors">2</button>
+<button class="px-2.5 py-1 rounded border border-surface-variant bg-surface-container-lowest text-on-surface-variant hover:bg-surface-container transition-colors">3</button>
+<button class="px-2.5 py-1 rounded border border-surface-variant bg-surface-container-lowest text-on-surface hover:bg-surface-container transition-colors">Next</button>
+</div>
+</div>
+</section>
+<!-- Sub-footer / Compliance Seal -->
+<footer class="pt-2 pb-8 flex flex-col sm:flex-row items-center justify-between text-outline font-label-mono text-[11px] gap-2 border-t border-surface-variant/50">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary" data-icon="shield">shield</span>
+<span>SOC2 Type II Certified • Custodial assets held in bankruptcy-remote master trust entities</span>
+</div>
+<div class="flex items-center gap-4">
+<span class="hover:text-on-surface cursor-pointer">Security Protocol v4.12</span>
+<span>•</span>
+<span class="hover:text-on-surface cursor-pointer">Encrypted Session (256-bit AES)</span>
+</div>
+</footer>
+</main>
+</div>
+</body></html>

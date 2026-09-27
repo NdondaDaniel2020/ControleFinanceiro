@@ -104,7 +104,7 @@ padding: 0px}
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../img/Money Bag Franc_30px.png</normaloff>../img/Money Bag Franc_30px.png</iconset>
+        <normaloff>img/Money Bag Franc_30px.png</normaloff>img/Money Bag Franc_30px.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -283,7 +283,7 @@ padding: 0px
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../img/logoFC.png</normaloff>../img/logoFC.png</iconset>
+        <normaloff>img/logoFC.png</normaloff>img/logoFC.png</iconset>
       </property>
       <property name="iconSize">
        <size>
@@ -407,7 +407,7 @@ padding: 0px}
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../img/Money Bag Pounds_30px.png</normaloff>../img/Money Bag Pounds_30px.png</iconset>
+           <normaloff>img/Money Bag Pounds_30px.png</normaloff>img/Money Bag Pounds_30px.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -558,7 +558,7 @@ padding: 0px}
       </property>
       <property name="icon">
        <iconset>
-        <normaloff>../img/logoFC.png</normaloff>../img/logoFC.png</iconset>
+        <normaloff>img/logoFC.png</normaloff>img/logoFC.png</iconset>
       </property>
       <property name="iconSize">
        <size>

@@ -390,7 +390,7 @@ border-radius:0px;</string>
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/loogo.PNG</normaloff>../img/loogo.PNG</iconset>
+                             <normaloff>img/loogo.PNG</normaloff>img/loogo.PNG</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -493,7 +493,7 @@ QToolButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../img/24x24/cil-minus.png</normaloff>../img/24x24/cil-minus.png</iconset>
+                                <normaloff>img/24x24/cil-minus.png</normaloff>img/24x24/cil-minus.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -519,7 +519,7 @@ QToolButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../img/24x24/cil-media-stop.png</normaloff>../img/24x24/cil-media-stop.png</iconset>
+                                <normaloff>img/24x24/cil-media-stop.png</normaloff>img/24x24/cil-media-stop.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -539,7 +539,7 @@ QToolButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../img/24x24/cil-x.png</normaloff>../img/24x24/cil-x.png</iconset>
+                                <normaloff>img/24x24/cil-x.png</normaloff>img/24x24/cil-x.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -661,7 +661,7 @@ QPushButton:pressed{
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/24x24/cil-home.png</normaloff>../img/24x24/cil-home.png</iconset>
+                             <normaloff>img/24x24/cil-home.png</normaloff>img/24x24/cil-home.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -690,7 +690,7 @@ QPushButton:pressed{
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/web_50px.png</normaloff>../img/web_50px.png</iconset>
+                             <normaloff>img/web_50px.png</normaloff>img/web_50px.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -719,7 +719,7 @@ QPushButton:pressed{
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/24x24/cil-settings.png</normaloff>../img/24x24/cil-settings.png</iconset>
+                             <normaloff>img/24x24/cil-settings.png</normaloff>img/24x24/cil-settings.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -748,7 +748,7 @@ QPushButton:pressed{
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/24x24/cil-chevron-double-up-alt.png</normaloff>../img/24x24/cil-chevron-double-up-alt.png</iconset>
+                             <normaloff>img/24x24/cil-chevron-double-up-alt.png</normaloff>img/24x24/cil-chevron-double-up-alt.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -807,7 +807,7 @@ QPushButton:pressed{
                           <string/>
                          </property>
                          <property name="pixmap">
-                          <pixmap>../img/qr_code_120px.png</pixmap>
+                          <pixmap>img/qr_code_120px.png</pixmap>
                          </property>
                         </widget>
                         <widget class="QLabel" name="data">
@@ -935,7 +935,7 @@ QPushButton:pressed{
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/24x24/help_30px.png</normaloff>../img/24x24/help_30px.png</iconset>
+                              <normaloff>img/24x24/help_30px.png</normaloff>img/24x24/help_30px.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -967,7 +967,7 @@ QPushButton:pressed{
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/24x24/cil-user.png</normaloff>../img/24x24/cil-user.png</iconset>
+                              <normaloff>img/24x24/cil-user.png</normaloff>img/24x24/cil-user.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -996,7 +996,7 @@ QPushButton:pressed{
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/website_50px.png</normaloff>../img/website_50px.png</iconset>
+                              <normaloff>img/website_50px.png</normaloff>img/website_50px.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -1025,7 +1025,7 @@ QPushButton:pressed{
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/24x24/settings_30px.png</normaloff>../img/24x24/settings_30px.png</iconset>
+                              <normaloff>img/24x24/settings_30px.png</normaloff>img/24x24/settings_30px.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -1054,7 +1054,7 @@ QPushButton:pressed{
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/money_50px.png</normaloff>../img/money_50px.png</iconset>
+                              <normaloff>img/money_50px.png</normaloff>img/money_50px.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -1083,7 +1083,7 @@ QPushButton:pressed{
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/24x24/admin_settings_male_30px.png</normaloff>../img/24x24/admin_settings_male_30px.png</iconset>
+                              <normaloff>img/24x24/admin_settings_male_30px.png</normaloff>img/24x24/admin_settings_male_30px.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -1112,7 +1112,7 @@ QPushButton:pressed{
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/edit_folder_24px.png</normaloff>../img/edit_folder_24px.png</iconset>
+                              <normaloff>img/edit_folder_24px.png</normaloff>img/edit_folder_24px.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -1184,7 +1184,7 @@ QPushButton:pressed{
                                </property>
                                <property name="icon">
                                 <iconset>
-                                 <normaloff>../img/24x24/cil-volume-off.png</normaloff>../img/24x24/cil-volume-off.png</iconset>
+                                 <normaloff>img/24x24/cil-volume-off.png</normaloff>img/24x24/cil-volume-off.png</iconset>
                                </property>
                               </widget>
                              </item>
@@ -1338,7 +1338,7 @@ padding-bottom:0px;
                                     <string/>
                                    </property>
                                    <property name="pixmap">
-                                    <pixmap>../img/SystemMW.png</pixmap>
+                                    <pixmap>img/SystemMW.png</pixmap>
                                    </property>
                                    <property name="alignment">
                                     <set>Qt::AlignCenter</set>
@@ -1527,7 +1527,7 @@ border-radius:10px;}
                                       </property>
                                       <property name="icon">
                                        <iconset>
-                                        <normaloff>../img/search_30px.png</normaloff>../img/search_30px.png</iconset>
+                                        <normaloff>img/search_30px.png</normaloff>img/search_30px.png</iconset>
                                       </property>
                                       <property name="iconSize">
                                        <size>
@@ -1559,7 +1559,7 @@ border-radius:10px;}
                                       </property>
                                       <property name="icon">
                                        <iconset>
-                                        <normaloff>../img/24x24/cil-loop-circular.png</normaloff>../img/24x24/cil-loop-circular.png</iconset>
+                                        <normaloff>img/24x24/cil-loop-circular.png</normaloff>img/24x24/cil-loop-circular.png</iconset>
                                       </property>
                                       <property name="iconSize">
                                        <size>
@@ -1665,7 +1665,7 @@ color:rgb(223, 223, 223);}
                                       </property>
                                       <property name="icon">
                                        <iconset>
-                                        <normaloff>../img/microphone_50px.png</normaloff>../img/microphone_50px.png</iconset>
+                                        <normaloff>img/microphone_50px.png</normaloff>img/microphone_50px.png</iconset>
                                       </property>
                                       <property name="iconSize">
                                        <size>
@@ -1697,7 +1697,7 @@ color:rgb(223, 223, 223);}
                                       </property>
                                       <property name="icon">
                                        <iconset>
-                                        <normaloff>../img/24x24/cil-arrow-left.png</normaloff>../img/24x24/cil-arrow-left.png</iconset>
+                                        <normaloff>img/24x24/cil-arrow-left.png</normaloff>img/24x24/cil-arrow-left.png</iconset>
                                       </property>
                                       <property name="iconSize">
                                        <size>
@@ -1729,7 +1729,7 @@ color:rgb(223, 223, 223);}
                                       </property>
                                       <property name="icon">
                                        <iconset>
-                                        <normaloff>../img/24x24/cil-arrow-right.png</normaloff>../img/24x24/cil-arrow-right.png</iconset>
+                                        <normaloff>img/24x24/cil-arrow-right.png</normaloff>img/24x24/cil-arrow-right.png</iconset>
                                       </property>
                                       <property name="iconSize">
                                        <size>
@@ -2272,7 +2272,7 @@ border-radius:15px;
                                               </property>
                                               <property name="icon">
                                                <iconset>
-                                                <normaloff>../img/web_100px.png</normaloff>../img/web_100px.png</iconset>
+                                                <normaloff>img/web_100px.png</normaloff>img/web_100px.png</iconset>
                                               </property>
                                               <property name="iconSize">
                                                <size>
@@ -2325,7 +2325,7 @@ border-radius:15px;
                                               </property>
                                               <property name="icon">
                                                <iconset>
-                                                <normaloff>../img/close_pane_120px.png</normaloff>../img/close_pane_120px.png</iconset>
+                                                <normaloff>img/close_pane_120px.png</normaloff>img/close_pane_120px.png</iconset>
                                               </property>
                                               <property name="iconSize">
                                                <size>
@@ -2400,7 +2400,7 @@ border-radius:15px;
                                               </property>
                                               <property name="icon">
                                                <iconset>
-                                                <normaloff>../img/user_menu_female_120px.png</normaloff>../img/user_menu_female_120px.png</iconset>
+                                                <normaloff>img/user_menu_female_120px.png</normaloff>img/user_menu_female_120px.png</iconset>
                                               </property>
                                               <property name="iconSize">
                                                <size>
@@ -2475,7 +2475,7 @@ border-radius:15px;
                                               </property>
                                               <property name="icon">
                                                <iconset>
-                                                <normaloff>../img/instagram_logo_120px.png</normaloff>../img/instagram_logo_120px.png</iconset>
+                                                <normaloff>img/instagram_logo_120px.png</normaloff>img/instagram_logo_120px.png</iconset>
                                               </property>
                                               <property name="iconSize">
                                                <size>
@@ -2620,7 +2620,7 @@ border:3px solid rgb(170, 85, 255)</string>
                                               </property>
                                               <property name="icon">
                                                <iconset>
-                                                <normaloff>../img/mac_client_50px.png</normaloff>../img/mac_client_50px.png</iconset>
+                                                <normaloff>img/mac_client_50px.png</normaloff>img/mac_client_50px.png</iconset>
                                               </property>
                                               <property name="iconSize">
                                                <size>
@@ -2654,7 +2654,7 @@ border:3px solid rgb(170, 85, 255)</string>
                                                <string/>
                                               </property>
                                               <property name="pixmap">
-                                               <pixmap>../img/ncicon.png</pixmap>
+                                               <pixmap>img/ncicon.png</pixmap>
                                               </property>
                                               <property name="alignment">
                                                <set>Qt::AlignCenter</set>
@@ -2726,7 +2726,7 @@ border:3px solid rgb(170, 85, 255)</string>
                                               </property>
                                               <property name="icon">
                                                <iconset>
-                                                <normaloff>../img/ibm_70px.png</normaloff>../img/ibm_70px.png</iconset>
+                                                <normaloff>img/ibm_70px.png</normaloff>img/ibm_70px.png</iconset>
                                               </property>
                                               <property name="iconSize">
                                                <size>
@@ -3810,7 +3810,7 @@ border-radius:10px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/exchange_bitcoinn_30px.png</pixmap>
+                                                  <pixmap>img/exchange_bitcoinn_30px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                </widget>
@@ -3879,7 +3879,7 @@ border-top-right-radius: 0px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/bitcoin_50px.png</pixmap>
+                                                  <pixmap>img/bitcoin_50px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <widget class="QLabel" name="bitcoin_aoa_lbl">
@@ -4724,7 +4724,7 @@ border-radius:10px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/synchronize_40px.png</pixmap>
+                                                  <pixmap>img/synchronize_40px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <widget class="QLabel" name="label_75">
@@ -4814,7 +4814,7 @@ border-top-right-radius: 0px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/round_50px.png</pixmap>
+                                                  <pixmap>img/round_50px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <widget class="QLabel" name="dk_aoa_lbl">
@@ -5730,7 +5730,7 @@ border-radius:10px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/synchronize_40px.png</pixmap>
+                                                  <pixmap>img/synchronize_40px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <widget class="QLabel" name="label_77">
@@ -5864,7 +5864,7 @@ border-top-right-radius: 0px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/round_50px.png</pixmap>
+                                                  <pixmap>img/round_50px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <zorder>label_34</zorder>
@@ -6714,7 +6714,7 @@ border-radius:10px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/synchronize_40px.png</pixmap>
+                                                  <pixmap>img/synchronize_40px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <widget class="QLabel" name="label_81">
@@ -6827,7 +6827,7 @@ border-top-right-radius: 0px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/round_50px.png</pixmap>
+                                                  <pixmap>img/round_50px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <widget class="QLabel" name="label_82">
@@ -7696,7 +7696,7 @@ border-radius:10px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/synchronize_40px.png</pixmap>
+                                                  <pixmap>img/synchronize_40px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <widget class="QLabel" name="label_84">
@@ -7808,7 +7808,7 @@ border-top-right-radius: 0px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/round_50px.png</pixmap>
+                                                  <pixmap>img/round_50px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <widget class="QLabel" name="label_159">
@@ -8675,7 +8675,7 @@ border-radius:10px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/synchronize_40px.png</pixmap>
+                                                  <pixmap>img/synchronize_40px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <widget class="QLabel" name="label_163">
@@ -8788,7 +8788,7 @@ border-top-right-radius: 0px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/round_50px.png</pixmap>
+                                                  <pixmap>img/round_50px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <widget class="QLabel" name="label_164">
@@ -9639,7 +9639,7 @@ border-radius:10px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/synchronize_40px.png</pixmap>
+                                                  <pixmap>img/synchronize_40px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <widget class="QLabel" name="label_158">
@@ -9752,7 +9752,7 @@ border-top-right-radius: 0px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/round_50px.png</pixmap>
+                                                  <pixmap>img/round_50px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <widget class="QLabel" name="label_161">
@@ -10624,7 +10624,7 @@ border-radius:10px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/synchronize_40px.png</pixmap>
+                                                  <pixmap>img/synchronize_40px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <widget class="QLabel" name="label_166">
@@ -10737,7 +10737,7 @@ border-top-right-radius: 0px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/round_50px.png</pixmap>
+                                                  <pixmap>img/round_50px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <widget class="QLabel" name="label_167">
@@ -11631,7 +11631,7 @@ border-radius:10px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/synchronize_40px.png</pixmap>
+                                                  <pixmap>img/synchronize_40px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <zorder>label_169</zorder>
@@ -11747,7 +11747,7 @@ border-top-right-radius: 0px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/round_50px.png</pixmap>
+                                                  <pixmap>img/round_50px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <zorder>label_52</zorder>
@@ -12618,7 +12618,7 @@ border-radius:10px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/synchronize_40px.png</pixmap>
+                                                  <pixmap>img/synchronize_40px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <zorder>label_172</zorder>
@@ -12734,7 +12734,7 @@ border-top-right-radius: 0px;</string>
                                                   <string/>
                                                  </property>
                                                  <property name="pixmap">
-                                                  <pixmap>../img/round_50px.png</pixmap>
+                                                  <pixmap>img/round_50px.png</pixmap>
                                                  </property>
                                                 </widget>
                                                 <zorder>label_55</zorder>
@@ -13497,7 +13497,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/blender_3d_40px.png</normaloff>../img/blender_3d_40px.png</iconset>
+                            <normaloff>img/blender_3d_40px.png</normaloff>img/blender_3d_40px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
@@ -13550,7 +13550,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/unity_40px.png</normaloff>../img/unity_40px.png</iconset>
+                            <normaloff>img/unity_40px.png</normaloff>img/unity_40px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
@@ -13649,7 +13649,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/gmail_logo_40px.png</normaloff>../img/gmail_logo_40px.png</iconset>
+                            <normaloff>img/gmail_logo_40px.png</normaloff>img/gmail_logo_40px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
@@ -13724,7 +13724,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/bing_40px.png</normaloff>../img/bing_40px.png</iconset>
+                            <normaloff>img/bing_40px.png</normaloff>img/bing_40px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
@@ -13799,7 +13799,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/hbo_go_53px.png</normaloff>../img/hbo_go_53px.png</iconset>
+                            <normaloff>img/hbo_go_53px.png</normaloff>img/hbo_go_53px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
@@ -13874,7 +13874,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/open_source_50px.png</normaloff>../img/open_source_50px.png</iconset>
+                            <normaloff>img/open_source_50px.png</normaloff>img/open_source_50px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
@@ -13949,7 +13949,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/electronics_50px.png</normaloff>../img/electronics_50px.png</iconset>
+                            <normaloff>img/electronics_50px.png</normaloff>img/electronics_50px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
@@ -14024,7 +14024,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/dropbox_50px.png</normaloff>../img/dropbox_50px.png</iconset>
+                            <normaloff>img/dropbox_50px.png</normaloff>img/dropbox_50px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
@@ -14102,7 +14102,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/raspberry_pi_50px.png</normaloff>../img/raspberry_pi_50px.png</iconset>
+                            <normaloff>img/raspberry_pi_50px.png</normaloff>img/raspberry_pi_50px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
@@ -14180,7 +14180,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/android_os_50px.png</normaloff>../img/android_os_50px.png</iconset>
+                            <normaloff>img/android_os_50px.png</normaloff>img/android_os_50px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
@@ -14255,7 +14255,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/wi-fi_direct_60px.png</normaloff>../img/wi-fi_direct_60px.png</iconset>
+                            <normaloff>img/wi-fi_direct_60px.png</normaloff>img/wi-fi_direct_60px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
@@ -14330,7 +14330,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/mac_client_50px.png</normaloff>../img/mac_client_50px.png</iconset>
+                            <normaloff>img/mac_client_50px.png</normaloff>img/mac_client_50px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
@@ -14405,7 +14405,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/ibm_70px.png</normaloff>../img/ibm_70px.png</iconset>
+                            <normaloff>img/ibm_70px.png</normaloff>img/ibm_70px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
@@ -14480,7 +14480,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/tesla_70px.png</normaloff>../img/tesla_70px.png</iconset>
+                            <normaloff>img/tesla_70px.png</normaloff>img/tesla_70px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>
@@ -14555,7 +14555,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../img/help_70px.png</normaloff>../img/help_70px.png</iconset>
+                            <normaloff>img/help_70px.png</normaloff>img/help_70px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>

@@ -83,7 +83,7 @@ class Ui_Form(object):
 "color: rgb(255, 255, 255);\n"
 "}")
         icon = QIcon()
-        icon.addFile(u"../img/24x24/cil-minus.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u"img/24x24/cil-minus.png", QSize(), QIcon.Normal, QIcon.Off)
         self.minimizar.setIcon(icon)
         self.minimizar.setIconSize(QSize(20, 20))
 
@@ -111,7 +111,7 @@ class Ui_Form(object):
 "color: rgb(255, 255, 255);\n"
 "}")
         icon1 = QIcon()
-        icon1.addFile(u"../img/24x24/cil-x-f.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u"img/24x24/cil-x-f.png", QSize(), QIcon.Normal, QIcon.Off)
         self.fechar.setIcon(icon1)
         self.fechar.setIconSize(QSize(20, 20))
 

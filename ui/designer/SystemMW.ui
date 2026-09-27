@@ -406,7 +406,7 @@ border-radius:15px}
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/logoFC.png</normaloff>../img/logoFC.png</iconset>
+                             <normaloff>img/logoFC.png</normaloff>img/logoFC.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -509,7 +509,7 @@ QToolButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../img/24x24/cil-minus.png</normaloff>../img/24x24/cil-minus.png</iconset>
+                                <normaloff>img/24x24/cil-minus.png</normaloff>img/24x24/cil-minus.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -535,7 +535,7 @@ QToolButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../img/24x24/cil-media-stop.png</normaloff>../img/24x24/cil-media-stop.png</iconset>
+                                <normaloff>img/24x24/cil-media-stop.png</normaloff>img/24x24/cil-media-stop.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -555,7 +555,7 @@ QToolButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../img/24x24/cil-x.png</normaloff>../img/24x24/cil-x.png</iconset>
+                                <normaloff>img/24x24/cil-x.png</normaloff>img/24x24/cil-x.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -683,7 +683,7 @@ QPushButton:pressed{
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/24x24/cil-home.png</normaloff>../img/24x24/cil-home.png</iconset>
+                             <normaloff>img/24x24/cil-home.png</normaloff>img/24x24/cil-home.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -712,7 +712,7 @@ QPushButton:pressed{
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/web_50px.png</normaloff>../img/web_50px.png</iconset>
+                             <normaloff>img/web_50px.png</normaloff>img/web_50px.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -741,7 +741,7 @@ QPushButton:pressed{
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/24x24/cil-settings.png</normaloff>../img/24x24/cil-settings.png</iconset>
+                             <normaloff>img/24x24/cil-settings.png</normaloff>img/24x24/cil-settings.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -770,7 +770,7 @@ QPushButton:pressed{
                            </property>
                            <property name="icon">
                             <iconset>
-                             <normaloff>../img/24x24/cil-x-f.png</normaloff>../img/24x24/cil-x-f.png</iconset>
+                             <normaloff>img/24x24/cil-x-f.png</normaloff>img/24x24/cil-x-f.png</iconset>
                            </property>
                            <property name="iconSize">
                             <size>
@@ -893,7 +893,7 @@ QPushButton:pressed{
                                <string/>
                               </property>
                               <property name="pixmap">
-                               <pixmap>../img/qr_code_120px.png</pixmap>
+                               <pixmap>img/qr_code_120px.png</pixmap>
                               </property>
                               <property name="alignment">
                                <set>Qt::AlignBottom|Qt::AlignHCenter</set>
@@ -1052,7 +1052,7 @@ QPushButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/help_30px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/help_30px.png</iconset>
+                                <normaloff>img/24x24/help_30px.png</normaloff>img/24x24/help_30px.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -1084,7 +1084,7 @@ QPushButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-user.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/cil-user.png</iconset>
+                                <normaloff>img/24x24/cil-user.png</normaloff>img/24x24/cil-user.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -1113,7 +1113,7 @@ QPushButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/website_50px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/website_50px.png</iconset>
+                                <normaloff>img/website_50px.png</normaloff>img/website_50px.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -1142,7 +1142,7 @@ QPushButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/settings_30px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/settings_30px.png</iconset>
+                                <normaloff>img/24x24/settings_30px.png</normaloff>img/24x24/settings_30px.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -1171,7 +1171,7 @@ QPushButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/money_50px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/money_50px.png</iconset>
+                                <normaloff>img/money_50px.png</normaloff>img/money_50px.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -1200,7 +1200,7 @@ QPushButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/admin_settings_male_30px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/24x24/admin_settings_male_30px.png</iconset>
+                                <normaloff>img/24x24/admin_settings_male_30px.png</normaloff>img/24x24/admin_settings_male_30px.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -1229,7 +1229,7 @@ QPushButton:pressed{
                               </property>
                               <property name="icon">
                                <iconset>
-                                <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/edit_folder_24px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/edit_folder_24px.png</iconset>
+                                <normaloff>img/edit_folder_24px.png</normaloff>img/edit_folder_24px.png</iconset>
                               </property>
                               <property name="iconSize">
                                <size>
@@ -1537,7 +1537,7 @@ padding:0px;
                                              </property>
                                              <property name="icon">
                                               <iconset>
-                                               <normaloff>../img/atrasado.png</normaloff>../img/atrasado.png</iconset>
+                                               <normaloff>img/atrasado.png</normaloff>img/atrasado.png</iconset>
                                              </property>
                                              <property name="iconSize">
                                               <size>
@@ -1703,7 +1703,7 @@ padding:0px;
                                              </property>
                                              <property name="icon">
                                               <iconset>
-                                               <normaloff>../img/adiantamento-de-dinheiroV2.png</normaloff>../img/adiantamento-de-dinheiroV2.png</iconset>
+                                               <normaloff>img/adiantamento-de-dinheiroV2.png</normaloff>img/adiantamento-de-dinheiroV2.png</iconset>
                                              </property>
                                              <property name="iconSize">
                                               <size>
@@ -1904,7 +1904,7 @@ padding:0px;
                                              </property>
                                              <property name="icon">
                                               <iconset>
-                                               <normaloff>../img/adiantamento-de-dinheiroV.png</normaloff>../img/adiantamento-de-dinheiroV.png</iconset>
+                                               <normaloff>img/adiantamento-de-dinheiroV.png</normaloff>img/adiantamento-de-dinheiroV.png</iconset>
                                              </property>
                                              <property name="iconSize">
                                               <size>
@@ -2098,7 +2098,7 @@ padding:0px;
                                              </property>
                                              <property name="icon">
                                               <iconset>
-                                               <normaloff>../img/adiantamento-de-dinheiroV5.png</normaloff>../img/adiantamento-de-dinheiroV5.png</iconset>
+                                               <normaloff>img/adiantamento-de-dinheiroV5.png</normaloff>img/adiantamento-de-dinheiroV5.png</iconset>
                                              </property>
                                              <property name="iconSize">
                                               <size>
@@ -2967,7 +2967,7 @@ border-radius: 10px</string>
                                                   </property>
                                                   <property name="icon">
                                                    <iconset>
-                                                    <normaloff>../img/totalTitulos.png</normaloff>../img/totalTitulos.png</iconset>
+                                                    <normaloff>img/totalTitulos.png</normaloff>img/totalTitulos.png</iconset>
                                                   </property>
                                                   <property name="iconSize">
                                                    <size>
@@ -3145,7 +3145,7 @@ border-radius: 10px</string>
                                                   </property>
                                                   <property name="icon">
                                                    <iconset>
-                                                    <normaloff>../img/carduse_card_payment_.png</normaloff>../img/carduse_card_payment_.png</iconset>
+                                                    <normaloff>img/carduse_card_payment_.png</normaloff>img/carduse_card_payment_.png</iconset>
                                                   </property>
                                                   <property name="iconSize">
                                                    <size>
@@ -3294,7 +3294,7 @@ border-radius: 10px</string>
                                                   </property>
                                                   <property name="icon">
                                                    <iconset>
-                                                    <normaloff>../img/Total em Aberto.png</normaloff>../img/Total em Aberto.png</iconset>
+                                                    <normaloff>img/Total em Aberto.png</normaloff>img/Total em Aberto.png</iconset>
                                                   </property>
                                                   <property name="iconSize">
                                                    <size>
@@ -6212,7 +6212,7 @@ border-radius: 10px</string>
                                                      </property>
                                                      <property name="icon">
                                                       <iconset>
-                                                       <normaloff>../img/totalTitulos.png</normaloff>../img/totalTitulos.png</iconset>
+                                                       <normaloff>img/totalTitulos.png</normaloff>img/totalTitulos.png</iconset>
                                                      </property>
                                                      <property name="iconSize">
                                                       <size>
@@ -6390,7 +6390,7 @@ border-radius: 10px</string>
                                                      </property>
                                                      <property name="icon">
                                                       <iconset>
-                                                       <normaloff>../img/carduse_card_payment_.png</normaloff>../img/carduse_card_payment_.png</iconset>
+                                                       <normaloff>img/carduse_card_payment_.png</normaloff>img/carduse_card_payment_.png</iconset>
                                                      </property>
                                                      <property name="iconSize">
                                                       <size>
@@ -6539,7 +6539,7 @@ border-radius: 10px</string>
                                                      </property>
                                                      <property name="icon">
                                                       <iconset>
-                                                       <normaloff>../img/Total em Aberto.png</normaloff>../img/Total em Aberto.png</iconset>
+                                                       <normaloff>img/Total em Aberto.png</normaloff>img/Total em Aberto.png</iconset>
                                                      </property>
                                                      <property name="iconSize">
                                                       <size>
@@ -9321,7 +9321,7 @@ border-radius:15px;
                                           </property>
                                           <property name="icon">
                                            <iconset>
-                                            <normaloff>../img/web_100px.png</normaloff>../img/web_100px.png</iconset>
+                                            <normaloff>img/web_100px.png</normaloff>img/web_100px.png</iconset>
                                           </property>
                                           <property name="iconSize">
                                            <size>
@@ -9374,7 +9374,7 @@ border-radius:15px;
                                           </property>
                                           <property name="icon">
                                            <iconset>
-                                            <normaloff>../img/close_pane_120px.png</normaloff>../img/close_pane_120px.png</iconset>
+                                            <normaloff>img/close_pane_120px.png</normaloff>img/close_pane_120px.png</iconset>
                                           </property>
                                           <property name="iconSize">
                                            <size>
@@ -9449,7 +9449,7 @@ border-radius:15px;
                                           </property>
                                           <property name="icon">
                                            <iconset>
-                                            <normaloff>../img/user_menu_female_120px.png</normaloff>../img/user_menu_female_120px.png</iconset>
+                                            <normaloff>img/user_menu_female_120px.png</normaloff>img/user_menu_female_120px.png</iconset>
                                           </property>
                                           <property name="iconSize">
                                            <size>
@@ -9524,7 +9524,7 @@ border-radius:15px;
                                           </property>
                                           <property name="icon">
                                            <iconset>
-                                            <normaloff>../img/instagram_logo_120px.png</normaloff>../img/instagram_logo_120px.png</iconset>
+                                            <normaloff>img/instagram_logo_120px.png</normaloff>img/instagram_logo_120px.png</iconset>
                                           </property>
                                           <property name="iconSize">
                                            <size>
@@ -9669,7 +9669,7 @@ border:3px solid rgb(170, 85, 255)</string>
                                           </property>
                                           <property name="icon">
                                            <iconset>
-                                            <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/mac_client_50px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/mac_client_50px.png</iconset>
+                                            <normaloff>img/mac_client_50px.png</normaloff>img/mac_client_50px.png</iconset>
                                           </property>
                                           <property name="iconSize">
                                            <size>
@@ -9703,7 +9703,7 @@ border:3px solid rgb(170, 85, 255)</string>
                                            <string/>
                                           </property>
                                           <property name="pixmap">
-                                           <pixmap>../../../../3D Objects/ControleFinanceiro/System/img/ncicon.png</pixmap>
+                                           <pixmap>img/ncicon.png</pixmap>
                                           </property>
                                           <property name="alignment">
                                            <set>Qt::AlignCenter</set>
@@ -9775,7 +9775,7 @@ border:3px solid rgb(170, 85, 255)</string>
                                           </property>
                                           <property name="icon">
                                            <iconset>
-                                            <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/ibm_70px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/ibm_70px.png</iconset>
+                                            <normaloff>img/ibm_70px.png</normaloff>img/ibm_70px.png</iconset>
                                           </property>
                                           <property name="iconSize">
                                            <size>
@@ -10097,7 +10097,7 @@ border-radius: 20px;
                                                    </property>
                                                    <property name="icon">
                                                     <iconset>
-                                                     <normaloff>../img/daniel.jpg</normaloff>../img/daniel.jpg</iconset>
+                                                     <normaloff>img/daniel.jpg</normaloff>img/daniel.jpg</iconset>
                                                    </property>
                                                    <property name="iconSize">
                                                     <size>
@@ -11032,7 +11032,7 @@ background-color: transparent;</string>
                                           <string/>
                                          </property>
                                          <property name="pixmap">
-                                          <pixmap>../img/asd.png</pixmap>
+                                          <pixmap>img/asd.png</pixmap>
                                          </property>
                                          <property name="alignment">
                                           <set>Qt::AlignCenter</set>
@@ -11820,7 +11820,7 @@ border-radius: 10px</string>
                                                   </property>
                                                   <property name="icon">
                                                    <iconset>
-                                                    <normaloff>../img/fluxoEntrada.png</normaloff>../img/fluxoEntrada.png</iconset>
+                                                    <normaloff>img/fluxoEntrada.png</normaloff>img/fluxoEntrada.png</iconset>
                                                   </property>
                                                   <property name="iconSize">
                                                    <size>
@@ -11998,7 +11998,7 @@ border-radius: 10px</string>
                                                   </property>
                                                   <property name="icon">
                                                    <iconset>
-                                                    <normaloff>../img/fluxoSaida.png</normaloff>../img/fluxoSaida.png</iconset>
+                                                    <normaloff>img/fluxoSaida.png</normaloff>img/fluxoSaida.png</iconset>
                                                   </property>
                                                   <property name="iconSize">
                                                    <size>
@@ -12477,7 +12477,7 @@ border-radius:4px;</string>
                                                   </property>
                                                   <property name="icon">
                                                    <iconset>
-                                                    <normaloff>../img/fluxoTotal.png</normaloff>../img/fluxoTotal.png</iconset>
+                                                    <normaloff>img/fluxoTotal.png</normaloff>img/fluxoTotal.png</iconset>
                                                   </property>
                                                   <property name="iconSize">
                                                    <size>
@@ -14196,7 +14196,7 @@ color: rgb(255, 255, 255);
                                 </property>
                                 <property name="icon">
                                  <iconset>
-                                  <normaloff>../img/search_30px.png</normaloff>../img/search_30px.png</iconset>
+                                  <normaloff>img/search_30px.png</normaloff>img/search_30px.png</iconset>
                                 </property>
                                 <property name="iconSize">
                                  <size>
@@ -14519,7 +14519,7 @@ border-radius:15px;
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/fina.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/fina.png</iconset>
+                              <normaloff>img/fina.png</normaloff>img/fina.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -14583,7 +14583,7 @@ border-radius:15px;
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/yahoo.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/yahoo.png</iconset>
+                              <normaloff>img/yahoo.png</normaloff>img/yahoo.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -14645,7 +14645,7 @@ border-radius:15px;
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/investing.com.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/investing.com.png</iconset>
+                              <normaloff>img/investing.com.png</normaloff>img/investing.com.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -14707,7 +14707,7 @@ border-radius:15px;
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/BLHL.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/BLHL.png</iconset>
+                              <normaloff>img/BLHL.png</normaloff>img/BLHL.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -14769,7 +14769,7 @@ border-radius:15px;
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/infomaney.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/infomaney.png</iconset>
+                              <normaloff>img/infomaney.png</normaloff>img/infomaney.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -14831,7 +14831,7 @@ border-radius:15px;
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/dinherama.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/dinherama.png</iconset>
+                              <normaloff>img/dinherama.png</normaloff>img/dinherama.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -14893,7 +14893,7 @@ border-radius:15px;
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/cme.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/cme.png</iconset>
+                              <normaloff>img/cme.png</normaloff>img/cme.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -14955,7 +14955,7 @@ border-radius:15px;
                             </property>
                             <property name="icon">
                              <iconset>
-                              <normaloff>../img/uol economia.png</normaloff>../img/uol economia.png</iconset>
+                              <normaloff>img/uol economia.png</normaloff>img/uol economia.png</iconset>
                             </property>
                             <property name="iconSize">
                              <size>
@@ -15032,7 +15032,7 @@ border-radius:15px;
                           </property>
                           <property name="icon">
                            <iconset>
-                            <normaloff>../../../../3D Objects/ControleFinanceiro/System/img/help_70px.png</normaloff>../../../../3D Objects/ControleFinanceiro/System/img/help_70px.png</iconset>
+                            <normaloff>img/help_70px.png</normaloff>img/help_70px.png</iconset>
                           </property>
                           <property name="iconSize">
                            <size>

@@ -133,7 +133,7 @@ color: rgb(255, 255, 255);
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>../img/24x24/cil-minus.png</normaloff>../img/24x24/cil-minus.png</iconset>
+             <normaloff>img/24x24/cil-minus.png</normaloff>img/24x24/cil-minus.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -181,7 +181,7 @@ color: rgb(255, 255, 255);
            </property>
            <property name="icon">
             <iconset>
-             <normaloff>../img/24x24/cil-x-f.png</normaloff>../img/24x24/cil-x-f.png</iconset>
+             <normaloff>img/24x24/cil-x-f.png</normaloff>img/24x24/cil-x-f.png</iconset>
            </property>
            <property name="iconSize">
             <size>
@@ -325,7 +325,7 @@ border-radius: 5px;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../img/cil-vertical-align-top.png</normaloff>../img/cil-vertical-align-top.png</iconset>
+           <normaloff>img/cil-vertical-align-top.png</normaloff>img/cil-vertical-align-top.png</iconset>
          </property>
          <property name="iconSize">
           <size>
@@ -383,7 +383,7 @@ border-radius: 5px;
          </property>
          <property name="icon">
           <iconset>
-           <normaloff>../img/cil-vertical-align-bottom.png</normaloff>../img/cil-vertical-align-bottom.png</iconset>
+           <normaloff>img/cil-vertical-align-bottom.png</normaloff>img/cil-vertical-align-bottom.png</iconset>
          </property>
          <property name="iconSize">
           <size>

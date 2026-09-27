@@ -41,7 +41,7 @@ class Ui_SplashCreen(object):
 "	background-color: rgb(170, 85, 255);\n"
 "	color: rgb(255, 255, 255);\n"
 "	border-left: 3px solid rgb(255, 255, 255);\n"
-"	pedding-left: 8px;\n"
+"	padding-left: 8px;\n"
 "}")
         self.CentralFrame.setFrameShape(QFrame.StyledPanel)
         self.CentralFrame.setFrameShadow(QFrame.Raised)
@@ -103,7 +103,7 @@ class Ui_SplashCreen(object):
 "	border-radius:10px;\n"
 "}")
         icon = QIcon()
-        icon.addFile(u"../img/cancel_512px.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon.addFile(u"img/cancel_512px.png", QSize(), QIcon.Normal, QIcon.Off)
         self.fechar_3.setIcon(icon)
         self.fechar_3.setIconSize(QSize(20, 20))
         self.criadoPor_3 = QLabel(self.title_login)
@@ -127,7 +127,7 @@ class Ui_SplashCreen(object):
 "	border-radius:10px;\n"
 "}")
         icon1 = QIcon()
-        icon1.addFile(u"../img/Instagram_90px.png", QSize(), QIcon.Normal, QIcon.Off)
+        icon1.addFile(u"img/Instagram_90px.png", QSize(), QIcon.Normal, QIcon.Off)
         self.camera_2.setIcon(icon1)
         self.camera_2.setIconSize(QSize(100, 200))
 
@@ -258,7 +258,7 @@ class Ui_SplashCreen(object):
         self.logoPrincipal_2.setObjectName(u"logoPrincipal_2")
         self.logoPrincipal_2.setGeometry(QRect(4, 0, 139, 121))
         self.logoPrincipal_2.setStyleSheet(u"")
-        self.logoPrincipal_2.setPixmap(QPixmap(u"../img/finacialControrlEffct.png"))
+        self.logoPrincipal_2.setPixmap(QPixmap(u"img/finacialControrlEffct.png"))
         self.logoPrincipal_2.setAlignment(Qt.AlignCenter)
         self.faceid_login = QPushButton(self.zone_logo)
         self.faceid_login.setObjectName(u"faceid_login")
@@ -426,7 +426,7 @@ class Ui_SplashCreen(object):
 "	background-color: rgb(170, 85, 255);\n"
 "	color: rgb(255, 255, 255);\n"
 "	border-left: 3px solid rgb(255, 255, 255);\n"
-"	pedding-left: 8px;\n"
+"	padding-left: 8px;\n"
 "}")
         self.verticalLayout_3 = QVBoxLayout(self.page_central)
         self.verticalLayout_3.setSpacing(0)
@@ -516,7 +516,7 @@ class Ui_SplashCreen(object):
         self.logoPrincipal.setObjectName(u"logoPrincipal")
         self.logoPrincipal.setGeometry(QRect(99, 50, 206, 131))
         self.logoPrincipal.setStyleSheet(u"")
-        self.logoPrincipal.setPixmap(QPixmap(u"../img/logoCinacilaControl.png"))
+        self.logoPrincipal.setPixmap(QPixmap(u"img/logoCinacilaControl.png"))
         self.logoPrincipal.setAlignment(Qt.AlignCenter)
         self.logo = QLabel(self.centro)
         self.logo.setObjectName(u"logo")
@@ -526,7 +526,7 @@ class Ui_SplashCreen(object):
         self.logo.setFont(font6)
         self.logo.setStyleSheet(u"border-radius:40px;\n"
 "")
-        self.logo.setPixmap(QPixmap(u"../img/cinacisl control2.png"))
+        self.logo.setPixmap(QPixmap(u"img/cinacisl control2.png"))
         self.versao = QLabel(self.centro)
         self.versao.setObjectName(u"versao")
         self.versao.setGeometry(QRect(16, 2, 110, 16))
@@ -721,7 +721,7 @@ class Ui_SplashCreen(object):
         self.logoCamera = QLabel(self.linhaBranca_8)
         self.logoCamera.setObjectName(u"logoCamera")
         self.logoCamera.setGeometry(QRect(160, 5, 81, 91))
-        self.logoCamera.setPixmap(QPixmap(u"../img/Instagram_90px.png"))
+        self.logoCamera.setPixmap(QPixmap(u"img/Instagram_90px.png"))
         self.senhaIncorreta = QLabel(self.linhaBranca_8)
         self.senhaIncorreta.setObjectName(u"senhaIncorreta")
         self.senhaIncorreta.setGeometry(QRect(260, 50, 81, 10))

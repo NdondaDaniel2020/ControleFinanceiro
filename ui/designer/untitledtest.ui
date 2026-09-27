@@ -302,7 +302,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/blender_3d_40px.png</normaloff>../img/blender_3d_40px.png</iconset>
+                   <normaloff>img/blender_3d_40px.png</normaloff>img/blender_3d_40px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -355,7 +355,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/unity_40px.png</normaloff>../img/unity_40px.png</iconset>
+                   <normaloff>img/unity_40px.png</normaloff>img/unity_40px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -454,7 +454,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/gmail_logo_40px.png</normaloff>../img/gmail_logo_40px.png</iconset>
+                   <normaloff>img/gmail_logo_40px.png</normaloff>img/gmail_logo_40px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -529,7 +529,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/bing_40px.png</normaloff>../img/bing_40px.png</iconset>
+                   <normaloff>img/bing_40px.png</normaloff>img/bing_40px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -604,7 +604,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/hbo_go_53px.png</normaloff>../img/hbo_go_53px.png</iconset>
+                   <normaloff>img/hbo_go_53px.png</normaloff>img/hbo_go_53px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -679,7 +679,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/open_source_50px.png</normaloff>../img/open_source_50px.png</iconset>
+                   <normaloff>img/open_source_50px.png</normaloff>img/open_source_50px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -754,7 +754,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/electronics_50px.png</normaloff>../img/electronics_50px.png</iconset>
+                   <normaloff>img/electronics_50px.png</normaloff>img/electronics_50px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -829,7 +829,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/dropbox_50px.png</normaloff>../img/dropbox_50px.png</iconset>
+                   <normaloff>img/dropbox_50px.png</normaloff>img/dropbox_50px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -907,7 +907,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/raspberry_pi_50px.png</normaloff>../img/raspberry_pi_50px.png</iconset>
+                   <normaloff>img/raspberry_pi_50px.png</normaloff>img/raspberry_pi_50px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -985,7 +985,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/android_os_50px.png</normaloff>../img/android_os_50px.png</iconset>
+                   <normaloff>img/android_os_50px.png</normaloff>img/android_os_50px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -1060,7 +1060,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/wi-fi_direct_60px.png</normaloff>../img/wi-fi_direct_60px.png</iconset>
+                   <normaloff>img/wi-fi_direct_60px.png</normaloff>img/wi-fi_direct_60px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -1135,7 +1135,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/mac_client_50px.png</normaloff>../img/mac_client_50px.png</iconset>
+                   <normaloff>img/mac_client_50px.png</normaloff>img/mac_client_50px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -1210,7 +1210,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/ibm_70px.png</normaloff>../img/ibm_70px.png</iconset>
+                   <normaloff>img/ibm_70px.png</normaloff>img/ibm_70px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -1285,7 +1285,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/tesla_70px.png</normaloff>../img/tesla_70px.png</iconset>
+                   <normaloff>img/tesla_70px.png</normaloff>img/tesla_70px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -1360,7 +1360,7 @@ border-radius:15px;
                  </property>
                  <property name="icon">
                   <iconset>
-                   <normaloff>../img/help_70px.png</normaloff>../img/help_70px.png</iconset>
+                   <normaloff>img/help_70px.png</normaloff>img/help_70px.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
